@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream-50: #FAFAF9;
+  
+  --color-teal-50: #F0FDFA;
+  --color-teal-700: #0F766E;
+  --color-teal-800: #115E59;
+  
+  --color-slate-900: #0F172A;
+  --color-slate-600: #475569;
+  --color-slate-200: #E2E8F0;
+  
+  --color-orange-700: #C2410C;
+
+  --font-serif: var(--font-merriweather);
+  --font-sans: var(--font-inter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Accessibility Base Styles */
+html {
+  font-size: 20px; /* Base size */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream-50);
+  color: var(--color-slate-900);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* Utility for focus rings */
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50;
+  }
 }
