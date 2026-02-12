@@ -2,15 +2,15 @@
 
 @theme {
   --color-cream-50: #FAFAF9;
-  
+
   --color-teal-50: #F0FDFA;
   --color-teal-700: #0F766E;
   --color-teal-800: #115E59;
-  
+
   --color-slate-900: #0F172A;
   --color-slate-600: #475569;
   --color-slate-200: #E2E8F0;
-  
+
   --color-orange-700: #C2410C;
 
   --font-serif: var(--font-merriweather);
@@ -19,7 +19,8 @@
 
 /* Accessibility Base Styles */
 html {
-  font-size: 20px; /* Base size */
+  font-size: 20px;
+  /* Base size */
 }
 
 body {
@@ -33,5 +34,23 @@ body {
 @layer utilities {
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50;
+  }
+
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
   }
 }
