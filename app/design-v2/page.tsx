@@ -177,13 +177,13 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     <div className="mb-8">
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Products</h4>
                         <nav className="flex flex-col gap-4 text-xl font-medium text-slate-800">
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">Walk-in Showers</a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700 flex items-center">
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Showers</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700 flex items-center">
                                 Wet Rooms
                                 <span className="ml-3 bg-teal-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">New</span>
                             </a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">Deep Soakers</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Deep Soakers</a>
                         </nav>
                     </div>
 
@@ -191,13 +191,13 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     <div>
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Help & Advice</h4>
                         <nav className="flex flex-col gap-4 text-lg font-medium text-slate-800">
-                            <a href="#" className="py-2 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-2">
+                            <a href="#" className="py-3 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-2">
                                 <Sparkles size={20} className="text-teal-600" />
                                 Help Me Choose
                             </a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
-                            <a href="#" className="py-2 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
+                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
                         </nav>
                     </div>
 
@@ -318,13 +318,14 @@ const Hero = () => (
                 />
 
                 {/* VAT Relief Badge Overlay */}
-                <div className="absolute bottom-4 left-4 right-4 md:right-auto md:w-auto bg-white/95 backdrop-blur-sm border border-teal-100 rounded-xl p-3 shadow-lg flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 z-10">
-                    <div className="bg-teal-100 p-1.5 rounded-full shrink-0">
-                        <CheckCircle2 size={20} className="text-teal-700" strokeWidth={3} />
+                {/* VAT Relief Badge Overlay */}
+                <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-white/95 backdrop-blur-sm border border-teal-100 rounded-lg md:rounded-xl p-2 md:p-3 shadow-lg flex items-center gap-2 md:gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 z-10">
+                    <div className="bg-teal-100 p-1 md:p-1.5 rounded-full shrink-0">
+                        <CheckCircle2 className="text-teal-700 w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />
                     </div>
                     <div>
-                        <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
-                        <div className="text-slate-900 font-bold leading-none text-sm md:text-base">VAT Relief Available</div>
+                        <div className="text-[9px] md:text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
+                        <div className="text-slate-900 font-bold leading-none text-xs md:text-sm">VAT Relief Available</div>
                     </div>
                 </div>
             </div>

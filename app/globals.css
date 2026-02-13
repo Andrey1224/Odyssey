@@ -30,12 +30,18 @@ body {
   line-height: 1.6;
 }
 
-/* Utility for focus rings */
-@layer utilities {
-  .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50;
+/* Global Focus Styles for Accessibility */
+@layer base {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 rounded-sm;
   }
+}
 
+@layer utilities {
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom);
   }
