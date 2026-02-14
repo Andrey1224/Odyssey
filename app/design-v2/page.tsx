@@ -2,18 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-    Phone,
-    ShieldCheck,
-    MapPin,
-    CheckCircle2,
-    ChevronRight,
-    Menu,
-    X,
-    Info,
-    Sparkles,
-    Wrench
-} from "lucide-react";
+import { CheckCircle2, Info, Sparkles, Phone } from "lucide-react";
+
+import HandingCard from "@/components/HandingCard";
+import { Testimonials } from "@/components/Testimonials";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { TrustStrip } from "@/components/TrustStrip";
+import { TrustBar } from "@/components/TrustBar";
 
 // --- Mock Data & Types ---
 
@@ -66,161 +62,6 @@ const PRODUCTS: Product[] = [
     },
 ];
 
-// --- Sub-Components ---
-
-const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    return (
-        <>
-            <header className="sticky top-0 z-50 w-full bg-white border-b border-slate-200 shadow-sm transition-all duration-300">
-                <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
-                    {/* Logo (Updated) */}
-                    <div className="relative w-32 h-10 md:w-48 md:h-12 shrink-0">
-                        <Image
-                            src="/images/ODYSSEY_Transparent-File-2048x735.webp"
-                            alt="Odyssey Baths"
-                            fill
-                            className="object-contain object-left"
-                            priority
-                        />
-                    </div>
-
-                    {/* Desktop Nav */}
-                    <nav className="hidden lg:flex gap-10 items-center">
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Walk-in Baths</a>
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Showers</a>
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Reviews</a>
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Contact</a>
-                    </nav>
-
-                    {/* Right Actions (Mobile: Call Pill + Menu) */}
-                    <div className="flex items-center gap-4 lg:gap-8">
-
-                        {/* Desktop: Free Brochure Button */}
-                        <a href="#brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
-                            Free Brochure
-                        </a>
-
-                        {/* Desktop: Phone Info Block (Text Stack) */}
-                        <div className="hidden lg:flex flex-col items-end leading-tight">
-                            <a href="tel:08001234567" className="group flex items-center gap-2 text-2xl font-bold text-slate-900 hover:text-teal-700 transition-colors">
-                                <Phone size={24} className="text-teal-700 group-hover:scale-110 transition-transform" fill="currentColor" />
-                                0800 123 4567
-                            </a>
-                            <div className="text-xs font-medium text-slate-500 mt-1 flex gap-2">
-                                <span className="text-teal-700 font-bold uppercase tracking-wider">Call Free</span>
-                                <span>Mon–Fri 9am–5pm</span>
-                            </div>
-                        </div>
-
-                        {/* Mobile: Compact Call Button */}
-                        <a href="tel:08001234567" className="lg:hidden flex items-center gap-2 bg-teal-700 hover:bg-teal-800 px-4 py-2 rounded-full shadow-sm transition-all group text-white">
-                            <Phone size={18} fill="currentColor" />
-                            <span className="font-bold text-sm">Call Us</span>
-                        </a>
-
-                        {/* Mobile Menu Toggle */}
-                        <button
-                            className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition"
-                            onClick={() => setIsMenuOpen(true)}
-                        >
-                            <Menu size={28} />
-                        </button>
-                    </div>
-                </div>
-            </header>
-
-            {/* Mobile Menu Overlay */}
-            <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-        </>
-    );
-};
-
-const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-    useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "unset";
-        }
-        return () => { document.body.style.overflow = "unset"; };
-    }, [isOpen]);
-
-    return (
-        <div className={`fixed inset-0 z-[60] lg:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
-            <div
-                className={`absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"
-                    }`}
-                onClick={onClose}
-            />
-            <div
-                className={`absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl flex flex-col transition-transform duration-300 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"
-                    }`}
-                onClick={(e) => e.stopPropagation()}
-            >
-                {/* Header */}
-                <div className="flex justify-between items-center p-6 border-b border-slate-100">
-                    <span className="font-serif text-3xl font-bold text-slate-900">Menu</span>
-                    <button
-                        onClick={onClose}
-                        className="p-1 rounded-full text-slate-900 hover:bg-slate-100 transition"
-                    >
-                        <X size={32} strokeWidth={2.5} />
-                    </button>
-                </div>
-
-                {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto py-6 px-6">
-
-                    {/* Section 1: Our Products */}
-                    <div className="mb-8">
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Products</h4>
-                        <nav className="flex flex-col gap-4 text-xl font-medium text-slate-800">
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Showers</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700 flex items-center">
-                                Wet Rooms
-                                <span className="ml-3 bg-teal-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">New</span>
-                            </a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Deep Soakers</a>
-                        </nav>
-                    </div>
-
-                    {/* Section 2: Help & Advice */}
-                    <div>
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Help & Advice</h4>
-                        <nav className="flex flex-col gap-4 text-lg font-medium text-slate-800">
-                            <a href="#" className="py-3 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-2">
-                                <Sparkles size={20} className="text-teal-600" />
-                                Help Me Choose
-                            </a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
-                        </nav>
-                    </div>
-
-                </div>
-
-                {/* Footer Actions */}
-                <div className="p-6 bg-white border-t border-slate-100 mt-auto">
-                    <p className="text-center text-slate-500 text-sm mb-4">Need to speak to a human?</p>
-                    <div className="flex gap-3">
-                        <a href="tel:08001234567" className="flex-1 bg-teal-700 hover:bg-teal-800 text-white font-bold py-3.5 rounded-xl shadow-sm flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
-                            <Phone size={20} fill="currentColor" />
-                            Call Now
-                        </a>
-                        <button className="flex-1 bg-white border-2 border-slate-300 text-slate-800 font-bold py-3.5 rounded-xl hover:bg-slate-50 flex items-center justify-center text-lg active:scale-95 transition-transform">
-                            Get Quote
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
 const TrustTicker = () => {
     const [index, setIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
@@ -250,29 +91,6 @@ const TrustTicker = () => {
         </div>
     );
 };
-
-const TrustStrip = () => (
-    <div className="bg-white border-b border-slate-100 py-1.5 flex justify-center items-center shadow-sm relative z-10">
-        <div className="flex gap-4 md:gap-8 text-[11px] md:text-sm font-bold text-slate-700 uppercase tracking-tight">
-            <span className="flex items-center gap-1.5">
-                <span className="text-[#00b67a] text-sm md:text-lg">★</span> Trustpilot 4.9/5
-            </span>
-            <span className="w-px h-3 bg-slate-300 my-auto"></span>
-            <span className="flex items-center">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                    className="w-4 h-3 mr-1.5 shadow-sm border border-slate-200"
-                    alt="UK Flag"
-                />
-                Made in UK
-            </span>
-            <span className="w-px h-3 bg-slate-300 my-auto"></span>
-            <span className="flex items-center gap-1.5">
-                VAT Relief
-            </span>
-        </div>
-    </div>
-);
 
 const Hero = () => (
     <section className="w-full bg-cream-50 py-6 md:py-16 lg:py-24 text-balance">
@@ -385,224 +203,6 @@ const CategoryChoice = () => (
     </section>
 );
 
-const TrustBar = () => (
-    <section className="bg-teal-50 border-t border-b border-teal-100 py-12">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-            {[
-                {
-                    icon: ShieldCheck,
-                    title: "No Hard Sell Guarantee",
-                    desc: "Our advisors are not on commission. We give you the price and leave you to decide."
-                },
-                {
-                    icon: CheckCircle2,
-                    title: "VAT Relief Handled",
-                    desc: "Most customers save 20% due to chronic conditions. We do all the paperwork for you."
-                },
-                {
-                    icon: Wrench,
-                    title: "Nationwide Installation",
-                    desc: "Expert fitting teams across the UK. Installed in as little as 1 day."
-                },
-            ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                    <div className="bg-white p-4 rounded-full shadow-sm text-teal-700 ring-1 ring-slate-900/5 shrink-0">
-                        <item.icon size={28} />
-                    </div>
-                    <div>
-                        <h3 className="font-serif text-xl font-bold text-slate-900 mb-2 leading-tight">{item.title}</h3>
-                        <p className="text-slate-600 text-base leading-relaxed">{item.desc}</p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    </section>
-);
-
-const ProductGrid = () => {
-    // Simplified Pricing - no dynamic toggle
-    const formatPrice = (price: number) => {
-        return new Intl.NumberFormat('en-GB', {
-            style: 'currency',
-            currency: 'GBP',
-            maximumFractionDigits: 0
-        }).format(price);
-    };
-
-    return (
-        <section className="py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="font-serif text-5xl md:text-6xl text-slate-900 mb-6 font-bold">
-                        Find Your Perfect Bath
-                    </h2>
-                    <p className="text-2xl text-slate-600 max-w-3xl mx-auto">
-                        Browse our most popular accessible bathing solutions.
-                    </p>
-
-                    {/* Global Pricing Note */}
-                    <div className="mt-8 inline-flex items-center gap-2 bg-orange-50 text-orange-900 px-6 py-3 rounded-xl border border-orange-200">
-                        <Info size={20} className="text-orange-700" />
-                        <span className="font-medium text-lg">Prices shown exclude VAT. Most of our customers do not pay VAT.</span>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {PRODUCTS.map((product) => (
-                        <div
-                            key={product.id}
-                            className="group bg-white rounded-[2rem] border-2 border-slate-200 overflow-hidden hover:shadow-2xl hover:border-teal-600 transition-all duration-300 flex flex-col"
-                        >
-                            {/* Image Area */}
-                            <div className="h-72 bg-slate-100 flex items-center justify-center text-slate-500 group-hover:bg-slate-50 transition-colors relative">
-                                <Image
-                                    src={product.image}
-                                    alt={product.title}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-6 md:p-10 flex-1 flex flex-col">
-                                <div className="flex justify-between items-start mb-6">
-                                    <span className="inline-block px-4 py-1.5 bg-teal-50 text-teal-900 text-sm font-bold rounded-lg uppercase tracking-wider border border-teal-100">
-                                        {product.category}
-                                    </span>
-                                </div>
-
-                                <div className="flex justify-between items-end mb-4 gap-4">
-                                    <h3 className="font-serif text-3xl font-bold text-slate-900 leading-tight group-hover:text-teal-800 transition-colors">
-                                        {product.title}
-                                    </h3>
-                                    <div className="text-right shrink-0">
-                                        <span className="block text-sm text-slate-500 font-bold uppercase tracking-wide mb-1">From</span>
-                                        <span className="block text-3xl font-bold text-slate-900">
-                                            {formatPrice(product.priceExVat)}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <p className="text-slate-700 mb-8 text-xl leading-relaxed">
-                                    {product.description}
-                                </p>
-
-                                <ul className="space-y-3 mb-10 flex-1">
-                                    {product.features.map((feat, i) => (
-                                        <li key={i} className="flex items-center gap-3 text-slate-700 text-lg">
-                                            <CheckCircle2 size={22} className="text-teal-600 shrink-0" />
-                                            {feat}
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <button className="w-full py-5 rounded-xl bg-slate-900 text-white text-xl font-bold hover:bg-teal-700 transition-colors shadow-md focus-ring">
-                                    View Details
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const HandingSelector = () => {
-    return (
-        <section className="py-12 bg-cream-50 scroll-mt-24" id="handing-guide">
-            <div className="max-w-md mx-auto px-3">
-                <div className="bg-slate-900 text-white rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
-
-                    {/* Badge */}
-                    <div className="inline-block bg-teal-600 text-white text-xs font-bold px-3 py-1.5 rounded mb-6 uppercase tracking-wider">
-                        Avoid Mistakes
-                    </div>
-
-                    <h2 className="font-serif text-4xl md:text-5xl mb-6 font-bold leading-tight">
-                        Left Hand? <br /> Right Hand?
-                    </h2>
-
-                    <p className="text-slate-300 text-lg mb-10 leading-relaxed">
-                        Ordering the wrong orientation is the #1 mistake. Don't worry about technical terms-our free survey checks your plumbing.
-                    </p>
-
-                    <button className="w-full bg-white text-slate-900 text-lg font-bold py-4 rounded-xl hover:bg-slate-100 transition-colors shadow-lg active:scale-95 transform duration-200 mb-10">
-                        Check My Bathroom Layout
-                    </button>
-
-                    {/* Visual Placeholder */}
-                    <div className="bg-slate-800/50 rounded-2xl aspect-[4/3] w-full flex items-center justify-center border border-slate-700/50 p-6">
-                        <div className="text-slate-500 text-sm font-medium flex flex-col items-center gap-2">
-                            <div className="w-16 h-16 border-2 border-dashed border-slate-600 rounded-lg flex items-center justify-center">
-                                <span className="text-2xl">?</span>
-                            </div>
-                            L-Shape vs R-Shape Diagram
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    );
-};
-
-const Footer = () => (
-    <footer className="bg-slate-900 text-slate-300 py-12 md:py-20 pb-28 md:pb-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 text-lg">
-            <div className="space-y-6">
-                <h4 className="text-white font-serif text-2xl font-bold tracking-tight">Odyssey Baths</h4>
-                <div className="flex gap-4">
-                    <MapPin className="shrink-0 mt-1 text-teal-400" />
-                    <p className="text-slate-300">
-                        123 Accessibility Lane,<br />
-                        Bath City, BA1 1AA
-                    </p>
-                </div>
-                <div className="flex gap-4">
-                    <Phone className="shrink-0 mt-1 text-teal-400" />
-                    <div>
-                        <p className="font-bold text-white text-xl">0800 123 4567</p>
-                        <p className="text-sm text-slate-400 mt-1">Mon-Fri 9am - 5pm</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h4 className="text-white font-bold text-xl mb-6">Our Products</h4>
-                <ul className="space-y-4">
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Baths</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Showers</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Wet Rooms</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 className="text-white font-bold text-xl mb-6">Customer Care</h4>
-                <ul className="space-y-4">
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">About Our Family</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Read Reviews</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 className="text-white font-bold text-xl mb-6">Legal</h4>
-                <ul className="space-y-4">
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Privacy Policy</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Terms of Service</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Returns Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-            © {new Date().getFullYear()} Odyssey Baths Ltd. Registered in UK.
-        </div>
-    </footer>
-);
-
-// --- Main Page Component ---
-
 export default function DesignV2() {
     return (
         <main className="min-h-screen bg-cream-50 font-sans selection:bg-teal-200">
@@ -610,10 +210,11 @@ export default function DesignV2() {
             <TrustTicker />
             <TrustStrip />
             <Hero />
+            <Testimonials />
             <CategoryChoice />
             <TrustBar />
             {/* ProductGrid Removed in favor of CategoryChoice for Variant A */}
-            <HandingSelector />
+            <HandingCard />
 
             {/* Ethical Promise Block - New Design */}
             <section className="bg-white py-16 border-y-4 border-teal-700/10">
