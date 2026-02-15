@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronRight, Home } from "lucide-react";
+import { ChevronRight, Home, Check, PlayCircle } from "lucide-react";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -11,6 +11,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { FilterSidebar, FilterState } from "@/components/FilterSidebar";
 import { CollectionProductCard } from "@/components/CollectionProductCard";
 import { BrochureBridge } from "@/components/BrochureBridge";
+import { FAQSection } from "@/components/FAQSection";
 
 // Mock Data
 const PRODUCTS = [
@@ -94,11 +95,7 @@ export default function WalkInBathsPage() {
         if (filters.size.length > 0 && !filters.size.includes(product.size)) return false;
         // Handing Filter
         if (filters.handing.length > 0 && !filters.handing.includes(product.handing)) return false;
-        // Features Filter (Must have ALL selected features? Or ANY? Let's go with ANY for now to be permissive, or ALL for strict. Let's do ANY match for better UX typically, but strict is often expected. Let's do strict intersection.)
-        // Actually, usually filters are "OR" within category, "AND" between categories.
-        // But here `features` implies capability. Let's simplify: checks if product has *at least one* of the selected features if any are selected.
-        // Or if strict: product.keyFeatures includes ALL selected.
-        // Let's stick to simple: if filter selected, product must match.
+        // Features Filter 
         if (filters.features.length > 0) {
             const hasFeature = filters.features.some(f => product.keyFeatures?.includes(f));
             if (!hasFeature) return false;
@@ -124,7 +121,7 @@ export default function WalkInBathsPage() {
             </section>
 
             {/* TRUST STRIP - Strictly matching .trust-strip */}
-            <div className="bg-[#f1f5f9] py-3 border-b border-[#e2e8f0] mb-10">
+            <div className="bg-[#f1f5f9] py-2 border-b border-[#e2e8f0] mb-5">
                 <div className="max-w-[1280px] mx-auto px-5">
                     <div className="flex justify-center flex-wrap gap-10">
                         <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
@@ -142,6 +139,51 @@ export default function WalkInBathsPage() {
                     </div>
                 </div>
             </div>
+
+            {/* INFO SECTION - "What is a walk-in bath?" */}
+            <section className="bg-white py-2 mb-5 border-b border-slate-100">
+                <div className="max-w-[1280px] mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4">What is a walk-in bath?</h2>
+                        <p className="text-slate-600 mb-6 leading-relaxed">
+                            A walk-in bath is a bathtub with a watertight door and a low step-in entry,
+                            designed to make bathing safer and easier for those with limited mobility.
+                        </p>
+                        <ul className="space-y-3 mb-8">
+                            <li className="flex items-start gap-3 text-slate-700">
+                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <span>Low threshold entry (reduced trip risk)</span>
+                            </li>
+                            <li className="flex items-start gap-3 text-slate-700">
+                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <span>Built-in seat for safer transfers</span>
+                            </li>
+                            <li className="flex items-start gap-3 text-slate-700">
+                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <span>Easy-to-use door handle and secure seal</span>
+                            </li>
+                            <li className="flex items-start gap-3 text-slate-700">
+                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <span>Optional spa comfort (jets, heated seat)</span>
+                            </li>
+                        </ul>
+                        <button className="flex items-center gap-2 text-teal-700 font-bold border border-teal-200 px-5 py-2.5 rounded-full hover:bg-teal-50 transition-colors">
+                            <PlayCircle size={20} />
+                            See how it works (30 sec)
+                        </button>
+                    </div>
+                    <div className="relative bg-slate-50 rounded-xl overflow-hidden border border-slate-200 p-2">
+                        <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden bg-white">
+                            <Image
+                                src="/images/Walkin.jpg"
+                                alt="Walk-in Bath Diagram showing door, seat, and seal"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -195,6 +237,7 @@ export default function WalkInBathsPage() {
             </div>
 
             <TrustBar />
+            <FAQSection />
             <Footer />
         </main>
     );

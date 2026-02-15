@@ -25,7 +25,7 @@ export const Footer = () => (
             <div>
                 <h4 className="text-white font-bold text-xl mb-6">Our Products</h4>
                 <ul className="space-y-4">
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Baths</a></li>
+                    <li><a href="/walk-in-baths" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Baths</a></li>
                     <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Showers</a></li>
                     <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Wet Rooms</a></li>
                 </ul>
@@ -36,7 +36,7 @@ export const Footer = () => (
                 <ul className="space-y-4">
                     <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">About Our Family</a></li>
                     <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Read Reviews</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Contact Us</a></li>
+                    <li><a href="/contact" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Contact Us</a></li>
                 </ul>
             </div>
 
