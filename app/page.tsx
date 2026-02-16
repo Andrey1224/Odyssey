@@ -109,9 +109,9 @@ const Hero = () => (
         </div>
 
         <div className="flex flex-col gap-3 pt-2 w-full max-w-md">
-          <button className="h-14 md:h-16 px-6 md:px-10 bg-teal-700 hover:bg-teal-800 text-white text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center justify-center gap-2 focus-ring w-full">
+          <a href="/free-brochure" className="h-14 md:h-16 px-6 md:px-10 bg-teal-700 hover:bg-teal-800 text-white text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center justify-center gap-2 focus-ring w-full">
             Request Free Brochure
-          </button>
+          </a>
           <p className="text-center text-sm text-slate-600 font-medium mt-1">
             No obligation • Takes 30 seconds
           </p>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity 66 Classic Walk-in Bath | Odyssey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-text: #334155;
+            --teal-primary: #117a7a;
+            --teal-hover: #0d6161;
+            --teal-light: #e0f2f1;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --price-green: #16a34a;
+            --bg-grey: #F8FAFC;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--navy-dark); padding-top: 60px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- STICKY TOP BAR --- */
+        .sticky-help-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            border-bottom: 2px solid var(--teal-primary);
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .sticky-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .sticky-phone { font-weight: 700; font-size: 1.1rem; color: var(--navy-dark); }
+        .sticky-cta { background: var(--teal-primary); color: white; padding: 8px 20px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+
+        /* --- BREADCRUMBS --- */
+        .breadcrumbs { padding: 20px 0; color: #64748b; font-size: 0.9rem; }
+        .breadcrumbs a:hover { color: var(--teal-primary); }
+        .breadcrumbs span { margin: 0 8px; color: #cbd5e1; }
+
+        /* --- PRODUCT HERO (Split Layout) --- */
+        .product-hero { padding-bottom: 60px; }
+        .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: start; }
+
+        /* Left: Gallery */
+        .gallery-wrap { position: sticky; top: 100px; }
+        .main-img-box {
+            background: #f1f5f9;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .main-img { width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3; mix-blend-mode: multiply; }
+        
+        .thumbs { display: flex; gap: 10px; }
+        .thumb { 
+            width: 80px; height: 80px; border-radius: 8px; background: #f1f5f9; 
+            cursor: pointer; border: 2px solid transparent; object-fit: contain; padding: 5px;
+        }
+        .thumb.active { border-color: var(--teal-primary); }
+
+        /* Right: Info & Buy Box */
+        .product-info h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.1; }
+        .product-tagline { font-size: 1.1rem; color: #64748b; margin-bottom: 20px; }
+        
+        .trust-badges { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .t-badge { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; background: #f8fafc; padding: 6px 12px; border-radius: 6px; color: var(--navy-text); }
+        .t-badge i { color: var(--teal-primary); }
+
+        /* Pricing Card */
+        .buy-card {
+            background: var(--bg-grey);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .vat-switch-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .switch-label { font-weight: 600; font-size: 0.9rem; }
+        .vat-toggler { display: flex; background: #e2e8f0; padding: 3px; border-radius: 20px; cursor: pointer; }
+        .vt-opt { padding: 4px 12px; font-size: 0.8rem; font-weight: 600; color: #64748b; border-radius: 16px; transition: 0.2s; }
+        .vt-opt.active { background: white; color: var(--teal-primary); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+        .price-large { font-size: 2.5rem; font-weight: 700; color: var(--navy-dark); line-height: 1; }
+        .price-save { color: var(--price-green); font-weight: 600; font-size: 0.9rem; margin-top: 5px; display: flex; align-items: center; gap: 5px; }
+        
+        .stock-status { margin-top: 15px; font-size: 0.9rem; color: var(--navy-text); display: flex; align-items: center; gap: 6px; }
+        .dot { width: 8px; height: 8px; background: var(--price-green); border-radius: 50%; }
+
+        /* Handing Choice */
+        .handing-sec { margin-top: 25px; padding-top: 25px; border-top: 1px solid #e2e8f0; }
+        .h-title { font-weight: 600; margin-bottom: 10px; display: block; }
+        .h-options { display: flex; gap: 10px; }
+        .h-btn {
+            flex: 1; border: 2px solid var(--border); border-radius: 8px; padding: 12px;
+            text-align: center; cursor: pointer; transition: 0.2s; background: white;
+        }
+        .h-btn:hover { border-color: #cbd5e1; }
+        .h-btn.selected { border-color: var(--teal-primary); background: var(--teal-light); color: var(--teal-primary); font-weight: 700; }
+
+        /* CTAs */
+        .cta-group { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+        .btn-primary { 
+            background: var(--teal-primary); color: white; padding: 16px; border-radius: 8px; 
+            font-weight: 700; text-align: center; font-size: 1.1rem; border: none; cursor: pointer; width: 100%; transition: 0.2s;
+        }
+        .btn-primary:hover { background: var(--teal-hover); }
+        .btn-secondary {
+            background: white; border: 2px solid var(--navy-dark); color: var(--navy-dark); padding: 14px;
+            border-radius: 8px; font-weight: 600; text-align: center; cursor: pointer; width: 100%;
+        }
+
+        /* --- CONTENT SECTIONS --- */
+        .content-section { padding: 60px 0; border-top: 1px solid var(--border); }
+        .sec-title { font-size: 1.8rem; margin-bottom: 30px; color: var(--navy-dark); text-align: center; }
+
+        /* Features List Grid */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feat-card { display: flex; gap: 15px; align-items: flex-start; }
+        .feat-icon { 
+            width: 50px; height: 50px; background: var(--teal-light); color: var(--teal-primary); 
+            border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+        }
+        .feat-text h4 { font-size: 1.1rem; margin-bottom: 5px; }
+        .feat-text p { font-size: 0.95rem; color: #64748b; line-height: 1.5; }
+
+        /* Comparison Table */
+        .comp-wrapper { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+        .comp-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .comp-table th, .comp-table td { padding: 15px 20px; text-align: center; border-bottom: 1px solid #f1f5f9; }
+        .comp-table th { background: #f8fafc; font-weight: 700; color: var(--navy-dark); }
+        .comp-table td:first-child, .comp-table th:first-child { text-align: left; background: white; position: sticky; left: 0; border-right: 1px solid #f1f5f9; }
+        .highlight-col { background: var(--teal-light) !important; border-top: 3px solid var(--teal-primary); }
+
+        /* Technical Specs Accordion */
+        .specs-wrap { max-width: 800px; margin: 0 auto; }
+        .spec-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #e2e8f0; }
+        .spec-label { font-weight: 600; color: var(--navy-dark); }
+        .spec-val { color: #64748b; }
+
+        /* --- REVIEWS --- */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .review-card { background: #f8fafc; padding: 25px; border-radius: 12px; }
+        .r-stars { color: #f59e0b; margin-bottom: 10px; }
+        .r-text { font-style: italic; color: #475569; margin-bottom: 15px; line-height: 1.6; }
+        .r-author { font-weight: 600; font-size: 0.9rem; }
+
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .gallery-wrap { position: static; }
+            .buy-card { position: fixed; bottom: 0; left: 0; width: 100%; z-index: 100; border-radius: 0; border-top: 2px solid var(--teal-primary); box-shadow: 0 -5px 20px rgba(0,0,0,0.1); padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+            .buy-card .vat-switch-row, .buy-card .handing-sec, .buy-card .stock-status { display: none; } /* Simplify for mobile sticky bottom */
+            .buy-card .price-large { font-size: 1.5rem; }
+            .buy-card .cta-group { margin: 0; flex-direction: row; flex: 1; }
+            .btn-secondary { display: none; }
+            .product-hero { padding-bottom: 100px; /* Space for fixed bottom bar */ }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. STICKY TOP BAR -->
+    <div class="sticky-help-bar">
+        <div class="sticky-inner">
+            <div class="sticky-phone"><i class="fas fa-phone-alt"></i> 0800 123 4567</div>
+            <a href="#" class="sticky-cta">Request Free Brochure</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- BREADCRUMBS -->
+        <nav class="breadcrumbs">
+            <a href="#">Home</a> <span>/</span> 
+            <a href="#">Walk-in Baths</a> <span>/</span> 
+            <span style="color: var(--navy-dark); font-weight: 600;">Serenity 66 Classic</span>
+        </nav>
+
+        <!-- 2. PRODUCT HERO SECTION -->
+        <section class="product-hero">
+            <div class="hero-grid">
+                
+                <!-- LEFT: GALLERY -->
+                <div class="gallery-wrap">
+                    <div class="main-img-box">
+                        <span style="position: absolute; top: 15px; left: 15px; background: var(--navy-dark); color: white; padding: 5px 10px; font-size: 0.8rem; font-weight: 700; border-radius: 4px;">BEST SELLER</span>
+                        <!-- Изображение из вашего файла Serenity 66 Classic -->
+                        <img src="https://via.placeholder.com/600x450/f1f5f9/cbd5e1?text=Serenity+66+Classic" alt="Serenity 66 Classic Walk in Bath" class="main-img" id="mainImage">
+                    </div>
+                    <div class="thumbs">
+                        <img src="https://via.placeholder.com/80/f1f5f9/cbd5e1?text=Front" class="thumb active" onclick="changeImg(this)">
+                        <img src="https://via.placeholder.com/80/f1f5f9/cbd5e1?text=Open" class="thumb" onclick="changeImg(this)">
+                        <img src="https://via.placeholder.com/80/f1f5f9/cbd5e1?text=Seat" class="thumb" onclick="changeImg(this)">
+                    </div>
+                </div>
+
+                <!-- RIGHT: DECISION CARD -->
+                <div class="product-info">
+                    <h1>Serenity 66 Classic</h1>
+                    <p class="product-tagline">The UK's most robust walk-in bath. Built like a tank, designed for comfort.</p>
+                    
+                    <div class="trust-badges">
+                        <div class="t-badge"><i class="fas fa-star"></i> 4.9/5 Trustpilot</div>
+                        <div class="t-badge"><i class="fas fa-shield-alt"></i> 10 Year Warranty</div>
+                        <div class="t-badge"><i class="fas fa-flag"></i> Made in UK</div>
+                    </div>
+
+                    <!-- BUY BOX -->
+                    <div class="buy-card">
+                        
+                        <!-- VAT Toggle -->
+                        <div class="vat-switch-row">
+                            <span class="switch-label">Pricing Mode:</span>
+                            <div class="vat-toggler" onclick="toggleVat()">
+                                <div class="vt-opt active" id="vt-ex">Ex. VAT</div>
+                                <div class="vt-opt" id="vt-inc">Inc. VAT</div>
+                            </div>
+                        </div>
+
+                        <!-- Price Display -->
+                        <div class="price-wrapper">
+                            <div class="price-large" id="priceDisplay">£2,708.00</div>
+                            <div class="price-save" id="saveDisplay"><i class="fas fa-check"></i> VAT Relief Applied</div>
+                            <div style="font-size: 0.85rem; color: #94a3b8; text-decoration: line-through; margin-top: 5px;">Regular Price: £3,195.00</div>
+                        </div>
+
+                        <div class="stock-status">
+                            <div class="dot"></div> In Stock - Ready for Installation
+                        </div>
+
+                        <!-- Handing Selector -->
+                        <div class="handing-sec">
+                            <span class="h-title">Door Position (Handing):</span>
+                            <div class="h-options">
+                                <div class="h-btn selected" onclick="selectHand(this)">
+                                    <i class="fas fa-door-open"></i> Left Hand
+                                </div>
+                                <div class="h-btn" onclick="selectHand(this)">
+                                    <i class="fas fa-door-open" style="transform: scaleX(-1);"></i> Right Hand
+                                </div>
+                            </div>
+                            <div style="font-size: 0.8rem; color: #64748b; margin-top: 8px;">
+                                <i class="fas fa-info-circle"></i> Not sure? We verify this during your free home survey.
+                            </div>
+                        </div>
+
+                        <!-- CTAs -->
+                        <div class="cta-group">
+                            <button class="btn-primary">Request Free Brochure</button>
+                            <button class="btn-secondary">Book Free Survey</button>
+                        </div>
+                        <div style="text-align: center; margin-top: 15px; font-size: 0.8rem; color: #64748b;">
+                            <i class="fas fa-lock"></i> No Hard Sell Guarantee. Just honest advice.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. WHY CHOOSE (Description from File) -->
+        <section class="content-section">
+            <h2 class="sec-title">Why the Serenity 66 is the Best Choice</h2>
+            <div class="features-grid">
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-door-open"></i></div>
+                    <div class="feat-text">
+                        <h4>Zero Height Threshold</h4>
+                        <p>Eliminates the risk of trips. Simply sit on the seat and slide your legs in. No high steps to navigate.</p>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="feat-text">
+                        <h4>Supports 35 Stone (222kg)</h4>
+                        <p>Built on a stainless steel box frame. Known as "The Tank" for its incredible strength and stability.</p>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-tint"></i></div>
+                    <div class="feat-text">
+                        <h4>Quick Drain Technology</h4>
+                        <p>Includes dual wastes to drain water up to 2x faster than standard baths, reducing waiting time.</p>
+                    </div>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon"><i class="fas fa-tools"></i></div>
+                    <div class="feat-text">
+                        <h4>Easy Maintenance</h4>
+                        <p>One-piece acrylic shell means no seams for mold to grow. The door can be removed in 5 mins for access.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COMPARISON TABLE (Upsell) -->
+        <section class="content-section" style="background: #f8fafc; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px;">
+            <div class="container">
+                <h2 class="sec-title">Choose Your Specification</h2>
+                <div class="comp-wrapper">
+                    <table class="comp-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th class="highlight-col">Classic (This Model)</th>
+                                <th>Plus (+£500)</th>
+                                <th>Special (+£1200)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low Threshold Door</td>
+                                <td class="highlight-col"><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Reinforced Fiberglass Shell</td>
+                                <td class="highlight-col"><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Air Spa / Water Jets</td>
+                                <td class="highlight-col" style="color: #cbd5e1;">—</td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Heated Seat & Back</td>
+                                <td class="highlight-col" style="color: #cbd5e1;">—</td>
+                                <td style="color: #cbd5e1;">—</td>
+                                <td><i class="fas fa-check" style="color: var(--teal-primary);"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Price (Ex VAT)</td>
+                                <td class="highlight-col" style="font-weight: 700;">£2,708</td>
+                                <td>£3,208</td>
+                                <td>£3,908</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TECHNICAL SPECS -->
+        <section class="content-section">
+            <h2 class="sec-title">Technical Specifications</h2>
+            <div class="specs-wrap">
+                <div class="spec-row">
+                    <span class="spec-label">Length</span>
+                    <span class="spec-val">1675mm (66 inches)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Width</span>
+                    <span class="spec-val">750mm (29.5 inches)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Internal Seat Width</span>
+                    <span class="spec-val">550mm</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Max User Weight</span>
+                    <span class="spec-val">35 Stone (222kg)</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Shell Material</span>
+                    <span class="spec-val">Marine-grade acrylic + 4 layers fiberglass</span>
+                </div>
+                <div class="spec-row">
+                    <span class="spec-label">Frame Material</span>
+                    <span class="spec-val">Stainless Steel Box Section</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. REVIEWS -->
+        <section class="content-section">
+            <h2 class="sec-title">Customer Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-text">"After retiring I decided to splash out on the Serenity. The quality is perfect, and it was worth every penny. Installation was flawless."</p>
+                    <span class="r-author">- Adam Simmonds</span>
+                </div>
+                <div class="review-card">
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-text">"My husband and I are very impressed. We have a small bathroom and didn't think we had room, but this fit perfectly."</p>
+                    <span class="r-author">- Grace Ellison</span>
+                </div>
+                <div class="review-card">
+                    <div class="r-stars">★★★★★</div>
+                    <p class="r-text">"Really great service. I chewed their ears off for hours asking questions, and they were very patient. No hard sell."</p>
+                    <span class="r-author">- Mike Edwards</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // VAT Logic
+        const basePrice = 2708;
+        let isExempt = true;
+
+        function toggleVat() {
+            isExempt = !isExempt;
+            const display = document.getElementById('priceDisplay');
+            const saveMsg = document.getElementById('saveDisplay');
+            const btnEx = document.getElementById('vt-ex');
+            const btnInc = document.getElementById('vt-inc');
+
+            if (isExempt) {
+                display.innerText = "£" + basePrice.toLocaleString();
+                saveMsg.innerHTML = '<i class="fas fa-check"></i> VAT Relief Applied';
+                saveMsg.style.color = '#16a34a';
+                btnEx.classList.add('active');
+                btnInc.classList.remove('active');
+            } else {
+                const incPrice = Math.round(basePrice * 1.2);
+                display.innerText = "£" + incPrice.toLocaleString();
+                saveMsg.innerHTML = 'Includes 20% VAT';
+                saveMsg.style.color = '#64748b';
+                btnEx.classList.remove('active');
+                btnInc.classList.add('active');
+            }
+        }
+
+        // Handing Logic
+        function selectHand(btn) {
+            document.querySelectorAll('.h-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        // Gallery
+        function changeImg(thumb) {
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+            // В реальном коде здесь меняется src у #mainImage
+        }
+    </script>
+
+</body>
+</html>

@@ -36,7 +36,7 @@ export const Header = () => {
                     <div className="flex items-center gap-4 lg:gap-8">
 
                         {/* Desktop: Free Brochure Button */}
-                        <a href="#brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
+                        <a href="/free-brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
                             Free Brochure
                         </a>
 

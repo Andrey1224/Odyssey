@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Check } from "lucide-react";
 
 interface ProductProps {
@@ -20,6 +21,7 @@ interface ProductProps {
 }
 
 export const CollectionProductCard = ({
+    id,
     title,
     priceExVat,
     vatExempt,
@@ -119,12 +121,12 @@ export const CollectionProductCard = ({
 
                 {/* .card-actions */}
                 <div className="grid grid-cols-2 gap-3">
-                    <button className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
+                    <Link href={`/walk-in-baths/${id}`} className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
                         View Details
-                    </button>
-                    <button className="bg-white hover:border-[#0f172a] text-[#0f172a] border-[2px] border-[#e2e8f0] py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
+                    </Link>
+                    <Link href={`/free-brochure?product=${title.toLowerCase().replace(/\s+/g, '-')}`} className="bg-white hover:border-[#0f172a] text-[#0f172a] border-[2px] border-[#e2e8f0] py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
                         Brochure
-                    </button>
+                    </Link>
                 </div>
 
             </div>

@@ -12,88 +12,8 @@ import { FilterSidebar, FilterState } from "@/components/FilterSidebar";
 import { CollectionProductCard } from "@/components/CollectionProductCard";
 import { BrochureBridge } from "@/components/BrochureBridge";
 import { FAQSection } from "@/components/FAQSection";
-
-// Mock Data
-const PRODUCTS = [
-    {
-        id: "1",
-        title: "Serenity 66 Classic",
-        priceExVat: 2708,
-        image: "/images/Walk-inBath.png",
-        description: "Our core model offering essential safety and comfort with a low-step entry.",
-        features: ["Low-level entry", "Slip-resistant seat", "Leak-free door"],
-        dimensions: "1675mm",
-        capacity: "Low",
-        category: "walk-in",
-        handing: "Left Hand",
-        size: "66\" (Standard)",
-        lengthBucket: "standard" as const,
-        keyFeatures: [],
-        stepLevel: "Low",
-        system: "Classic",
-        installedIn: "Manchester"
-    },
-    {
-        id: "2",
-        title: "Serenity 66 Plus",
-        priceExVat: 3208,
-        image: "/images/DeepSoaker.png",
-        description: "Enhanced comfort featuring our signature Air Spa system for gentle relaxation.",
-        features: ["Air Spa System", "Digital controls", "Rapid fill technology"],
-        dimensions: "1675mm",
-        capacity: "Air Spa",
-        category: "walk-in",
-        handing: "Right Hand",
-        size: "66\" (Standard)",
-        lengthBucket: "standard" as const,
-        keyFeatures: ["Air Spa Jets"],
-        stepLevel: "Low",
-        system: "Air Spa",
-        installedIn: "Leeds"
-    },
-    {
-        id: "3",
-        title: "Serenity 66 Special",
-        priceExVat: 3908,
-        image: "/images/StandardEasy-Access.png",
-        description: "The ultimate luxury experience with heated seating and chromotherapy.",
-        features: ["Heated Seat & Back", "Chromotherapy", "Luxury Headrest"],
-        dimensions: "1675mm",
-        capacity: "Heated",
-        category: "walk-in",
-        handing: "Left Hand",
-        size: "66\" (Standard)",
-        lengthBucket: "standard" as const,
-        keyFeatures: ["Heated Seat", "Chromotherapy"],
-        stepLevel: "Low",
-        system: "Luxury",
-        installedIn: "Birmingham"
-    },
-    {
-        id: "4",
-        title: "Serenity 75 Grand",
-        priceExVat: 4100,
-        image: "/images/Walk-inBath.png",
-        description: "Extended length for taller bathers, offering extra legroom and comfort.",
-        features: ["Extended legroom", "Reinforced frame", "High-flow waste"],
-        dimensions: "1900mm",
-        capacity: "260L",
-        category: "lay-down",
-        handing: "Right Hand",
-        size: "75\" (Extended)",
-        lengthBucket: "large" as const,
-        keyFeatures: ["Heated Seat"],
-        stepLevel: "Low",
-        system: "Grand",
-        installedIn: "Edinburgh"
-    }
-];
-
-const SIZE_LABEL_TO_BUCKET: Record<string, string> = {
-    "< 1500mm (Compact)": "compact",
-    "1500 - 1699mm (Standard)": "standard",
-    "1700mm+ (Large)": "large",
-};
+import { PRODUCTS } from "@/data/walkInBaths";
+import { WALK_IN_BATHS_FILTERS } from "@/config/filters";
 
 function WalkInBathsContent() {
     const searchParams = useSearchParams();
@@ -123,7 +43,7 @@ function WalkInBathsContent() {
     const filteredProducts = PRODUCTS.filter(product => {
         // Size Filter — compare label against lengthBucket
         if (filters.size.length > 0) {
-            const buckets = filters.size.map(label => SIZE_LABEL_TO_BUCKET[label]).filter(Boolean);
+            const buckets = filters.size.map(label => WALK_IN_BATHS_FILTERS.sizeLabelToBucket[label]).filter(Boolean);
             if (!buckets.includes(product.lengthBucket)) return false;
         }
         // Handing Filter
@@ -220,7 +140,7 @@ function WalkInBathsContent() {
 
                     {/* Desktop Sidebar — hidden on mobile */}
                     <div className="hidden lg:block sticky top-24 z-10 w-full lg:w-auto">
-                        <FilterSidebar filters={filters} setFilters={updateFilters} />
+                        <FilterSidebar filters={filters} setFilters={updateFilters} filterConfig={WALK_IN_BATHS_FILTERS} />
                     </div>
 
                     {/* Mobile Filter Drawer Overlay */}
@@ -235,6 +155,7 @@ function WalkInBathsContent() {
                                     filters={filters}
                                     setFilters={updateFilters}
                                     onClose={() => setShowDrawer(false)}
+                                    filterConfig={WALK_IN_BATHS_FILTERS}
                                 />
                             </div>
                         </div>

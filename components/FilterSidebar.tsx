@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Sparkles, Check, Info, X } from "lucide-react";
+import type { FilterConfig } from "@/config/filters";
 
 export type FilterState = {
     vatExempt: boolean;
@@ -10,13 +11,22 @@ export type FilterState = {
     features: string[];
 };
 
+const DEFAULT_LENGTH_OPTIONS = ["< 1500mm (Compact)", "1500 - 1699mm (Standard)", "1700mm+ (Large)"];
+const DEFAULT_HANDING_OPTIONS = ["Left Hand", "Right Hand"];
+const DEFAULT_FEATURE_OPTIONS = ["Powered Seat Lift", "Hydrotherapy", "Chromotherapy", "Lay-down Option"];
+
 interface FilterSidebarProps {
     filters: FilterState;
     setFilters: (filters: FilterState) => void;
     onClose?: () => void;
+    filterConfig?: FilterConfig;
 }
 
-export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarProps) => {
+export const FilterSidebar = ({ filters, setFilters, onClose, filterConfig }: FilterSidebarProps) => {
+
+    const lengthOptions  = filterConfig?.lengthOptions  ?? DEFAULT_LENGTH_OPTIONS;
+    const handingOptions = filterConfig?.handingOptions ?? DEFAULT_HANDING_OPTIONS;
+    const featureOptions = filterConfig?.featureOptions ?? DEFAULT_FEATURE_OPTIONS;
 
     const toggleFilter = (category: keyof FilterState, value: string) => {
         const current = filters[category] as string[];
@@ -97,7 +107,7 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
                 <div>
                     <h4 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">Length</h4>
                     <div className="space-y-2">
-                        {["< 1500mm (Compact)", "1500 - 1699mm (Standard)", "1700mm+ (Large)"].map((opt) => (
+                        {lengthOptions.map((opt) => (
                             <label key={opt} className="flex items-center gap-3 cursor-pointer group">
                                 <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${filters.size.includes(opt)
                                     ? "bg-teal-600 border-teal-600"
@@ -123,7 +133,7 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
                 <div>
                     <h4 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">Handing</h4>
                     <div className="space-y-2">
-                        {["Left Hand", "Right Hand"].map((opt) => (
+                        {handingOptions.map((opt) => (
                             <label key={opt} className="flex items-center gap-3 cursor-pointer group">
                                 <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${filters.handing.includes(opt)
                                     ? "bg-teal-600 border-teal-600"
@@ -149,7 +159,7 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
                 <div>
                     <h4 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wide">Key Features</h4>
                     <div className="space-y-2">
-                        {["Powered Seat Lift", "Hydrotherapy", "Chromotherapy", "Lay-down Option"].map((opt) => (
+                        {featureOptions.map((opt) => (
                             <label key={opt} className="flex items-center gap-3 cursor-pointer group">
                                 <div className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${filters.features.includes(opt)
                                     ? "bg-teal-600 border-teal-600"

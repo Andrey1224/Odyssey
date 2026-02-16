@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export const BrochureBridge = () => (
     <div className="bg-white border-2 border-dashed border-[#117a7a] rounded-xl p-[30px] flex flex-col md:flex-row items-center justify-between mt-5 gap-5 text-center md:text-left">
@@ -12,8 +13,8 @@ export const BrochureBridge = () => (
             </p>
         </div>
 
-        <button className="bg-[#0f172a] text-white px-8 py-4 rounded-lg font-semibold whitespace-nowrap hover:bg-[#1e293b] transition-colors">
+        <Link href="/free-brochure" className="bg-[#0f172a] text-white px-8 py-4 rounded-lg font-semibold whitespace-nowrap hover:bg-[#1e293b] transition-colors">
             Send Me a Brochure by Post
-        </button>
+        </Link>
     </div>
 );
