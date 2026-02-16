@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Image from "next/image";
-import { ChevronRight, Home, Check, PlayCircle } from "lucide-react";
+import { useSearchParams, useRouter } from "next/navigation";
+import { Check, PlayCircle, Star, CheckCircle2, Flag, Percent, SlidersHorizontal } from "lucide-react";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { TrustStrip } from "@/components/TrustStrip";
 import { TrustBar } from "@/components/TrustBar";
 import { FilterSidebar, FilterState } from "@/components/FilterSidebar";
 import { CollectionProductCard } from "@/components/CollectionProductCard";
@@ -27,9 +27,11 @@ const PRODUCTS = [
         category: "walk-in",
         handing: "Left Hand",
         size: "66\" (Standard)",
+        lengthBucket: "standard" as const,
         keyFeatures: [],
         stepLevel: "Low",
-        system: "Classic"
+        system: "Classic",
+        installedIn: "Manchester"
     },
     {
         id: "2",
@@ -43,9 +45,11 @@ const PRODUCTS = [
         category: "walk-in",
         handing: "Right Hand",
         size: "66\" (Standard)",
+        lengthBucket: "standard" as const,
         keyFeatures: ["Air Spa Jets"],
         stepLevel: "Low",
-        system: "Air Spa"
+        system: "Air Spa",
+        installedIn: "Leeds"
     },
     {
         id: "3",
@@ -59,9 +63,11 @@ const PRODUCTS = [
         category: "walk-in",
         handing: "Left Hand",
         size: "66\" (Standard)",
+        lengthBucket: "standard" as const,
         keyFeatures: ["Heated Seat", "Chromotherapy"],
         stepLevel: "Low",
-        system: "Luxury"
+        system: "Luxury",
+        installedIn: "Birmingham"
     },
     {
         id: "4",
@@ -75,40 +81,64 @@ const PRODUCTS = [
         category: "lay-down",
         handing: "Right Hand",
         size: "75\" (Extended)",
+        lengthBucket: "large" as const,
         keyFeatures: ["Heated Seat"],
         stepLevel: "Low",
-        system: "Grand"
+        system: "Grand",
+        installedIn: "Edinburgh"
     }
 ];
 
-export default function WalkInBathsPage() {
-    const [filters, setFilters] = useState<FilterState>({
-        vatExempt: true,
-        size: [],
-        handing: [],
-        features: []
+const SIZE_LABEL_TO_BUCKET: Record<string, string> = {
+    "< 1500mm (Compact)": "compact",
+    "1500 - 1699mm (Standard)": "standard",
+    "1700mm+ (Large)": "large",
+};
+
+function WalkInBathsContent() {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+
+    const parseFilters = (): FilterState => ({
+        vatExempt: searchParams.get('vat') !== 'standard',
+        size: searchParams.get('length')?.split(',').filter(Boolean) ?? [],
+        handing: searchParams.get('handing')?.split(',').filter(Boolean) ?? [],
+        features: searchParams.get('features')?.split(',').filter(Boolean) ?? [],
     });
+
+    const [filters, setFilters] = useState<FilterState>(parseFilters);
+    const [showDrawer, setShowDrawer] = useState(false);
+
+    const updateFilters = (next: FilterState) => {
+        setFilters(next);
+        const params = new URLSearchParams();
+        if (!next.vatExempt) params.set('vat', 'standard');
+        if (next.size.length) params.set('length', next.size.join(','));
+        if (next.handing.length) params.set('handing', next.handing.join(','));
+        if (next.features.length) params.set('features', next.features.join(','));
+        router.replace(`?${params.toString()}`, { scroll: false });
+    };
 
     // Filtering Logic
     const filteredProducts = PRODUCTS.filter(product => {
-        // Size Filter
-        if (filters.size.length > 0 && !filters.size.includes(product.size)) return false;
+        // Size Filter — compare label against lengthBucket
+        if (filters.size.length > 0) {
+            const buckets = filters.size.map(label => SIZE_LABEL_TO_BUCKET[label]).filter(Boolean);
+            if (!buckets.includes(product.lengthBucket)) return false;
+        }
         // Handing Filter
         if (filters.handing.length > 0 && !filters.handing.includes(product.handing)) return false;
-        // Features Filter 
+        // Features Filter
         if (filters.features.length > 0) {
             const hasFeature = filters.features.some(f => product.keyFeatures?.includes(f));
             if (!hasFeature) return false;
         }
-
         return true;
     });
 
     return (
-        <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
-            <Header />
-
-            {/* HERO SECTION - Strictly matching .cat-hero */}
+        <>
+            {/* HERO SECTION */}
             <section className="bg-white py-10 text-center">
                 <div className="max-w-[1280px] mx-auto px-5">
                     <h1 className="text-[2.5rem] font-bold text-[#0f172a] mb-2.5">
@@ -120,27 +150,27 @@ export default function WalkInBathsPage() {
                 </div>
             </section>
 
-            {/* TRUST STRIP - Strictly matching .trust-strip */}
+            {/* TRUST STRIP */}
             <div className="bg-[#f1f5f9] py-2 border-b border-[#e2e8f0] mb-5">
                 <div className="max-w-[1280px] mx-auto px-5">
                     <div className="flex justify-center flex-wrap gap-10">
                         <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-                            <span className="text-[#117a7a]"><i className="fas fa-star"></i></span> 4.9/5 Trustpilot
+                            <span className="text-[#117a7a]"><Star size={14} /></span> 4.9/5 Trustpilot
                         </div>
                         <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-                            <span className="text-[#117a7a]"><i className="fas fa-check-circle"></i></span> 10 Year Warranty
+                            <span className="text-[#117a7a]"><CheckCircle2 size={14} /></span> 10 Year Warranty
                         </div>
                         <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-                            <span className="text-[#117a7a]"><i className="fas fa-flag"></i></span> Made in UK
+                            <span className="text-[#117a7a]"><Flag size={14} /></span> Made in UK
                         </div>
                         <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-                            <span className="text-[#117a7a]"><i className="fas fa-percentage"></i></span> VAT Relief Handled
+                            <span className="text-[#117a7a]"><Percent size={14} /></span> VAT Relief Handled
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* INFO SECTION - "What is a walk-in bath?" */}
+            {/* INFO SECTION */}
             <section className="bg-white py-2 mb-5 border-b border-slate-100">
                 <div className="max-w-[1280px] mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     <div>
@@ -188,20 +218,43 @@ export default function WalkInBathsPage() {
             <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex flex-col lg:flex-row gap-12 items-start">
 
-                    {/* Sidebar */}
-                    <div className="sticky top-24 z-10 w-full lg:w-auto">
-                        <FilterSidebar filters={filters} setFilters={setFilters} />
+                    {/* Desktop Sidebar — hidden on mobile */}
+                    <div className="hidden lg:block sticky top-24 z-10 w-full lg:w-auto">
+                        <FilterSidebar filters={filters} setFilters={updateFilters} />
                     </div>
+
+                    {/* Mobile Filter Drawer Overlay */}
+                    {showDrawer && (
+                        <div className="fixed inset-0 z-50 lg:hidden">
+                            <div
+                                className="absolute inset-0 bg-black/40"
+                                onClick={() => setShowDrawer(false)}
+                            />
+                            <div className="absolute top-0 left-0 h-full w-[320px] max-w-full bg-white overflow-y-auto p-5 shadow-xl">
+                                <FilterSidebar
+                                    filters={filters}
+                                    setFilters={updateFilters}
+                                    onClose={() => setShowDrawer(false)}
+                                />
+                            </div>
+                        </div>
+                    )}
 
                     {/* Main Content */}
                     <div className="flex-1 w-full">
 
-                        {/* Results Count */}
+                        {/* Results Count + Mobile Filter Button */}
                         <div className="flex justify-between items-center mb-6 pb-6 border-b border-slate-200">
                             <span className="font-bold text-slate-700">
                                 Showing {filteredProducts.length} results
                             </span>
-                            {/* Mobile Filter Toggle could go here */}
+                            <button
+                                onClick={() => setShowDrawer(true)}
+                                className="lg:hidden flex items-center gap-2 px-4 py-2 border border-slate-300 rounded-lg text-slate-700 font-medium hover:bg-slate-50 transition-colors"
+                            >
+                                <SlidersHorizontal size={16} />
+                                Filters
+                            </button>
                         </div>
 
                         {/* Product Grid */}
@@ -221,7 +274,7 @@ export default function WalkInBathsPage() {
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">No baths found fitting criteria</h3>
                                 <p className="text-slate-500 mb-6">Try adjusting your filters to see more results.</p>
                                 <button
-                                    onClick={() => setFilters({ vatExempt: true, size: [], handing: [], features: [] })}
+                                    onClick={() => updateFilters({ vatExempt: true, size: [], handing: [], features: [] })}
                                     className="text-teal-700 font-bold hover:underline"
                                 >
                                     Clear all filters
@@ -235,7 +288,17 @@ export default function WalkInBathsPage() {
                     </div>
                 </div>
             </div>
+        </>
+    );
+}
 
+export default function WalkInBathsPage() {
+    return (
+        <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
+            <Header />
+            <Suspense fallback={null}>
+                <WalkInBathsContent />
+            </Suspense>
             <TrustBar />
             <FAQSection />
             <Footer />

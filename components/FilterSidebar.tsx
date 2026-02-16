@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { Sparkles, Check, Info } from "lucide-react";
+import React from "react";
+import { Sparkles, Check, Info, X } from "lucide-react";
 
 export type FilterState = {
     vatExempt: boolean;
@@ -12,29 +12,41 @@ export type FilterState = {
 
 interface FilterSidebarProps {
     filters: FilterState;
-    setFilters: React.Dispatch<React.SetStateAction<FilterState>>;
+    setFilters: (filters: FilterState) => void;
+    onClose?: () => void;
 }
 
-export const FilterSidebar = ({ filters, setFilters }: FilterSidebarProps) => {
+export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarProps) => {
 
     const toggleFilter = (category: keyof FilterState, value: string) => {
-        setFilters(prev => {
-            const current = prev[category] as string[]; // Cast to string[] as we know these are string arrays
-            if (typeof current === 'boolean') return prev; // Safety check
-
-            const updated = current.includes(value)
-                ? current.filter(item => item !== value)
-                : [...current, value];
-            return { ...prev, [category]: updated };
-        });
+        const current = filters[category] as string[];
+        if (typeof current === 'boolean') return;
+        const updated = current.includes(value)
+            ? current.filter(item => item !== value)
+            : [...current, value];
+        setFilters({ ...filters, [category]: updated });
     };
 
     const toggleVat = (val: boolean) => {
-        setFilters(prev => ({ ...prev, vatExempt: val }));
+        setFilters({ ...filters, vatExempt: val });
     }
 
     return (
         <aside className="w-full lg:w-72 shrink-0 space-y-8">
+
+            {/* Close button for drawer mode */}
+            {onClose && (
+                <div className="flex justify-between items-center mb-2">
+                    <span className="font-bold text-slate-900 text-lg">Filters</span>
+                    <button
+                        onClick={onClose}
+                        className="p-2 rounded-full hover:bg-slate-100 transition-colors"
+                        aria-label="Close filters"
+                    >
+                        <X size={20} className="text-slate-600" />
+                    </button>
+                </div>
+            )}
 
             {/* Help Me Choose Banner - Matching .wizard-banner */}
             <div className="bg-[#0f172a] text-white p-5 rounded-lg text-center mb-6">

@@ -16,6 +16,7 @@ interface ProductProps {
     stepLevel?: string;
     system?: string;
     handing?: string;
+    installedIn?: string;
 }
 
 export const CollectionProductCard = ({
@@ -26,7 +27,8 @@ export const CollectionProductCard = ({
     dimensions,
     stepLevel = "Low",
     system = "Standard",
-    handing = "L or R"
+    handing = "L or R",
+    installedIn
 }: ProductProps) => {
 
     // HTML Logic:
@@ -58,9 +60,11 @@ export const CollectionProductCard = ({
                     />
                 </div>
                 {/* .real-photo-badge */}
-                <span className="absolute bottom-2.5 right-2.5 bg-[rgba(0,0,0,0.6)] text-white px-2 py-1 text-[0.7rem] rounded">
-                    Installed in Manchester
-                </span>
+                {installedIn && (
+                    <span className="absolute bottom-2.5 right-2.5 bg-[rgba(0,0,0,0.6)] text-white px-2 py-1 text-[0.7rem] rounded">
+                        Installed in {installedIn}
+                    </span>
+                )}
             </div>
 
             {/* .card-body */}
