@@ -165,10 +165,10 @@ const CategoryChoice = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 auto-rows-fr">
         {[
-          { title: "Walk-in Baths", img: "/images/Walk-inBath.png", desc: "Full length comfort & low threshold", cta: "View Baths" },
-          { title: "Walk-in Showers", img: "/images/AccessibleShower.png", desc: "Level access, no stepping over", cta: "View Showers" },
-          { title: "Wet Rooms", img: "/images/StandardEasy-Access.png", desc: "Complete open-plan safety.", cta: "View Wet Rooms" },
-          { title: "Deep Soakers", img: "/images/DeepSoaker.png", desc: "Ideal for small spaces.", cta: "View Soakers" },
+          { title: "Walk-in Baths", img: "/images/Walk-inBath.png", desc: "Full length comfort & low threshold", cta: "View Baths", href: "/walk-in-baths" },
+          { title: "Walk-in Showers", img: "/images/AccessibleShower.png", desc: "Level access, no stepping over", cta: "View Showers", href: "#" },
+          { title: "Wet Rooms", img: "/images/StandardEasy-Access.png", desc: "Complete open-plan safety.", cta: "View Wet Rooms", href: "#" },
+          { title: "Deep Soakers", img: "/images/DeepSoaker.png", desc: "Ideal for small spaces.", cta: "View Soakers", href: "#" },
         ].map((cat, i) => (
           <div key={i} className="group relative bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-teal-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
             <div className="aspect-[4/3] relative bg-white shrink-0">
@@ -187,7 +187,7 @@ const CategoryChoice = () => (
               </button>
             </div>
             {/* Make whole card clickable */}
-            <a href="#" className="absolute inset-0 z-10" aria-label={`View ${cat.title}`}></a>
+            <a href={cat.href} className="absolute inset-0 z-10" aria-label={`View ${cat.title}`}></a>
           </div>
         ))}
       </div>

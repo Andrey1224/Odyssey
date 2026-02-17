@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey Product Cards Component</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #0f172a;
+            --navy-text: #334155;
+            --teal-primary: #117a7a;
+            --teal-hover: #0d6161;
+            --teal-light: #e0f2f1;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --price-green: #16a34a;
+            --bg-grey: #F8FAFC;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-grey); padding: 40px 20px; }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        h2 { text-align: center; color: var(--navy-dark); margin-bottom: 30px; font-size: 2rem; }
+
+        /* --- PRODUCT GRID --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- CARD COMPONENT STYLES --- */
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        /* Badges */
+        .card-badges {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 2;
+        }
+        
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-vat { background: var(--teal-light); color: var(--teal-primary); }
+        .badge-best { background: #fef3c7; color: #b45309; } /* Amber for Best Seller */
+        .badge-premium { background: var(--navy-dark); color: white; }
+
+        /* Image Area */
+        .card-image-wrapper {
+            height: 240px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .card-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply; /* Helps blend white backgrounds */
+        }
+
+        /* Content Area */
+        .card-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 6px;
+            text-decoration: none;
+        }
+
+        .product-subtitle {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 16px;
+            min-height: 20px;
+        }
+
+        /* Features List (Replaces Bullets) */
+        .feature-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: var(--navy-text);
+            background: #f1f5f9;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        
+        .pill i { color: var(--teal-primary); font-size: 0.8rem; }
+
+        /* Pricing Section */
+        .card-price-area {
+            margin-top: auto;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .price-ex-vat {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            line-height: 1;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            color: var(--price-green); /* Green for "VAT Relief" */
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .price-inc-vat {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+
+        /* Actions */
+        .card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-view {
+            background: var(--teal-primary);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            border: 1px solid var(--teal-primary);
+        }
+        .btn-view:hover { background: var(--teal-hover); }
+
+        .btn-brochure {
+            background: white;
+            color: var(--navy-dark);
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid #cbd5e1;
+            transition: all 0.2s;
+        }
+        .btn-brochure:hover { border-color: var(--navy-dark); background: #f8fafc; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Recommended Models</h2>
+        
+        <div class="product-grid">
+
+            <!-- 1. Serenity 66 Classic (Base Model) -->
+            <div class="product-card">
+                <div class="card-badges">
+                    <span class="badge badge-vat">VAT Relief Eligible</span>
+                </div>
+                <div class="card-image-wrapper">
+                    <!-- Заглушка, замените на фото Serenity 66 -->
+                    <img src="https://via.placeholder.com/300x240/f8fafc/cbd5e1?text=Serenity+66+Classic" alt="Serenity 66 Classic" class="card-img">
+                </div>
+                <div class="card-body">
+                    <a href="#" class="product-title">Serenity 66 Classic</a>
+                    <div class="product-subtitle">Robust & Reliable. The UK standard for safety.</div>
+                    
+                    <div class="feature-pills">
+                        <span class="pill"><i class="fas fa-ruler-horizontal"></i> 1675mm Length</span>
+                        <span class="pill"><i class="fas fa-door-open"></i> Low Threshold</span>
+                        <span class="pill"><i class="fas fa-shield-alt"></i> Stainless Frame</span>
+                        <span class="pill"><i class="fas fa-tint"></i> Quick Drain</span>
+                    </div>
+
+                    <div class="card-price-area">
+                        <div class="price-ex-vat">£2,708.00</div>
+                        <div class="price-label"><i class="fas fa-check"></i> Ex. VAT Price</div>
+                        <div class="price-inc-vat">Regular Price: £3,195.00</div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-brochure">Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Serenity 66 Plus (Mid-Range) -->
+            <div class="product-card" style="border-color: var(--teal-primary); box-shadow: 0 4px 12px rgba(17, 122, 122, 0.15);">
+                <div class="card-badges">
+                    <span class="badge badge-best"><i class="fas fa-star"></i> Best Seller</span>
+                    <span class="badge badge-vat">VAT Relief Eligible</span>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="https://via.placeholder.com/300x240/f8fafc/cbd5e1?text=Serenity+66+Plus" alt="Serenity 66 Plus" class="card-img">
+                </div>
+                <div class="card-body">
+                    <a href="#" class="product-title">Serenity 66 Plus</a>
+                    <div class="product-subtitle">Enhanced comfort with Air Spa & Fast Fill.</div>
+                    
+                    <div class="feature-pills">
+                        <span class="pill"><i class="fas fa-wind"></i> Air Spa System</span>
+                        <span class="pill"><i class="fas fa-faucet"></i> Fast Fill Taps</span>
+                        <span class="pill"><i class="fas fa-shower"></i> Dual Shower</span>
+                        <span class="pill"><i class="fas fa-tint"></i> Water Jets</span>
+                    </div>
+
+                    <div class="card-price-area">
+                        <div class="price-ex-vat">£3,208.00</div>
+                        <div class="price-label"><i class="fas fa-check"></i> Ex. VAT Price</div>
+                        <div class="price-inc-vat">Regular Price: £3,695.00</div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-brochure">Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Serenity 66 Special (Premium) -->
+            <div class="product-card">
+                <div class="card-badges">
+                    <span class="badge badge-premium">Premium Spec</span>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="https://via.placeholder.com/300x240/f8fafc/cbd5e1?text=Serenity+Special" alt="Serenity 66 Special" class="card-img">
+                </div>
+                <div class="card-body">
+                    <a href="#" class="product-title">Serenity 66 Special</a>
+                    <div class="product-subtitle">The ultimate therapy experience. Fully loaded.</div>
+                    
+                    <div class="feature-pills">
+                        <span class="pill"><i class="fas fa-chair"></i> Heated Seat & Back</span>
+                        <span class="pill"><i class="fas fa-magic"></i> Microbubbles</span>
+                        <span class="pill"><i class="fas fa-lightbulb"></i> Chromotherapy</span>
+                        <span class="pill"><i class="fas fa-leaf"></i> Aromatherapy</span>
+                    </div>
+
+                    <div class="card-price-area">
+                        <div class="price-ex-vat">£3,908.00</div>
+                        <div class="price-label"><i class="fas fa-check"></i> Ex. VAT Price</div>
+                        <div class="price-inc-vat">Regular Price: £4,295.00</div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-brochure">Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Stamford 75 (Alternative Model) -->
+            <div class="product-card">
+                <div class="card-badges">
+                    <span class="badge badge-vat">VAT Relief Eligible</span>
+                </div>
+                <div class="card-image-wrapper">
+                    <img src="https://via.placeholder.com/300x240/f8fafc/cbd5e1?text=Stamford+75" alt="Stamford 75 Classic" class="card-img">
+                </div>
+                <div class="card-body">
+                    <a href="#" class="product-title">Stamford 75 Classic</a>
+                    <div class="product-subtitle">Wide entry & Inswing door design.</div>
+                    
+                    <div class="feature-pills">
+                        <span class="pill"><i class="fas fa-arrows-alt-h"></i> 75cm Wide</span>
+                        <span class="pill"><i class="fas fa-door-open"></i> Inswing Door</span>
+                        <span class="pill"><i class="fas fa-user-check"></i> Bariatric Friendly</span>
+                        <span class="pill"><i class="fas fa-layer-group"></i> 4-Layer Glass</span>
+                    </div>
+
+                    <div class="card-price-area">
+                        <div class="price-ex-vat">£2,608.00</div>
+                        <div class="price-label"><i class="fas fa-check"></i> Ex. VAT Price</div>
+                        <div class="price-inc-vat">Regular Price: £3,008.00</div>
+                    </div>
+
+                    <div class="card-actions">
+                        <a href="#" class="btn-view">View Details</a>
+                        <a href="#" class="btn-brochure">Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

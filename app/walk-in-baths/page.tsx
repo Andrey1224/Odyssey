@@ -12,8 +12,9 @@ import { FilterSidebar, FilterState } from "@/components/FilterSidebar";
 import { CollectionProductCard } from "@/components/CollectionProductCard";
 import { BrochureBridge } from "@/components/BrochureBridge";
 import { FAQSection } from "@/components/FAQSection";
-import { PRODUCTS } from "@/data/walkInBaths";
-import { WALK_IN_BATHS_FILTERS } from "@/config/filters";
+import { WALK_IN_BATHS } from "@/data/walkInBaths";
+import { TAGS } from "@/data/tags";
+import { EMPTY_FILTERS } from "@/components/FilterSidebar";
 
 function WalkInBathsContent() {
     const searchParams = useSearchParams();
@@ -21,9 +22,12 @@ function WalkInBathsContent() {
 
     const parseFilters = (): FilterState => ({
         vatExempt: searchParams.get('vat') !== 'standard',
-        size: searchParams.get('length')?.split(',').filter(Boolean) ?? [],
+        width: searchParams.get('width')?.split(',').filter(Boolean) ?? [],
+        doorType: searchParams.get('doorType')?.split(',').filter(Boolean) ?? [],
+        package: searchParams.get('pkg')?.split(',').filter(Boolean) ?? [],
         handing: searchParams.get('handing')?.split(',').filter(Boolean) ?? [],
         features: searchParams.get('features')?.split(',').filter(Boolean) ?? [],
+        access: searchParams.get('access')?.split(',').filter(Boolean) ?? [],
     });
 
     const [filters, setFilters] = useState<FilterState>(parseFilters);
@@ -33,26 +37,27 @@ function WalkInBathsContent() {
         setFilters(next);
         const params = new URLSearchParams();
         if (!next.vatExempt) params.set('vat', 'standard');
-        if (next.size.length) params.set('length', next.size.join(','));
+        if (next.width.length) params.set('width', next.width.join(','));
+        if (next.doorType.length) params.set('doorType', next.doorType.join(','));
+        if (next.package.length) params.set('pkg', next.package.join(','));
         if (next.handing.length) params.set('handing', next.handing.join(','));
         if (next.features.length) params.set('features', next.features.join(','));
+        if (next.access.length) params.set('access', next.access.join(','));
         router.replace(`?${params.toString()}`, { scroll: false });
     };
 
-    // Filtering Logic
-    const filteredProducts = PRODUCTS.filter(product => {
-        // Size Filter — compare label against lengthBucket
-        if (filters.size.length > 0) {
-            const buckets = filters.size.map(label => WALK_IN_BATHS_FILTERS.sizeLabelToBucket[label]).filter(Boolean);
-            if (!buckets.includes(product.lengthBucket)) return false;
-        }
-        // Handing Filter
-        if (filters.handing.length > 0 && !filters.handing.includes(product.handing)) return false;
-        // Features Filter
-        if (filters.features.length > 0) {
-            const hasFeature = filters.features.some(f => product.keyFeatures?.includes(f));
-            if (!hasFeature) return false;
-        }
+    // Tag-based filtering (AND between groups, OR within group; features requires ALL selected)
+    const filteredProducts = WALK_IN_BATHS.filter(product => {
+        const tags = TAGS[product.id];
+        if (!tags) return true;
+
+        if (filters.width.length && !filters.width.includes(String(tags.widthMm))) return false;
+        if (filters.doorType.length && !filters.doorType.includes(tags.doorType)) return false;
+        if (filters.package.length && !filters.package.includes(tags.variant)) return false;
+        if (filters.handing.length && !filters.handing.some(h => tags.handing.includes(h as "left" | "right"))) return false;
+        if (filters.features.length && !filters.features.every(f => tags.features.includes(f as never))) return false;
+        if (filters.access.includes("wideDoor") && !tags.doorOpeningMm) return false;
+
         return true;
     });
 
@@ -101,19 +106,19 @@ function WalkInBathsContent() {
                         </p>
                         <ul className="space-y-3 mb-8">
                             <li className="flex items-start gap-3 text-slate-700">
-                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <Check size={20} className="text-[#117a7a] shrink-0 mt-0.5" />
                                 <span>Low threshold entry (reduced trip risk)</span>
                             </li>
                             <li className="flex items-start gap-3 text-slate-700">
-                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <Check size={20} className="text-[#117a7a] shrink-0 mt-0.5" />
                                 <span>Built-in seat for safer transfers</span>
                             </li>
                             <li className="flex items-start gap-3 text-slate-700">
-                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <Check size={20} className="text-[#117a7a] shrink-0 mt-0.5" />
                                 <span>Easy-to-use door handle and secure seal</span>
                             </li>
                             <li className="flex items-start gap-3 text-slate-700">
-                                <Check size={20} className="text-teal-600 shrink-0 mt-0.5" />
+                                <Check size={20} className="text-[#117a7a] shrink-0 mt-0.5" />
                                 <span>Optional spa comfort (jets, heated seat)</span>
                             </li>
                         </ul>
@@ -140,7 +145,7 @@ function WalkInBathsContent() {
 
                     {/* Desktop Sidebar — hidden on mobile */}
                     <div className="hidden lg:block sticky top-24 z-10 w-full lg:w-auto">
-                        <FilterSidebar filters={filters} setFilters={updateFilters} filterConfig={WALK_IN_BATHS_FILTERS} />
+                        <FilterSidebar filters={filters} setFilters={updateFilters} />
                     </div>
 
                     {/* Mobile Filter Drawer Overlay */}
@@ -155,8 +160,7 @@ function WalkInBathsContent() {
                                     filters={filters}
                                     setFilters={updateFilters}
                                     onClose={() => setShowDrawer(false)}
-                                    filterConfig={WALK_IN_BATHS_FILTERS}
-                                />
+                                                                    />
                             </div>
                         </div>
                     )}
@@ -195,7 +199,7 @@ function WalkInBathsContent() {
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">No baths found fitting criteria</h3>
                                 <p className="text-slate-500 mb-6">Try adjusting your filters to see more results.</p>
                                 <button
-                                    onClick={() => updateFilters({ vatExempt: true, size: [], handing: [], features: [] })}
+                                    onClick={() => updateFilters({ vatExempt: filters.vatExempt, ...EMPTY_FILTERS })}
                                     className="text-teal-700 font-bold hover:underline"
                                 >
                                     Clear all filters

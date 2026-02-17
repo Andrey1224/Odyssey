@@ -8,8 +8,9 @@ export default function HandingCard() {
     const [handing, setHanding] = React.useState<"left" | "right">("left");
 
     return (
-        <div className="w-full max-w-4xl mx-auto px-4 md:px-0 scroll-mt-24" id="handing-guide">
-            <div className="rounded-[2.5rem] bg-[#0F172A] p-6 md:p-12 text-white shadow-2xl overflow-hidden relative">
+        <section className="w-full bg-cream-50 py-12 md:py-24" id="handing-guide">
+            <div className="w-full max-w-4xl mx-auto px-4 md:px-0 scroll-mt-24">
+                <div className="rounded-[2.5rem] bg-[#0F172A] p-6 md:p-12 text-white shadow-2xl overflow-hidden relative">
 
                 {/* Decorative background blob */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-teal-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -98,6 +99,7 @@ export default function HandingCard() {
                     </div>
                 </div>
             </div>
-        </div>
+                </div>
+                </section>
     );
 }

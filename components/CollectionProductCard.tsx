@@ -1,130 +1,187 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react";
+import {
+    Check, Star,
+    Ruler, DoorOpen, Shield, Droplets,
+    Wind, Zap, Droplet, Waves,
+    Thermometer, Sparkles, Lightbulb, Leaf,
+    ArrowLeftRight, Users, Layers,
+    type LucideIcon,
+} from "lucide-react";
+import type { FeaturePill } from "@/data/walkInBaths";
+
+const PILL_ICONS: Record<string, LucideIcon> = {
+    ruler: Ruler,
+    door: DoorOpen,
+    shield: Shield,
+    droplets: Droplets,
+    wind: Wind,
+    zap: Zap,
+    showerHead: Droplet,
+    waves: Waves,
+    thermometer: Thermometer,
+    sparkles: Sparkles,
+    lightbulb: Lightbulb,
+    leaf: Leaf,
+    arrowLeftRight: ArrowLeftRight,
+    doorOpen: DoorOpen,
+    users: Users,
+    layers: Layers,
+};
 
 interface ProductProps {
     id: string;
     title: string;
+    subtitle?: string;
+    badges?: string[];
     priceExVat: number;
+    vatRate: number;
+    wasPriceIncVat?: number;
     vatExempt: boolean;
-    image: string;
-    description?: string;
-    features?: string[];
-    dimensions: string;
-    stepLevel?: string;
-    system?: string;
-    handing?: string;
-    installedIn?: string;
+    primaryImage: { src: string; alt: string };
+    featurePills?: FeaturePill[];
+    [key: string]: unknown;
 }
 
 export const CollectionProductCard = ({
     id,
     title,
+    subtitle,
+    badges = [],
     priceExVat,
+    vatRate,
+    wasPriceIncVat,
     vatExempt,
-    image,
-    dimensions,
-    stepLevel = "Low",
-    system = "Standard",
-    handing = "L or R",
-    installedIn
+    primaryImage,
+    featurePills = [],
 }: ProductProps) => {
 
-    // HTML Logic:
-    // if exempt: price = base, text = VAT Relief Applied (Save X)
-    // if std: price = base * 1.2, text = Standard Price (inc 20% VAT)
+    const incVatPrice = Math.round(priceExVat * (1 + vatRate));
 
-    const displayPrice = vatExempt ? priceExVat : Math.round(priceExVat * 1.2);
-    const saving = Math.round((priceExVat * 1.2) - priceExVat);
-
-    const formatPrice = (price: number) => {
-        return new Intl.NumberFormat('en-GB', {
-            style: 'currency',
-            currency: 'GBP',
-            maximumFractionDigits: 0
+    const formatPrice = (price: number) =>
+        new Intl.NumberFormat("en-GB", {
+            style: "currency",
+            currency: "GBP",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
         }).format(price);
-    };
+
+    const FALLBACK = "/images/Walk-inBath.png";
+    const [imageSrc, setImageSrc] = useState(primaryImage.src || FALLBACK);
+
+    const isBestSeller = badges.includes("Best Seller");
+    const isPremium = badges.includes("Premium Spec");
+
+    const displayPrice = vatExempt ? priceExVat : incVatPrice;
+    const regularPrice = wasPriceIncVat ?? incVatPrice;
 
     return (
-        <article className="bg-white border border-[#e2e8f0] rounded-xl overflow-hidden transition-all duration-300 flex flex-col relative hover:shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] hover:border-[#cbd5e1] group">
+        <article className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 flex flex-col relative hover:shadow-[0_12px_28px_-6px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 ${
+            isBestSeller
+                ? "border-[#117a7a] shadow-[0_4px_12px_rgba(17,122,122,0.15)]"
+                : "border-[#e2e8f0] hover:border-[#cbd5e1]"
+        }`}>
 
-            {/* .card-img-wrapper */}
-            <div className="h-[220px] bg-[#f8fafc] flex items-center justify-center p-2.5 relative">
-                <div className="relative w-full h-full">
-                    <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        className="object-cover"
-                    />
-                </div>
-                {/* .real-photo-badge */}
-                {installedIn && (
-                    <span className="absolute bottom-2.5 right-2.5 bg-[rgba(0,0,0,0.6)] text-white px-2 py-1 text-[0.7rem] rounded">
-                        Installed in {installedIn}
+            {/* Badges — absolute top-left */}
+            <div className="absolute top-4 left-4 z-10 flex flex-col items-start gap-1.5">
+                {isBestSeller && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#fef3c7] text-[#b45309] uppercase tracking-wider leading-none">
+                        <Star size={10} fill="currentColor" /> Best Seller
                     </span>
                 )}
+                {isPremium && (
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#0f172a] text-white uppercase tracking-wider leading-none">
+                        Premium Spec
+                    </span>
+                )}
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#e0f2f1] text-[#117a7a] uppercase tracking-wider leading-none">
+                    VAT Relief Eligible
+                </span>
             </div>
 
-            {/* .card-body */}
-            <div className="p-5 flex-grow flex flex-col">
+            {/* Image */}
+            <div className="h-[240px] bg-[#f1f5f9] flex items-center justify-center p-4">
+                <div className="relative w-full h-full">
+                    <Image
+                        src={imageSrc}
+                        alt={primaryImage.alt || title}
+                        fill
+                        className="object-contain mix-blend-multiply"
+                        onError={() => setImageSrc(FALLBACK)}
+                    />
+                </div>
+            </div>
 
-                {/* .product-name */}
-                <h3 className="text-[1.35rem] font-bold mb-3 text-[#0f172a] no-underline">
+            {/* Body */}
+            <div className="p-6 flex-grow flex flex-col">
+
+                <h3 className="text-[1.25rem] font-bold text-[#0f172a] mb-1 leading-tight">
                     {title}
                 </h3>
 
-                {/* .key-specs */}
-                <div className="flex justify-between bg-[#f8fafc] p-2.5 rounded-lg mb-4">
-                    <div className="flex flex-col items-center text-center">
-                        <span className="text-[0.7rem] text-[#94a3b8] uppercase tracking-wide">Size</span>
-                        <span className="text-[0.9rem] font-semibold text-[#0f172a] mt-0.5">{dimensions}</span>
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                        <span className="text-[0.7rem] text-[#94a3b8] uppercase tracking-wide">Step</span>
-                        <span className="text-[0.9rem] font-semibold text-[#0f172a] mt-0.5">{stepLevel}</span>
-                    </div>
-                    <div className="flex flex-col items-center text-center">
-                        <span className="text-[0.7rem] text-[#94a3b8] uppercase tracking-wide">Door</span>
-                        <span className="text-[0.9rem] font-semibold text-[#0f172a] mt-0.5">{handing === "Left Hand" ? "L" : handing === "Right Hand" ? "R" : "L or R"}</span>
-                    </div>
-                </div>
+                {subtitle && (
+                    <p className="text-sm text-slate-500 mb-4 leading-snug min-h-[20px]">
+                        {subtitle}
+                    </p>
+                )}
 
-                {/* .price-block - Dual Pricing */}
-                <div className="mt-auto mb-4 min-h-[60px]">
-                    <div className="flex flex-col items-start leading-none">
-                        <div className="text-[1.6rem] font-bold text-[#0f172a]">
-                            {vatExempt ? formatPrice(priceExVat) : formatPrice(Math.round(priceExVat * 1.2))}
-                        </div>
-                        <div className="text-[0.8rem] text-[#64748b] font-medium mt-1">
-                            {vatExempt ? (
-                                <span>{formatPrice(Math.round(priceExVat * 1.2))} inc. VAT</span>
-                            ) : (
-                                <span>{formatPrice(priceExVat)} ex. VAT</span>
-                            )}
-                        </div>
+                {/* Feature Pills */}
+                {featurePills.length > 0 && (
+                    <div className="grid grid-cols-2 gap-2 mb-5">
+                        {featurePills.map((pill) => {
+                            const Icon = PILL_ICONS[pill.iconKey];
+                            return (
+                                <span
+                                    key={pill.iconKey}
+                                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-[0.75rem] font-semibold bg-[#f1f5f9] text-[#334155] leading-none"
+                                >
+                                    {Icon && <Icon size={14} strokeWidth={2.5} className="text-[#117a7a] shrink-0" />}
+                                    <span className="truncate">{pill.label}</span>
+                                </span>
+                            );
+                        })}
+                    </div>
+                )}
+
+                {/* Price Area */}
+                <div className="border-t border-slate-100 mt-auto pt-4 mb-4">
+                    <div className="text-[1.6rem] font-bold text-[#0f172a] leading-none">
+                        {formatPrice(displayPrice)}
                     </div>
 
                     {vatExempt ? (
-                        <div className="text-[0.85rem] font-semibold flex items-center gap-1 text-[#16a34a] mt-2">
-                            <Check size={12} strokeWidth={3} /> Save {formatPrice(Math.round((priceExVat * 1.2) - priceExVat))} (VAT Relief)
+                        <div className="flex items-center gap-1 text-[0.82rem] font-semibold text-green-600 mt-1">
+                            <Check size={13} strokeWidth={3} /> Ex. VAT Price
                         </div>
                     ) : (
-                        <div className="text-[0.85rem] font-semibold flex items-center gap-1 text-[#64748b] mt-2">
+                        <div className="text-[0.82rem] font-medium text-slate-500 mt-1">
                             Standard Price
                         </div>
                     )}
+
+                    <div className="text-sm text-slate-500 mt-0.5">
+                        {vatExempt
+                            ? `Regular Price: ${formatPrice(regularPrice)}`
+                            : `${formatPrice(priceExVat)} ex. VAT`
+                        }
+                    </div>
                 </div>
 
-                {/* .card-actions */}
+                {/* Actions */}
                 <div className="grid grid-cols-2 gap-3">
-                    <Link href={`/walk-in-baths/${id}`} className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
+                    <Link
+                        href={`/walk-in-baths/${id}`}
+                        className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
+                    >
                         View Details
                     </Link>
-                    <Link href={`/free-brochure?product=${title.toLowerCase().replace(/\s+/g, '-')}`} className="bg-white hover:border-[#0f172a] text-[#0f172a] border-[2px] border-[#e2e8f0] py-3.5 rounded-md font-semibold cursor-pointer text-center transition-colors">
+                    <Link
+                        href={`/free-brochure?product=${id}`}
+                        className="bg-white hover:border-slate-900 text-slate-900 border border-slate-200 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
+                    >
                         Brochure
                     </Link>
                 </div>
