@@ -323,9 +323,9 @@ export const WALK_IN_BATHS: ProductVariant[] = [
 
     primaryImage: { src: "/images/Walk-inBath.png", alt: "Serenity 66 Classic" },
     gallery: [
-      { src: "/images/products/serenity-66-classic/1.jpg", alt: "Serenity 66 Classic view 1" },
-      { src: "/images/products/serenity-66-classic/2.jpg", alt: "Serenity 66 Classic view 2" },
-      { src: "/images/products/serenity-66-classic/3.jpg", alt: "Serenity 66 Classic view 3" },
+      { src: "/images/products/serenity-classic/primary.png", alt: "Serenity 66 Classic view 1" },
+      { src: "/images/products/serenity-classic/gallery-1.png", alt: "Serenity 66 Classic view 2" },
+      { src: "/images/products/serenity-classic/gallery-2.png", alt: "Serenity 66 Classic view 3" },
     ],
     installedInLabel: "Installed in Manchester",
 
@@ -593,7 +593,7 @@ export const WALK_IN_BATHS_CATEGORY: WalkInBathsCategory = {
       "Easy-to-use door handle and secure seal",
       "Optional spa comfort (jets, heated seat)",
     ],
-    image: { src: "/images/diagrams/walk-in-diagram.png", alt: "Walk-in bath diagram" },
+    image: { src: "/images/about/about-process-placeholder.svg", alt: "Walk-in bath diagram" },
     ctaLabel: "See how it works (30 sec)",
   },
   filterConfig: { enableLength: true, enableHanding: true, enableKeyFeatures: true },
