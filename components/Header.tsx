@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Menu, X, Sparkles } from "lucide-react";
 
 export const Header = () => {
@@ -13,7 +14,7 @@ export const Header = () => {
                 <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
                     {/* Logo (Updated) */}
                     <div className="relative w-32 h-10 md:w-48 md:h-12 shrink-0">
-                        <a href="/" className="block relative w-full h-full">
+                        <Link href="/" className="block relative w-full h-full">
                             <Image
                                 src="/images/ODYSSEY_Transparent-File-2048x735.webp"
                                 alt="Odyssey Baths"
@@ -21,25 +22,26 @@ export const Header = () => {
                                 className="object-contain object-left"
                                 priority
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Desktop Nav */}
                     <nav className="hidden lg:flex gap-10 items-center">
-                        <a href="/walk-in-baths" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Walk-in Baths</a>
+                        <Link href="/about" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">About</Link>
+                        <Link href="/walk-in-baths" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Walk-in Baths</Link>
                         <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Showers</a>
                         <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Reviews</a>
-                        <a href="/faq" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">FAQ</a>
-                        <a href="/contact" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Contact</a>
+                        <Link href="/faq" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">FAQ</Link>
+                        <Link href="/contact" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Contact</Link>
                     </nav>
 
                     {/* Right Actions (Mobile: Call Pill + Menu) */}
                     <div className="flex items-center gap-4 lg:gap-8">
 
                         {/* Desktop: Free Brochure Button */}
-                        <a href="/free-brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
+                        <Link href="/free-brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
                             Free Brochure
-                        </a>
+                        </Link>
 
                         {/* Desktop: Phone Info Block (Text Stack) */}
                         <div className="hidden lg:flex flex-col items-end leading-tight">
@@ -116,13 +118,10 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     <div className="mb-8">
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Products</h4>
                         <nav className="flex flex-col gap-4 text-xl font-medium text-slate-800">
-                            <a href="/walk-in-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Showers</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700 flex items-center">
-                                Wet Rooms
-                                <span className="ml-3 bg-teal-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">New</span>
-                            </a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Deep Soakers</a>
+                            <Link href="/walk-in-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</Link>
+                            <Link href="/walk-in-shower-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Shower Baths</Link>
+                            <Link href="/standard-size-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Standard Size Baths</Link>
+                            <Link href="/deep-soaker-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Deep Soaker Baths</Link>
                         </nav>
                     </div>
 
@@ -130,13 +129,14 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                     <div>
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Help & Advice</h4>
                         <nav className="flex flex-col gap-4 text-lg font-medium text-slate-800">
+                            <Link href="/about" className="py-3 border-b border-slate-100 hover:text-teal-700">About</Link>
                             <a href="#" className="py-3 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-2">
                                 <Sparkles size={20} className="text-teal-600" />
                                 Help Me Choose
                             </a>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
-                            <a href="/faq" className="py-3 border-b border-slate-100 hover:text-teal-700">FAQ</a>
+                            <Link href="/faq" className="py-3 border-b border-slate-100 hover:text-teal-700">FAQ</Link>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
                         </nav>
                     </div>

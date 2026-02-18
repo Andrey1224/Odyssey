@@ -30,7 +30,7 @@ export const EMPTY_FILTERS: Omit<FilterState, "vatExempt"> = {
     access: [],
 };
 
-interface FilterSidebarProps {
+export interface FilterSidebarProps {
     filters: FilterState;
     setFilters: (filters: FilterState) => void;
     onClose?: () => void;

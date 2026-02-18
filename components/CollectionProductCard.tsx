@@ -43,6 +43,7 @@ interface ProductProps {
     vatExempt: boolean;
     primaryImage: { src: string; alt: string };
     featurePills?: FeaturePill[];
+    detailHrefBase: string;
     [key: string]: unknown;
 }
 
@@ -57,6 +58,7 @@ export const CollectionProductCard = ({
     vatExempt,
     primaryImage,
     featurePills = [],
+    detailHrefBase,
 }: ProductProps) => {
 
     const incVatPrice = Math.round(priceExVat * (1 + vatRate));
@@ -177,7 +179,7 @@ export const CollectionProductCard = ({
                 {/* Actions */}
                 <div className="grid grid-cols-2 gap-3">
                     <Link
-                        href={`/walk-in-baths/${id}`}
+                        href={`${detailHrefBase}/${id}`}
                         className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
                     >
                         View Details

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Odyssey Baths | Our Story</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAFAF9',     
+                        slate: '#0F172A',     
+                        teal: '#0D9488',      
+                        tealDark: '#0F766E',
+                        softBlue: '#E2E8F0',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white antialiased text-slate">
+
+    <!-- 1. HERO: Who We Are (Trust First) -->
+    <section class="py-16 md:py-24 bg-cream text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-serif font-bold text-4xl md:text-5xl mb-4 text-slate">About Odyssey Baths</h1>
+            <h2 class="text-xl md:text-2xl text-teal font-bold mb-6 font-serif">Helping Britain Bathe Safely, Independently and with Confidence</h2>
+            
+            <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+                Odyssey Baths is a UK specialist in safe, accessible bathing solutions for independent living.
+                <br><br>
+                We believe that enjoying a warm, relaxing bath should never feel risky — no matter your age or mobility.
+            </p>
+
+            <!-- Trust Bullets (Visual Reinforcement) -->
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10">
+                <div class="flex items-center justify-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-award text-teal text-xl"></i>
+                    <span class="font-bold text-sm md:text-base">10+ Years Experience</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-map-location-dot text-teal text-xl"></i>
+                    <span class="font-bold text-sm md:text-base">Nationwide Installation</span>
+                </div>
+                <div class="flex items-center justify-center gap-3 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-shield-heart text-teal text-xl"></i>
+                    <span class="font-bold text-sm md:text-base">No Hard Sell Guarantee</span>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-4">
+                <button class="bg-teal hover:bg-tealDark text-white text-lg font-bold px-8 py-4 rounded-xl shadow-lg transition-transform active:scale-95">
+                    Book Free Home Survey
+                </button>
+                <button class="bg-white border-2 border-slate text-slate hover:bg-slate hover:text-white text-lg font-bold px-8 py-4 rounded-xl transition-colors">
+                    Request Free Brochure
+                </button>
+            </div>
+            <p class="text-sm text-gray-500 font-medium">No obligation. No pressure. Just friendly advice.</p>
+        </div>
+    </section>
+
+    <!-- 2. MISSION: Emotional Connection -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text -->
+                <div class="order-2 lg:order-1">
+                    <div class="inline-block bg-teal/10 text-tealDark font-bold px-3 py-1 rounded mb-4 uppercase text-xs tracking-wider">Our Mission</div>
+                    <h2 class="font-serif font-bold text-3xl md:text-4xl mb-6">Restoring dignity, one bath at a time.</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        For many people, considering a walk-in bath begins with a worry — a slip, a near fall, or simply the difficulty of stepping over a high rim.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Our mission isn’t just to install a bath. <strong class="text-slate">It’s to restore confidence.</strong> We help transform a daily task into a safe, comfortable and reassuring routine — so you can relax without asking for help.
+                    </p>
+                    <p class="text-lg text-slate font-medium mb-8">
+                        Many of our customers come to us after a fall — or just before one happens.
+                    </p>
+                    <div class="border-l-4 border-teal pl-6 py-2 bg-cream/50">
+                        <p class="font-serif italic text-xl text-slate">"Independence is not a luxury. It’s a necessity we protect."</p>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="order-1 lg:order-2">
+                    <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative">
+                         <img src="https://placehold.co/800x600/e2e8f0/1e293b?text=Happy+Couple+In+Safe+Bathroom" alt="Elderly couple smiling in a safe bathroom" class="w-full h-full object-cover">
+                         <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. USP: Why UK Homeowners Trust Odyssey -->
+    <section class="py-16 bg-cream border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif font-bold text-3xl md:text-4xl">Why UK Homeowners Trust Odyssey</h2>
+                <p class="text-gray-600 mt-3 text-lg">Honest pricing. Robust engineering. Respectful service.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-slate text-white rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-shield-cat"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Built Like "The Tank"</h3>
+                    <p class="text-gray-600 mb-2">Our baths feature reinforced steel frames and strengthened acrylic shells. They don’t flex, creak or weaken over time.</p>
+                    <p class="text-teal font-bold text-sm">Strength you can rely on.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">VAT Relief Handled</h3>
+                    <p class="text-gray-600 mb-2">Many customers are eligible for 0% VAT. We guide you through the process and handle the paperwork clearly and simply.</p>
+                    <p class="text-teal font-bold text-sm">No hidden charges.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-slate text-white rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">1–2 Day Installation</h3>
+                    <p class="text-gray-600 mb-2">Most installations are completed within one to two days. We remove your existing bath, install, and tidy up.</p>
+                    <p class="text-teal font-bold text-sm">Minimal disruption.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-teal text-white rounded-full flex items-center justify-center text-xl mb-4">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">No Sales Pressure</h3>
+                    <p class="text-gray-600 mb-2">We provide fixed, transparent quotations — not vague estimates. No aggressive follow-up calls.</p>
+                    <p class="text-teal font-bold text-sm">Decide at your own pace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROCESS: Our Simple 4-Step Process -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl text-center mb-2">Our Simple 4-Step Process</h2>
+            <p class="text-center text-gray-600 text-lg mb-12">Designed to make everything straightforward.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Line for desktop -->
+                <div class="hidden md:block absolute top-8 left-0 w-full h-1 bg-gray-100 -z-10"></div>
+
+                <!-- Step 1 -->
+                <div class="text-center bg-white">
+                    <div class="w-16 h-16 mx-auto bg-cream border-4 border-teal text-teal font-bold text-2xl flex items-center justify-center rounded-full mb-4">1</div>
+                    <h3 class="font-bold text-lg mb-2">Free Home Visit</h3>
+                    <p class="text-gray-600 text-sm px-2">We assess your bathroom layout and plumbing. No obligation.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center bg-white">
+                    <div class="w-16 h-16 mx-auto bg-cream border-4 border-teal text-teal font-bold text-2xl flex items-center justify-center rounded-full mb-4">2</div>
+                    <h3 class="font-bold text-lg mb-2">Bespoke Design</h3>
+                    <p class="text-gray-600 text-sm px-2">We recommend a solution tailored to your mobility needs and available space.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center bg-white">
+                    <div class="w-16 h-16 mx-auto bg-cream border-4 border-teal text-teal font-bold text-2xl flex items-center justify-center rounded-full mb-4">3</div>
+                    <h3 class="font-bold text-lg mb-2">Expert Installation</h3>
+                    <p class="text-gray-600 text-sm px-2">Professional fitting — usually completed within one day. Old bath removed and disposed of.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center bg-white">
+                    <div class="w-16 h-16 mx-auto bg-cream border-4 border-teal text-teal font-bold text-2xl flex items-center justify-center rounded-full mb-4">4</div>
+                    <h3 class="font-bold text-lg mb-2">Aftercare & Warranty</h3>
+                    <p class="text-gray-600 text-sm px-2">Full demonstration and comprehensive warranty for long-term peace of mind.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="text-teal font-bold hover:underline text-lg">Learn more about installation <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PRODUCT PHILOSOPHY: Engineered for Safety -->
+    <section class="py-16 bg-slate text-white">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="font-serif font-bold text-3xl md:text-4xl mb-6">Engineered for Safety. <br>Designed for Comfort.</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Every Odyssey bath is built with a zero-threshold philosophy — reducing strain and lowering the risk of falls.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-teal mt-1"></i>
+                            <div>
+                                <strong class="block text-white">Reinforced steel frame</strong>
+                                <span class="text-gray-400 text-sm">For long-term structural stability.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-teal mt-1"></i>
+                            <div>
+                                <strong class="block text-white">Anti-slip base</strong>
+                                <span class="text-gray-400 text-sm">Built directly into the bath (not an aftermarket mat).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-teal mt-1"></i>
+                            <div>
+                                <strong class="block text-white">Easy-close aluminium door</strong>
+                                <span class="text-gray-400 text-sm">With watertight seal and easy locking mechanism.</span>
+                            </div>
+                        </li>
+                         <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-teal mt-1"></i>
+                            <div>
+                                <strong class="block text-white">Quick-drain system</strong>
+                                <span class="text-gray-400 text-sm">To reduce waiting time before you exit.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <p class="mt-8 text-xl font-serif italic text-teal">"Because safety should feel effortless."</p>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-white/5 rounded-xl p-6 border border-white/10">
+                        <!-- Abstract representation of tech/structure -->
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Engineering+Diagram:+Steel+Frame" alt="Technical diagram of bath structure" class="w-full rounded opacity-90">
+                        <div class="mt-4 flex justify-between text-sm text-gray-400 font-mono">
+                            <span>High-Grade Acrylic</span>
+                            <span>Steel Frame Chassis</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GUARANTEES: Built for Long-Term Peace of Mind -->
+    <section class="py-16 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl text-center mb-8">Built for Long-Term Peace of Mind</h2>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    
+                    <div class="px-4 py-2">
+                        <div class="text-teal font-bold text-4xl mb-2"><i class="fa-solid fa-infinity"></i></div>
+                        <h3 class="font-bold text-lg mb-2">Lifetime Door Seal Warranty</h3>
+                        <p class="text-sm text-gray-500">Protection against leaks for lasting reassurance.</p>
+                    </div>
+
+                    <div class="px-4 py-2">
+                        <div class="text-teal font-bold text-4xl mb-2">200kg</div>
+                        <h3 class="font-bold text-lg mb-2">Heavy Duty Capacity</h3>
+                        <p class="text-sm text-gray-500">Engineered for strength and bariatric support.</p>
+                    </div>
+
+                    <div class="px-4 py-2">
+                        <div class="text-teal font-bold text-4xl mb-2">6 Year</div>
+                        <h3 class="font-bold text-lg mb-2">Shell & Frame Warranty</h3>
+                        <p class="text-sm text-gray-500">Reliable construction across the Serenity range.</p>
+                    </div>
+
+                </div>
+                <div class="mt-8 text-center border-t border-gray-100 pt-8">
+                    <p class="text-lg text-slate font-bold mb-2">Designed for everyday use, not occasional support.</p>
+                    <p class="text-gray-500 font-medium italic">When you choose Odyssey, you’re choosing durability — not short-term solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FINAL CTA: Ready to Explore? -->
+    <section class="py-20 bg-white text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-serif font-bold text-3xl md:text-4xl text-slate mb-4">Ready to Explore Your Options?</h2>
+            <p class="text-lg text-gray-600 mb-10">Take the first step towards a safer, more comfortable bathroom today.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-teal hover:bg-tealDark text-white text-xl font-bold px-10 py-4 rounded-xl shadow-lg transition-transform active:scale-95">
+                    Book Free Survey
+                </button>
+                <button class="bg-cream hover:bg-gray-100 text-slate border-2 border-slate text-xl font-bold px-10 py-4 rounded-xl transition-colors">
+                    Request Free Brochure
+                </button>
+            </div>
+            
+            <div class="mt-8">
+                <p class="text-gray-500 font-medium">Or speak to our friendly UK team:</p>
+                <a href="tel:08001234567" class="text-2xl font-bold text-slate hover:text-teal transition-colors">0800 123 4567</a>
+                <p class="text-sm text-gray-400 mt-2">No pressure. Just helpful guidance.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
