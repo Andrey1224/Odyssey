@@ -72,6 +72,10 @@ export const CollectionProductCard = ({
     const FALLBACK = "/images/Walk-inBath.png";
     const [imageSrc, setImageSrc] = useState(primaryImage.src || FALLBACK);
 
+    React.useEffect(() => {
+        setImageSrc(primaryImage.src || FALLBACK);
+    }, [primaryImage.src]);
+
     const isBestSeller = badges.includes("Best Seller");
     const isPremium = badges.includes("Premium Spec");
 
