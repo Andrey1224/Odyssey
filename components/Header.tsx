@@ -29,6 +29,7 @@ export const Header = () => {
                         <a href="/walk-in-baths" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Walk-in Baths</a>
                         <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Showers</a>
                         <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Reviews</a>
+                        <a href="/faq" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">FAQ</a>
                         <a href="/contact" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Contact</a>
                     </nav>
 
@@ -135,6 +136,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                             </a>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
+                            <a href="/faq" className="py-3 border-b border-slate-100 hover:text-teal-700">FAQ</a>
                             <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
                         </nav>
                     </div>
