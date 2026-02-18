@@ -593,7 +593,7 @@ export const WALK_IN_BATHS_CATEGORY: WalkInBathsCategory = {
       "Easy-to-use door handle and secure seal",
       "Optional spa comfort (jets, heated seat)",
     ],
-    image: { src: "/images/about/about-process-placeholder.svg", alt: "Walk-in bath diagram" },
+    image: { src: "/images/diagrams/walk-in-diagram.webp", alt: "Walk-in bath diagram" },
     ctaLabel: "See how it works (30 sec)",
   },
   filterConfig: { enableLength: true, enableHanding: true, enableKeyFeatures: true },
