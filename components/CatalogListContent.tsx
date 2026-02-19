@@ -225,35 +225,35 @@ export function CatalogListContent({
 
   return (
     <>
-      <section className="bg-white py-10 text-center">
+      <section className="bg-cream-50 py-10 text-center">
         <div className="mx-auto max-w-[1280px] px-5">
-          <h1 className="mb-2.5 text-2xl md:text-[2.5rem] font-bold text-[#0f172a]">{category.heroHeadline}</h1>
-          <p className="mx-auto max-w-[600px] text-[1.1rem] leading-[1.5] text-[#475569]">
+          <h1 className="mb-2.5 text-2xl font-bold text-slate-900 md:text-[2.5rem]">{category.heroHeadline}</h1>
+          <p className="mx-auto max-w-[600px] text-[1.1rem] leading-[1.5] text-slate-600">
             {category.heroSubhead}
           </p>
         </div>
       </section>
 
-      <div className="mb-5 border-b border-[#e2e8f0] bg-[#f1f5f9] py-2">
+      <div className="mb-5 border-b border-slate-200 bg-slate-100 py-2">
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="flex flex-wrap justify-center gap-3 md:gap-10">
-            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-              <span className="text-[#117a7a]"><Star size={14} /></span> 4.9/5 Trustpilot
+            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
+              <span className="text-teal-800"><Star size={14} /></span> 4.9/5 Trustpilot
             </div>
-            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-              <span className="text-[#117a7a]"><CheckCircle2 size={14} /></span> 10 Year Warranty
+            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
+              <span className="text-teal-800"><CheckCircle2 size={14} /></span> 10 Year Warranty
             </div>
-            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-              <span className="text-[#117a7a]"><Flag size={14} /></span> Made in UK
+            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
+              <span className="text-teal-800"><Flag size={14} /></span> Made in UK
             </div>
-            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
-              <span className="text-[#117a7a]"><Percent size={14} /></span> VAT Relief Handled
+            <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
+              <span className="text-teal-800"><Percent size={14} /></span> VAT Relief Handled
             </div>
           </div>
         </div>
       </div>
 
-      <section className="mb-5 border-b border-slate-100 bg-white py-2">
+      <section className="mb-5 border-b border-slate-100 bg-cream-50 py-2">
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-10 px-5 md:grid-cols-2">
           <div>
             <h2 className="mb-4 text-2xl font-bold text-slate-900">{category.explainer.headline}</h2>
@@ -261,19 +261,19 @@ export function CatalogListContent({
             <ul className="mb-8 space-y-3">
               {category.explainer.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3 text-slate-700">
-                  <Check size={20} className="mt-0.5 shrink-0 text-[#117a7a]" />
+                  <Check size={20} className="mt-0.5 shrink-0 text-teal-800" />
                   <span>{bullet}</span>
                 </li>
               ))}
             </ul>
-            <button className="flex items-center gap-2 rounded-full border border-teal-200 px-5 py-2.5 font-bold text-teal-700 transition-colors hover:bg-teal-50">
+            <button className="flex items-center gap-2 rounded-full border border-teal-200 px-5 py-2.5 font-bold text-teal-800 transition-colors hover:bg-teal-50">
               <PlayCircle size={20} />
               {category.explainer.ctaLabel}
             </button>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-50 p-2">
             {category.explainer.image?.src ? (
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-white">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-cream-50">
                 <Image
                   src={category.explainer.image.src}
                   alt={category.explainer.image.alt}
@@ -282,7 +282,7 @@ export function CatalogListContent({
                 />
               </div>
             ) : (
-              <div className="flex aspect-[4/3] w-full items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-200 px-6 text-center text-base font-semibold text-slate-500">
+              <div className="flex aspect-[4/3] w-full items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-200 px-6 text-center text-base font-semibold text-slate-600">
                 {category.explainer.placeholderLabel ?? "Image placeholder - will be replaced"}
               </div>
             )}
@@ -299,7 +299,7 @@ export function CatalogListContent({
           {showDrawer && (
             <div className="fixed inset-0 z-50 lg:hidden">
               <div className="absolute inset-0 bg-black/40" onClick={() => setShowDrawer(false)} />
-              <div className="absolute left-0 top-0 h-full w-[320px] max-w-full overflow-y-auto bg-white p-5 shadow-xl">
+              <div className="absolute left-0 top-0 h-full w-[320px] max-w-full overflow-y-auto bg-cream-50 p-5 shadow-xl">
                 <SidebarComponent
                   filters={filters}
                   setFilters={updateFilters}
@@ -333,12 +333,12 @@ export function CatalogListContent({
             </div>
 
             {filteredProducts.length === 0 && (
-              <div className="rounded-2xl border border-dashed border-slate-200 bg-white py-20 text-center">
+              <div className="rounded-2xl border border-dashed border-slate-200 bg-cream-50 py-20 text-center">
                 <h3 className="mb-2 text-xl font-bold text-slate-900">No baths found fitting criteria</h3>
-                <p className="mb-6 text-slate-500">Try adjusting your filters to see more results.</p>
+                <p className="mb-6 text-slate-600">Try adjusting your filters to see more results.</p>
                 <button
                   onClick={() => updateFilters({ vatExempt: filters.vatExempt, ...EMPTY_FILTERS })}
-                  className="font-bold text-teal-700 hover:underline"
+                  className="font-bold text-teal-800 hover:underline"
                 >
                   Clear all filters
                 </button>

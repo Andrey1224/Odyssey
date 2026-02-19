@@ -18,7 +18,7 @@ export const Footer = () => (
                     <Phone className="shrink-0 mt-1 text-teal-400" />
                     <div>
                         <p className="font-bold text-white text-xl">0800 123 4567</p>
-                        <p className="text-sm text-slate-400 mt-1">Mon-Fri 9am - 5pm</p>
+                        <p className="mt-1 text-sm text-slate-300">Mon-Fri 9am - 5pm</p>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export const Footer = () => (
                 </ul>
             </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <div className="mt-16 max-w-7xl border-t border-slate-800 px-6 pt-8 text-center text-sm text-slate-300">
             © {new Date().getFullYear()} Odyssey Baths Ltd. Registered in UK.
         </div>
     </footer>

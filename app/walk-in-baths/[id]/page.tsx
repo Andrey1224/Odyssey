@@ -18,7 +18,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       product={product}
       products={WALK_IN_BATHS}
       baseModels={BASE_MODELS}
-      categoryTitle="Walk-in Baths"
       categoryHref="/walk-in-baths"
     />
   );

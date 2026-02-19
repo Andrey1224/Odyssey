@@ -107,11 +107,11 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
             {/* Breadcrumbs */}
             <div className="max-w-7xl mx-auto px-6 py-5">
                 <nav className="text-base text-slate-600 flex gap-2 flex-wrap">
-                    <Link href="/" className="hover:text-teal-700 transition-colors">
+                    <Link href="/" className="hover:text-teal-800 transition-colors">
                         Home
                     </Link>
                     <span>/</span>
-                    <Link href="/walk-in-baths" className="hover:text-teal-700 transition-colors">
+                    <Link href="/walk-in-baths" className="hover:text-teal-800 transition-colors">
                         Walk-in Baths
                     </Link>
                     <span>/</span>
@@ -188,14 +188,14 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                     key={label}
                                     className="flex items-center gap-1.5 text-base font-semibold bg-slate-100 px-3 py-1.5 rounded-md text-slate-700"
                                 >
-                                    <Icon size={16} className="text-teal-700 shrink-0" />
+                                    <Icon size={16} className="text-teal-800 shrink-0" />
                                     {label}
                                 </span>
                             ))}
                         </div>
 
                         {/* Buy Box */}
-                        <div className="bg-white border border-slate-200 rounded-2xl p-7">
+                        <div className="bg-cream-50 border border-slate-200 rounded-2xl p-7">
 
                             {/* VAT Toggle */}
                             <div className="flex justify-between items-center mb-4">
@@ -207,8 +207,8 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                         onClick={() => setVatExempt(true)}
                                         className={`px-3 py-1 text-sm font-semibold rounded-full transition-all ${
                                             vatExempt
-                                                ? "bg-white text-teal-700 shadow-sm"
-                                                : "text-slate-500"
+                                                ? "bg-cream-50 text-teal-800 shadow-sm"
+                                                : "text-slate-600"
                                         }`}
                                     >
                                         Ex. VAT
@@ -217,8 +217,8 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                         onClick={() => setVatExempt(false)}
                                         className={`px-3 py-1 text-sm font-semibold rounded-full transition-all ${
                                             !vatExempt
-                                                ? "bg-white text-teal-700 shadow-sm"
-                                                : "text-slate-500"
+                                                ? "bg-cream-50 text-teal-800 shadow-sm"
+                                                : "text-slate-600"
                                         }`}
                                     >
                                         Inc. VAT
@@ -232,7 +232,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                     {formatGBP(displayPrice)}
                                 </div>
                                 {vatExempt ? (
-                                    <div className="flex items-center gap-1 text-green-600 font-semibold text-base mt-2">
+                                    <div className="flex items-center gap-1 text-teal-800 font-semibold text-base mt-2">
                                         <Check size={16} strokeWidth={3} />
                                         VAT Relief Applied — Save {formatGBP(priceIncVat(product) - product.priceExVat)}
                                     </div>
@@ -243,7 +243,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                 )}
                                 {product.wasPriceIncVat && (
                                     <div className="flex items-center gap-2 mt-2">
-                                        <span className="text-slate-400 text-base line-through">
+                                        <span className="text-slate-600 text-base line-through">
                                             {formatGBP(product.wasPriceIncVat)}
                                         </span>
                                         {(() => {
@@ -251,7 +251,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                                 ? product.wasPriceIncVat - product.priceExVat
                                                 : product.wasPriceIncVat - priceIncVat(product);
                                             return save > 0 ? (
-                                                <span className="text-green-600 text-sm font-semibold bg-green-50 px-2 py-0.5 rounded">
+                                                <span className="text-teal-800 text-sm font-semibold bg-teal-50 px-2 py-0.5 rounded">
                                                     Save {formatGBP(save)}
                                                 </span>
                                             ) : null;
@@ -262,7 +262,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
 
                             {/* Stock Status */}
                             <div className="flex items-center gap-2 text-base text-slate-600 mb-5">
-                                <span className="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0" />
+                                <span className="w-2.5 h-2.5 rounded-full bg-teal-800 shrink-0" />
                                 {product.stockNote ?? "In Stock — Ready for Installation"}
                             </div>
 
@@ -286,8 +286,8 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                             onClick={() => setSelectedHanding(h)}
                                             className={`flex-1 border-2 rounded-lg py-3 text-base font-semibold transition-all min-h-[48px] ${
                                                 selectedHanding === h
-                                                    ? "border-teal-700 bg-teal-50 text-teal-700"
-                                                    : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+                                                    ? "border-teal-700 bg-teal-50 text-teal-800"
+                                                    : "border-slate-200 bg-cream-50 text-slate-700 hover:border-slate-300"
                                             }`}
                                         >
                                             {handingLabel(h)}
@@ -303,11 +303,11 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                             <div className="flex flex-col gap-3">
                                 <Link
                                     href={`/free-brochure?product=${product.slug}`}
-                                    className="bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-xl font-bold text-lg transition-colors w-full min-h-[48px] shadow-sm text-center"
+                                    className="bg-teal-800 hover:bg-teal-900 text-white py-4 rounded-xl font-bold text-lg transition-colors w-full min-h-[48px] shadow-sm text-center"
                                 >
                                     Request Free Brochure
                                 </Link>
-                                <button className="bg-white border-2 border-slate-900 text-slate-900 py-3.5 rounded-xl font-bold text-lg transition-colors w-full hover:bg-slate-50 min-h-[48px]">
+                                <button className="bg-cream-50 border-2 border-slate-900 text-slate-900 py-3.5 rounded-xl font-bold text-lg transition-colors w-full hover:bg-slate-50 min-h-[48px]">
                                     Book Free Survey
                                 </button>
                             </div>
@@ -323,7 +323,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
 
             {/* Highlights (Why Choose) */}
             {product.highlights && product.highlights.length > 0 && (
-                <section className="border-t border-slate-200 py-12 md:py-16 bg-white">
+                <section className="border-t border-slate-200 py-12 md:py-16 bg-cream-50">
                     <div className="max-w-7xl mx-auto px-6">
                         <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 text-center mb-10">
                             Why the {product.title} is the Best Choice
@@ -333,7 +333,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                 const Icon = HIGHLIGHTS_ICON_MAP[item.iconKey] ?? HIGHLIGHTS_ICONS[i % HIGHLIGHTS_ICONS.length];
                                 return (
                                     <div key={i} className="flex gap-4">
-                                        <div className="w-12 h-12 bg-teal-50 text-teal-700 rounded-xl flex items-center justify-center shrink-0">
+                                        <div className="w-12 h-12 bg-teal-50 text-teal-800 rounded-xl flex items-center justify-center shrink-0">
                                             <Icon size={22} />
                                         </div>
                                         <div>
@@ -385,7 +385,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                 {baseModel?.packageFeatureMatrix ? (
                                     baseModel.packageFeatureMatrix.rows.map((row, ri) => (
                                         <tr key={ri} className="border-b border-slate-100">
-                                            <td className="p-4 text-left font-medium text-slate-700 bg-white sticky left-0 border-r border-slate-100">
+                                            <td className="p-4 text-left font-medium text-slate-700 bg-cream-50 sticky left-0 border-r border-slate-100">
                                                 {row}
                                             </td>
                                             {siblings.map((p) => {
@@ -396,10 +396,10 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                                 return (
                                                     <td
                                                         key={p.id}
-                                                        className={`p-4 text-center ${p.id === product.id ? "bg-teal-50" : "bg-white"}`}
+                                                        className={`p-4 text-center ${p.id === product.id ? "bg-teal-50" : "bg-cream-50"}`}
                                                     >
                                                         {hasFeature ? (
-                                                            <Check size={18} className="text-teal-700 mx-auto" strokeWidth={3} />
+                                                            <Check size={18} className="text-teal-800 mx-auto" strokeWidth={3} />
                                                         ) : (
                                                             <span className="text-slate-300 text-lg">—</span>
                                                         )}
@@ -410,7 +410,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                     ))
                                 ) : null}
                                 <tr>
-                                    <td className="p-4 text-left font-semibold text-slate-700 bg-white sticky left-0 border-r border-slate-100">
+                                    <td className="p-4 text-left font-semibold text-slate-700 bg-cream-50 sticky left-0 border-r border-slate-100">
                                         Price (Ex VAT)
                                     </td>
                                     {siblings.map(p => (
@@ -419,7 +419,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                                             className={`p-4 text-center font-bold ${
                                                 p.id === product.id
                                                     ? "bg-teal-50 text-teal-800"
-                                                    : "bg-white text-slate-900"
+                                                    : "bg-cream-50 text-slate-900"
                                             }`}
                                         >
                                             {formatGBP(p.priceExVat)}
@@ -434,7 +434,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
 
             {/* Technical Specs */}
             {techSpecRows.length > 0 && (
-                <section className="border-t border-slate-200 py-12 md:py-16 bg-white">
+                <section className="border-t border-slate-200 py-12 md:py-16 bg-cream-50">
                     <div className="max-w-7xl mx-auto px-6">
                         <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 text-center mb-10">
                             Technical Specifications
@@ -465,7 +465,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                             {product.testimonials.map((review, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white rounded-xl p-6 border border-slate-200"
+                                    className="bg-cream-50 rounded-xl p-6 border border-slate-200"
                                 >
                                     <div className="text-amber-400 text-xl mb-3">★★★★★</div>
                                     <p className="italic text-slate-600 mb-4 leading-relaxed">
@@ -486,13 +486,13 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
             <Footer />
 
             {/* Mobile Sticky Bottom Bar */}
-            <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-white border-t-2 border-teal-700 px-4 py-3 flex items-center gap-4 z-50 shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
+            <div className="fixed bottom-0 left-0 right-0 lg:hidden bg-cream-50 border-t-2 border-teal-700 px-4 py-3 flex items-center gap-4 z-50 shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
                 <div className="font-bold text-2xl text-slate-900 shrink-0">
                     {formatGBP(displayPrice)}
                 </div>
                 <Link
                     href={`/free-brochure?product=${product.slug}`}
-                    className="flex-1 bg-teal-700 hover:bg-teal-800 text-white py-3 rounded-xl font-bold text-lg transition-colors min-h-[48px] text-center"
+                    className="flex-1 bg-teal-800 hover:bg-teal-900 text-white py-3 rounded-xl font-bold text-lg transition-colors min-h-[48px] text-center"
                 >
                     Request Free Brochure
                 </Link>

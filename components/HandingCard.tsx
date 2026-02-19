@@ -10,7 +10,7 @@ export default function HandingCard() {
     return (
         <section className="w-full bg-cream-50 py-12 md:py-24" id="handing-guide">
             <div className="w-full max-w-4xl mx-auto px-4 md:px-0 scroll-mt-24">
-                <div className="rounded-[2.5rem] bg-[#0F172A] p-6 md:p-12 text-white shadow-2xl overflow-hidden relative">
+                <div className="rounded-[2.5rem] bg-slate-900 p-6 md:p-12 text-white shadow-2xl overflow-hidden relative">
 
                 {/* Decorative background blob */}
                 <div className="absolute top-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-teal-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-0 sm:translate-x-1/2 pointer-events-none" />
@@ -33,19 +33,19 @@ export default function HandingCard() {
                             Ordering the wrong orientation is a common mistake. Use this quick interactive check to visualize your bathroom layout.
                         </p>
 
-                        <p className="text-sm text-slate-400 italic border-l-2 border-teal-500/30 pl-4 py-1">
+                        <p className="text-sm text-slate-600 italic border-l-2 border-teal-500/30 pl-4 py-1">
                             Don't worry — we verify everything during your free home survey.
                         </p>
 
                         <a
                             href={`/contact?handing=${handing}`}
-                            className="hidden lg:flex w-full bg-white text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
+                            className="hidden lg:flex w-full bg-cream-50 text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
                         >
                             Check My Bathroom Layout
                         </a>
 
                         {/* Secondary CTA (Desktop placement) */}
-                        <div className="hidden lg:block mt-6 p-5 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-sm">
+                        <div className="hidden lg:block mt-6 p-5 rounded-2xl bg-cream-50/15 border border-white/10 backdrop-blur-sm">
                             <div className="font-semibold text-white mb-3">
                                 Still unsure? Call us and we’ll help you choose.
                             </div>
@@ -66,7 +66,7 @@ export default function HandingCard() {
                     {/* Right Column: Interactive Tool */}
                     <div className="w-full lg:w-auto flex-1 flex flex-col items-center">
                         {/* White card container for the tool */}
-                        <div className="w-full bg-white rounded-3xl p-2 md:p-6 shadow-xl text-slate-900">
+                        <div className="w-full bg-cream-50 rounded-3xl p-2 md:p-6 shadow-xl text-slate-900">
                             <HandingTool value={handing} onChange={setHanding} />
                         </div>
 
@@ -74,12 +74,12 @@ export default function HandingCard() {
                         <div className="w-full lg:hidden mt-8 space-y-4">
                             <a
                                 href={`/contact?handing=${handing}`}
-                                className="flex w-full bg-white text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
+                                className="flex w-full bg-cream-50 text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
                             >
                                 Check My Bathroom Layout
                             </a>
 
-                            <div className="p-5 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-sm">
+                            <div className="p-5 rounded-2xl bg-cream-50/15 border border-white/10 backdrop-blur-sm">
                                 <div className="font-semibold text-white mb-3 text-center">
                                     Still unsure? Call us.
                                 </div>

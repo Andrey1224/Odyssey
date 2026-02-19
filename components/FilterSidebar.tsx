@@ -52,7 +52,7 @@ function FilterCheckbox({
                 className={`w-5 h-5 rounded border flex items-center justify-center transition-colors shrink-0 ${
                     checked
                         ? "bg-teal-600 border-teal-600"
-                        : "bg-white border-slate-300 group-hover:border-teal-400"
+                        : "bg-cream-50 border-slate-300 group-hover:border-teal-400"
                 }`}
             >
                 {checked && <Check size={12} className="text-white" strokeWidth={3} />}
@@ -118,22 +118,22 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
             )}
 
             {/* Help Me Choose Banner */}
-            <div className="bg-[#0f172a] text-white p-5 rounded-lg text-center mb-6">
+            <div className="bg-slate-900 text-white p-5 rounded-lg text-center mb-6">
                 <span className="block font-bold mb-2">Not sure which model?</span>
                 <div className="text-[0.9rem] mb-2.5">Take our 30-second quiz to find your perfect fit.</div>
-                <button onClick={() => openWizard("walk-in-baths")} className="inline-block bg-white text-[#0f172a] px-4 py-2 rounded font-semibold text-[0.9rem] mt-2 w-full hover:bg-slate-100 transition-colors">
+                <button onClick={() => openWizard("walk-in-baths")} className="inline-block bg-cream-50 text-slate-900 px-4 py-2 rounded font-semibold text-[0.9rem] mt-2 w-full hover:bg-slate-100 transition-colors">
                     Help Me Choose
                 </button>
             </div>
 
             {/* VAT Toggle */}
-            <div className="bg-[#e0f2f1] p-4 rounded-lg mb-6 border border-[#117a7a]">
-                <span className="block font-bold text-[#117a7a] mb-2 text-[0.95rem]">Your Pricing:</span>
-                <div className="flex bg-white rounded p-0.5 border border-[#ccc]">
+            <div className="bg-teal-50 p-4 rounded-lg mb-6 border border-teal-700">
+                <span className="block font-bold text-teal-800 mb-2 text-[0.95rem]">Your Pricing:</span>
+                <div className="flex bg-cream-50 rounded p-0.5 border border-slate-300">
                     <div
                         onClick={() => toggleVat(true)}
                         className={`flex-1 text-center p-2 cursor-pointer text-[0.85rem] rounded-sm transition-all ${
-                            filters.vatExempt ? "bg-[#117a7a] text-white font-semibold" : ""
+                            filters.vatExempt ? "bg-teal-800 text-white font-semibold" : ""
                         }`}
                     >
                         VAT Exempt
@@ -141,18 +141,18 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
                     <div
                         onClick={() => toggleVat(false)}
                         className={`flex-1 text-center p-2 cursor-pointer text-[0.85rem] rounded-sm transition-all ${
-                            !filters.vatExempt ? "bg-[#117a7a] text-white font-semibold" : ""
+                            !filters.vatExempt ? "bg-teal-800 text-white font-semibold" : ""
                         }`}
                     >
                         Standard
                     </div>
                 </div>
-                <div className="text-[0.75rem] text-[#0d6161] mt-3 leading-[1.4] space-y-2">
+                <div className="text-[0.75rem] text-teal-800 mt-3 leading-[1.4] space-y-2">
                     <div className="flex gap-1.5 align-top">
                         <Info size={12} className="shrink-0 mt-0.5" />
                         <span>Most customers with a chronic condition are eligible for VAT relief.</span>
                     </div>
-                    <div className="pl-4.5 opacity-90 border-t border-[#117a7a]/20 pt-2 mt-2">
+                    <div className="pl-4.5 opacity-90 border-t border-teal-700/20 pt-2 mt-2">
                         <p className="font-semibold mb-1">Self-declaration, no doctor&apos;s note needed.</p>
                         <p>You must confirm eligibility at checkout.</p>
                     </div>
@@ -163,7 +163,7 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
             {hasActiveFilters && (
                 <button
                     onClick={clearAll}
-                    className="w-full text-sm text-teal-700 font-semibold border border-teal-200 rounded-lg py-2 hover:bg-teal-50 transition-colors"
+                    className="w-full text-sm text-teal-800 font-semibold border border-teal-200 rounded-lg py-2 hover:bg-teal-50 transition-colors"
                 >
                     Clear all filters
                 </button>

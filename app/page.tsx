@@ -87,7 +87,7 @@ const TrustTicker = () => {
         className={`flex items-center gap-2 text-sm md:text-base text-slate-800 font-medium transition-all duration-500 transform ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95"
           }`}
       >
-        <CheckCircle2 className="text-teal-700 shrink-0" size={16} />
+        <CheckCircle2 className="text-teal-800 shrink-0" size={16} />
         {items[index]}
       </div>
     </div>
@@ -101,7 +101,7 @@ const Hero = () => (
       <div className="space-y-4 md:space-y-8 order-2 lg:order-1">
         <h1 className="font-serif text-[28px] sm:text-5xl md:text-7xl text-slate-900 leading-[1.2] font-bold">
           Rediscover Your <br className="hidden sm:block" />
-          <span className="text-teal-700">Independence.</span>
+          <span className="text-teal-800">Independence.</span>
         </h1>
 
         <div className="space-y-4 md:space-y-6">
@@ -111,13 +111,13 @@ const Hero = () => (
         </div>
 
         <div className="flex flex-col gap-3 pt-2 w-full max-w-md">
-          <a href="/free-brochure" className="h-14 md:h-16 px-6 md:px-10 bg-teal-700 hover:bg-teal-800 text-white text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center justify-center gap-2 focus-ring w-full">
+          <a href="/free-brochure" className="h-14 md:h-16 px-6 md:px-10 bg-teal-800 hover:bg-teal-900 text-white text-lg md:text-xl font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition flex items-center justify-center gap-2 focus-ring w-full">
             Request Free Brochure
           </a>
           <p className="text-center text-sm text-slate-600 font-medium mt-1">
             No obligation • Takes 30 seconds
           </p>
-          <Link id="hero-quote-btn" href="/free-quote" className="h-14 md:h-16 px-6 md:px-10 bg-white border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1 flex items-center justify-center">
+          <Link id="hero-quote-btn" href="/free-quote" className="h-14 md:h-16 px-6 md:px-10 bg-cream-50 border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1 flex items-center justify-center">
             Get Free Quote
           </Link>
         </div>
@@ -127,7 +127,7 @@ const Hero = () => (
       {/* Compact Trust Row - Removed as it's now in TrustStrip above */}
 
       {/* Visual - First on Mobile, Second on Desktop */}
-      <div className="relative w-full aspect-video md:aspect-[4/3] lg:aspect-square bg-slate-200 rounded-2xl overflow-hidden shadow-md items-center justify-center text-slate-500 order-1 lg:order-2 border border-slate-100 flex">
+      <div className="relative w-full aspect-video md:aspect-[4/3] lg:aspect-square bg-slate-200 rounded-2xl overflow-hidden shadow-md items-center justify-center text-slate-600 order-1 lg:order-2 border border-slate-100 flex">
         <Image
           src="/images/HeroImage.png"
           alt="Accessible Bathroom Layout"
@@ -139,12 +139,12 @@ const Hero = () => (
 
         {/* VAT Relief Badge Overlay */}
         {/* VAT Relief Badge Overlay */}
-        <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-white/95 backdrop-blur-sm border border-teal-100 rounded-lg md:rounded-xl p-2 md:p-3 shadow-lg flex items-center gap-2 md:gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 z-10">
+        <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-cream-50/95 backdrop-blur-sm border border-teal-100 rounded-lg md:rounded-xl p-2 md:p-3 shadow-lg flex items-center gap-2 md:gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 z-10">
           <div className="bg-teal-100 p-1 md:p-1.5 rounded-full shrink-0">
-            <CheckCircle2 className="text-teal-700 w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />
+            <CheckCircle2 className="text-teal-800 w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />
           </div>
           <div>
-            <div className="text-[9px] md:text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
+            <div className="text-[9px] md:text-[10px] text-slate-600 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
             <div className="text-slate-900 font-bold leading-none text-xs md:text-sm">VAT Relief Available</div>
           </div>
         </div>
@@ -156,7 +156,7 @@ const Hero = () => (
 const CategoryChoice = () => {
   const { openWizard } = useWizardStore();
   return (
-  <section className="bg-white py-12 md:py-20 border-b border-slate-100">
+  <section className="bg-cream-50 py-12 md:py-20 border-b border-slate-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="text-center mb-10 md:mb-14">
         <h2 className="font-serif text-3xl md:text-5xl text-slate-900 mb-3 font-bold">
@@ -175,7 +175,7 @@ const CategoryChoice = () => {
           { title: "Deep Soakers", img: "/images/DeepSoaker.png", desc: "Ideal for small spaces.", cta: "View Soakers", href: "/deep-soaker-baths" },
         ].map((cat, i) => (
           <div key={i} className="group relative bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-teal-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
-            <div className="aspect-[4/3] relative bg-white shrink-0">
+            <div className="aspect-[4/3] relative bg-cream-50 shrink-0">
               <Image
                 src={cat.img}
                 alt={cat.title}
@@ -225,7 +225,7 @@ export default function Home() {
       <HandingCard />
 
       {/* Ethical Promise Block - New Design */}
-      <section className="bg-white py-16 border-y-4 border-teal-700/10">
+      <section className="bg-cream-50 py-16 border-y-4 border-teal-700/10">
         <div className="max-w-3xl mx-auto px-6 text-center flex flex-col items-center">
 
           {/* Avatar Badge */}
@@ -279,15 +279,15 @@ const StickyBottomBar = () => {
 
   return (
     <div
-      className={`fixed bottom-0 left-1 right-1 bg-[#FAFAF9]/90 backdrop-blur-xl border border-slate-200/60 shadow-2xl rounded-2xl md:hidden z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[150%]"
+      className={`fixed bottom-0 left-1 right-1 bg-cream-50/90 backdrop-blur-xl border border-slate-200/60 shadow-2xl rounded-2xl md:hidden z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "translate-y-[150%]"
         }`}
     >
       <div className="px-4 py-3 flex gap-4 items-center">
-        <a href="tel:08001234567" className="flex-1 h-14 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
-          <Phone size={20} className="text-teal-700" />
+        <a href="tel:08001234567" className="flex-1 h-14 bg-cream-50 border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
+          <Phone size={20} className="text-teal-800" />
           <span className="whitespace-nowrap">Call Now</span>
         </a>
-        <Link href="/free-quote" className="flex-1 h-14 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
+        <Link href="/free-quote" className="flex-1 h-14 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
           <span className="whitespace-nowrap">Get Free Quote</span>
         </Link>
       </div>

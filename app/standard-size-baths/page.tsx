@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -10,6 +11,7 @@ import {
   STANDARD_SIZE_CATEGORY,
   STANDARD_SIZE_FILTER_TAGS,
 } from "@/data/standardSizeBaths";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 function StandardSizeBathsContent() {
   return (
@@ -34,6 +36,9 @@ export default function StandardSizeBathsPage() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
       <Header />
+      <div className="mx-auto max-w-7xl px-6 py-5">
+        <Breadcrumbs items={getBreadcrumbs("/standard-size-baths")} />
+      </div>
       <Suspense fallback={null}>
         <StandardSizeBathsContent />
       </Suspense>

@@ -25,7 +25,6 @@ export default async function WalkInShowerBathProductPage({
       product={product}
       products={WALK_IN_SHOWER_BATHS}
       baseModels={WALK_IN_SHOWER_BATHS_BASE_MODELS}
-      categoryTitle="Walk-in Shower Baths"
       categoryHref="/walk-in-shower-baths"
     />
   );

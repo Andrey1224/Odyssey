@@ -23,11 +23,13 @@ import {
   Zap,
 } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { TrustBar } from "@/components/TrustBar";
 import type { CatalogBaseModel, CatalogProductVariant, PackageFeatureMatrix } from "@/data/catalogTypes";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 import { formatGBP, getSiblings, priceIncVat } from "@/lib/catalog";
 
 const HIGHLIGHTS_ICONS = [DoorOpen, Dumbbell, Droplets, Wrench];
@@ -95,7 +97,6 @@ type CatalogProductDetailProps = {
   product: CatalogProductVariant;
   products: CatalogProductVariant[];
   baseModels: CatalogBaseModel[];
-  categoryTitle: string;
   categoryHref: string;
 };
 
@@ -103,7 +104,6 @@ export function CatalogProductDetail({
   product,
   products,
   baseModels,
-  categoryTitle,
   categoryHref,
 }: CatalogProductDetailProps) {
   const fallback = "/images/Walk-inBath.png";
@@ -138,17 +138,11 @@ export function CatalogProductDetail({
       <Header />
 
       <div className="mx-auto max-w-7xl px-6 py-5">
-        <nav className="flex flex-wrap gap-2 text-base text-slate-600">
-          <Link href="/" className="transition-colors hover:text-teal-700">
-            Home
-          </Link>
-          <span>/</span>
-          <Link href={categoryHref} className="transition-colors hover:text-teal-700">
-            {categoryTitle}
-          </Link>
-          <span>/</span>
-          <span className="font-semibold text-slate-900">{product.title}</span>
-        </nav>
+        <Breadcrumbs
+          items={getBreadcrumbs(`${categoryHref}/${product.slug}`, {
+            productTitle: product.title,
+          })}
+        />
       </div>
 
       <section className="mx-auto max-w-7xl px-6 pb-12 md:pb-16">
@@ -211,20 +205,20 @@ export function CatalogProductDetail({
                   key={label}
                   className="flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1.5 text-base font-semibold text-slate-700"
                 >
-                  <Icon size={16} className="shrink-0 text-teal-700" />
+                  <Icon size={16} className="shrink-0 text-teal-800" />
                   {label}
                 </span>
               ))}
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-7">
+            <div className="rounded-2xl border border-slate-200 bg-cream-50 p-7">
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-base font-semibold text-slate-700">Pricing Mode:</span>
                 <div className="flex rounded-full bg-slate-200 p-1">
                   <button
                     onClick={() => setVatExempt(true)}
                     className={`rounded-full px-3 py-1 text-sm font-semibold transition-all ${
-                      vatExempt ? "bg-white text-teal-700 shadow-sm" : "text-slate-500"
+                      vatExempt ? "bg-cream-50 text-teal-800 shadow-sm" : "text-slate-600"
                     }`}
                   >
                     Ex. VAT
@@ -232,7 +226,7 @@ export function CatalogProductDetail({
                   <button
                     onClick={() => setVatExempt(false)}
                     className={`rounded-full px-3 py-1 text-sm font-semibold transition-all ${
-                      !vatExempt ? "bg-white text-teal-700 shadow-sm" : "text-slate-500"
+                      !vatExempt ? "bg-cream-50 text-teal-800 shadow-sm" : "text-slate-600"
                     }`}
                   >
                     Inc. VAT
@@ -243,7 +237,7 @@ export function CatalogProductDetail({
               <div className="mb-4">
                 <div className="text-4xl font-bold leading-none text-slate-900">{formatGBP(displayPrice)}</div>
                 {vatExempt ? (
-                  <div className="mt-2 flex items-center gap-1 text-base font-semibold text-green-600">
+                  <div className="mt-2 flex items-center gap-1 text-base font-semibold text-teal-800">
                     <Check size={16} strokeWidth={3} />
                     VAT Relief Applied - Save {formatGBP(priceIncVat(product) - product.priceExVat)}
                   </div>
@@ -252,7 +246,7 @@ export function CatalogProductDetail({
                 )}
                 {product.wasPriceIncVat && (
                   <div className="mt-2 flex items-center gap-2">
-                    <span className="text-base text-slate-400 line-through">
+                    <span className="text-base text-slate-600 line-through">
                       {formatGBP(product.wasPriceIncVat)}
                     </span>
                     {(() => {
@@ -260,7 +254,7 @@ export function CatalogProductDetail({
                         ? product.wasPriceIncVat - product.priceExVat
                         : product.wasPriceIncVat - priceIncVat(product);
                       return save > 0 ? (
-                        <span className="rounded bg-green-50 px-2 py-0.5 text-sm font-semibold text-green-600">
+                        <span className="rounded bg-teal-50 px-2 py-0.5 text-sm font-semibold text-teal-800">
                           Save {formatGBP(save)}
                         </span>
                       ) : null;
@@ -270,7 +264,7 @@ export function CatalogProductDetail({
               </div>
 
               <div className="mb-5 flex items-center gap-2 text-base text-slate-600">
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-green-500" />
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-teal-800" />
                 {product.stockNote ?? "In Stock - Ready for Installation"}
               </div>
 
@@ -293,8 +287,8 @@ export function CatalogProductDetail({
                       onClick={() => setSelectedHanding(h)}
                       className={`min-h-[48px] flex-1 rounded-lg border-2 py-3 text-base font-semibold transition-all ${
                         selectedHanding === h
-                          ? "border-teal-700 bg-teal-50 text-teal-700"
-                          : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
+                          ? "border-teal-700 bg-teal-50 text-teal-800"
+                          : "border-slate-200 bg-cream-50 text-slate-700 hover:border-slate-300"
                       }`}
                     >
                       {handingLabel(h)}
@@ -309,11 +303,11 @@ export function CatalogProductDetail({
               <div className="flex flex-col gap-3">
                 <Link
                   href={`/free-brochure?product=${product.slug}`}
-                  className="min-h-[48px] w-full rounded-xl bg-teal-700 py-4 text-center text-lg font-bold text-white shadow-sm transition-colors hover:bg-teal-800"
+                  className="min-h-[48px] w-full rounded-xl bg-teal-800 py-4 text-center text-lg font-bold text-white shadow-sm transition-colors hover:bg-teal-900"
                 >
                   Request Free Brochure
                 </Link>
-                <button className="min-h-[48px] w-full rounded-xl border-2 border-slate-900 bg-white py-3.5 text-lg font-bold text-slate-900 transition-colors hover:bg-slate-50">
+                <button className="min-h-[48px] w-full rounded-xl border-2 border-slate-900 bg-cream-50 py-3.5 text-lg font-bold text-slate-900 transition-colors hover:bg-slate-50">
                   Book Free Survey
                 </button>
               </div>
@@ -328,7 +322,7 @@ export function CatalogProductDetail({
       </section>
 
       {product.highlights && product.highlights.length > 0 && (
-        <section className="border-t border-slate-200 bg-white py-12 md:py-16">
+        <section className="border-t border-slate-200 bg-cream-50 py-12 md:py-16">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-10 text-center font-serif text-3xl font-bold text-slate-900 md:text-4xl">
               Why the {product.title} is the Best Choice
@@ -338,7 +332,7 @@ export function CatalogProductDetail({
                 const Icon = HIGHLIGHTS_ICON_MAP[item.iconKey] ?? HIGHLIGHTS_ICONS[i % HIGHLIGHTS_ICONS.length];
                 return (
                   <div key={i} className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-800">
                       <Icon size={22} />
                     </div>
                     <div>
@@ -383,16 +377,16 @@ export function CatalogProductDetail({
                 <tbody>
                   {baseModel.packageFeatureMatrix.rows.map((row, ri) => (
                     <tr key={ri} className="border-b border-slate-100">
-                      <td className="sticky left-0 border-r border-slate-100 bg-white p-4 text-left font-medium text-slate-700">
+                      <td className="sticky left-0 border-r border-slate-100 bg-cream-50 p-4 text-left font-medium text-slate-700">
                         {row}
                       </td>
                       {siblings.map((p) => (
                         <td
                           key={p.id}
-                          className={`p-4 text-center ${p.id === product.id ? "bg-teal-50" : "bg-white"}`}
+                          className={`p-4 text-center ${p.id === product.id ? "bg-teal-50" : "bg-cream-50"}`}
                         >
                           {matrixValue(baseModel.packageFeatureMatrix!, p.packageLevel, ri) ? (
-                            <Check size={18} className="mx-auto text-teal-700" strokeWidth={3} />
+                            <Check size={18} className="mx-auto text-teal-800" strokeWidth={3} />
                           ) : (
                             <span className="text-lg text-slate-300">-</span>
                           )}
@@ -401,14 +395,14 @@ export function CatalogProductDetail({
                     </tr>
                   ))}
                   <tr>
-                    <td className="sticky left-0 border-r border-slate-100 bg-white p-4 text-left font-semibold text-slate-700">
+                    <td className="sticky left-0 border-r border-slate-100 bg-cream-50 p-4 text-left font-semibold text-slate-700">
                       Price (Ex VAT)
                     </td>
                     {siblings.map((p) => (
                       <td
                         key={p.id}
                         className={`p-4 text-center font-bold ${
-                          p.id === product.id ? "bg-teal-50 text-teal-800" : "bg-white text-slate-900"
+                          p.id === product.id ? "bg-teal-50 text-teal-800" : "bg-cream-50 text-slate-900"
                         }`}
                       >
                         {formatGBP(p.priceExVat)}
@@ -423,7 +417,7 @@ export function CatalogProductDetail({
       )}
 
       {techSpecRows.length > 0 && (
-        <section className="border-t border-slate-200 bg-white py-12 md:py-16">
+        <section className="border-t border-slate-200 bg-cream-50 py-12 md:py-16">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-10 text-center font-serif text-3xl font-bold text-slate-900 md:text-4xl">
               Technical Specifications
@@ -448,7 +442,7 @@ export function CatalogProductDetail({
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {product.testimonials.map((review, i) => (
-                <div key={i} className="rounded-xl border border-slate-200 bg-white p-6">
+                <div key={i} className="rounded-xl border border-slate-200 bg-cream-50 p-6">
                   <div className="mb-3 text-xl text-amber-400">★★★★★</div>
                   <p className="mb-4 italic leading-relaxed text-slate-600">&ldquo;{review.quote}&rdquo;</p>
                   <span className="text-base font-semibold text-slate-900">- {review.authorName}</span>
@@ -463,11 +457,11 @@ export function CatalogProductDetail({
       <FAQSection />
       <Footer />
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center gap-4 border-t-2 border-teal-700 bg-white px-4 py-3 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] lg:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center gap-4 border-t-2 border-teal-700 bg-cream-50 px-4 py-3 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] lg:hidden">
         <div className="shrink-0 text-2xl font-bold text-slate-900">{formatGBP(displayPrice)}</div>
         <Link
           href={`/free-brochure?product=${product.slug}`}
-          className="min-h-[48px] flex-1 rounded-xl bg-teal-700 py-3 text-center text-lg font-bold text-white transition-colors hover:bg-teal-800"
+          className="min-h-[48px] flex-1 rounded-xl bg-teal-800 py-3 text-center text-lg font-bold text-white transition-colors hover:bg-teal-900"
         >
           Request Free Brochure
         </Link>

@@ -22,7 +22,6 @@ export default async function DeepSoakerBathProductPage({
       product={product}
       products={DEEP_SOAKER_BATHS}
       baseModels={DEEP_SOAKER_BASE_MODELS}
-      categoryTitle="Deep Soaker Baths"
       categoryHref="/deep-soaker-baths"
     />
   );

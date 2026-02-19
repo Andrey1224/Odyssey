@@ -12,8 +12,10 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 type FAQItem = {
   question: string;
@@ -47,7 +49,7 @@ const FAQ_GROUPS: FAQGroup[] = [
               form at checkout.{" "}
               <a
                 href="/contact"
-                className="font-semibold text-teal-700 underline decoration-dashed underline-offset-4 hover:decoration-solid"
+                className="font-semibold text-teal-800 underline decoration-dashed underline-offset-4 hover:decoration-solid"
               >
                 Contact us
               </a>{" "}
@@ -140,7 +142,7 @@ const FAQ_GROUPS: FAQGroup[] = [
             <p>
               We use technology to ensure the fastest possible exit. Most of
               our models feature{" "}
-              <strong className="text-teal-700">
+              <strong className="text-teal-800">
                 <Droplets className="-mt-1 mr-1 inline-block h-4 w-4" />
                 Twin Waste Technology
               </strong>{" "}
@@ -161,7 +163,7 @@ const FAQ_GROUPS: FAQGroup[] = [
             <p>We are confident in our quality and offer comprehensive support:</p>
             <ul className="mt-3 list-disc space-y-2 pl-6">
               <li className="text-[1.05rem]">
-                <span className="font-bold text-teal-700">
+                <span className="font-bold text-teal-800">
                   <CheckCircle2 className="-mt-1 mr-1 inline-block h-4 w-4" />
                   Lifetime Warranty
                 </span>{" "}
@@ -193,11 +195,14 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-cream-50 font-sans selection:bg-teal-200">
       <Header />
+      <div className="mx-auto max-w-7xl px-6 py-5">
+        <Breadcrumbs items={getBreadcrumbs("/faq")} />
+      </div>
 
-      <section className="bg-white py-14 md:py-16">
+      <section className="bg-cream-50 py-14 md:py-16">
         <div className="mx-auto w-full max-w-5xl px-6">
           <div className="mb-12 text-center md:mb-14">
-            <span className="mb-3 block text-sm font-bold uppercase tracking-[0.08em] text-teal-700">
+            <span className="mb-3 block text-sm font-bold uppercase tracking-[0.08em] text-teal-800">
               Common Questions
             </span>
             <h1 className="font-serif text-4xl font-bold text-slate-900 md:text-5xl">
@@ -213,7 +218,7 @@ export default function FAQPage() {
             {FAQ_GROUPS.map((group) => (
               <section key={group.title}>
                 <h2 className="mb-5 flex items-center gap-3 border-b-2 border-teal-50 pb-3 text-2xl font-bold text-slate-900">
-                  <group.icon className="h-6 w-6 text-teal-700" />
+                  <group.icon className="h-6 w-6 text-teal-800" />
                   {group.title}
                 </h2>
 
@@ -226,7 +231,7 @@ export default function FAQPage() {
                       <div
                         key={item.question}
                         className={`rounded-xl border bg-slate-50 transition hover:border-slate-300 hover:shadow-[0_4px_10px_rgba(0,0,0,0.03)] ${isOpen
-                          ? "border-teal-700 bg-white shadow-[0_4px_15px_rgba(17,122,122,0.08)]"
+                          ? "border-teal-700 bg-cream-50 shadow-[0_4px_15px_rgba(17,122,122,0.08)]"
                           : "border-slate-200"
                           }`}
                       >
@@ -237,7 +242,7 @@ export default function FAQPage() {
                           aria-expanded={isOpen}
                         >
                           <span>{item.question}</span>
-                          <span className="ml-4 shrink-0 text-2xl leading-none text-teal-700">
+                          <span className="ml-4 shrink-0 text-2xl leading-none text-teal-800">
                             {isOpen ? "-" : "+"}
                           </span>
                         </button>
@@ -272,14 +277,14 @@ export default function FAQPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="tel:08001234567"
-                className="inline-flex items-center gap-2 rounded-full bg-teal-700 px-7 py-3 text-lg font-semibold text-white transition hover:bg-teal-800"
+                className="inline-flex items-center gap-2 rounded-full bg-teal-800 px-7 py-3 text-lg font-semibold text-white transition hover:bg-teal-900"
               >
                 <Phone className="h-5 w-5" />
                 Call Free 0800 123 4567
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-transparent px-7 py-3 text-lg font-semibold text-white transition hover:bg-white hover:text-slate-900"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-transparent px-7 py-3 text-lg font-semibold text-white transition hover:bg-cream-50 hover:text-slate-900"
               >
                 <Mail className="h-5 w-5" />
                 Contact Us

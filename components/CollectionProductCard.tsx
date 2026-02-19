@@ -85,31 +85,31 @@ export const CollectionProductCard = ({
     const regularPrice = wasPriceIncVat ?? incVatPrice;
 
     return (
-        <article className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 flex flex-col relative hover:shadow-[0_12px_28px_-6px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 ${
+        <article className={`bg-cream-50 border rounded-2xl overflow-hidden transition-all duration-300 flex flex-col relative hover:shadow-[0_12px_28px_-6px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 ${
             isBestSeller
-                ? "border-[#117a7a] shadow-[0_4px_12px_rgba(17,122,122,0.15)]"
-                : "border-[#e2e8f0] hover:border-[#cbd5e1]"
+                ? "border-teal-700 shadow-[0_4px_12px_rgba(17,122,122,0.15)]"
+                : "border-slate-200 hover:border-slate-300"
         }`}>
 
             {/* Badges — absolute top-left */}
             <div className="absolute top-4 left-4 z-10 flex flex-col items-start gap-1.5">
                 {isBestSeller && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#fef3c7] text-[#b45309] uppercase tracking-wider leading-none">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-1 text-[0.7rem] font-bold uppercase leading-none tracking-wider text-amber-700">
                         <Star size={10} fill="currentColor" /> Best Seller
                     </span>
                 )}
                 {isPremium && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#0f172a] text-white uppercase tracking-wider leading-none">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-slate-900 px-2.5 py-1 text-[0.7rem] font-bold uppercase leading-none tracking-wider text-white">
                         Premium Spec
                     </span>
                 )}
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[0.7rem] font-bold bg-[#e0f2f1] text-[#117a7a] uppercase tracking-wider leading-none">
+                <span className="inline-flex items-center gap-1 rounded-full bg-teal-50 px-2.5 py-1 text-[0.7rem] font-bold uppercase leading-none tracking-wider text-teal-800">
                     VAT Relief Eligible
                 </span>
             </div>
 
             {/* Image */}
-            <div className="h-[240px] bg-[#f1f5f9] flex items-center justify-center p-4">
+            <div className="h-[240px] flex items-center justify-center bg-slate-100 p-4">
                 <div className="relative w-full h-full">
                     <Image
                         src={imageSrc}
@@ -124,12 +124,12 @@ export const CollectionProductCard = ({
             {/* Body */}
             <div className="p-6 flex-grow flex flex-col">
 
-                <h3 className="text-[1.25rem] font-bold text-[#0f172a] mb-1 leading-tight">
+                <h3 className="mb-1 text-[1.25rem] font-bold leading-tight text-slate-900">
                     {title}
                 </h3>
 
                 {subtitle && (
-                    <p className="text-sm text-slate-500 mb-4 leading-snug min-h-[20px]">
+                    <p className="text-sm text-slate-600 mb-4 leading-snug min-h-[20px]">
                         {subtitle}
                     </p>
                 )}
@@ -142,9 +142,9 @@ export const CollectionProductCard = ({
                             return (
                                 <span
                                     key={pill.iconKey}
-                                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-[0.75rem] font-semibold bg-[#f1f5f9] text-[#334155] leading-none"
+                                    className="inline-flex items-center gap-1.5 rounded-lg bg-slate-100 px-3 py-2 text-[0.75rem] font-semibold leading-none text-slate-700"
                                 >
-                                    {Icon && <Icon size={14} strokeWidth={2.5} className="text-[#117a7a] shrink-0" />}
+                                    {Icon && <Icon size={14} strokeWidth={2.5} className="shrink-0 text-teal-800" />}
                                     <span className="truncate">{pill.label}</span>
                                 </span>
                             );
@@ -154,21 +154,21 @@ export const CollectionProductCard = ({
 
                 {/* Price Area */}
                 <div className="border-t border-slate-100 mt-auto pt-4 mb-4">
-                    <div className="text-[1.6rem] font-bold text-[#0f172a] leading-none">
+                    <div className="text-[1.6rem] font-bold leading-none text-slate-900">
                         {formatPrice(displayPrice)}
                     </div>
 
                     {vatExempt ? (
-                        <div className="flex items-center gap-1 text-[0.82rem] font-semibold text-green-600 mt-1">
+                        <div className="mt-1 flex items-center gap-1 text-[0.82rem] font-semibold text-teal-800">
                             <Check size={13} strokeWidth={3} /> Ex. VAT Price
                         </div>
                     ) : (
-                        <div className="text-[0.82rem] font-medium text-slate-500 mt-1">
+                        <div className="text-[0.82rem] font-medium text-slate-600 mt-1">
                             Standard Price
                         </div>
                     )}
 
-                    <div className="text-sm text-slate-500 mt-0.5">
+                    <div className="text-sm text-slate-600 mt-0.5">
                         {vatExempt
                             ? `Regular Price: ${formatPrice(regularPrice)}`
                             : `${formatPrice(priceExVat)} ex. VAT`
@@ -180,13 +180,13 @@ export const CollectionProductCard = ({
                 <div className="grid grid-cols-2 gap-3">
                     <Link
                         href={`${detailHrefBase}/${id}`}
-                        className="bg-[#117a7a] hover:bg-[#0d6161] text-white border-0 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
+                        className="rounded-lg border-0 bg-teal-800 py-3.5 text-center text-[0.9rem] font-bold text-white transition-colors hover:bg-teal-900"
                     >
                         View Details
                     </Link>
                     <Link
                         href={`/free-brochure?product=${id}`}
-                        className="bg-white hover:border-slate-900 text-slate-900 border border-slate-200 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
+                        className="bg-cream-50 hover:border-slate-900 text-slate-900 border border-slate-200 py-3.5 rounded-lg font-bold text-center transition-colors text-[0.9rem]"
                     >
                         Brochure
                     </Link>

@@ -40,7 +40,7 @@ export function HandingTool({ value, onChange, className }: Props) {
                             "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50",
                             value === "left"
                                 ? "bg-slate-900 text-white border-slate-900 shadow-md transform scale-[1.02]"
-                                : "bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50",
+                                : "bg-cream-50 text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50",
                         ].join(" ")}
                     >
                         Left
@@ -56,7 +56,7 @@ export function HandingTool({ value, onChange, className }: Props) {
                             "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50",
                             value === "right"
                                 ? "bg-slate-900 text-white border-slate-900 shadow-md transform scale-[1.02]"
-                                : "bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50",
+                                : "bg-cream-50 text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50",
                         ].join(" ")}
                     >
                         Right
@@ -67,15 +67,15 @@ export function HandingTool({ value, onChange, className }: Props) {
                 <div id="handing-description" className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 text-center sm:text-left">
                     <div className="text-base font-bold text-slate-900">{copy.title}</div>
                     <p className="mt-1 text-sm text-slate-700 font-medium">{copy.text}</p>
-                    <p className="mt-2 text-xs text-slate-500 font-medium">
+                    <p className="mt-2 text-xs text-slate-600 font-medium">
                         * Final orientation confirmed during free home survey.
                     </p>
                 </div>
 
                 {/* Diagram (top-down) */}
-                <div className="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+                <div className="rounded-2xl border border-slate-100 bg-cream-50 p-4 shadow-sm">
                     <TopDownDiagram handing={value} />
-                    <div className="mt-3 text-center text-[10px] uppercase tracking-wider font-bold text-slate-400">
+                    <div className="mt-3 text-center text-[10px] uppercase tracking-wider font-bold text-slate-600">
                         View from above • You are seated facing the taps
                     </div>
                 </div>

@@ -47,8 +47,8 @@ const FreeQuoteForm = () => {
   if (status === "success") {
     return (
       <div className="bg-cream-50 py-16 px-4 min-h-[600px] flex items-center justify-center">
-        <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center border-t-8 border-green-500">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full text-green-600 mb-6">
+        <div className="max-w-2xl w-full bg-cream-50 rounded-2xl shadow-xl p-8 md:p-12 text-center border-t-8 border-teal-800">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-teal-100 rounded-full text-teal-800 mb-6">
             <CheckCircle size={48} />
           </div>
 
@@ -65,7 +65,7 @@ const FreeQuoteForm = () => {
             <p className="text-slate-600 mb-4">Why not view our latest brochure online?</p>
             <Link
               href="/free-brochure"
-              className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white text-lg font-bold py-3 px-8 rounded-lg shadow-md transition-all transform hover:-translate-y-1"
+              className="inline-flex items-center gap-2 bg-teal-800 hover:bg-teal-900 text-white text-lg font-bold py-3 px-8 rounded-lg shadow-md transition-all transform hover:-translate-y-1"
             >
               <Download size={20} />
               Download Digital Brochure
@@ -74,7 +74,7 @@ const FreeQuoteForm = () => {
 
           <Link
             href="/"
-            className="text-slate-500 hover:text-teal-700 font-semibold underline underline-offset-4"
+            className="text-slate-600 hover:text-teal-800 font-semibold underline underline-offset-4"
           >
             Back to Home Page
           </Link>
@@ -104,12 +104,12 @@ const FreeQuoteForm = () => {
           <div className="lg:col-span-5 space-y-8 order-2 lg:order-1">
 
             {/* What Happens Next */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
+            <div className="bg-cream-50 rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8">
               <h3 className="text-2xl font-bold text-slate-800 mb-6">What happens next?</h3>
               <div className="space-y-6">
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl">1</div>
+                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-800 font-bold text-xl">1</div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">We&apos;ll give you a call</h4>
                     <p className="text-slate-600">Usually within 24 hours. Just a quick, friendly chat to understand what you need.</p>
@@ -117,7 +117,7 @@ const FreeQuoteForm = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl">2</div>
+                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-800 font-bold text-xl">2</div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Check compatibility</h4>
                     <p className="text-slate-600">We&apos;ll ask a few simple questions about your bathroom size and hot water system.</p>
@@ -125,7 +125,7 @@ const FreeQuoteForm = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl">3</div>
+                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-800 font-bold text-xl">3</div>
                   <div>
                     <h4 className="text-lg font-bold text-slate-900">Free Quote / Survey</h4>
                     <p className="text-slate-600">We&apos;ll give you a fixed price or book a free home survey if measurements are needed.</p>
@@ -136,15 +136,15 @@ const FreeQuoteForm = () => {
             </div>
 
             {/* Phone CTA */}
-            <div className="bg-teal-900 rounded-2xl p-8 text-center text-white shadow-lg">
-              <p className="text-teal-200 font-bold uppercase tracking-wider text-sm mb-2">Prefer to speak to a human?</p>
-              <h3 className="text-2xl font-bold mb-4">Call our UK team directly</h3>
-              <a href="tel:08001234567" className="inline-flex items-center gap-3 text-3xl font-black text-yellow-400 hover:text-white transition-colors">
-                <Phone size={32} />
+            <div className="bg-teal-900 rounded-2xl p-6 md:p-8 text-center text-white shadow-lg">
+              <p className="text-teal-200 font-bold uppercase tracking-wider text-xs md:text-sm mb-2">Prefer to speak to a human?</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Call our UK team directly</h3>
+              <a href="tel:08001234567" className="inline-flex items-center justify-center gap-2 md:gap-3 text-2xl md:text-3xl font-black text-white transition-colors break-keep whitespace-nowrap">
+                <Phone className="w-6 h-6 md:w-8 md:h-8 shrink-0" />
                 0800 123 4567
               </a>
-              <p className="mt-4 text-sm text-teal-300 flex items-center justify-center gap-2">
-                <Clock size={16} /> Mon-Fri: 9am - 5pm
+              <p className="mt-4 text-xs md:text-sm text-teal-300 flex items-center justify-center gap-2">
+                <Clock className="w-4 h-4" /> Mon-Fri: 9am - 5pm
               </p>
             </div>
 
@@ -152,14 +152,14 @@ const FreeQuoteForm = () => {
 
           {/* RIGHT COLUMN: FORM */}
           <div className="lg:col-span-7 order-1 lg:order-2">
-            <div className="bg-white rounded-2xl shadow-xl border-t-4 border-t-teal-700 p-6 md:p-10">
+            <div className="bg-cream-50 rounded-2xl shadow-xl border-t-4 border-t-teal-700 p-6 md:p-10">
 
               <form onSubmit={handleSubmit} className="space-y-6">
 
                 {/* Full Name */}
                 <div>
                   <label htmlFor="fullName" className="block text-lg font-bold text-slate-700 mb-2">
-                    Full Name <span className="text-red-500">*</span>
+                    Full Name <span className="text-red-800">*</span>
                   </label>
                   <input
                     type="text"
@@ -169,7 +169,7 @@ const FreeQuoteForm = () => {
                     placeholder="e.g. John Smith"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-white text-xl text-slate-900 placeholder:text-slate-400 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
+                    className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-xl text-slate-900 placeholder:text-slate-600 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
                   />
                 </div>
 
@@ -177,7 +177,7 @@ const FreeQuoteForm = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-lg font-bold text-slate-700 mb-2">
-                      Phone Number <span className="text-red-500">*</span>
+                      Phone Number <span className="text-red-800">*</span>
                     </label>
                     <input
                       type="tel"
@@ -187,16 +187,16 @@ const FreeQuoteForm = () => {
                       placeholder="07700 900000"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-white text-xl text-slate-900 placeholder:text-slate-400 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
+                      className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-xl text-slate-900 placeholder:text-slate-600 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
                     />
                   </div>
 
                   <div>
                     <label htmlFor="postcode" className="block text-lg font-bold text-slate-700 mb-2">
-                      Postcode <span className="text-red-500">*</span>
+                      Postcode <span className="text-red-800">*</span>
                     </label>
                     <div className="relative">
-                      <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                      <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-600" size={20} />
                       <input
                         type="text"
                         id="postcode"
@@ -205,7 +205,7 @@ const FreeQuoteForm = () => {
                         placeholder="e.g. IP33 1AA"
                         value={formData.postcode}
                         onChange={handleChange}
-                        className="w-full h-14 pl-12 pr-4 rounded-xl border-2 border-slate-200 bg-white text-xl text-slate-900 placeholder:text-slate-400 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none uppercase"
+                        className="w-full h-14 pl-12 pr-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-xl text-slate-900 placeholder:text-slate-600 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none uppercase"
                       />
                     </div>
                   </div>
@@ -214,7 +214,7 @@ const FreeQuoteForm = () => {
                 {/* Email (optional) */}
                 <div>
                   <label htmlFor="email" className="block text-lg font-bold text-slate-700 mb-2">
-                    Email Address <span className="text-slate-400 font-normal text-sm">(Optional)</span>
+                    Email Address <span className="text-slate-600 font-normal text-sm">(Optional)</span>
                   </label>
                   <input
                     type="email"
@@ -223,7 +223,7 @@ const FreeQuoteForm = () => {
                     placeholder="john@example.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-white text-xl text-slate-900 placeholder:text-slate-400 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
+                    className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-xl text-slate-900 placeholder:text-slate-600 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none"
                   />
                 </div>
 
@@ -238,20 +238,20 @@ const FreeQuoteForm = () => {
                       name="callTime"
                       value={formData.callTime}
                       onChange={handleChange}
-                      className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-white text-xl text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none appearance-none cursor-pointer"
+                      className="w-full h-14 px-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-xl text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none appearance-none cursor-pointer"
                     >
                       <option value="Anytime">Anytime (9am - 5pm)</option>
                       <option value="Morning">Morning (9am - 12pm)</option>
                       <option value="Afternoon">Afternoon (12pm - 5pm)</option>
                     </select>
-                    <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none" size={24} />
+                    <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-600 pointer-events-none" size={24} />
                   </div>
                 </div>
 
                 {/* Message (optional) */}
                 <div>
                   <label htmlFor="message" className="block text-lg font-bold text-slate-700 mb-2">
-                    How can we help? <span className="text-slate-400 font-normal text-sm">(Optional)</span>
+                    How can we help? <span className="text-slate-600 font-normal text-sm">(Optional)</span>
                   </label>
                   <textarea
                     id="message"
@@ -260,7 +260,7 @@ const FreeQuoteForm = () => {
                     placeholder="Tell us about your requirements..."
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full p-4 rounded-xl border-2 border-slate-200 bg-white text-lg text-slate-900 placeholder:text-slate-400 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none resize-none"
+                    className="w-full p-4 rounded-xl border-2 border-slate-200 bg-cream-50 text-lg text-slate-900 placeholder:text-slate-600 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 transition-all outline-none resize-none"
                   />
                 </div>
 
@@ -270,8 +270,8 @@ const FreeQuoteForm = () => {
                   disabled={status === "submitting"}
                   className={`w-full flex items-center justify-center gap-3 text-2xl font-bold py-5 rounded-xl shadow-lg transition-all ${
                     status === "submitting"
-                      ? "bg-slate-300 cursor-wait text-slate-500"
-                      : "bg-teal-700 hover:bg-teal-800 text-white transform hover:-translate-y-1"
+                      ? "bg-slate-300 cursor-wait text-slate-600"
+                      : "bg-teal-800 hover:bg-teal-900 text-white transform hover:-translate-y-1"
                   }`}
                 >
                   {status === "submitting" ? "Sending..." : "Get Free Quote"}
@@ -280,8 +280,8 @@ const FreeQuoteForm = () => {
 
                 {/* Privacy note */}
                 <div className="flex items-start gap-3 mt-4 p-4 bg-cream-50 rounded-lg border border-slate-100">
-                  <ShieldCheck className="text-teal-700 flex-shrink-0" size={20} />
-                  <p className="text-sm text-slate-500 leading-snug">
+                  <ShieldCheck className="text-teal-800 flex-shrink-0" size={20} />
+                  <p className="text-sm text-slate-600 leading-snug">
                     <strong>Your privacy is safe.</strong> We never share your details with third parties. This is purely for an initial consultation with no obligation to buy.
                   </p>
                 </div>

@@ -22,7 +22,7 @@ export const TrustBar = () => (
                 },
             ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-4">
-                    <div className="bg-white p-4 rounded-full shadow-sm text-teal-700 ring-1 ring-slate-900/5 shrink-0">
+                    <div className="bg-cream-50 p-4 rounded-full shadow-sm text-teal-800 ring-1 ring-slate-900/5 shrink-0">
                         <item.icon size={28} />
                     </div>
                     <div>

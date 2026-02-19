@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -10,6 +11,7 @@ import {
   DEEP_SOAKER_CATEGORY,
   DEEP_SOAKER_FILTER_TAGS,
 } from "@/data/deepSoakerBaths";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 function DeepSoakerBathsContent() {
   return (
@@ -35,6 +37,9 @@ export default function DeepSoakerBathsPage() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
       <Header />
+      <div className="mx-auto max-w-7xl px-6 py-5">
+        <Breadcrumbs items={getBreadcrumbs("/deep-soaker-baths")} />
+      </div>
       <Suspense fallback={null}>
         <DeepSoakerBathsContent />
       </Suspense>

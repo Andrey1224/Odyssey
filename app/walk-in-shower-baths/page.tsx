@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -10,6 +11,7 @@ import {
   WALK_IN_SHOWER_BATHS,
   WALK_IN_SHOWER_BATHS_CATEGORY,
 } from "@/data/walkInShowerBaths";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 function WalkInShowerBathsContent() {
   return (
@@ -35,6 +37,9 @@ export default function WalkInShowerBathsPage() {
   return (
     <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
       <Header />
+      <div className="mx-auto max-w-7xl px-6 py-5">
+        <Breadcrumbs items={getBreadcrumbs("/walk-in-shower-baths")} />
+      </div>
       <Suspense fallback={null}>
         <WalkInShowerBathsContent />
       </Suspense>

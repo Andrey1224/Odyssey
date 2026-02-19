@@ -12,8 +12,10 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 const trustBullets = [
   { icon: Award, label: "10+ Years Experience" },
@@ -31,7 +33,7 @@ const trustCards = [
   },
   {
     icon: Percent,
-    iconBg: "bg-teal-700",
+    iconBg: "bg-teal-800",
     title: "VAT Relief Handled",
     text: "Many customers are eligible for 0% VAT. We guide you through the process and handle the paperwork clearly and simply.",
     kicker: "No hidden charges.",
@@ -45,7 +47,7 @@ const trustCards = [
   },
   {
     icon: Heart,
-    iconBg: "bg-teal-700",
+    iconBg: "bg-teal-800",
     title: "No Sales Pressure",
     text: "We provide fixed, transparent quotations - not vague estimates. No aggressive follow-up calls.",
     kicker: "Decide at your own pace.",
@@ -92,13 +94,16 @@ const safetyPoints = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white font-sans selection:bg-teal-200">
+    <main className="min-h-screen bg-cream-50 font-sans selection:bg-teal-200">
       <Header />
+      <div className="mx-auto max-w-7xl px-6 py-5">
+        <Breadcrumbs items={getBreadcrumbs("/about")} />
+      </div>
 
       <section className="bg-cream-50 px-4 py-16 text-center md:py-24">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-4 font-serif text-4xl font-bold text-slate-900 md:text-5xl">About Odyssey Baths</h1>
-          <h2 className="mb-6 font-serif text-xl font-bold text-teal-700 md:text-2xl">
+          <h2 className="mb-6 font-serif text-xl font-bold text-teal-800 md:text-2xl">
             Helping Britain Bathe Safely, Independently and with Confidence
           </h2>
 
@@ -113,9 +118,9 @@ export default function AboutPage() {
             {trustBullets.map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="flex items-center justify-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 shadow-sm"
+                className="flex items-center justify-center gap-3 rounded-full border border-slate-200 bg-cream-50 px-5 py-3 shadow-sm"
               >
-                <Icon className="text-teal-700" size={20} />
+                <Icon className="text-teal-800" size={20} />
                 <span className="text-sm font-bold text-slate-900 md:text-base">{label}</span>
               </div>
             ))}
@@ -124,25 +129,25 @@ export default function AboutPage() {
           <div className="mb-4 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="rounded-xl bg-teal-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:bg-teal-800 active:scale-95"
+              className="rounded-xl bg-teal-800 px-8 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:bg-teal-900 active:scale-95"
             >
               Book Free Home Survey
             </Link>
             <Link
               href="/free-brochure"
-              className="rounded-xl border-2 border-slate-900 bg-white px-8 py-4 text-lg font-bold text-slate-900 transition-colors hover:bg-slate-900 hover:text-white"
+              className="rounded-xl border-2 border-slate-900 bg-cream-50 px-8 py-4 text-lg font-bold text-slate-900 transition-colors hover:bg-slate-900 hover:text-white"
             >
               Request Free Brochure
             </Link>
           </div>
-          <p className="text-sm font-medium text-slate-500">No obligation. No pressure. Just friendly advice.</p>
+          <p className="text-sm font-medium text-slate-600">No obligation. No pressure. Just friendly advice.</p>
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-cream-50 py-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 lg:grid-cols-2 lg:px-8">
           <div className="order-2 lg:order-1">
-            <div className="mb-4 inline-block rounded bg-teal-700/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teal-800">
+            <div className="mb-4 inline-block rounded bg-teal-800/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teal-800">
               Our Mission
             </div>
             <h2 className="mb-6 font-serif text-3xl font-bold text-slate-900 md:text-4xl">
@@ -193,21 +198,21 @@ export default function AboutPage() {
             {trustCards.map(({ icon: Icon, iconBg, title, text, kicker }) => (
               <div
                 key={title}
-                className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="rounded-xl border border-slate-200 bg-cream-50 p-6 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full text-white ${iconBg}`}>
                   <Icon size={20} />
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-slate-900">{title}</h3>
                 <p className="mb-2 text-slate-600">{text}</p>
-                <p className="text-sm font-bold text-teal-700">{kicker}</p>
+                <p className="text-sm font-bold text-teal-800">{kicker}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-cream-50 py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <h2 className="mb-2 text-center font-serif text-3xl font-bold text-slate-900 md:text-4xl">Our Simple 4-Step Process</h2>
           <p className="mb-12 text-center text-lg text-slate-600">Designed to make everything straightforward.</p>
@@ -215,8 +220,8 @@ export default function AboutPage() {
           <div className="relative grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="absolute left-0 top-8 -z-10 hidden h-1 w-full bg-slate-100 md:block" />
             {steps.map((step, index) => (
-              <div key={step.title} className="bg-white text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-teal-700 bg-cream-50 text-2xl font-bold text-teal-700">
+              <div key={step.title} className="bg-cream-50 text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-teal-700 bg-cream-50 text-2xl font-bold text-teal-800">
                   {index + 1}
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-slate-900">{step.title}</h3>
@@ -226,7 +231,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/contact" className="inline-flex items-center gap-2 text-lg font-bold text-teal-700 hover:underline">
+            <Link href="/contact" className="inline-flex items-center gap-2 text-lg font-bold text-teal-800 hover:underline">
               Learn more about installation
               <ArrowRight size={18} />
             </Link>
@@ -252,7 +257,7 @@ export default function AboutPage() {
                   <CheckCircle2 className="mt-1 text-teal-400" size={18} />
                   <div>
                     <strong className="block text-white">{point.title}</strong>
-                    <span className="text-sm text-slate-400">{point.text}</span>
+                    <span className="text-sm text-slate-600">{point.text}</span>
                   </div>
                 </li>
               ))}
@@ -261,7 +266,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="rounded-xl border border-white/10 bg-cream-50/5 p-6">
               <Image
                 src="/images/about/about-process-placeholder.svg"
                 alt="Technical diagram of bath structure"
@@ -269,7 +274,7 @@ export default function AboutPage() {
                 height={400}
                 className="w-full rounded opacity-90"
               />
-              <div className="mt-4 flex justify-between font-mono text-sm text-slate-400">
+              <div className="mt-4 flex justify-between font-mono text-sm text-slate-600">
                 <span>High-Grade Acrylic</span>
                 <span>Steel Frame Chassis</span>
               </div>
@@ -283,30 +288,30 @@ export default function AboutPage() {
           <h2 className="mb-8 text-center font-serif text-3xl font-bold text-slate-900 md:text-4xl">
             Built for Long-Term Peace of Mind
           </h2>
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:p-12">
+          <div className="rounded-2xl border border-slate-200 bg-cream-50 p-8 shadow-sm md:p-12">
             <div className="grid grid-cols-1 divide-y divide-slate-100 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
               <div className="px-4 py-2">
-                <div className="mb-2 text-4xl font-bold text-teal-700">∞</div>
+                <div className="mb-2 text-4xl font-bold text-teal-800">∞</div>
                 <h3 className="mb-2 text-lg font-bold text-slate-900">Lifetime Door Seal Warranty</h3>
-                <p className="text-sm text-slate-500">Protection against leaks for lasting reassurance.</p>
+                <p className="text-sm text-slate-600">Protection against leaks for lasting reassurance.</p>
               </div>
 
               <div className="px-4 py-2">
-                <div className="mb-2 text-4xl font-bold text-teal-700">200kg</div>
+                <div className="mb-2 text-4xl font-bold text-teal-800">200kg</div>
                 <h3 className="mb-2 text-lg font-bold text-slate-900">Heavy Duty Capacity</h3>
-                <p className="text-sm text-slate-500">Engineered for strength and bariatric support.</p>
+                <p className="text-sm text-slate-600">Engineered for strength and bariatric support.</p>
               </div>
 
               <div className="px-4 py-2">
-                <div className="mb-2 text-4xl font-bold text-teal-700">6 Year</div>
+                <div className="mb-2 text-4xl font-bold text-teal-800">6 Year</div>
                 <h3 className="mb-2 text-lg font-bold text-slate-900">Shell & Frame Warranty</h3>
-                <p className="text-sm text-slate-500">Reliable construction across the Serenity range.</p>
+                <p className="text-sm text-slate-600">Reliable construction across the Serenity range.</p>
               </div>
             </div>
 
             <div className="mt-8 border-t border-slate-100 pt-8 text-center">
               <p className="mb-2 text-lg font-bold text-slate-900">Designed for everyday use, not occasional support.</p>
-              <p className="font-medium italic text-slate-500">
+              <p className="font-medium italic text-slate-600">
                 When you choose Odyssey, you&apos;re choosing durability - not short-term solutions.
               </p>
             </div>
@@ -314,7 +319,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-20 text-center">
+      <section className="bg-cream-50 px-4 py-20 text-center">
         <div className="mx-auto max-w-3xl">
           <h2 className="mb-4 font-serif text-3xl font-bold text-slate-900 md:text-4xl">Ready to Explore Your Options?</h2>
           <p className="mb-10 text-lg text-slate-600">
@@ -324,7 +329,7 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/contact"
-              className="rounded-xl bg-teal-700 px-10 py-4 text-xl font-bold text-white shadow-lg transition-transform hover:bg-teal-800 active:scale-95"
+              className="rounded-xl bg-teal-800 px-10 py-4 text-xl font-bold text-white shadow-lg transition-transform hover:bg-teal-900 active:scale-95"
             >
               Book Free Survey
             </Link>
@@ -337,11 +342,11 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-8">
-            <p className="font-medium text-slate-500">Or speak to our friendly UK team:</p>
-            <a href="tel:08001234567" className="text-2xl font-bold text-slate-900 transition-colors hover:text-teal-700">
+            <p className="font-medium text-slate-600">Or speak to our friendly UK team:</p>
+            <a href="tel:08001234567" className="text-2xl font-bold text-slate-900 transition-colors hover:text-teal-800">
               0800 123 4567
             </a>
-            <p className="mt-2 text-sm text-slate-400">No pressure. Just helpful guidance.</p>
+            <p className="mt-2 text-sm text-slate-600">No pressure. Just helpful guidance.</p>
           </div>
         </div>
       </section>

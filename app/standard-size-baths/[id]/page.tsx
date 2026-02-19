@@ -22,7 +22,6 @@ export default async function StandardSizeBathProductPage({
       product={product}
       products={STANDARD_SIZE_BATHS}
       baseModels={STANDARD_SIZE_BASE_MODELS}
-      categoryTitle="Standard Size Baths"
       categoryHref="/standard-size-baths"
     />
   );

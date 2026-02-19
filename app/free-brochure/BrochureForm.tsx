@@ -3,8 +3,10 @@
 import { useActionState } from "react";
 import Link from "next/link";
 import { Check, Shield, Lock } from "lucide-react";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { getBreadcrumbs } from "@/lib/breadcrumbs";
 import { submitBrochureLead } from "./actions";
 
 type FormState = {
@@ -18,7 +20,7 @@ const initialState: FormState = { success: false };
 function SuccessState({ firstName }: { firstName: string }) {
   return (
     <div className="text-center py-10 px-4">
-      <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-5">
+      <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-teal-100 text-teal-800">
         <Check size={40} strokeWidth={3} />
       </div>
       <h2 className="font-serif text-3xl font-bold text-slate-900 mb-3">
@@ -38,7 +40,7 @@ function SuccessState({ firstName }: { firstName: string }) {
       </div>
       <Link
         href="/walk-in-baths"
-        className="inline-block bg-teal-700 hover:bg-teal-800 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors min-h-[48px]"
+        className="inline-block bg-teal-800 hover:bg-teal-900 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors min-h-[48px]"
       >
         Back to Walk-in Baths
       </Link>
@@ -48,14 +50,14 @@ function SuccessState({ firstName }: { firstName: string }) {
 
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
-  return <p className="mt-1.5 text-red-600 text-base font-medium">{message}</p>;
+  return <p className="mt-1.5 text-red-800 text-base font-medium">{message}</p>;
 }
 
 function inputClass(hasError?: boolean) {
   return [
-    "w-full text-lg px-4 py-3.5 border-2 rounded-xl text-slate-900 bg-white transition-colors",
+    "w-full text-lg px-4 py-3.5 border-2 rounded-xl text-slate-900 bg-cream-50 transition-colors",
     "focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 focus:border-teal-700",
-    hasError ? "border-red-500 bg-red-50" : "border-slate-300",
+    hasError ? "border-red-700 bg-red-50" : "border-slate-300",
   ].join(" ");
 }
 
@@ -79,13 +81,7 @@ export function BrochureForm({
 
       <main className="max-w-7xl mx-auto px-6 pb-16">
         {/* Breadcrumbs */}
-        <nav className="text-base text-slate-600 flex gap-2 py-5">
-          <Link href="/" className="hover:text-teal-700 transition-colors">
-            Home
-          </Link>
-          <span>/</span>
-          <span className="text-slate-900 font-semibold">Free Brochure</span>
-        </nav>
+        <Breadcrumbs items={getBreadcrumbs("/free-brochure")} className="py-5" />
 
         {/* Split layout */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
@@ -102,7 +98,7 @@ export function BrochureForm({
             {/* Brochure mockup */}
             <div className="bg-slate-100 rounded-2xl p-6 text-center mb-8 border border-slate-200">
               <div className="h-48 bg-slate-200 rounded-xl flex items-center justify-center mb-3">
-                <span className="text-slate-500 font-semibold text-lg">
+                <span className="text-slate-600 font-semibold text-lg">
                   Odyssey 2026 Catalogue
                 </span>
               </div>
@@ -125,7 +121,7 @@ export function BrochureForm({
                 <li key={item} className="flex items-start gap-3 text-lg text-slate-900">
                   <Check
                     size={22}
-                    className="text-teal-700 shrink-0 mt-0.5"
+                    className="text-teal-800 shrink-0 mt-0.5"
                     strokeWidth={3}
                   />
                   <span>{item}</span>
@@ -141,7 +137,7 @@ export function BrochureForm({
                 { Icon: Check, label: "10-Year Warranty" },
               ].map(({ Icon, label }) => (
                 <span key={label} className="flex items-center gap-2">
-                  <Icon size={16} className="text-teal-700 shrink-0" />
+                  <Icon size={16} className="text-teal-800 shrink-0" />
                   {label}
                 </span>
               ))}
@@ -149,7 +145,7 @@ export function BrochureForm({
           </div>
 
           {/* Right: Form card */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <div className="bg-cream-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
             {state.success && state.firstName ? (
               <SuccessState firstName={state.firstName} />
             ) : (
@@ -162,7 +158,7 @@ export function BrochureForm({
                     Fill in your details below. No obligation.
                   </p>
                   {productName && (
-                    <span className="inline-block mt-3 bg-teal-50 text-teal-700 text-sm font-semibold px-3 py-1.5 rounded-lg border border-teal-200">
+                    <span className="inline-block mt-3 bg-teal-50 text-teal-800 text-sm font-semibold px-3 py-1.5 rounded-lg border border-teal-200">
                       Including details for: {productName}
                     </span>
                   )}
@@ -191,7 +187,7 @@ export function BrochureForm({
                         htmlFor="firstName"
                         className="block font-semibold text-slate-900 mb-2 text-base"
                       >
-                        First Name <span className="text-red-500">*</span>
+                        First Name <span className="text-red-800">*</span>
                       </label>
                       <input
                         id="firstName"
@@ -208,7 +204,7 @@ export function BrochureForm({
                         htmlFor="lastName"
                         className="block font-semibold text-slate-900 mb-2 text-base"
                       >
-                        Last Name <span className="text-red-500">*</span>
+                        Last Name <span className="text-red-800">*</span>
                       </label>
                       <input
                         id="lastName"
@@ -228,7 +224,7 @@ export function BrochureForm({
                       htmlFor="postcode"
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
-                      Postcode <span className="text-red-500">*</span>
+                      Postcode <span className="text-red-800">*</span>
                     </label>
                     <input
                       id="postcode"
@@ -250,7 +246,7 @@ export function BrochureForm({
                       htmlFor="address1"
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
-                      Address Line 1 <span className="text-red-500">*</span>
+                      Address Line 1 <span className="text-red-800">*</span>
                     </label>
                     <input
                       id="address1"
@@ -270,7 +266,7 @@ export function BrochureForm({
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
                       Address Line 2{" "}
-                      <span className="text-slate-400 font-normal">
+                      <span className="text-slate-600 font-normal">
                         (Optional)
                       </span>
                     </label>
@@ -289,7 +285,7 @@ export function BrochureForm({
                       htmlFor="email"
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
-                      Email Address <span className="text-red-500">*</span>
+                      Email Address <span className="text-red-800">*</span>
                     </label>
                     <input
                       id="email"
@@ -308,7 +304,7 @@ export function BrochureForm({
                       htmlFor="phone"
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
-                      Telephone <span className="text-red-500">*</span>
+                      Telephone <span className="text-red-800">*</span>
                     </label>
                     <input
                       id="phone"
@@ -318,7 +314,7 @@ export function BrochureForm({
                       autoComplete="tel"
                       className={inputClass(!!state.errors?.phone)}
                     />
-                    <p className="mt-1.5 text-slate-500 text-sm">
+                    <p className="mt-1.5 text-slate-600 text-sm">
                       We only call to confirm address details.
                     </p>
                     <FieldError message={state.errors?.phone} />
@@ -331,14 +327,14 @@ export function BrochureForm({
                       className="block font-semibold text-slate-900 mb-2 text-base"
                     >
                       Best time to call{" "}
-                      <span className="text-slate-400 font-normal">
+                      <span className="text-slate-600 font-normal">
                         (Optional)
                       </span>
                     </label>
                     <select
                       id="bestTimeToCall"
                       name="bestTimeToCall"
-                      className="w-full text-lg px-4 py-3.5 border-2 border-slate-300 rounded-xl text-slate-900 bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 focus:border-teal-700 transition-colors"
+                      className="w-full text-lg px-4 py-3.5 border-2 border-slate-300 rounded-xl text-slate-900 bg-cream-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 focus:border-teal-700 transition-colors"
                     >
                       <option value="">Anytime</option>
                       <option value="morning">Morning (9am – 12pm)</option>
@@ -351,7 +347,7 @@ export function BrochureForm({
                   <button
                     type="submit"
                     disabled={isPending}
-                    className="w-full bg-teal-700 hover:bg-teal-800 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold text-xl py-4 rounded-xl transition-colors min-h-[56px] flex items-center justify-center gap-3"
+                    className="w-full bg-teal-800 hover:bg-teal-900 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold text-xl py-4 rounded-xl transition-colors min-h-[56px] flex items-center justify-center gap-3"
                   >
                     {isPending ? (
                       <>
@@ -381,7 +377,7 @@ export function BrochureForm({
                     )}
                   </button>
 
-                  <p className="text-center text-sm text-slate-500 mt-4 flex items-center justify-center gap-1.5">
+                  <p className="text-center text-sm text-slate-600 mt-4 flex items-center justify-center gap-1.5">
                     <Lock size={13} />
                     Your data is safe. We never share with 3rd parties.
                   </p>

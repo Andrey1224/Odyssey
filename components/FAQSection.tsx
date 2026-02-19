@@ -18,7 +18,7 @@ const FAQItem = ({ question, answer }: FAQItemProps) => {
                 className="w-full flex justify-between items-center py-5 text-left focus:outline-none"
             >
                 <span className="text-lg font-bold text-slate-800">{question}</span>
-                {isOpen ? <ChevronUp className="text-teal-600" /> : <ChevronDown className="text-teal-600" />}
+                {isOpen ? <ChevronUp className="text-teal-800" /> : <ChevronDown className="text-teal-800" />}
             </button>
             <div
                 className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100 mb-5" : "max-h-0 opacity-0"
@@ -53,7 +53,7 @@ export const FAQSection = () => {
     ];
 
     return (
-        <section className="bg-white py-12 md:py-16 border-t border-slate-100">
+        <section className="bg-cream-50 py-12 md:py-16 border-t border-slate-100">
             <div className="max-w-3xl mx-auto px-5">
                 <h2 className="text-3xl font-bold text-center text-slate-900 mb-10 font-serif">
                     Buyer's Guide & FAQ
