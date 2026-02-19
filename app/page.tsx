@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { CheckCircle2, Info, Sparkles, Phone } from "lucide-react";
+import { useWizardStore } from "@/lib/wizardStore";
 
 import HandingCard from "@/components/HandingCard";
 import { Testimonials } from "@/components/Testimonials";
@@ -151,7 +152,9 @@ const Hero = () => (
   </section >
 );
 
-const CategoryChoice = () => (
+const CategoryChoice = () => {
+  const { openWizard } = useWizardStore();
+  return (
   <section className="bg-white py-12 md:py-20 border-b border-slate-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="text-center mb-10 md:mb-14">
@@ -194,14 +197,18 @@ const CategoryChoice = () => (
 
       {/* Help Me Choose - New Button */}
       <div className="mt-10 md:mt-14 flex justify-center">
-        <button className="bg-slate-900 hover:bg-slate-800 text-white text-lg md:text-xl font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-3 w-full md:w-auto justify-center">
+        <button
+          onClick={() => openWizard("global")}
+          className="bg-slate-900 hover:bg-slate-800 text-white text-lg md:text-xl font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-3 w-full md:w-auto justify-center"
+        >
           <Sparkles className="text-teal-400" size={24} fill="currentColor" />
           Help me choose in 30s
         </button>
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default function Home() {
   return (

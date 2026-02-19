@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Check, Info, X } from "lucide-react";
+import { useWizardStore } from "@/lib/wizardStore";
 import {
     WIDTH_OPTIONS,
     DOOR_TYPE_OPTIONS,
@@ -80,6 +81,7 @@ function FilterGroup({
 }
 
 export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarProps) => {
+    const { openWizard } = useWizardStore();
 
     const toggle = (field: keyof typeof EMPTY_FILTERS, value: string) => {
         const current = filters[field] as string[];
@@ -119,7 +121,7 @@ export const FilterSidebar = ({ filters, setFilters, onClose }: FilterSidebarPro
             <div className="bg-[#0f172a] text-white p-5 rounded-lg text-center mb-6">
                 <span className="block font-bold mb-2">Not sure which model?</span>
                 <div className="text-[0.9rem] mb-2.5">Take our 30-second quiz to find your perfect fit.</div>
-                <button className="inline-block bg-white text-[#0f172a] px-4 py-2 rounded font-semibold text-[0.9rem] mt-2 w-full hover:bg-slate-100 transition-colors">
+                <button onClick={() => openWizard("walk-in-baths")} className="inline-block bg-white text-[#0f172a] px-4 py-2 rounded font-semibold text-[0.9rem] mt-2 w-full hover:bg-slate-100 transition-colors">
                     Help Me Choose
                 </button>
             </div>

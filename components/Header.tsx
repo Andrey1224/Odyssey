@@ -4,9 +4,13 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Menu, X, Sparkles } from "lucide-react";
+import { BathWizardModal } from "@/components/BathWizardModal";
+import { WalkInBathsWizardModal } from "@/components/WalkInBathsWizardModal";
+import { useWizardStore } from "@/lib/wizardStore";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { activeWizard, openWizard, closeWizard } = useWizardStore();
 
     return (
         <>
@@ -64,12 +68,27 @@ export const Header = () => {
             </header>
 
             {/* Menu Overlay (Visible on both Mobile and Desktop) */}
-            <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+            <MenuOverlay
+                isOpen={isMenuOpen}
+                onClose={() => setIsMenuOpen(false)}
+                onOpenWizard={() => openWizard("global")}
+            />
+
+            <BathWizardModal
+                key={activeWizard === "global" ? "global-open" : "global-closed"}
+                isOpen={activeWizard === "global"}
+                onClose={closeWizard}
+            />
+            <WalkInBathsWizardModal
+                key={activeWizard === "walk-in-baths" ? "walkin-open" : "walkin-closed"}
+                isOpen={activeWizard === "walk-in-baths"}
+                onClose={closeWizard}
+            />
         </>
     );
 };
 
-const MenuOverlay = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+const MenuOverlay = ({ isOpen, onClose, onOpenWizard }: { isOpen: boolean; onClose: () => void; onOpenWizard: () => void }) => {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -121,10 +140,13 @@ const MenuOverlay = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                         <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Help & Advice</h4>
                         <nav className="flex flex-col gap-6 text-xl font-medium text-slate-800">
                             <Link href="/about" className="py-4 border-b border-slate-100 hover:text-teal-700">About</Link>
-                            <a href="#" className="py-4 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-3">
+                            <button
+                                onClick={() => { onClose(); onOpenWizard(); }}
+                                className="py-4 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-3 w-full text-left"
+                            >
                                 <Sparkles size={24} className="text-teal-600" />
                                 Help Me Choose
-                            </a>
+                            </button>
                             <a href="#" className="py-4 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
                             <a href="#" className="py-4 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
                             <Link href="/faq" className="py-4 border-b border-slate-100 hover:text-teal-700">FAQ</Link>

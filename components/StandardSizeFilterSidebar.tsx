@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, Info, X } from "lucide-react";
+import { useWizardStore } from "@/lib/wizardStore";
 
 import type { FilterSidebarProps } from "@/components/FilterSidebar";
 import { EMPTY_FILTERS } from "@/components/FilterSidebar";
@@ -72,6 +73,7 @@ function FilterGroup({
 }
 
 export function StandardSizeFilterSidebar({ filters, setFilters, onClose }: FilterSidebarProps) {
+  const { openWizard } = useWizardStore();
   const toggle = (field: keyof typeof EMPTY_FILTERS, value: string) => {
     const current = filters[field] as string[];
     const updated = current.includes(value)
@@ -107,7 +109,7 @@ export function StandardSizeFilterSidebar({ filters, setFilters, onClose }: Filt
       <div className="mb-6 rounded-lg bg-[#0f172a] p-5 text-center text-white">
         <span className="mb-2 block font-bold">Planning a direct replacement?</span>
         <div className="mb-2.5 text-[0.9rem]">Filter by door style and position to match your bathroom layout.</div>
-        <button className="mt-2 inline-block w-full rounded bg-white px-4 py-2 text-[0.9rem] font-semibold text-[#0f172a] transition-colors hover:bg-slate-100">
+        <button onClick={() => openWizard("global")} className="mt-2 inline-block w-full rounded bg-white px-4 py-2 text-[0.9rem] font-semibold text-[#0f172a] transition-colors hover:bg-slate-100">
           Help Me Choose
         </button>
       </div>
