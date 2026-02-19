@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle2, Info, Sparkles, Phone } from "lucide-react";
 import { useWizardStore } from "@/lib/wizardStore";
 
@@ -116,9 +117,9 @@ const Hero = () => (
           <p className="text-center text-sm text-slate-600 font-medium mt-1">
             No obligation • Takes 30 seconds
           </p>
-          <button id="hero-quote-btn" className="h-14 md:h-16 px-6 md:px-10 bg-white border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1">
+          <Link id="hero-quote-btn" href="/free-quote" className="h-14 md:h-16 px-6 md:px-10 bg-white border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1 flex items-center justify-center">
             Get Free Quote
-          </button>
+          </Link>
         </div>
 
       </div>
@@ -286,9 +287,9 @@ const StickyBottomBar = () => {
           <Phone size={20} className="text-teal-700" />
           <span className="whitespace-nowrap">Call Now</span>
         </a>
-        <button className="flex-1 h-14 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
+        <Link href="/free-quote" className="flex-1 h-14 bg-teal-700 hover:bg-teal-800 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
           <span className="whitespace-nowrap">Get Free Quote</span>
-        </button>
+        </Link>
       </div>
     </div>
   );

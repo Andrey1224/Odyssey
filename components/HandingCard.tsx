@@ -13,7 +13,7 @@ export default function HandingCard() {
                 <div className="rounded-[2.5rem] bg-[#0F172A] p-6 md:p-12 text-white shadow-2xl overflow-hidden relative">
 
                 {/* Decorative background blob */}
-                <div className="absolute top-0 right-0 w-96 h-96 bg-teal-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-72 h-72 sm:w-96 sm:h-96 bg-teal-900/20 rounded-full blur-3xl -translate-y-1/2 translate-x-0 sm:translate-x-1/2 pointer-events-none" />
 
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start relative z-10">
 

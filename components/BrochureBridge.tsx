@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export const BrochureBridge = () => (
-    <div className="bg-white border-2 border-dashed border-[#117a7a] rounded-xl p-[30px] flex flex-col md:flex-row items-center justify-between mt-5 gap-5 text-center md:text-left">
+    <div className="bg-white border-2 border-dashed border-[#117a7a] rounded-xl p-4 md:p-[30px] flex flex-col md:flex-row items-center justify-between mt-5 gap-5 text-center md:text-left">
 
         <div className="max-w-[600px]">
             <h3 className="text-[1.5rem] mb-2 text-[#0f172a] font-bold font-serif">

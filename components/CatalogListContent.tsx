@@ -227,7 +227,7 @@ export function CatalogListContent({
     <>
       <section className="bg-white py-10 text-center">
         <div className="mx-auto max-w-[1280px] px-5">
-          <h1 className="mb-2.5 text-[2.5rem] font-bold text-[#0f172a]">{category.heroHeadline}</h1>
+          <h1 className="mb-2.5 text-2xl md:text-[2.5rem] font-bold text-[#0f172a]">{category.heroHeadline}</h1>
           <p className="mx-auto max-w-[600px] text-[1.1rem] leading-[1.5] text-[#475569]">
             {category.heroSubhead}
           </p>
@@ -236,7 +236,7 @@ export function CatalogListContent({
 
       <div className="mb-5 border-b border-[#e2e8f0] bg-[#f1f5f9] py-2">
         <div className="mx-auto max-w-[1280px] px-5">
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-10">
             <div className="flex items-center gap-2 text-[0.9rem] font-medium text-[#1e293b]">
               <span className="text-[#117a7a]"><Star size={14} /></span> 4.9/5 Trustpilot
             </div>
@@ -314,7 +314,7 @@ export function CatalogListContent({
               <span className="font-bold text-slate-700">Showing {filteredProducts.length} results</span>
               <button
                 onClick={() => setShowDrawer(true)}
-                className="flex items-center gap-2 rounded-lg border border-slate-300 px-4 py-2 font-medium text-slate-700 transition-colors hover:bg-slate-50 lg:hidden"
+                className="flex items-center gap-2 rounded-lg border border-slate-300 px-4 py-3 font-medium text-slate-700 transition-colors hover:bg-slate-50 lg:hidden"
               >
                 <SlidersHorizontal size={16} />
                 Filters

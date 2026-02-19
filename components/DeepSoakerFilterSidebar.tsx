@@ -121,7 +121,7 @@ export function DeepSoakerFilterSidebar({ filters, setFilters, onClose }: Filter
       <div className="mb-6 rounded-lg bg-[#0f172a] p-5 text-center text-white">
         <span className="mb-2 block font-bold">Need compact-fit advice?</span>
         <div className="mb-2.5 text-[0.9rem]">Find the right sit-in bath for your layout in 30 seconds.</div>
-        <button onClick={() => openWizard("global")} className="mt-2 inline-block w-full rounded bg-white px-4 py-2 text-[0.9rem] font-semibold text-[#0f172a] transition-colors hover:bg-slate-100">
+        <button onClick={() => openWizard("deep-soaker-baths")} className="mt-2 inline-block w-full rounded bg-white px-4 py-2 text-[0.9rem] font-semibold text-[#0f172a] transition-colors hover:bg-slate-100">
           Help Me Choose
         </button>
       </div>

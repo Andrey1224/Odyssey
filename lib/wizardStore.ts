@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export type WizardType = "global" | "walk-in-baths";
+export type WizardType = "global" | "walk-in-baths" | "walk-in-shower-baths" | "standard-size-baths" | "deep-soaker-baths";
 
 interface WizardStore {
   activeWizard: WizardType | null;
