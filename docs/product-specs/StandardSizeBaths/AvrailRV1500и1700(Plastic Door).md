@@ -1,53 +1,53 @@
-4. Avrail RV 1500 и 1700 (Plastic Door)
-Avrail RV — это полноразмерная ванна с «реверсивным» (Reverse) расположением двери. Она сохраняет всю легендарную прочность серии Avrail, но переносит вход в противоположный от кранов конец ванны (со стороны сиденья).
+4. Avrail RV 1500 and 1700 (Plastic Door)
+Avrail RV is a full-size walk-in bath with a reverse door layout. It keeps the durability of the Avrail platform but places the entry at the seat end, opposite the taps.
 
-Цена и условия
-Текущая цена: £1,710.00 (без НДС).
+Price and terms
+Current price: £1,710.00 (ex VAT).
 
-Старая цена: £2,100.00.
+Previous price: £2,100.00.
 
-VAT Relief: Доступна льгота 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Основные характеристики (Bulleted Features)
-Based on the Avrail: Обладает той же надежностью, что и базовая модель.
+Key features (Bulleted Features)
+Based on the Avrail: Same reliability as the base model.
 
-Alternate Door Position: Дверь расположена со стороны сиденья.
+Alternate Door Position: Entry door placed at the seat end.
 
-Door Positioned Away from the Tap End: Вход находится вдали от смесителей, что расширяет варианты планировки.
+Door Positioned Away from the Tap End: Improves options for constrained bathroom layouts.
 
-Rugged and Durable Plastic Door: Дверь из сверхпрочного пластика для интенсивного использования.
+Rugged and Durable Plastic Door: Heavy-duty plastic door for intensive use.
 
-Designed for the Modern Bathroom: Лаконичный дизайн, подходящий для любого обновления интерьера.
+Designed for the Modern Bathroom: Clean design suitable for modern updates.
 
-Anti-slip Surface: Антискользящее покрытие дна.
+Anti-slip Surface: Anti-slip base finish.
 
-Options of Left Hand Door or Right Hand Door: Выбор стороны открытия.
+Options of Left Hand Door or Right Hand Door: Left/right opening options.
 
-End Panel Included: Торцевая панель входит в комплект.
+End Panel Included: End panel included.
 
-Описание модели
-Avrail RV — идеальное решение для ситуаций, когда доступ к «крановому» концу ванны заблокирован раковиной, унитазом или стеной. Перенос двери в дальний конец позволяет безопасно входить в ванну там, где больше свободного места.
+Model description
+Avrail RV is ideal where the tap-end side is blocked by a sink, WC, or wall. Moving the door to the opposite end enables safer entry where more clear space is available.
 
-Ванна ориентирована на практичность. Прочная пластиковая дверь не требует деликатного обращения, что делает модель отличным выбором для семей с детьми или для домов с большой проходимостью. Благодаря стандартным размерам (1500 или 1700 мм), она легко встает на место старой ванны, мгновенно повышая уровень безопасности и комфорта в доме.
+This model is built for practical, everyday use. The robust plastic door is low maintenance and family-friendly. With standard 1500/1700-size fit, it can replace an old bath while improving safety and comfort.
 
-Технические данные (Specifications)
-Длина: 1500 мм или 1695 мм.
+Technical data (Specifications)
+Length: 1500 mm or 1695 mm.
 
-Ширина: 700 мм.
+Width: 700 mm.
 
-Высота: 510 мм.
+Height: 510 mm.
 
-Высота шага (Step Height): 190 мм.
+Step Height: 190 mm.
 
-Ширина проема двери: 380 мм.
+Door opening width: 380 mm.
 
-Объем: 190 литров.
+Capacity: 190 liters.
 
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери.
+Warranty: 5 years on shell, lifetime on door seal.
 
-Рекомендованные действия (Action Items):
-Сравнение цен: Укажите в каталоге, что версии RV стоят немного дороже обычных из-за сложности конфигурации.
+Recommended actions (Action Items):
+Price comparison: Note in catalog that RV versions are typically priced slightly higher due to configuration complexity.
 
-Гайд по планировке: Добавьте визуальную схему, показывающую разницу между стандартным входом и входом "RV" (Seat end).
+Layout guide: Add a visual comparing standard entry vs RV (seat-end) entry.
 
-Акцент на долговечности: Выделите пластиковую дверь как решение для «Heavy Use» (активного использования).
+Durability emphasis: Position the plastic door as a heavy-use solution.

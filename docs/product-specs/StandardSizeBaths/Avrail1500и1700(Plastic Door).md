@@ -1,46 +1,46 @@
-3. Avrail 1500 и 1700 (Plastic Door)
-Avrail — это полноразмерная ванна с дверцей, которая идеально подходит для семейного использования или для сдачи жилья в аренду. Её главная особенность — прочная пластиковая дверь, которая выдерживает более грубое обращение по сравнению со стеклянными аналогами.
+3. Avrail 1500 and 1700 (Plastic Door)
+Avrail is a full-size walk-in bath suited for family homes and rental properties. Its key benefit is a robust plastic door that tolerates heavier daily use than glass alternatives.
 
-Цена и условия
-Текущая цена: £1,658.00 (без НДС)
+Price and terms
+Current price: £1,658.00 (ex VAT)
 
-Старая цена: £2,005.00
+Previous price: £2,005.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Основные характеристики (Bulleted Features)
-Rugged and Durable Plastic Door: Дверь из высокопрочного пластика, устойчивая к ударам и тяжелым условиям эксплуатации.
+Key features (Bulleted Features)
+Rugged and Durable Plastic Door: Heavy-duty plastic door resistant to impact and intensive use.
 
-1500 and 1700 Models Available: Два стандартных размера для легкой установки на место старой ванны.
+1500 and 1700 Models Available: Two standard lengths for easy replacement installs.
 
-Designed for the Modern Bathroom: Простые, чистые линии, которые подходят к любому интерьеру.
+Designed for the Modern Bathroom: Clean lines that suit most interiors.
 
-Simple to Operate Robust Single Lever: Надежный и легкий в использовании механизм закрытия двери.
+Simple to Operate Robust Single Lever: Reliable and user-friendly door locking mechanism.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания.
+Options of Left Hand Door or Right Hand Door: Select preferred opening side.
 
-Anti-slip Surface: Специальное покрытие дна для предотвращения скольжения.
+Anti-slip Surface: Slip-resistant base finish.
 
-End Panel Included: Торцевая панель входит в комплект.
+End Panel Included: End panel included.
 
-Описание модели
-Ванна Avrail разработана как практичное решение для тех, кто хочет сохранить комфорт стандартной ванны, но нуждается в безопасном доступе. Мы рекомендуем эту модель для домов, где ванна будет использоваться очень часто (heavy use), так как пластиковая дверь крайне надежна и долговечна.
+Model description
+Avrail is designed as a practical option for customers who want standard bath comfort with safer access. It is especially suitable for heavy-use households, where a durable plastic door is a major advantage.
 
-Низкий порог входа обеспечивает душевное спокойствие, минимизируя риск споткнуться. Как и другие модели этой серии, Avrail позволяет любителям водных процедур полноценно лежать и наслаждаться пеной. Ванна оснащена двумя кликер-сливами для сверхбыстрого опорожнения, что позволяет выйти из нее практически сразу после купания.
+The low-threshold entry reduces trip risk. Like other baths in this size class, Avrail still supports full-length bathing. Twin clicker drains provide very fast emptying, so users can exit sooner after bathing.
 
-Технические данные (Specifications)
-Длина: 1500 мм или 1695 мм.
+Technical data (Specifications)
+Length: 1500 mm or 1695 mm.
 
-Ширина: 700 мм.
+Width: 700 mm.
 
-Высота: 510 мм.
+Height: 510 mm.
 
-Высота шага (Step Height): 190 мм.
+Step Height: 190 mm.
 
-Ширина проема двери: 380 мм.
+Door opening width: 380 mm.
 
-Тип слива: Двойной кликер (Twin Clicker Waste).
+Drain type: Twin Clicker Waste.
 
-Объем: 190 литров.
+Capacity: 190 liters.
 
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери, 1 год на электронику/SPA.
+Warranty: 5 years on shell, lifetime on door seal, 1 year on electronics/SPA.

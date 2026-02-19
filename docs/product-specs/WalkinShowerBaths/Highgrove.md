@@ -1,52 +1,41 @@
 2. Highgrove
-Highgrove — это современная L-образная ванна с душевой зоной, сочетающая в себе функциональность полноценного душа и комфорт глубокой ванны. Её «резкий» и уверенный дизайн делает её отличным выбором для тех, кто предпочитает минимализм и прямые формы.
+Highgrove is a modern L-shaped shower bath that combines full shower functionality with deep-bath comfort. Its sharp geometric styling makes it a good fit for minimalist interiors.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,928.00 (без НДС).
+Current price: £1,928.00 (ex VAT).
 
+Previous price: £2,395.00.
 
-Старая цена: £2,395.00.
+VAT Relief: 0% VAT relief is available for eligible customers.
 
+Key features (Bulleted Features)
 
-VAT Relief: Как и на другие модели, действует льгота 0% НДС для соответствующих категорий покупателей.
+Sharp and Bold Design: Modern geometric styling with clean lines.
 
-Основные характеристики (Bulleted Features)
+Toughened Glass: 6 mm toughened-glass shower screen, 1500 mm high.
 
-Sharp and Bold Design: Современный геометричный дизайн с четкими линиями.
+L Shape Design: L-shape creates extra standing room in the shower zone.
 
+Anti Slip Surface at the Shower End: Dedicated anti-slip finish in the shower area.
 
-Toughened Glass: Прочный душевой экран из закаленного стекла высотой 1500 мм и толщиной 6 мм.
+Options of Left Hand Door or Right Hand Door: Left/right entry options.
 
+End Panel Included: End panel included.
 
-L Shape Design: L-образная форма обеспечивает дополнительное пространство в зоне душа.
+Model description
+Highgrove is designed as an all-family solution. The low-threshold entry improves access for older users and people with reduced mobility, while still offering enough internal space for comfortable full bathing.
 
+Its L-shaped profile provides more standing space than a standard bath, improving movement during shower use. Optional wellness upgrades, including hydrotherapy, can be added for muscle and joint relief.
 
-Anti Slip Surface at the Shower End: Специальное противоскользящее покрытие в зоне душа для максимальной безопасности.
+Technical data (Specifications)
 
+Shape: L Shape.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора левого или правого расположения двери.
+Screen material: 6 mm toughened glass.
 
+Screen height: 1500 mm.
 
-End Panel Included: Торцевая панель входит в стандартный комплект.
+Safety: Low threshold entry and anti-slip base.
 
-Описание модели
-Highgrove разработана как универсальное решение для всей семьи. Низкий порог входа обеспечивает легкий доступ для пожилых людей или людей с ограниченной подвижностью, при этом ванна остается достаточно просторной, чтобы в ней можно было полноценно лежать и расслабляться.
-
-Благодаря L-образной форме, зона душа становится шире, чем в стандартных ваннах, что дает больше свободы движений во время мытья стоя. Как и другие модели этой серии, Highgrove может быть оснащена дополнительными опциями роскоши, такими как гидромассаж, для снятия мышечного напряжения и болей в суставах.
-
-Технические данные (Specifications)
-
-Форма: L-образная (L Shape).
-
-
-Материал экрана: Закаленное стекло 6 мм.
-
-
-Высота экрана: 1500 мм.
-
-
-Безопасность: Низкий порог (Low threshold) и антискользящее дно.
-
-
-Производство: Сделано в Великобритании (UK Made) из долговечного и легкого в уходе гелькоута.
+Manufacture: UK-made from durable, easy-care gel-coat materials.

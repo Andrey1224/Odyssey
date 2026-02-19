@@ -1,65 +1,51 @@
-Пятая модель в категории Deep Soaker Bath — Caversham. Она позиционируется как эксклюзивное и утонченное решение, сочетающее в себе чистые линии дизайна и уникальные технические особенности для тех, кто ищет не просто ванну, а произведение искусства.
+The fifth model in the Deep Soaker Bath category is Caversham. It is positioned as an exclusive, refined solution that combines clean design lines with distinctive technical features.
 
 5. Caversham
 
-Caversham — это глубокая сидячая ванна премиум-класса, которая устанавливает высокую планку для других моделей благодаря своему передовому дизайну и инновационным функциям. Она предлагает исключительную функциональность и роскошный опыт купания.
+Caversham is a premium deep seated bath that sets a high benchmark through advanced design and practical innovation. It delivers strong functionality with a luxury bathing feel.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,638.00 (без НДС).
+Current price: £1,638.00 (ex VAT).
 
+Previous price: £2,005.00.
 
-Старая цена: £2,005.00.
+VAT Relief: Eligible for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Подходит под льготу 0% НДС.
+Clean Lines and Spacious Interior: Elegant design with generous internal room.
 
-Основные характеристики (Bulleted Features)
+Deeper than Average Bath Depth: Above-average depth for fuller immersion.
 
-Clean Lines and Spacious Interior: Элегантный дизайн с просторным внутренним пространством.
+External Locking Lever: External lock lever keeps internal entry space clear and easier to use.
 
+Stainless Steel frame: Durable stainless steel frame.
 
-Deeper than Average Bath Depth: Глубина чаши выше средней для максимального погружения.
+Options of Left Hand Door or Right Hand Door: Left/right opening options available.
 
+Anti Slip Base: Anti-slip base finish.
 
-External Locking Lever: Уникальный внешний рычаг замка, который не загромождает внутреннее пространство и облегчает доступ.
+End Panel Included: End panel included.
 
+Model description
 
-Stainless Steel frame: Прочный каркас из нержавеющей стали.
+Caversham is known for its external lock concept, which keeps the entry zone free from extra hardware and simplifies access. It includes one of the larger inward-opening doors in this segment.
 
+The bath combines a low step with an ergonomic curved backrest for seated comfort. Built from high-quality materials, it supports a premium user experience. Optional chromotherapy can be added for deeper relaxation.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания двери.
+Technical data (Specifications)
 
+Dimensions: Length 1220 mm x Width 660 mm x Height 960 mm.
 
-Anti Slip Base: Антискользящее покрытие дна.
+Step height: 240 mm.
 
+Seat height: 360 mm.
 
-End Panel Included: Боковая панель входит в комплект.
+Floor-to-overflow depth: 705 mm.
 
-Описание модели
+Door opening width: 370 mm.
 
-Caversham считается первопроходцем в мире мобильных ванн. Её главная уникальная особенность — внешний замок, который делает входную зону свободной от лишних деталей и механизмов. Модель оснащена одной из самых больших дверей, открывающихся внутрь, на рынке, что значительно упрощает доступ.
+Capacity: 230 liters.
 
-Ванна имеет низкий порог и эргономичную закругленную спинку для максимально комфортной посадки. Изготовленная из высококачественных материалов, она полностью соответствует роскоши, которую олицетворяет её название. Для тех, кто стремится к максимальной релаксации, предусмотрена возможность установки системы самовосстанавливающейся светотерапии (Chromotherapy).
-
-Технические данные (Specifications)
-
-Размеры: Длина 1220 мм x Ширина 660 мм x Высота 960 мм.
-
-
-Высота шага (Step height): 240 мм.
-
-
-Высота сиденья (Seat height): 360 мм.
-
-
-Глубина от пола до перелива: 705 мм.
-
-
-Ширина проема двери: 370 мм.
-
-
-Объем чаши: 230 литров.
-
-
-Гарантия: 6 лет на корпус, пожизненная на уплотнитель двери, 1 год на системы спа и свет.
+Warranty: 6 years on shell, lifetime on door seal, 1 year on SPA and lighting systems.

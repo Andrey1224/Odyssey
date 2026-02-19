@@ -1,49 +1,49 @@
 2. Serenity 66 Plus
-Serenity 66 Plus — это расширенная версия модели 66 Classic. Она создана для тех, кто хочет совместить безопасность глубокой ванны с дверцей и пользу оздоровительных водных процедур.
+Serenity 66 Plus is an upgraded version of the 66 Classic. It is designed for customers who want the safety of a deep walk-in bath plus the added benefits of wellness-focused water therapy.
 
-Цена и условия
-Текущая цена: £3,208.00 (без НДС)
+Price and terms
+Current price: £3,208.00 (ex VAT)
 
-Старая цена: £3,695.00
+Previous price: £3,695.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Что добавлено (в отличие от Classic)
-В дополнение к стальной раме и алюминиевой двери версии Classic, пакет Plus включает:
+What's added (compared with Classic)
+In addition to the steel frame and aluminum door used in the Classic version, the Plus package includes:
 
-Dual Flow Faucet and Shower System: Специальный смеситель, который распределяет воду: 20% идет в душевую лейку (чтобы вы могли согреться под душем, пока ванна наполняется), а 80% наполняет саму чашу.
+Dual Flow Faucet and Shower System: A dedicated mixer that splits water flow: 20% to the shower handset (so you can stay warm while filling) and 80% to fill the bath.
 
-Water Jet Jacuzzi: Система терапевтических гидромассажных форсунок, направленных на спину для снятия мышечного напряжения.
+Water Jet Jacuzzi: Therapeutic water jets aimed at the back to reduce muscle tension.
 
-Chrome/Metallic Fittings: Вся фурнитура и переключатели выполнены в премиальном хроме/металле.
+Chrome/Metallic Fittings: Premium chrome/metal controls and fittings.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Сверхпрочная алюминиевая конструкция входа.
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Extra-strong aluminum entry construction.
 
-Solid one Piece Acrylic Shell: Гладкий акриловый корпус без швов (легко мыть).
+Solid one Piece Acrylic Shell: Smooth, seamless acrylic shell (easy to clean).
 
-4 Layers of Reinforced Fiberglass: Четырехслойное армирование для долговечности.
+4 Layers of Reinforced Fiberglass: Four-layer reinforcement for long-term durability.
 
-Quick Drain Technology: Быстрый слив воды после купания.
+Quick Drain Technology: Rapid water drainage after bathing.
 
-Stainless Steel Frame: Фирменный стальной каркас, выдерживающий до 200 кг.
+Stainless Steel Frame: Signature steel frame rated up to 200 kg.
 
-Anti Slip Base: Безопасное дно с защитой от скольжения.
+Anti Slip Base: Safe anti-slip base surface.
 
-Options of Left Hand Door or Right Hand Door: Выбор стороны открывания двери.
+Options of Left Hand Door or Right Hand Door: Choose left- or right-hand opening.
 
-Описание модели
-Модель Serenity 66 Plus решает главную проблему сидячих ванн — ожидание наполнения. Благодаря системе Dual Flow, вы не мерзнете, а сразу используете душевую лейку. Гидромассажные форсунки превращают обычное мытье в сеанс физиотерапии, что особенно полезно при болях в суставах или спине.
+Model description
+Serenity 66 Plus solves one of the main seated-bath pain points: waiting while the tub fills. With the Dual Flow system, you can immediately use the shower handset and stay warm. The hydrotherapy jets turn daily bathing into a light physiotherapy session, especially useful for back and joint discomfort.
 
-Как и вся серия, эта ванна имеет «нулевой порог», что делает её идеальным выбором для людей, которым трудно поднимать ноги. Компактная ширина 66 см позволяет установить её даже в самых небольших ванных комнатах Великобритании без перепланировки.
+Like the rest of the range, this bath has a zero-height threshold, making it ideal for people who struggle to lift their legs. The compact 660 mm width allows installation in most standard UK bathrooms without major remodeling.
 
-Технические данные (Specifications)
-Ширина: 660 мм.
+Technical data (Specifications)
+Width: 660 mm.
 
-Грузоподъемность: 200 кг (35 stone).
+Weight capacity: 200 kg (35 stone).
 
-Порог: Нулевой (Low entry).
+Threshold: Zero-height (Low entry).
 
-Система слива: Высокопоточный Quick Drain.
+Drain system: High-flow Quick Drain.
 
-Гарантия: Пожизненная на уплотнитель двери, 6 лет на корпус, 1 год на гидромассажную систему.
+Warranty: Lifetime on door seal, 6 years on shell, 1 year on hydrotherapy system.

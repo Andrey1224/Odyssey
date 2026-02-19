@@ -11,9 +11,9 @@ export const Header = () => {
     return (
         <>
             <header className="sticky top-0 z-50 w-full bg-white border-b border-slate-200 shadow-sm transition-all duration-300">
-                <div className="max-w-7xl mx-auto px-4 h-16 md:h-24 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-4 h-20 md:h-[88px] flex items-center justify-between">
                     {/* Logo (Updated) */}
-                    <div className="relative w-32 h-10 md:w-48 md:h-12 shrink-0">
+                    <div className="relative w-40 h-10 md:w-60 md:h-14 shrink-0">
                         <Link href="/" className="block relative w-full h-full">
                             <Image
                                 src="/images/ODYSSEY_Transparent-File-2048x735.webp"
@@ -25,60 +25,51 @@ export const Header = () => {
                         </Link>
                     </div>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden lg:flex gap-10 items-center">
-                        <Link href="/about" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">About</Link>
-                        <Link href="/walk-in-baths" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Walk-in Baths</Link>
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Showers</a>
-                        <a href="#" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Reviews</a>
-                        <Link href="/faq" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">FAQ</Link>
-                        <Link href="/contact" className="text-xl font-medium text-slate-700 hover:text-teal-800 transition">Contact</Link>
-                    </nav>
-
-                    {/* Right Actions (Mobile: Call Pill + Menu) */}
-                    <div className="flex items-center gap-4 lg:gap-8">
+                    {/* Right Actions */}
+                    <div className="flex items-center gap-4 lg:gap-10">
 
                         {/* Desktop: Free Brochure Button */}
-                        <Link href="/free-brochure" className="hidden lg:inline-flex items-center px-6 py-2.5 rounded-full border border-teal-700 text-teal-700 font-bold text-sm tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
+                        <Link href="/free-brochure" className="hidden lg:inline-flex items-center px-6 py-3 rounded-full border-2 border-teal-700 text-teal-700 font-bold text-lg tracking-wide hover:bg-teal-50 transition-colors active:scale-95">
                             Free Brochure
                         </Link>
 
                         {/* Desktop: Phone Info Block (Text Stack) */}
                         <div className="hidden lg:flex flex-col items-end leading-tight">
-                            <a href="tel:08001234567" className="group flex items-center gap-2 text-2xl font-bold text-slate-900 hover:text-teal-700 transition-colors">
-                                <Phone size={24} className="text-teal-700 group-hover:scale-110 transition-transform" fill="currentColor" />
+                            <a href="tel:08001234567" className="group flex items-center gap-3 text-[28px] font-bold text-slate-900 hover:text-teal-700 transition-colors">
+                                <Phone size={26} className="text-teal-700 group-hover:scale-110 transition-transform" fill="currentColor" />
                                 0800 123 4567
                             </a>
-                            <div className="text-xs font-medium text-slate-500 mt-1 flex gap-2">
+                            <div className="text-sm font-medium text-slate-500 mt-1 flex gap-3">
                                 <span className="text-teal-700 font-bold uppercase tracking-wider">Call Free</span>
                                 <span>Mon–Fri 9am–5pm</span>
                             </div>
                         </div>
 
                         {/* Mobile: Compact Call Button */}
-                        <a href="tel:08001234567" className="lg:hidden flex items-center gap-2 bg-teal-700 hover:bg-teal-800 px-4 py-2 rounded-full shadow-sm transition-all group text-white">
-                            <Phone size={18} fill="currentColor" />
-                            <span className="font-bold text-sm">Call Us</span>
+                        <a href="tel:08001234567" className="lg:hidden flex items-center gap-3 bg-teal-700 hover:bg-teal-800 px-6 py-3 rounded-full shadow-md transition-all group text-white">
+                            <Phone size={22} fill="currentColor" />
+                            <span className="font-bold text-lg">Call Us</span>
                         </a>
 
-                        {/* Mobile Menu Toggle */}
+                        {/* Menu Toggle (Visible on both Mobile and Desktop) */}
                         <button
-                            className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition"
+                            className="flex items-center gap-3 px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-2xl transition-all active:scale-95 group border border-slate-200"
                             onClick={() => setIsMenuOpen(true)}
                         >
-                            <Menu size={28} />
+                            <span className="font-bold tracking-wider text-base md:text-xl">MENU</span>
+                            <Menu size={34} className="group-hover:scale-110 transition-transform" />
                         </button>
                     </div>
                 </div>
             </header>
 
-            {/* Mobile Menu Overlay */}
-            <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+            {/* Menu Overlay (Visible on both Mobile and Desktop) */}
+            <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
         </>
     );
 };
 
-const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+const MenuOverlay = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -89,7 +80,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
     }, [isOpen]);
 
     return (
-        <div className={`fixed inset-0 z-[60] lg:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        <div className={`fixed inset-0 z-[60] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
             <div
                 className={`absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"
                     }`}
@@ -101,57 +92,58 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="flex justify-between items-center p-6 border-b border-slate-100">
-                    <span className="font-serif text-3xl font-bold text-slate-900">Menu</span>
+                <div className="flex justify-between items-center p-8 border-b border-slate-100">
+                    <span className="font-serif text-4xl font-bold text-slate-900">Menu</span>
                     <button
                         onClick={onClose}
-                        className="p-1 rounded-full text-slate-900 hover:bg-slate-100 transition"
+                        className="p-2 rounded-full text-slate-900 hover:bg-slate-100 transition"
                     >
-                        <X size={32} strokeWidth={2.5} />
+                        <X size={40} strokeWidth={2.5} />
                     </button>
                 </div>
 
                 {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto py-6 px-6">
+                <div className="flex-1 overflow-y-auto py-8 px-8">
 
                     {/* Section 1: Our Products */}
-                    <div className="mb-8">
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Products</h4>
-                        <nav className="flex flex-col gap-4 text-xl font-medium text-slate-800">
-                            <Link href="/walk-in-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</Link>
-                            <Link href="/walk-in-shower-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Walk-in Shower Baths</Link>
-                            <Link href="/standard-size-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Standard Size Baths</Link>
-                            <Link href="/deep-soaker-baths" className="py-3 border-b border-slate-100 hover:text-teal-700">Deep Soaker Baths</Link>
+                    <div className="mb-10">
+                        <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Our Products</h4>
+                        <nav className="flex flex-col gap-6 text-2xl font-medium text-slate-800">
+                            <Link href="/walk-in-baths" className="py-4 border-b border-slate-100 hover:text-teal-700">Walk-in Baths</Link>
+                            <Link href="/walk-in-shower-baths" className="py-4 border-b border-slate-100 hover:text-teal-700">Walk-in Shower Baths</Link>
+                            <Link href="/standard-size-baths" className="py-4 border-b border-slate-100 hover:text-teal-700">Standard Size Baths</Link>
+                            <Link href="/deep-soaker-baths" className="py-4 border-b border-slate-100 hover:text-teal-700">Deep Soaker Baths</Link>
                         </nav>
                     </div>
 
                     {/* Section 2: Help & Advice */}
                     <div>
-                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Help & Advice</h4>
-                        <nav className="flex flex-col gap-4 text-lg font-medium text-slate-800">
-                            <Link href="/about" className="py-3 border-b border-slate-100 hover:text-teal-700">About</Link>
-                            <a href="#" className="py-3 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-2">
-                                <Sparkles size={20} className="text-teal-600" />
+                        <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Help & Advice</h4>
+                        <nav className="flex flex-col gap-6 text-xl font-medium text-slate-800">
+                            <Link href="/about" className="py-4 border-b border-slate-100 hover:text-teal-700">About</Link>
+                            <a href="#" className="py-4 border-b border-slate-100 text-teal-700 font-bold flex items-center gap-3">
+                                <Sparkles size={24} className="text-teal-600" />
                                 Help Me Choose
                             </a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
-                            <Link href="/faq" className="py-3 border-b border-slate-100 hover:text-teal-700">FAQ</Link>
-                            <a href="#" className="py-3 border-b border-slate-100 hover:text-teal-700">Customer Reviews</a>
+                            <a href="#" className="py-4 border-b border-slate-100 hover:text-teal-700">VAT Relief Guide</a>
+                            <a href="#" className="py-4 border-b border-slate-100 hover:text-teal-700">Right vs Left Hand?</a>
+                            <Link href="/faq" className="py-4 border-b border-slate-100 hover:text-teal-700">FAQ</Link>
+                            <Link href="/reviews" className="py-4 border-b border-slate-100 hover:text-teal-700">Customer Reviews</Link>
+                            <Link href="/contact" className="py-4 border-b border-slate-100 hover:text-teal-700">Contact</Link>
                         </nav>
                     </div>
 
                 </div>
 
                 {/* Footer Actions */}
-                <div className="p-6 bg-white border-t border-slate-100 mt-auto">
-                    <p className="text-center text-slate-500 text-sm mb-4">Need to speak to a human?</p>
-                    <div className="flex gap-3">
-                        <a href="tel:08001234567" className="flex-1 bg-teal-700 hover:bg-teal-800 text-white font-bold py-3.5 rounded-xl shadow-sm flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
-                            <Phone size={20} fill="currentColor" />
+                <div className="p-8 bg-white border-t border-slate-100 mt-auto">
+                    <p className="text-center text-slate-500 text-lg mb-6">Need to speak to a human?</p>
+                    <div className="flex flex-col gap-4">
+                        <a href="tel:08001234567" className="bg-teal-700 hover:bg-teal-800 text-white font-bold py-5 rounded-2xl shadow-md flex items-center justify-center gap-3 text-2xl active:scale-95 transition-transform">
+                            <Phone size={28} fill="currentColor" />
                             Call Now
                         </a>
-                        <button className="flex-1 bg-white border-2 border-slate-300 text-slate-800 font-bold py-3.5 rounded-xl hover:bg-slate-50 flex items-center justify-center text-lg active:scale-95 transition-transform">
+                        <button className="bg-white border-2 border-slate-300 text-slate-800 font-bold py-5 rounded-2xl hover:bg-slate-50 flex items-center justify-center text-2xl active:scale-95 transition-transform">
                             Get Quote
                         </button>
                     </div>

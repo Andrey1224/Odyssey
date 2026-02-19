@@ -1,51 +1,51 @@
 3. Serenity 66 Special
-Serenity 66 Special — самая технологичная модель в размере 66 см. Она включает в себя абсолютно все опции линеек Classic и Plus, дополняя их инновационными системами омоложения кожи и глубокой релаксации.
+Serenity 66 Special is the most advanced model in the 66 cm format. It includes every option from the Classic and Plus lines and adds premium systems focused on skin care, comfort, and deep relaxation.
 
-Цена и условия
-Текущая цена: £3,908.00 (без НДС)
+Price and terms
+Current price: £3,908.00 (ex VAT)
 
-Старая цена: £4,295.00
+Previous price: £4,295.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Что добавлено (Максимальный пакет)
-В дополнение к гидромассажу и системе Dual Flow из пакета Plus, версия Special включает:
+What's added (Maximum package)
+In addition to hydrotherapy and Dual Flow from the Plus package, the Special version includes:
 
-Microbubble Technology: Система из США, которая насыщает воду миллиардами микропузырьков кислорода. Они глубоко очищают поры, увлажняют кожу и создают эффект «облака» в ванне.
+Microbubble Technology: A US-developed system that saturates water with billions of oxygen microbubbles to deeply cleanse pores and hydrate skin.
 
-Heated Back and Seat: Подогрев сиденья и спинки. Это критически важная функция: вы садитесь в уже теплое кресло и не мерзнете, пока ванна наполняется водой.
+Heated Back and Seat: Heated seat and backrest for comfort while the bath fills.
 
-Chromotherapy: Подводная светотерапия. Смена цветов воды помогает сбалансировать энергию и улучшить эмоциональное состояние.
+Chromotherapy: Underwater color light therapy to support mood and relaxation.
 
-Aromatherapy: Система наполнения воздуха и воды приятными лечебными ароматами.
+Aromatherapy: System for releasing therapeutic aromas into the bathing environment.
 
-Ozone Purifier: Озоновый очиститель, который уничтожает бактерии и грибки, делая воду максимально гигиеничной.
+Ozone Purifier: Ozone purification that helps eliminate bacteria and fungi for improved hygiene.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Прочная алюминиевая дверь (пожизненная гарантия на уплотнитель).
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Strong aluminum door construction (lifetime seal warranty).
 
-Solid one Piece Acrylic Shell: Гладкий акрил без швов (легкая чистка).
+Solid one Piece Acrylic Shell: Smooth seamless acrylic for easy cleaning.
 
-4 Layers of Reinforced Fiberglass: Максимальное армирование корпуса.
+4 Layers of Reinforced Fiberglass: Maximum shell reinforcement.
 
-Quick Drain Technology: Самый быстрый слив воды на рынке.
+Quick Drain Technology: Very fast drain-out performance.
 
-Stainless Steel Frame: Стальной каркас «The Tank» (нагрузка до 200 кг).
+Stainless Steel Frame: "The Tank" steel frame (rated up to 200 kg).
 
-Dual Flow Faucet and Shower System: Смеситель с душевой лейкой.
+Dual Flow Faucet and Shower System: Mixer with integrated shower handset.
 
-Water Jet Jacuzzi: Гидромассаж спины.
+Water Jet Jacuzzi: Back-focused hydrotherapy jets.
 
-Описание модели
-Serenity 66 Special создана для тех, кто не хочет идти на компромиссы. Благодаря «нулевому порогу» вход остается максимально безопасным, а внутреннее оснащение соответствует лучшим мировым стандартам SPA.
+Model description
+Serenity 66 Special is built for customers who do not want compromises. The zero-height threshold keeps entry and exit as safe as possible, while the internal equipment is aligned with premium SPA standards.
 
-Технология Microbubbles — это «фишка» модели: пузырьки настолько мелкие, что они проникают в поры, удаляя загрязнения и омертвевшую кожу без использования мыла. Подогрев сиденья решает проблему дискомфорта при ожидании воды, что часто является главной претензией к сидячим ваннам. При ширине 66 см она остается идеальным решением для стандартных британских планировок.
+Microbubble technology is the model's signature benefit: bubbles are fine enough to reach pores, helping remove impurities and dead skin. The heated seat solves the common discomfort of sitting in a cold bath while waiting for water. At only 660 mm wide, it still fits well in standard UK layouts.
 
-Технические данные (Specifications)
-Ширина: 660 мм.
+Technical data (Specifications)
+Width: 660 mm.
 
-Грузоподъемность: 200 кг (35 stone).
+Weight capacity: 200 kg (35 stone).
 
-Порог: Нулевой (Low entry).
+Threshold: Zero-height (Low entry).
 
-Гарантия: Пожизненная на уплотнитель, 6 лет на корпус, 1 год на электронику и помпы.
+Warranty: Lifetime on seal, 6 years on shell, 1 year on electronics and pumps.

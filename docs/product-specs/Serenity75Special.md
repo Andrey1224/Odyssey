@@ -1,55 +1,55 @@
 6. Serenity 75 Special
-Serenity 75 Special — флагман всей линейки Walk-in Baths. Эта ванна создана для тех, кто ищет максимальную функциональность без компромиссов. Она оснащена всеми возможными системами оздоровления, обеспечивая комфорт премиального уровня.
+Serenity 75 Special is the flagship of the entire Walk-in Baths range. It is built for customers who want maximum functionality without compromise, with a full set of premium wellness systems.
 
-Цена и условия
-Текущая цена: £3,908.00 (без НДС)
+Price and terms
+Current price: £3,908.00 (ex VAT)
 
-Старая цена: £4,295.00
+Previous price: £4,295.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Что добавлено (Самый полный пакет)
-В этой модели собраны все функции уровней Classic и Plus, а также эксклюзивный набор Special:
+What's added (Most complete package)
+This model includes all Classic and Plus functions, plus exclusive Special-level systems:
 
-Microbubble Technology: Инновационная система, наполняющая воду миллиардами пузырьков кислорода. Она глубоко очищает и увлажняет кожу, создавая эффект «молочной ванны».
+Microbubble Technology: Advanced system that fills water with billions of oxygen bubbles for deep cleansing and skin hydration.
 
-Heated Back and Seat: Подогрев сиденья и спинки — незаменимая вещь для широкой ванны. Вы садитесь в теплое кресло и чувствуете себя уютно, пока вода наполняет просторную чашу.
+Heated Back and Seat: Heated seat/backrest so users remain warm while the bath fills.
 
-Chromotherapy: Подводное световое шоу. Вы можете выбрать цвет воды в зависимости от настроения: от успокаивающего синего до бодрящего красного.
+Chromotherapy: Underwater lighting modes to match mood and support relaxation.
 
-Aromatherapy: Наслаждайтесь целебными ароматами масел во время купания.
+Aromatherapy: Pleasant therapeutic aroma support during bathing.
 
-Ozone Purifier: Встроенный озонатор, который эффективно обеззараживает воду, убивая бактерии и грибки, и дарит ощущение свежести.
+Ozone Purifier: Built-in ozonation to help sanitize water and reduce bacteria/fungi.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Алюминиевая конструкция входа (гарантия на уплотнитель — пожизненно).
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Aluminum entry structure (lifetime door-seal warranty).
 
-Solid one Piece Acrylic Shell: Бесшовный корпус — никакого грибка и легкая уборка.
+Solid one Piece Acrylic Shell: Seamless shell for easy cleaning and reduced mold risk.
 
-4 Layers of Reinforced Fiberglass: Максимальная прочность чаши.
+4 Layers of Reinforced Fiberglass: Maximum shell strength.
 
-Quick Drain Technology: Система сверхбыстрого слива.
+Quick Drain Technology: Ultra-fast draining.
 
-Stainless Steel Frame: Фирменный каркас «The Tank» (нагрузка до 200 кг).
+Stainless Steel Frame: Signature "The Tank" frame (up to 200 kg).
 
-Dual Flow Faucet and Shower System: Смеситель с ручным душем для комфортного ожидания наполнения.
+Dual Flow Faucet and Shower System: Mixer with handheld shower for comfortable waiting.
 
-Water Jet Jacuzzi: Гидромассаж для глубокой проработки мышц спины.
+Water Jet Jacuzzi: Hydrotherapy jets for deep back muscle relief.
 
-Chrome/Metallic Fittings: Металлическая фурнитура высшего качества.
+Chrome/Metallic Fittings: High-grade metal/chrome hardware.
 
-Описание модели
-Serenity 75 Special — это «королевский» выбор. Ширина 75 см позволяет свободно расположиться человеку любого телосложения, а самый широкий проем на рынке (85 см) обеспечивает беспрепятственный доступ.
+Model description
+Serenity 75 Special is the top-tier choice. The 750 mm width improves comfort for different body types, and the 850 mm opening provides excellent access.
 
-Помимо безопасности (нулевой порог), эта модель делает упор на омоложение и детокс. Технология Microbubbles не просто моет, а лечит кожу на клеточном уровне, что в сочетании с гидромассажем и светотерапией превращает ванную комнату в настоящий оздоровительный кабинет. Благодаря возможности снять дверь за 5 минут, монтаж этой широкой ванны возможен даже в стандартных домах с узкими коридорами.
+Beyond safety (zero-height threshold), this model emphasizes rejuvenation and detox. Microbubbles support skin care at a deeper level, and together with hydrotherapy plus chromotherapy, turn the bathroom into a home wellness space. The door can still be removed in minutes, helping with installation in homes with narrow corridors.
 
-Технические данные (Specifications)
-Ширина: 750 мм (Extra space).
+Technical data (Specifications)
+Width: 750 mm (extra space).
 
-Ширина проема двери: 850 мм (Widest in UK).
+Door opening width: 850 mm (widest in UK range).
 
-Грузоподъемность: 200 кг (35 stone).
+Weight capacity: 200 kg (35 stone).
 
-Порог: Нулевой (Low entry).
+Threshold: Zero-height (Low entry).
 
-Гарантия: Пожизненная на уплотнитель, 6 лет на корпус, 1 год на электронику и SPA-системы.
+Warranty: Lifetime on seal, 6 years on shell, 1 year on electronics and SPA systems.

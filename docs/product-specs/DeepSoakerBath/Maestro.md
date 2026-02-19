@@ -1,62 +1,49 @@
-Шестая модель в категории Deep Soaker Bath — Maestro. Это одна из самых компактных моделей в ассортименте, которая, как и Affinity, оснащена уникальной дверью-книжкой, но с фронтальным расположением входа.
+The sixth model in the Deep Soaker Bath category is Maestro. It is one of the most compact options in the range and, like Affinity, uses a bi-fold door, but with front-entry positioning.
 
 6. Maestro
-Maestro — это высокотехнологичная и невероятно компактная сидячая ванна. Она разработана для самых маленьких ванных комнат, где каждый сантиметр на счету, при этом обеспечивая полноценный опыт глубокого погружения.
+Maestro is a high-tech, ultra-compact seated bath. It is designed for very small bathrooms where every centimeter matters, while still delivering a true deep-soak experience.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,658.00 (без НДС).
+Current price: £1,658.00 (ex VAT).
 
+Previous price: £1,995.00.
 
-Старая цена: £1,995.00.
+VAT Relief: Eligible for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Подходит под льготу 0% НДС.
+Unique Bi-Fold Door: Folding door design that keeps knee position comfortable when closing.
 
-Основные характеристики (Bulleted Features)
+Highly Compact: Smallest footprint in the line (900 mm length).
 
-Unique Bi-Fold Door: Уникальная складная дверь, позволяющая комфортно разместить колени при закрытии.
+Deep Soaking Experience: Deep bowl for relaxing seated bathing.
 
+Front Facing Door: Front-entry configuration for straightforward access.
 
-Highly Compact: Самые компактные размеры в линейке (длина всего 900 мм).
+Options of Left Hand Door or Right Hand Door: Left/right opening options.
 
+Anti Slip Base: Anti-slip base finish.
 
-Deep Soaking Experience: Глубокая чаша для расслабляющего сидячего купания.
+End Panel Included: End panel included.
 
+Model description
+Maestro stands out due to its bi-fold door. In tight spaces, users do not need to force themselves into position to close the door; it folds smoothly without interfering with leg placement. As with Affinity, the door can be removed quickly for easier cleaning.
 
-Front Facing Door: Фронтальное расположение двери для удобного прямого доступа.
+The bath uses premium gel-coat material for a smooth, durable, easy-maintenance surface. Despite its compact size, Maestro supports optional wellness upgrades such as air massage and chromotherapy.
 
+Technical data (Specifications)
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания.
+Dimensions: Length 900 mm x Width 655 mm x Height 850 mm.
 
+Step height: approx. 160 mm.
 
-Anti Slip Base: Антискользящее покрытие дна для максимальной безопасности.
+Seat height: 315 mm.
 
+Door access width: 390 mm.
 
-End Panel Included: Боковая панель входит в комплект поставки.
+Water depth: 640 mm.
 
-Описание модели
-Maestro выделяется на рынке благодаря своей складной двери Bi-fold. Эта конструкция решает типичную проблему тесных ванн: вам не нужно тесниться внутри, чтобы закрыть за собой дверь — она плавно складывается, не задевая ноги. Как и модель Affinity, дверь Maestro можно снять за несколько секунд, что делает уход за ванной и её очистку чрезвычайно простыми.
+Water capacity: 175 liters.
 
-Ванна выполнена из премиального материала gel coat, который обеспечивает идеально гладкую, долговечную и приятную на ощупь поверхность. Несмотря на свои малые габариты, Maestro предлагает полноценный терапевтический комплекс: её можно оснастить системами воздушного массажа и хромотерапии. Это идеальный баланс роскоши, долговечности и безопасности для небольших помещений.
-
-Технические данные (Specifications)
-
-Размеры: Длина 900 мм x Ширина 655 мм x Высота 850 мм.
-
-Высота шага (Step height): прибл. 160 мм.
-
-
-Высота сиденья (Seat height): 315 мм.
-
-
-Ширина проема двери (Door access): 390 мм.
-
-
-Глубина воды: 640 мм.
-
-
-Объем воды: 175 литров.
-
-
-Гарантия: 6 лет на корпус, пожизненная на уплотнитель двери, 1 год на системы спа и свет.
+Warranty: 6 years on shell, lifetime on door seal, 1 year on SPA and lighting systems.

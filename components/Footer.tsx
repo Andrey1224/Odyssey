@@ -27,8 +27,9 @@ export const Footer = () => (
                 <h4 className="text-white font-bold text-xl mb-6">Our Products</h4>
                 <ul className="space-y-4">
                     <li><Link href="/walk-in-baths" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Baths</Link></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Showers</a></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Wet Rooms</a></li>
+                    <li><Link href="/walk-in-shower-baths" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Walk-in Shower Baths</Link></li>
+                    <li><Link href="/standard-size-baths" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Standard Size Baths</Link></li>
+                    <li><Link href="/deep-soaker-baths" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Deep Soaker Baths</Link></li>
                 </ul>
             </div>
 
@@ -36,7 +37,7 @@ export const Footer = () => (
                 <h4 className="text-white font-bold text-xl mb-6">Customer Care</h4>
                 <ul className="space-y-4">
                     <li><Link href="/about" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">About Our Family</Link></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Read Reviews</a></li>
+                    <li><Link href="/reviews" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Read Reviews</Link></li>
                     <li><Link href="/faq" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">FAQ</Link></li>
                     <li><Link href="/contact" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Contact Us</Link></li>
                 </ul>

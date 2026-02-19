@@ -1,42 +1,42 @@
 1. Serenity 66 Classic
-Serenity 66 Classic — это премиальная ванна с дверцей, разработанная специально для людей с ограниченной подвижностью. Она считается одной из самых надежных и качественных моделей на рынке Великобритании.
+Serenity 66 Classic is a premium walk-in bath designed specifically for people with reduced mobility. It is considered one of the most reliable and high-quality models on the UK market.
 
-Цена и условия
-Текущая цена: £2,708.00 (без НДС)
+Price and terms
+Current price: £2,708.00 (ex VAT)
 
-Старая цена: £3,195.00
+Previous price: £3,195.00
 
-VAT Relief: Подходит под льготу 0% НДС для лиц с хроническими заболеваниями.
+VAT Relief: Eligible for 0% VAT relief for customers with long-term health conditions.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Дверь и дверная коробка из авиационного алюминия для максимальной прочности.
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Door and door frame made from aerospace-grade aluminum for maximum strength.
 
-Solid one Piece Acrylic Shell: Цельный акриловый корпус без швов (препятствует появлению плесени и грязи).
+Solid one Piece Acrylic Shell: Seamless one-piece acrylic shell (helps prevent mold and dirt buildup).
 
-4 Layers of Reinforced Fiberglass: 4 слоя армированного стекловолокна для жесткости.
+4 Layers of Reinforced Fiberglass: Four layers of reinforced fiberglass for rigidity and durability.
 
-Quick Drain Technology: Технология быстрого слива (увеличенное отверстие).
+Quick Drain Technology: Fast-drain technology with an enlarged outlet.
 
-Stainless Steel Frame: Рама из нержавеющей стали коробчатого сечения.
+Stainless Steel Frame: Box-section stainless steel frame.
 
-Handing Options: Доступны варианты с левой (LH) или правой (RH) дверью.
+Handing Options: Available with left-hand (LH) or right-hand (RH) door.
 
-Anti Slip Base: Антискользящее покрытие дна.
+Anti Slip Base: Anti-slip floor surface.
 
-End Panel Included: Боковая панель входит в комплект.
+End Panel Included: Side/end panel is included.
 
-Описание модели
-Главная особенность Serenity 66 Classic — нулевой порог (zero height threshold). Это означает, что пользователю не нужно перешагивать через бортик: можно просто сесть на сиденье и занести ноги внутрь. Это сводит риск падения к минимуму.
+Model description
+The standout feature of the Serenity 66 Classic is its zero-height threshold. This means users do not need to step over a high rim: they can sit down first and then bring their legs inside. That significantly reduces fall risk.
 
-Ванна невероятно прочная благодаря каркасу из нержавеющей стали, который выдерживает вес до 200 кг (35 stone). Именно за это её прозвали «Танком». Акриловый корпус устойчив к химическим воздействиям и износу. Дверь можно снять всего за 5 минут (открутив 6 гаек), что облегчает установку в домах с узкими дверными проемами.
+The bath is exceptionally robust thanks to its stainless steel frame, rated up to 200 kg (35 stone). This is why it is often nicknamed "The Tank." The acrylic shell is resistant to chemicals and daily wear. The door can be removed in about five minutes (by undoing six nuts), making installation easier in homes with narrow doorways.
 
-Технические данные (Specifications)
-Ширина: 660 мм (идеально для узких ванных комнат).
+Technical data (Specifications)
+Width: 660 mm (ideal for narrow bathrooms).
 
-Грузоподъемность: до 200 кг.
+Weight capacity: up to 200 kg.
 
-Порог: Нулевой (Low entry).
+Threshold: Zero-height (Low entry).
 
-Гарантия: Пожизненная на уплотнитель двери, 6 лет на корпус ванны.
+Warranty: Lifetime on door seal, 6 years on bath shell.
 
-Слив: Высокопоточный Quick Drain.
+Drain: High-flow Quick Drain.

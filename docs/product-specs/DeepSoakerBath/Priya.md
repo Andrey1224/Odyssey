@@ -1,46 +1,46 @@
-Четвертая модель в категории Deep Soaker Bath — Priya. Эта модель позиционируется как сочетание современного дизайна и инноваций, предлагая эстетичное решение без ущерба для функциональности.
+The fourth model in the Deep Soaker Bath category is Priya. It combines modern design and practical innovation, providing a premium appearance without compromising usability.
 
 4. Priya
-Priya — это современная сидячая ванна, которая выделяется своей элегантной стеклянной дверью и эргономичным внутренним пространством. Название происходит от санскритского слова, означающего «возлюбленная», что подчеркивает роскошный и приятный опыт использования этой модели.
+Priya is a modern seated bath distinguished by its elegant glass door and ergonomic interior. The name comes from a Sanskrit word meaning "beloved," reflecting the model's comfort-focused positioning.
 
-Цена и условия
-Текущая цена: £1,978.00 (без НДС).
+Price and terms
+Current price: £1,978.00 (ex VAT).
 
-Старая цена: £2,505.00.
+Previous price: £2,505.00.
 
-VAT Relief: Подходит под льготу 0% НДС для лиц с хроническими заболеваниями.
+VAT Relief: Eligible for 0% VAT relief for qualifying long-term health conditions.
 
-Основные характеристики (Bulleted Features)
-Glass Door adds Texture: Стильная стеклянная дверь придает ванне современный вид.
+Key features (Bulleted Features)
+Glass Door adds Texture: Stylish glass door for a modern visual finish.
 
-Integral Contoured Seat: Встроенное сиденье анатомической формы.
+Integral Contoured Seat: Built-in anatomically shaped seat.
 
-Low Level Wide Opening Door: Широкая дверь с низким порогом для легкого входа.
+Low Level Wide Opening Door: Wide low-threshold door for easier access.
 
-Simple to Operate Robust Single Lever: Надежный и простой в управлении рычаг фиксации двери.
+Simple to Operate Robust Single Lever: Reliable and simple door-lock lever.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания.
+Options of Left Hand Door or Right Hand Door: Left/right opening options.
 
-Anti Slip Base: Противоскользящая поверхность дна.
+Anti Slip Base: Anti-slip base surface.
 
-End Panel Included: Боковая панель входит в комплект поставки.
+End Panel Included: End panel included.
 
-Описание модели
-Priya создана для тех, кто не хочет идти на компромисс между стилем и доступностью. Благодаря низкому порогу и широкой двери, войти в ванну и занять место на эргономичном сиденье очень просто. Высококачественное покрытие gel coat обеспечивает гладкость, долговечность и легкость в уходе.
+Model description
+Priya is designed for customers who want both style and accessibility. The low threshold and wide door make entry simple, and the ergonomic seat supports comfort once inside. High-quality gel-coat finish provides smoothness, durability, and easy cleaning.
 
-Ванна оснащена двумя кликер-сливами для максимально быстрого опорожнения чаши. Эту модель часто выбирают за её «дизайнерский» вид, который делает её украшением интерьера. Как и другие флагманские модели, её можно дополнить системами гидромассажа и хромотерапии для глубокого физического и эмоционального расслабления.
+Twin clicker drains enable rapid emptying. Priya is often selected for its premium design presence and can be upgraded with hydrotherapy and chromotherapy systems for deeper physical and emotional relaxation.
 
-Технические данные (Specifications)
-Размеры: Длина 1220 мм x Ширина 660 мм x Высота 960 мм.
+Technical data (Specifications)
+Dimensions: Length 1220 mm x Width 660 mm x Height 960 mm.
 
-Высота шага (Step height): 240 мм.
+Step height: 240 mm.
 
-Высота сиденья (Seat height): 360 мм.
+Seat height: 360 mm.
 
-Глубина от пола до перелива: 705 мм.
+Floor-to-overflow depth: 705 mm.
 
-Ширина проема двери: 370 мм.
+Door opening width: 370 mm.
 
-Объем чаши: 230 литров.
+Capacity: 230 liters.
 
-Гарантия: 6 лет на корпус, пожизненная на уплотнитель двери, 1 год на системы спа и свет.
+Warranty: 6 years on shell, lifetime on door seal, 1 year on SPA and lighting systems.

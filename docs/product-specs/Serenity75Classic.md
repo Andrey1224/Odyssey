@@ -1,51 +1,49 @@
 4. Serenity 75 Classic
-Serenity 75 Classic — это широкая версия флагманской ванны с дверцей. Она разработана для пользователей, которым требуется дополнительный простор, или для людей с более крупным телосложением, обеспечивая максимальный комфорт без ущерба для безопасности.
+Serenity 75 Classic is the wider version of the flagship walk-in bath. It is designed for users who need more internal space or have a larger build, while maintaining maximum safety.
 
-Цена и условия
-Текущая цена: £2,708.00 (без НДС)
+Price and terms
+Current price: £2,708.00 (ex VAT)
 
-Старая цена: £3,195.00
+Previous price: £3,195.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Сверхпрочная алюминиевая дверь и косяк.
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Heavy-duty aluminum door and jamb.
 
-Solid one Piece Acrylic Shell: Бесшовный акриловый корпус, устойчивый к загрязнениям.
+Solid one Piece Acrylic Shell: Seamless acrylic shell resistant to dirt and wear.
 
-4 Layers of Reinforced Fiberglass: Четырехслойное армирование для исключительной долговечности.
+4 Layers of Reinforced Fiberglass: Four-layer reinforcement for exceptional durability.
 
-Quick Drain Technology: Система быстрого слива воды.
+Quick Drain Technology: Fast water drainage system.
 
-Stainless Steel Frame: Стальной каркас коробчатого сечения (выдерживает до 200 кг).
+Stainless Steel Frame: Box-section steel frame rated up to 200 kg.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны установки двери.
+Options of Left Hand Door or Right Hand Door: Door can be configured left or right.
 
-Anti Slip Base: Специальная текстура дна для предотвращения скольжения.
+Anti Slip Base: Anti-slip base texture.
 
-End Panel Included: Торцевая панель в комплекте.
+End Panel Included: End panel included.
 
-Описание модели
-Главное отличие Serenity 75 Classic — её ширина 75 см. Это дает пользователю больше места для маневра внутри ванны и позволяет глубже погрузиться в воду. Модель оснащена самой широкой дверью на рынке (85 см), что делает её идеальным выбором для людей, использующих инвалидные кресла, так как позволяет легко пересесть с кресла на сиденье ванны.
+Model description
+The key difference in Serenity 75 Classic is its 750 mm width. This gives users more room to maneuver and improves in-bath comfort. The model also features one of the widest door openings on the market (850 mm), making transfers from mobility aids easier.
 
-Конструкция сохраняет принцип «нулевого порога» (zero height threshold), полностью исключая необходимость поднимать ноги при входе. Как и в компактной версии, дверь можно снять за 5 минут для обслуживания или проноса через узкие дверные проемы. Благодаря стальному каркасу, эта ванна остается «самой прочной на рынке Великобритании».
+The design keeps the zero-height threshold concept, removing the need to step over a rim. As with the compact version, the door can be removed in about five minutes for servicing or easier transport through narrow internal doors. With its steel frame, this bath remains one of the toughest options in its category.
 
-Технические данные (Specifications)
-Ширина: 750 мм (Extra roominess).
+Technical data (Specifications)
+Width: 750 mm (extra roominess).
 
-Ширина дверного проема: 850 мм (самый широкий на рынке).
+Door opening width: 850 mm (one of the widest on the market).
 
-Грузоподъемность: 200 кг (35 stone).
+Weight capacity: 200 kg (35 stone).
 
-Порог: Нулевой (Low entry).
+Threshold: Zero-height (Low entry).
 
-Гарантия: Пожизненная на уплотнитель двери, 6 лет на корпус.
+Warranty: Lifetime on door seal, 6 years on shell.
 
-Готов двигаться дальше к пятой модели — Serenity 75 Plus?
+Recommended actions:
+Highlight width: In product cards, explicitly present 750 mm as a comfort advantage (bariatric-friendly).
 
-Рекомендованные действия:
-Акцент на ширине: В карточке товара на сайте обязательно выделите 750 мм как преимущество для комфорта (Bariatric friendly).
+Size comparison: Add a 66 vs 75 toggle so users can instantly see the space difference.
 
-Сравнение размеров: Добавьте на страницу переключатель (Toggle) между 66 и 75 моделями, чтобы пользователь сразу видел разницу в пространстве.
-
-Визуализация двери: Используйте фото или иконку, подчеркивающую ширину входа 85 см — это сильное конкурентное преимущество.
+Door visualization: Use a photo/icon to emphasize the 850 mm opening as a competitive advantage.

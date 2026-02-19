@@ -1,79 +1,49 @@
 4. Olivia
 
-Olivia — это потрясающая и универсальная ванна с душевой зоной, которая выделяется наличием встроенного полноразмерного складного сиденья. Она спроектирована так, чтобы обеспечить максимальное удобство для всех членов семьи, предлагая гибкость в выборе размера и исключительную надежность конструкции.
-+1
+Olivia is a highly versatile walk-in shower bath featuring a built-in full-width fold-down seat. It is designed for maximum convenience across family use cases, with flexible sizing and robust construction.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £2,300.00 (без НДС).
-+1
+Current price: £2,300.00 (ex VAT).
 
+Previous price: £2,705.00.
 
-Старая цена: £2,705.00.
-+1
+VAT Relief: Customers with qualifying long-term conditions may purchase at 0% VAT.
 
+Key features (Bulleted Features)
 
-VAT Relief: Покупатели с хроническими заболеваниями могут приобрести эту модель с нулевой ставкой НДС.
+Stunning and Versatile Design: Attractive style that fits modern bathrooms.
 
-Основные характеристики (Bulleted Features)
+Available in 1700 and 1800 Lengths: Two standard lengths for easier replacement planning.
 
-Stunning and Versatile Design: Привлекательный дизайн, который легко вписывается в интерьер современной ванной комнаты.
-+1
+Full Width Fold Down Seat: Full-width integrated fold-down seat for safer seated showering.
 
+Simple to Operate Robust Single Lever: Reliable and easy single-lever door operation.
 
-Available in 1700 and 1800 Lengths: Доступна в двух стандартных вариантах длины (1700 мм и 1800 мм), что позволяет заменить любую старую ванну без лишних хлопот.
-+1
+Stainless Steel Frame: Heavy-duty stainless frame for structural stability.
 
+Toughened Glass: 6 mm toughened-glass shower screen, 1500 mm high.
 
-Full Width Fold Down Seat: Уникальное складное сиденье на всю ширину ванны для безопасного и комфортного принятия душа сидя.
-+1
+Anti Slip Surface at the Shower End: Anti-slip shower zone surface.
 
+Options of Left Hand Door or Right Hand Door: LH/RH door options available.
 
-Simple to Operate Robust Single Lever: Надежный и простой в использовании рычаг управления дверью.
-+1
+End Panel Included: End panel included.
 
+Model description
 
-Stainless Steel Frame: Сверхпрочный каркас из нержавеющей стали обеспечивает стабильность всей конструкции.
-+1
+Olivia is a strong choice for high-accessibility requirements. Its fold-down seat allows users to shower comfortably while seated, and folds away when full bath use is preferred.
 
+With low-threshold entry, getting in and out is safer and easier. The UK-made gel-coat structure is durable and easy to maintain. Like other models in this range, Olivia can be upgraded with hydrotherapy for additional therapeutic benefit.
 
-Toughened Glass: Душевой экран из закаленного стекла высотой 1500 мм и толщиной 6 мм.
-+1
+Technical data (Specifications)
 
+Length: 1700 mm or 1800 mm.
 
-Anti Slip Surface at the Shower End: Противоскользящее покрытие в зоне душа для предотвращения падений.
-+1
+Screen: 6 mm toughened glass (1500 mm height).
 
+Frame: Stainless steel.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания двери (LH или RH).
-+1
+Seat: Integrated, fold-down, full-width.
 
-
-End Panel Included: Боковая панель входит в комплект поставки.
-+1
-
-Описание модели
-
-Olivia — идеальный выбор для тех, кто ищет бескомпромиссную доступность. Главная особенность этой модели — её складное сиденье, которое позволяет пользователю с комфортом мыться сидя под душем, а при необходимости легко убирается, освобождая пространство для полноценного принятия ванны лежа.
-+3
-
-Благодаря низкому порогу входа (low threshold), вход в ванну становится безопасным и не требует усилий. Ванна изготовлена из долговечного гелькоута (UK Made), который легко чистится и сохраняет свой вид долгие годы. Как и другие модели серии, Olivia может быть оснащена гидромассажной системой (spa option) для терапевтического воздействия на мышцы и суставы.
-+4
-
-Технические данные (Specifications)
-
-Длина: 1700 мм или 1800 мм.
-
-
-Экран: Закаленное стекло 6 мм (высота 1500 мм).
-+1
-
-
-Каркас: Нержавеющая сталь (Stainless Steel).
-
-
-Сиденье: Встроенное, складное, на всю ширину чаши.
-
-
-Производство: Великобритания (UK Made).
-+1
+Manufacture: UK Made.

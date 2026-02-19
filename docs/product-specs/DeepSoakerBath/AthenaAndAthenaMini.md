@@ -1,68 +1,52 @@
 3. Athena & Athena Mini
 
-Athena — это современная сидячая ванна, доступная в двух размерах, чтобы вписаться в любую ванную комнату. Её название символизирует силу, мудрость и красоту, что отражено в высоком качестве сборки и продуманном дизайне.
+Athena is a modern seated bath available in two sizes to fit different bathroom layouts. The product combines strong build quality with practical, user-focused design.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,738.00 (без НДС).
+Current price: £1,738.00 (ex VAT).
 
+Previous price: £2,105.00.
 
-Старая цена: £2,105.00.
+VAT Relief: Eligible for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Подходит под льготу 0% НДС.
+Integral Contoured Seat: Built-in ergonomic seat for comfortable posture.
 
-Основные характеристики (Bulleted Features)
+Low Level Wide Opening Door: Low threshold plus wide opening for easier access.
 
-Integral Contoured Seat: Встроенное эргономичное сиденье для комфортного положения.
+Simple to Operate Robust Single Lever: Reliable and easy-to-use door lever mechanism.
 
+Quick Fill Technology: Fast-fill system to reduce waiting time.
 
-Low Level Wide Opening Door: Низкий порог и широкий проем для легкого доступа.
+Stainless Steel Frame: Heavy-duty stainless steel frame.
 
+Anti Slip Base: Anti-slip base surface.
 
-Simple to Operate Robust Single Lever: Надежный и простой в использовании рычаг управления дверью.
+Handing Options: Available with left-hand (LH) or right-hand (RH) door.
 
+End Panel Included: End panel included.
 
-Quick Fill Technology: Технология быстрого наполнения, минимизирующая время ожидания.
+Model description
+Athena's key engineering feature is door geometry that passes smoothly above the knees when closing after seating. This improves comfort and safety during entry and closure.
 
+The bath is available in standard Athena (1270 mm) and compact Athena Mini (1060 mm), allowing better fit in tighter spaces. Optional chromotherapy and air massage upgrades are available for a premium SPA-like experience.
 
-Stainless Steel Frame: Сверхпрочный каркас из нержавеющей стали.
+Technical data (Specifications)
 
+Dimensions (Athena): Length 1270 mm x Width 660 mm x Height 940 mm.
 
-Anti Slip Base: Антискользящее покрытие дна для безопасности.
+Dimensions (Athena Mini): Length 1060 mm x Width 660 mm x Height 940 mm.
 
+Step height: 200 mm.
 
-Handing Options: Доступны варианты с левой (LH) или правой (RH) дверью.
+Seat height: 360 mm.
 
+Seat width: 450 mm.
 
-End Panel Included: Боковая панель входит в комплект.
+Drain: Twin waste on standard model, single waste on Mini.
 
-Описание модели
-Главное инженерное достижение Athena — форма её двери. Она спроектирована таким образом, чтобы плавно проходить над коленями, не задевая их, когда вы уже сидите внутри ванны. Это делает процесс закрытия двери максимально удобным и безопасным.
+Capacity: 220 liters (Athena) / 200 liters (Mini).
 
-Ванна доступна в двух вариантах длины: стандартная Athena (1270 мм) и компактная Athena Mini (1060 мм), что позволяет подобрать идеальное решение даже для самых тесных помещений. Для создания атмосферы роскошного SPA модель можно дополнить функциями светотерапии (Chromotherapy) и воздушного массажа.
-
-Технические данные (Specifications)
-
-Размеры (Athena): Длина 1270 мм x Ширина 660 мм x Высота 940 мм.
-
-
-Размеры (Athena Mini): Длина 1060 мм x Ширина 660 мм x Высота 940 мм.
-
-
-Высота шага (Step height): 200 мм.
-
-
-Высота сиденья: 360 мм.
-
-
-Ширина сиденья: 450 мм.
-
-
-Слив: Двойной слив (Twin waste) у стандартной модели и одинарный у Mini.
-
-
-Объем: 220 литров (Athena) / 200 литров (Mini).
-
-
-Гарантия: 5 лет на корпус, пожизненная на уплотнитель двери, 1 год на системы спа и свет.
+Warranty: 5 years on shell, lifetime on door seal, 1 year on SPA/lighting systems.

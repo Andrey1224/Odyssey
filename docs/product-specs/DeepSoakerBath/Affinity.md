@@ -1,72 +1,51 @@
 1. Affinity
-Affinity — это компактная сидячая ванна с уникальной дверью-книжкой (Bi-fold). Она идеально подходит для тех, кому нужно максимально освободить пространство в ванной комнате при входе и выходе.
+Affinity is a compact seated deep-soaker bath with a unique bi-fold door. It is ideal for users who need to maximize bathroom space during entry and exit.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,710.00 (без НДС) 
+Current price: £1,710.00 (ex VAT)
 
+Previous price: £1,995.00
 
-Старая цена: £1,995.00 
+VAT Relief: Eligible for 0% VAT relief (for qualifying long-term conditions).
 
+Key features (Bulleted Features)
 
-VAT Relief: Подходит под льготу 0% НДС (для людей с хроническими заболеваниями).
+Unique Bi-Fold Door: Folding door design that minimizes clearance requirements when opening.
 
-Основные характеристики (Bulleted Features)
+Highly Compact: Extremely compact external footprint.
 
-Unique Bi-Fold Door: Уникальная складная дверь, которая при открытии не занимает много места.
-+1
+Deep Soaking Experience: Deep internal bowl for full seated immersion.
 
+Side Facing Door: Side-entry door position for convenient access.
 
-Highly Compact: Чрезвычайно компактные внешние размеры.
-+1
+Easy-to-clean design: Door can be lifted and removed within seconds for easy cleaning.
 
+Anti-slip Surface: Slip-resistant base for safety.
 
-Deep Soaking Experience: Глубокая чаша для полноценного погружения в сидячем положении.
+Gel Coat Material: Durable gel-coat composite construction that supports ergonomic curved shaping.
 
+Model description
+The key advantage of Affinity is its bi-fold door. This design allows knees to remain in a comfortable position while the door is being closed, which is uncommon in this category. It is built for users who need a clear, unobstructed access path.
 
-Side Facing Door: Боковое расположение двери для удобного доступа.
+The shell material is high-grade gel coat: durable, chip-resistant, and non-porous, helping protect against stains, mold, and mildew. Seat and backrest geometry are shaped for natural support and comfort.
 
+Technical data (Specifications)
 
-Easy-to-clean design: Дверь можно поднять и снять за считанные секунды для легкой очистки ванны.
-+1
+Dimensions: Length 1045 mm x Width 660 mm x Height 885 mm.
 
+Step height: 200 mm.
 
-Anti-slip Surface: Антискользящее покрытие для безопасности.
-+2
+Seat height: 320 mm.
 
+Door access width: 400 mm.
 
-Gel Coat Material: Изготовлена из прочного полиэфирного полимера (Gel coat), который позволяет создавать эргономичные изогнутые формы.
-+2
+Water depth: 640 mm.
 
-Описание модели
-Главное преимущество Affinity — её складная дверь Bi-fold. Эта конструкция позволяет вашим коленям находиться в комфортном положении прямо в момент закрытия двери, что является редкостью для рынка ванн с дверцей. Она создана для тех, кому нужен «чистый путь» внутрь и наружу без препятствий.
-+1
+Capacity: 200 liters.
 
-Ванна изготовлена из высококачественного материала Gel coat, который не только долговечен и устойчив к сколам, но и имеет непористую поверхность, защищенную от пятен, плесени и грибка. Форма сиденья и спинки спроектирована так, чтобы повторять контуры тела, обеспечивая естественную поддержку и комфорт.
-+3
+Warranty: 6 years on shell, lifetime on door seal, 1 year on SPA and lighting systems.
 
-Технические данные (Specifications)
+Use the bi-fold door as the key USP in product-card design.
 
-Размеры: Длина 1045 мм x Ширина 660 мм x Высота 885 мм.
-
-
-Высота шага (Step height): 200 мм.
-
-
-Высота сиденья (Seat height): 320 мм.
-
-
-Ширина проема двери (Door access): 400 мм.
-
-
-Глубина воды: 640 мм.
-
-
-Объем: 200 литров.
-
-
-Гарантия: 6 лет на корпус ванны, пожизненная на уплотнитель двери, 1 год на системы спа и освещение.
-
-Используйте информацию о складной двери как ключевое УТП (Unique Selling Proposition) в дизайне карточки.
-
-Для этой модели важно сделать акцент на «Easy-to-clean» (съемная дверь).
+For this model, emphasize the "Easy-to-clean" removable door.

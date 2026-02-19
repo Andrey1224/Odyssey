@@ -1,66 +1,52 @@
 1. Carnelian
 
-Carnelian — это элегантная ванна P-образной формы, которая добавляет плавности интерьеру благодаря изогнутым линиям и использованию закаленного стекла. Она позволяет детям использовать её как обычную ванну, а пожилым людям — заходить через стеклянную дверь с низким порогом.
+Carnelian is an elegant P-shaped walk-in shower bath with curved lines and toughened glass. It allows children to use it as a standard bath while giving older users safer low-threshold access through the glass door.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,998.00 (без НДС).
+Current price: £1,998.00 (ex VAT).
 
+Previous price: £2,505.00.
 
-Старая цена: £2,505.00.
+VAT Relief: Prices are shown ex VAT, as many buyers qualify for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Цены указаны без НДС, так как большинство покупателей имеют право на льготу 0%.
+Elegant Design: Refined look with emphasis on light and openness.
 
-Основные характеристики (Bulleted Features)
+Toughened Glass: Curved 6 mm toughened-glass shower screen, 1500 mm high.
 
-Elegant Design: Изысканный внешний вид с акцентом на обилие света.
+P Shape Design: P-shape creates a wider showering area.
 
+Anti-slip Surface: Slip-resistant shower-zone base.
 
-Toughened Glass: Душевой экран высотой 1500 мм из изогнутого закаленного стекла толщиной 6 мм.
+Options of Left Hand or Right Hand Door: Left/right opening options.
 
+End Panel Included: End panel included.
 
-P Shape Design: Форма «P» расширяет пространство в зоне душа.
+Model meaning and positioning
+The name Carnelian comes from the gemstone associated with energy and vitality. For this model, it represents self-care and restoration.
 
+The bath length is 1675 mm, ideal for replacing many existing 1700 mm baths without full wall re-tiling. The model includes twin clicker drains for quick emptying.
 
-Anti-slip Surface: Антискользящее покрытие в душевой зоне для безопасности.
+Therapeutic options
 
+Self-Healing Light Therapy: Underwater chromotherapy with selectable color modes.
 
-Options of Left Hand or Right Hand Door: Выбор стороны открывания двери.
+Physical Relaxation: Warm air-bubble massage (hydrotherapy) to ease joints and muscles, with post-use self-cleaning function.
 
+Technical data (Specifications)
 
-End Panel Included: Боковая панель уже входит в стоимость.
+Length: 1675 mm.
 
-Описание и «смысл» названия
-Название Carnelian происходит от латинского слова cornum (вишня). Это полудрагоценный камень красновато-оранжевого цвета, который ассоциируется с мужеством, творчеством и жизненной силой. В контексте ванны это символизирует заботу о себе и восстановление энергии.
+Width: 750 mm to 850 mm (widest point).
 
-Ванна имеет длину 1675 мм, что делает её идеальной для замены старой стандартной ванны длиной 1700 мм без необходимости полной перекладки плитки на стенах. Модель оснащена двумя кликер-сливами для максимально быстрого опорожнения чаши.
+Height: 530 mm.
 
-Терапевтические опции
+Step height: 215 mm.
 
-Self-Healing Light Therapy: Подводная хромотерапия, где каждый цвет активирует и балансирует энергетические центры тела.
+Door width: 380 mm.
 
+Capacity: 220 liters.
 
-Physical Relaxation: Мягкий массаж теплыми пузырьками воздуха (гидромассаж), который помогает расслабить суставы и мышцы. Система имеет функцию самоочистки после использования.
-
-Технические данные (Specifications)
-
-Длина: 1675 мм.
-
-
-Ширина: от 750 мм до 850 мм (в самой широкой точке).
-
-
-Высота: 530 мм.
-
-
-Высота шага (Step height): 215 мм.
-
-
-Ширина двери: 380 мм.
-
-
-Объем: 220 литров.
-
-
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери, 1 год на системы спа и свет.
+Warranty: 5 years on shell, lifetime on door seal, 1 year on SPA and lighting systems.

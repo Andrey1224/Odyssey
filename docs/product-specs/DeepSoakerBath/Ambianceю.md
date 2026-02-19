@@ -1,65 +1,50 @@
 2. Ambiance
 
-Ambiance — это роскошная сидячая ванна с фронтальным входом, разработанная для обеспечения максимального комфорта и безопасности в условиях ограниченного пространства. Она выделяется своей универсальностью установки и широким проемом двери.
+Ambiance is a premium seated bath with front entry, designed for high comfort and safety in limited spaces. It stands out for flexible installation options and a wide door opening.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,710.00 (без НДС) 
+Current price: £1,710.00 (ex VAT)
 
+Previous price: £2,305.00
 
-Старая цена: £2,305.00 
+VAT Relief: Eligible for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Как и другие модели, подходит под льготу 0% НДС.
+Outward Opening Door: Door opens outward for unobstructed access to the seat.
 
-Основные характеристики (Bulleted Features)
+Contoured Moulded Back Rest and Arms: Ergonomic back and integrated arm supports for natural body positioning.
 
-Outward Opening Door: Дверь открывается наружу, обеспечивая беспрепятственный доступ к сиденью.
+Single Action Opening and Closing Mechanism: Simple and reliable one-action operation.
 
+Stainless Steel Frame: Durable stainless steel frame.
 
-Contoured Moulded Back Rest and Arms: Эргономичная форма спинки и встроенные подлокотники для естественной поддержки тела.
+Options of Left Hand Door or Right Hand Door: Left/right door placement available.
 
+Anti Slip Base: Anti-slip base to reduce fall risk.
 
-Single Action Opening and Closing Mechanism: Простой и надежный механизм открывания/закрытия одним движением.
+End Panel Included: End panel included.
 
+Model description
 
-Stainless Steel Frame: Прочный каркас из нержавеющей стали.
+Ambiance is one of the strongest front-entry options in the range. It supports two placement styles: standard corner installation or diagonal corner installation, making it suitable for challenging room layouts.
 
+Its extra-large front door gives easy access. The internal space uses soft lines and high-quality gel coat for a more relaxing, premium feel. As with Affinity, the door can be removed quickly for efficient cleaning. Optional chromotherapy can be added for enhanced therapeutic effect.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны установки двери.
+Technical data (Specifications)
+Available in two body configurations:
 
+Dimensions (Square model): Length 985 mm x Width 760 mm x Height 970 mm.
 
-Anti Slip Base: Антискользящее покрытие дна для предотвращения падений.
+Dimensions (Diagonal model): Length 1175 mm x Width 760 mm x Height 970 mm.
 
+Seat height: 280 mm.
 
-End Panel Included: Боковая панель уже включена в стоимость.
+Door opening width: 530 mm (one of the widest in class).
 
-Описание модели
+Step height: 220 mm.
 
-Ambiance считается одной из лучших моделей с фронтальным входом. Благодаря своей конструкции, она предлагает два варианта размещения: её можно установить в обычный угол или вписать по диагонали в угол комнаты, что делает её идеальным выбором для сложных планировок.
+Capacity: 200 liters.
 
-Чрезвычайно большая передняя дверь обеспечивает легкий доступ внутрь. Внутреннее пространство спроектировано с учетом комфорта: мягкие линии корпуса и использование высококачественного материала gel coat создают приятную атмосферу для релаксации. Как и в модели Affinity, дверь Ambiance легко снимается для быстрой и эффективной очистки чаши. Для усиления терапевтического эффекта ванну можно дооснастить системой подводного освещения (хромотерапией).
-
-Технические данные (Specifications)
-Ванна доступна в двух конфигурациях корпуса:
-
-
-Размеры (Квадратная модель): Длина 985 мм x Ширина 760 мм x Высота 970 мм.
-
-
-Размеры (Диагональная модель): Длина 1175 мм x Ширина 760 мм x Высота 970 мм.
-
-
-Высота сиденья: 280 мм.
-
-
-Ширина проема двери: 530 мм (один из самых широких показателей).
-
-
-Высота шага (Step height): 220 мм.
-
-
-Объем: 200 литров.
-
-
-Гарантия: 6 лет на корпус, пожизненная на уплотнитель двери, 1 год на электронику/свет.
+Warranty: 6 years on shell, lifetime on door seal, 1 year on electronics/lighting.

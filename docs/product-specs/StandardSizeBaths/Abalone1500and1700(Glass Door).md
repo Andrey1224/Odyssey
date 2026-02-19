@@ -1,75 +1,51 @@
 1. Abalone 1500 and 1700 (Glass Door)
-Abalone — это современная полноразмерная ванна с элегантной стеклянной дверцей. Она разработана для того, чтобы заменить вашу обычную ванну, обеспечив безопасный и комфортный доступ для всех членов семьи.
-+1
+Abalone is a modern full-length walk-in bath with an elegant glass door. It is designed to replace a standard bathtub while providing safer and more comfortable access for all family members.
 
-Цена и условия
+Price and terms
+Current price: £1,875.00 (ex VAT).
 
-Текущая цена: £1,875.00 (без НДС).
-+1
+Previous price: £2,250.00.
 
+VAT Relief: Most buyers are eligible for 0% VAT relief; a doctor's note is not required.
 
-Старая цена: £2,250.00.
-+1
+Key features (Bulleted Features)
+Designed for the Modern Bathroom: Stylish design that fits contemporary interiors.
 
-VAT Relief: Большинство покупателей имеют право на льготу 0% НДС; справка от врача не требуется.
+Stylish Toughened Glass: Durable and attractive toughened-glass door.
 
-Основные характеристики (Bulleted Features)
+1500 and 1700 Models Available: Two standard lengths for straightforward replacement.
 
-Designed for the Modern Bathroom: Стильный дизайн, который вписывается в современный интерьер.
+Stainless Steel Finish: Stainless steel finish elements.
 
+Anti-slip Surface: Specialized base texture to reduce slip risk.
 
-Stylish Toughened Glass: Прочная и эстетичная дверь из закаленного стекла.
+Options of Left Hand Door or Right Hand Door: Door opening side can be selected.
 
+End Panel Included: End panel included.
 
-1500 and 1700 Models Available: Доступна в двух стандартных длинах для легкой замены старой ванны.
-+1
+Model description
+Abalone helps "bring light into the bathroom" thanks to its glass-door construction. It is a universal solution: users who need easier access can use the low-threshold door, while other family members can use it like a standard full-length bath.
 
+The model features a twin clicker waste for very fast drainage. A traditional plug-and-chain drain can be fitted on request at no additional charge. Made in the UK with a high-quality finish.
 
-Stainless Steel Finish: Элементы отделки из нержавеющей стали.
+Therapeutic options (SPA)
+Like other premium models, Abalone can be upgraded with:
 
+Chromotherapy: Underwater light therapy to support relaxation and wellbeing.
 
-Anti-slip Surface: Специальное покрытие дна для защиты от падений.
+Hydrotherapy: Warm bubble massage to relax joints and muscles; includes self-cleaning functionality.
 
+Technical data (Specifications)
+Length: 1500 mm or 1695 mm.
 
-Options of Left Hand Door or Right Hand Door: Выбор стороны открывания двери ( hinges on left or right).
+Width: 700 mm.
 
+Height: 510 mm.
 
-End Panel Included: Торцевая панель входит в комплект.
+Door opening width: 380 mm.
 
-Описание модели
-Ванна Abalone позволяет «наполнить ванную комнату светом» благодаря использованию стекла в конструкции двери. Это универсальное решение: пожилые люди и те, кому трудно поднимать ноги, используют дверь с низким порогом, в то время как остальные члены семьи могут пользоваться ею как обычной ванной.
-+1
+Step Height: 190 mm.
 
-Модель оснащена двумя кликер-сливами (Twin Waste) для максимально быстрого слива воды. По запросу возможна установка классического слива с пробкой и цепочкой без дополнительной оплаты. Изготовлена в Великобритании ведущими экспертами и имеет высокое качество отделки.
-+2
+Capacity: 190 liters.
 
-Терапевтические опции (SPA)
-Как и другие премиальные модели, Abalone может быть дооснащена:
-
-
-Chromotherapy: Подводная светотерапия для балансировки энергии.
-
-Hydrotherapy: Система мягкого аэромассажа теплыми пузырьками для расслабления суставов и мышц; система имеет функцию самоочистки.
-+1
-
-Технические данные (Specifications)
-
-Длина: 1500 мм или 1695 мм.
-
-
-Ширина: 700 мм.
-
-
-Высота: 510 мм.
-
-
-Ширина проема двери: 380 мм.
-
-
-Высота шага (Step Height): 190 мм.
-
-
-Объем: 190 литров.
-
-
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери, 1 год на электронику/SPA.
+Warranty: 5 years on bath shell, lifetime on door seal, 1 year on electronics/SPA systems.

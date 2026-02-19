@@ -1,42 +1,42 @@
 7. Stamford 75 Classic
-Stamford 75 Classic — это надежная и высокотехнологичная ванна с дверцей, которая открывается внутрь (In-swing). Она была разработана как альтернатива серии Serenity для тех, кто ищет максимальную безопасность входа при ограниченном пространстве в ванной комнате.
+Stamford 75 Classic is a robust, high-performance walk-in bath with an inward-opening (in-swing) door. It was developed as an alternative to the Serenity line for users who need maximum entry safety where bathroom space is limited.
 
-Цена и условия
-Текущая цена: £2,608.00 (без НДС)
+Price and terms
+Current price: £2,608.00 (ex VAT)
 
-Старая цена: £3,008.00
+Previous price: £3,008.00
 
-VAT Relief: Подходит под льготу 0% НДС.
+VAT Relief: Eligible for 0% VAT relief.
 
-Основные характеристики (Bulleted Features)
-Aluminium Door and Jamb: Дверь из авиационного алюминия, которая сохраняет форму и герметичность десятилетиями.
+Key features (Bulleted Features)
+Aluminium Door and Jamb: Aerospace-grade aluminum door that keeps shape and seal integrity over time.
 
-Unique In-swing Door Design: Дверь открывается внутрь, проходя над коленями пользователя.
+Unique In-swing Door Design: Door swings inward over the user's knees.
 
-Solid one Piece Acrylic Shell: Бесшовный акриловый корпус высокой прочности.
+Solid one Piece Acrylic Shell: High-strength seamless acrylic shell.
 
-4 Layers of Reinforced Fiberglass: Четырехслойное армирование чаши.
+4 Layers of Reinforced Fiberglass: Four-layer reinforcement of the bath body.
 
-Quick Drain Technology: Технология быстрого слива воды.
+Quick Drain Technology: Fast water drainage.
 
-Stainless Steel Frame: Сверхпрочный каркас из нержавеющей стали.
+Stainless Steel Frame: Heavy-duty stainless steel frame.
 
-Options of Left Hand Door or Right Hand Door: Доступен выбор стороны открывания.
+Options of Left Hand Door or Right Hand Door: Left/right opening options available.
 
-Anti Slip Base: Антискользящее покрытие дна.
+Anti Slip Base: Anti-slip base surface.
 
-Описание модели
-Stamford 75 Classic часто называют «инвалидной ванной» (disabled bath), так как её конструкция максимально ориентирована на доступность. Уникальность модели заключается в механике двери: она спроектирована так, чтобы свинговать (проходить) над коленями сидящего человека. Это позволяет легко закрыть дверь, уже находясь внутри, что критически важно для людей с серьезными нарушениями координации или ограниченным пространством для маневра.
+Model description
+Stamford 75 Classic is often chosen for highly accessible bathrooms because its door mechanism is optimized for users with limited mobility. The inward swing path is engineered to pass above the knees of a seated user, making door closure easier once inside.
 
-Ванна невероятно надежна — стальной каркас и качественное стекловолокно позволяют ей выдерживать нагрузку до 200 кг. Акриловая поверхность устойчива к износу и химикатам, легко моется и не желтеет со временем. Несмотря на свою «суровую» прочность, Stamford выглядит современно и аккуратно, легко вписываясь в интерьер любой британской ванной комнаты.
+The build is very durable: steel frame plus reinforced fiberglass support up to 200 kg. The acrylic finish is resistant to wear and cleaning chemicals, easy to maintain, and color-stable over time. Despite its rugged construction, Stamford maintains a clean modern look.
 
-Технические данные (Specifications)
-Ширина: 750 мм.
+Technical data (Specifications)
+Width: 750 mm.
 
-Грузоподъемность: 200 кг (35 stone).
+Weight capacity: 200 kg (35 stone).
 
-Тип двери: Внутреннее открытие (In-swing over the knees).
+Door type: In-swing over the knees.
 
-Материалы: Нержавеющая сталь, алюминий, армированный акрил.
+Materials: Stainless steel, aluminum, reinforced acrylic.
 
-Гарантия: 10 лет на уплотнитель двери (Door Seal), 6 лет на корпус.
+Warranty: 10 years on door seal, 6 years on shell.

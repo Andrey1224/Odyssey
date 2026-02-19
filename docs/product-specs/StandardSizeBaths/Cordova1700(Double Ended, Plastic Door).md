@@ -1,46 +1,46 @@
 5. Cordova 1700 (Double Ended, Plastic Door)
-Cordova — это воплощение современных трендов в дизайне адаптивных ванных комнат. Благодаря расположению слива и перелива по центру, эта ванна предлагает одинаковый уровень комфорта с обоих концов, а прочная пластиковая дверь гарантирует надежность при ежедневном использовании.
+Cordova reflects current adaptive-bathroom design trends. With central waste and overflow, it provides balanced comfort at both ends of the bath, while its durable plastic door supports heavy daily use.
 
-Цена и условия
-Текущая цена: £1,768.00 (без НДС).
+Price and terms
+Current price: £1,768.00 (ex VAT).
 
-Старая цена: £2,205.00.
+Previous price: £2,205.00.
 
-VAT Relief: Покупатели с хроническими заболеваниями (артрит, диабет и др.) полностью освобождаются от уплаты НДС.
+VAT Relief: Buyers with long-term health conditions may qualify for 0% VAT relief.
 
-Основные характеристики (Bulleted Features)
-Double Ended Bath: Симметричный дизайн — вы можете располагаться в любом конце ванны, так как слив находится посередине.
+Key features (Bulleted Features)
+Double Ended Bath: Symmetrical design allows comfortable positioning at either end.
 
-Sleek and Simple Lines: Чистые и современные линии корпуса.
+Sleek and Simple Lines: Clean modern shell lines.
 
-Rugged and Durable Plastic Door: Усиленная пластиковая дверь, устойчивая к износу.
+Rugged and Durable Plastic Door: Reinforced plastic door with strong wear resistance.
 
-Stainless Steel Finish: Элементы отделки из нержавеющей стали.
+Stainless Steel Finish: Stainless trim details.
 
-Modern Alternative: Отличная альтернатива классическим ваннам для современного интерьера.
+Modern Alternative: Contemporary alternative to traditional accessible baths.
 
-Anti-slip Surface: Противоскользящее покрытие по всей площади дна.
+Anti-slip Surface: Full-area anti-slip base finish.
 
-Options of Left Hand or Right Hand Door: Возможность выбрать сторону установки двери.
+Options of Left Hand or Right Hand Door: Door side can be selected.
 
-Описание модели
-Cordova 1700 создана для тех, кто ищет «дизайнерский» вид без потери функциональности. Низкий порог входа (low threshold step) делает её безопасной для пожилых людей, избавляя от необходимости опасно балансировать на одной ноге при входе.
+Model description
+Cordova 1700 is designed for buyers who want a premium look without sacrificing usability. The low-threshold step improves safety for older users and those with reduced mobility.
 
-Главное преимущество Double Ended конструкции — простор. В такой ванне удобнее лежать, так как нет мешающих кранов или слива в одном из концов. Прочная пластиковая дверь делает эту модель идеальной для семей с активными детьми или для домов, где ценится практичность и «неубиваемость» материалов. Двойной кликер-слив (Twin waste) обеспечивает очень быстрое удаление воды.
+The Double Ended format improves usable internal space by avoiding taps and waste at one reclining end. The robust plastic door makes it a good fit for active family homes and high-traffic use. Twin clicker waste enables fast emptying.
 
-Технические данные (Specifications)
-Длина: 1695 мм.
+Technical data (Specifications)
+Length: 1695 mm.
 
-Ширина: 700 мм.
+Width: 700 mm.
 
-Высота: 510 мм.
+Height: 510 mm.
 
-Высота шага (Step Height): 190 мм.
+Step Height: 190 mm.
 
-Ширина проема двери: 380 мм.
+Door opening width: 380 mm.
 
-Тип двери: Пластиковая (Rugged Plastic).
+Door type: Rugged plastic.
 
-Объем: 200 литров.
+Capacity: 200 liters.
 
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери.
+Warranty: 5 years on shell, lifetime on door seal.

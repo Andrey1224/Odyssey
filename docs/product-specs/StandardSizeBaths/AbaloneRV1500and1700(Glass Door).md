@@ -1,63 +1,49 @@
 2. Abalone RV 1500 and 1700 (Glass Door)
 
-Abalone RV — это полноразмерная ванна со стильной стеклянной дверцей, созданная на базе стандартной модели Abalone. Индекс «RV» (Reverse) означает, что дверь расположена со стороны сиденья, то есть вдали от кранов.
+Abalone RV is a full-size bath with a stylish glass door, based on the standard Abalone model. "RV" (Reverse) means the door is positioned at the seat end, away from the taps.
 
-Цена и условия
+Price and terms
 
-Текущая цена: £1,875.00 (без НДС).
+Current price: £1,875.00 (ex VAT).
 
+Previous price: £2,250.00.
 
-Старая цена: £2,250.00.
+VAT Relief: Eligible for 0% VAT relief.
 
+Key features (Bulleted Features)
 
-VAT Relief: Подходит под льготу 0% НДС.
+Based on the Abalone: Retains the quality and benefits of the core Abalone platform.
 
-Основные характеристики (Bulleted Features)
+Alternate Door Position: Door is located at the opposite end from the taps.
 
-Based on the Abalone: Сочетает в себе все преимущества и качество базовой модели.
+Door Positioned Away from the Tap End: Useful for layouts where tap access and entry path should be separated.
 
+Designed for the Modern Bathroom: Clean, modern styling.
 
-Alternate Door Position: Дверь расположена в противоположном конце от кранов.
+Stylish Toughened Glass: High-quality toughened-glass door.
 
+Anti-slip Surface: Anti-slip base finish.
 
-Door Positioned Away from the Tap End: Удобно для планировок, где доступ к кранам и входу должен быть разделен.
+Options of Left Hand Door or Right Hand Door: Left/right opening options.
 
+Model description
 
-Designed for the Modern Bathroom: Лаконичный и современный дизайн.
+Abalone RV offers the same elegance and function as the standard version, but with different door ergonomics. The glass door helps keep the bathroom visually open and bright.
 
+It is ideal for replacing a standard bathtub while improving entry safety through a low threshold. Like the base model, it includes twin clicker drains for quick water removal and comfortable exit. A reliable option for families with mixed mobility needs.
 
-Stylish Toughened Glass: Дверца из высококачественного закаленного стекла.
+Technical data (Specifications)
 
+Length: 1500 mm or 1695 mm.
 
-Anti-slip Surface: Противоскользящее покрытие дна.
+Width: 700 mm.
 
+Height: 510 mm.
 
-Options of Left Hand Door or Right Hand Door: Возможность выбора стороны открывания.
+Step Height: 190 mm.
 
-Описание модели
+Door opening width: 380 mm.
 
-Abalone RV предлагает ту же элегантность и функциональность, что и стандартная версия, но с измененной эргономикой. Использование стеклянной двери позволяет визуально расширить пространство ванной комнаты и наполнить её светом.
+Capacity: 190 liters.
 
-Модель идеально подходит для замены стандартной ванны, обеспечивая безопасность благодаря низкому порогу входа. Как и базовая модель, она оснащена двумя кликер-сливами для быстрого удаления воды, что критично для комфортного выхода из ванны. Это надежное решение для семей, где ванной пользуются люди с разными физическими возможностями.
-
-Технические данные (Specifications)
-
-Длина: 1500 мм или 1695 мм.
-
-
-Ширина: 700 мм.
-
-
-Высота: 510 мм.
-
-
-Высота шага (Step Height): 190 мм.
-
-
-Ширина проема двери: 380 мм.
-
-
-Объем: 190 литров.
-
-
-Гарантия: 5 лет на корпус ванны, пожизненная на уплотнитель двери, 1 год на электронику/SPA.
+Warranty: 5 years on shell, lifetime on door seal, 1 year on electronics/SPA.
