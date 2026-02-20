@@ -14,6 +14,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   "walk-in-shower-baths": "Walk-in Shower Baths",
   "standard-size-baths": "Standard Size Baths",
   "deep-soaker-baths": "Deep Soaker Baths",
+  blog: "Advice & Guides",
 };
 
 function toTitleCaseSegment(segment: string): string {
