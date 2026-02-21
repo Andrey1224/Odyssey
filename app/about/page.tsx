@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_DOMAIN } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "About Odyssey Baths",
+  description:
+    "Learn about Odyssey Baths — our mission, values, and commitment to ethical, no-pressure sales of accessible bathing solutions for UK seniors.",
+  alternates: { canonical: `${SITE_DOMAIN}/about` },
+};
 import {
   ArrowRight,
   Award,

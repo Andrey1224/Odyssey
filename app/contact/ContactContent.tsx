@@ -59,6 +59,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
   const [activeIntent, setActiveIntent] = useState<IntentId>(defaultIntent);
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -68,19 +69,38 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
     handing: "",
   });
   const formSectionRef = useRef<HTMLElement>(null);
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
-    setTimeout(() => {
+    setError(null);
+    const res = await fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        intent: activeIntent,
+        name: formData.fullName,
+        phone: formData.phone,
+        postcode: formData.postcode,
+        email: formData.email || undefined,
+        message: formData.message || undefined,
+        website: honeypotRef.current?.value ?? "",
+      }),
+    });
+    const data = await res.json().catch(() => ({ ok: false, error: "Network error." }));
+    if (data.ok) {
       setStatus("success");
       formSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 1500);
+    } else {
+      setError(data.error ?? "Something went wrong. Please try again.");
+      setStatus("idle");
+    }
   };
 
   return (
@@ -261,6 +281,17 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
               <div className="p-8 md:p-12">
                 <form onSubmit={handleSubmit} className="space-y-6">
 
+                  {/* Honeypot — hidden from real users */}
+                  <input
+                    ref={honeypotRef}
+                    type="text"
+                    name="website"
+                    aria-hidden="true"
+                    tabIndex={-1}
+                    className="hidden"
+                    autoComplete="off"
+                  />
+
                   <div>
                     <label htmlFor="fullName" className="block text-[18px] font-bold text-slate-800 mb-2">
                       Full Name <span className="text-red-500">*</span>
@@ -361,6 +392,16 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                       className="w-full p-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all resize-none"
                     />
                   </div>
+
+                  {error && (
+                    <p
+                      role="alert"
+                      aria-live="polite"
+                      className="text-red-600 font-semibold text-[16px] text-center"
+                    >
+                      {error}
+                    </p>
+                  )}
 
                   <button
                     type="submit"

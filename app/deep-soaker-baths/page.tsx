@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
+import { SITE_DOMAIN } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Deep Soaker Baths",
+  description:
+    "Deep soaker walk-in baths for therapeutic bathing with hydrotherapy and chromotherapy options.",
+  alternates: { canonical: `${SITE_DOMAIN}/deep-soaker-baths` },
+};
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";

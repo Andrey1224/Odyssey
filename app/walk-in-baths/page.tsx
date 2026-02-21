@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
+import { SITE_DOMAIN } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Walk-In Baths",
+  description:
+    "Browse our range of UK walk-in baths with low threshold doors, heated seats, and hydrotherapy options. VAT relief for eligible customers.",
+  alternates: { canonical: `${SITE_DOMAIN}/walk-in-baths` },
+};
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";

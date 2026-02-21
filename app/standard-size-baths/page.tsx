@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
+import { SITE_DOMAIN } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Standard Size Accessible Baths",
+  description:
+    "Standard-sized accessible baths with safety doors for easier entry. Find the right fit for your bathroom.",
+  alternates: { canonical: `${SITE_DOMAIN}/standard-size-baths` },
+};
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQSection } from "@/components/FAQSection";
