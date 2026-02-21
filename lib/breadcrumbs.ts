@@ -10,6 +10,8 @@ const SEGMENT_LABELS: Record<string, string> = {
   contact: "Contact",
   "free-quote": "Free Quote",
   "free-brochure": "Free Brochure",
+  "return-policy": "Return Policy",
+  "privacy-policy": "Privacy Policy",
   "walk-in-baths": "Walk-in Baths",
   "walk-in-shower-baths": "Walk-in Shower Baths",
   "standard-size-baths": "Standard Size Baths",

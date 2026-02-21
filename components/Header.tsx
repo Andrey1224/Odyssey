@@ -164,6 +164,7 @@ const MenuOverlay = ({ isOpen, onClose, onOpenWizard }: { isOpen: boolean; onClo
                             </button>
                             <a href="#" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">VAT Relief Guide</a>
                             <a href="#" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Right vs Left Hand?</a>
+                            <Link href="/blog" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Advice & Guides</Link>
                             <Link href="/faq" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">FAQ</Link>
                             <Link href="/reviews" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Customer Reviews</Link>
                             <Link href="/contact" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Contact</Link>
