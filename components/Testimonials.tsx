@@ -17,8 +17,13 @@ export function Testimonials() {
                         We don't just sell baths; we restore confidence. Here is what our customers have to say about their experience.
                     </p>
 
-                    {/* Trustpilot Badge Imitation */}
-                    <div className="inline-flex items-center bg-cream-50 px-6 py-2 rounded-full shadow-sm border border-slate-200 gap-3">
+                    {/* Trustpilot Badge */}
+                    <a
+                        href="https://www.trustpilot.com/review/odysseybaths.co.uk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center bg-cream-50 px-6 py-2 rounded-full shadow-sm border border-slate-200 gap-3 hover:border-slate-300 transition-colors"
+                    >
                         <div className="flex gap-1 text-teal-800">
                             {[1, 2, 3, 4, 5].map((_, i) => (
                                 <Star key={i} size={20} fill="currentColor" strokeWidth={0} />
@@ -27,37 +32,34 @@ export function Testimonials() {
                         <span className="text-sm font-bold text-slate-900">
                             Rated 4.9/5 on <span className="font-black">Trustpilot</span>
                         </span>
-                    </div>
+                    </a>
                 </div>
 
                 {/* Reviews Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    {/* Review 1 */}
                     <ReviewCard
-                        initial="S"
-                        name="Sarah Jenkins"
-                        date="2 days ago"
-                        title="Excellent service from start to finish"
-                        body="The installer was polite, tidy, and very efficient. My mother is absolutely delighted with her new walk-in shower. It has transformed her daily routine completely."
+                        initial="C"
+                        name="Courtney Stokes"
+                        date="28 February 2025"
+                        title="Great communications and fast delivery"
+                        body="Superb choice of products at a competitive price. So helpful about updating our order as we worked out exactly what we needed. Great communications and product delivered as fast as possible. Thanks to all at Odyssey — you were wonderful to deal with."
                     />
 
-                    {/* Review 2 */}
                     <ReviewCard
-                        initial="M"
-                        name="Michael Thompson"
-                        date="1 week ago"
-                        title="Feeling safe again"
-                        body="I was worried about the disruption, but the team handled everything in just one day. The bath itself is high quality and very easy to access. Highly recommended."
+                        initial="L"
+                        name="Lorraine Clarke"
+                        date="28 February 2025"
+                        title="Walk In bath problem"
+                        body="Excellent service from this company. Paul was very helpful and went over and above to help me sort out a bath problem I had. He answered emails quickly too and he also rang me back when he missed my call. Great service thank you."
                     />
 
-                    {/* Review 3 */}
                     <ReviewCard
-                        initial="D"
-                        name="David & Jean"
-                        date="3 weeks ago"
-                        title="No hard sell, just honest advice"
-                        body="Unlike other companies, Odyssey gave us a quote and left us to decide. No pressure at all. That's why we chose them. The installation was flawless."
+                        initial="N"
+                        name="Nicole Ohnstad"
+                        date="9 February 2026"
+                        title="I sent them a photo of my bathroom"
+                        body="I sent them a photo of my bathroom so they could see how the usable space was situated, Odyssey suggested which baths would be most suitable and the correct handings, recommend getting in touch and talking through your build."
                     />
 
                 </div>

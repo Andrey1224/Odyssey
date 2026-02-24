@@ -7,6 +7,7 @@ import {
   ChevronDown, ChevronUp, MapPin,
   ShieldCheck, ExternalLink, Info, Quote,
 } from "lucide-react";
+import { PHONE, PHONE_TEL } from "@/lib/site";
 
 // ==========================================
 // 1. DATA (Mock Data)
@@ -55,27 +56,59 @@ const odysseyStories = [
 
 const trustpilotReviews = [
   {
-    id: 101,
-    name: "Eleanor Rigby",
-    date: "14 February 2026",
-    title: "No pressure sales, great result",
-    text: "Had quotes from 3 different companies. Odyssey was the only one that didn't stay in my house for 3 hours trying to force a sale. Gave me the price, left me a brochure, and the final installation was top notch.",
+    id: 1,
+    name: "A. Wilkinson",
+    date: "9 February 2026",
+    title: "Pleased with the bath and support",
+    text: "Pleased with the bath and support, thanks for the helpful advice.",
     verified: true,
   },
   {
-    id: 102,
-    name: "Arthur Pendelton",
-    date: "08 February 2026",
-    title: "Quality product, clean fitters",
-    text: "The fitters were very polite, put sheets down everywhere, and hoovered up before they left. Bath works perfectly.",
+    id: 2,
+    name: "Nicole Ohnstad",
+    date: "9 February 2026",
+    title: "I sent them a photo of my bathroom",
+    text: "I sent them a photo of my bathroom so they could see how the usable space was situated, Odyssey suggested which baths would be most suitable and the correct handings, recommend getting in touch and talking through your build.",
     verified: true,
   },
   {
-    id: 103,
-    name: "M. Foster",
-    date: "29 January 2026",
-    title: "VAT relief was handled for me",
-    text: "I was confused about the VAT exemption forms, but their team handled all the paperwork. Saved me a lot of stress and money.",
+    id: 3,
+    name: "Jacob Stewart",
+    date: "10 April 2025",
+    title: "Excellent — Thank you very much",
+    text: "Provided helpful advice via email when requested. Delivered promptly. Excellent product.",
+    verified: true,
+  },
+  {
+    id: 4,
+    name: "Courtney Stokes",
+    date: "28 February 2025",
+    title: "Great communications and fast delivery",
+    text: "Superb choice of products at a competitive price. So helpful about updating our order as we worked out exactly what we needed. Great communications and product delivered as fast as possible. Thanks to all at Odyssey — you were wonderful to deal with.",
+    verified: true,
+  },
+  {
+    id: 5,
+    name: "Roger Coleman",
+    date: "19 February 2025",
+    title: "Professional and reliable",
+    text: "Professional and reliable. Would use again. Thanks.",
+    verified: true,
+  },
+  {
+    id: 6,
+    name: "Lorraine Clarke",
+    date: "28 February 2025",
+    title: "Walk In bath problem",
+    text: "Excellent service from this company. Paul was very helpful and went over and above to help me sort out a bath problem I had. He answered emails quickly too and he also rang me back when he missed my call. Great service thank you.",
+    verified: true,
+  },
+  {
+    id: 7,
+    name: "OldChina Hand",
+    date: "12 April 2023",
+    title: "Needed to upgrade a relative's home",
+    text: "Needed to upgrade a relative's home so looked for a Bath supplier. Odyssey were very easy to use, the team were very knowledgeable and helpful and their speed of delivery was a big factor in deciding to use them.",
     verified: true,
   },
 ];
@@ -99,17 +132,17 @@ const ExpandableReview = ({ text, maxLength = 130 }: { text: string; maxLength?:
   const isLong = text.length > maxLength;
 
   if (!isLong) {
-    return <p className="text-[18px] text-slate-600 leading-relaxed">{text}</p>;
+    return <p className="text-[20px] text-slate-700 leading-relaxed mb-3">{text}</p>;
   }
 
   const displayText = isExpanded ? text : `${text.substring(0, maxLength)}...`;
 
   return (
     <div>
-      <p className="text-[18px] text-slate-600 leading-relaxed mb-3">{displayText}</p>
+      <p className="text-[20px] text-slate-700 leading-relaxed mb-3">{displayText}</p>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center gap-2 text-teal-700 font-bold text-[18px] hover:text-teal-800 hover:bg-teal-50 px-3 py-2 -ml-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500"
+        className="flex items-center gap-2 text-teal-700 font-bold text-[20px] hover:text-teal-800 hover:bg-teal-50 px-3 py-2 -ml-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500"
         aria-expanded={isExpanded}
       >
         {isExpanded ? (
@@ -151,7 +184,7 @@ export default function ReviewsContent() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-slate-50 border border-slate-200 rounded-2xl p-6 md:px-8 shadow-sm">
             <TrustpilotStars />
             <div className="h-10 w-px bg-slate-300 hidden sm:block" />
-            <div className="text-[18px] md:text-[20px] text-slate-700 text-left">
+            <div className="text-[20px] md:text-[22px] text-slate-700 text-left">
               <span className="font-bold text-slate-900">4.9/5</span> rating on Trustpilot{" "}
               <span className="font-medium text-slate-500">(1,284 reviews)</span>
             </div>
@@ -172,13 +205,13 @@ export default function ReviewsContent() {
 
         {/* Tag filter bar */}
         <div className="flex flex-wrap justify-center items-center gap-3 mb-16">
-          <span className="text-[18px] text-slate-500 font-medium mr-2 hidden lg:block">Filter by topic:</span>
+          <span className="text-[20px] text-slate-500 font-medium mr-2 hidden lg:block">Filter by topic:</span>
           {reviewTags.map((tag) => (
             <button
               key={tag}
               onClick={() => setActiveTag(tag)}
               className={`
-                text-[16px] md:text-[18px] font-bold py-3 px-6 rounded-full transition-colors min-h-[48px] border focus:outline-none focus:ring-2 focus:ring-teal-500
+                text-[18px] md:text-[20px] font-bold py-3 px-6 rounded-full transition-colors min-h-[48px] border focus:outline-none focus:ring-2 focus:ring-teal-500
                 ${activeTag === tag
                   ? "bg-teal-800 text-white border-teal-800 shadow-md"
                   : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300"
@@ -253,7 +286,7 @@ export default function ReviewsContent() {
 
           {/* Transparency bridge */}
           <div className="bg-slate-50 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-200">
-            <p className="text-[18px] text-slate-700 leading-relaxed max-w-3xl">
+            <p className="text-[20px] text-slate-700 leading-relaxed max-w-3xl">
               <strong className="text-slate-900 font-bold">Transparency matters.</strong> While we carefully select the detailed stories above to highlight specific features, below you can read every single review exactly as published on Trustpilot.
             </p>
             <ShieldCheck size={48} className="text-slate-300 hidden md:block flex-shrink-0" />
@@ -266,37 +299,27 @@ export default function ReviewsContent() {
               </h2>
             </div>
             <a
-              href="https://www.trustpilot.com"
+              href="https://www.trustpilot.com/review/odysseybaths.co.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-800 text-[18px] font-bold min-h-[56px] px-8 rounded-xl transition-colors w-full md:w-auto shadow-sm"
+              className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-800 text-[20px] font-bold min-h-[56px] px-8 rounded-xl transition-colors w-full md:w-auto shadow-sm"
             >
               View all on Trustpilot <ExternalLink size={20} strokeWidth={2.5} />
             </a>
           </div>
 
-          {/* Sort controls */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8 pb-6 border-b border-slate-100">
-            <span className="text-[16px] font-bold text-slate-500 uppercase tracking-wide">Sort by:</span>
-            <div className="flex flex-wrap gap-2">
-              <button className="bg-slate-800 text-white text-[16px] font-bold px-5 py-2 rounded-lg min-h-[48px] focus:outline-none focus:ring-2 focus:ring-slate-400 shadow-sm">Most recent</button>
-              <button className="bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 text-[16px] font-bold px-5 py-2 rounded-lg min-h-[48px] focus:outline-none focus:ring-2 focus:ring-slate-400">Highest rating</button>
-              <button className="bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 text-[16px] font-bold px-5 py-2 rounded-lg min-h-[48px] focus:outline-none focus:ring-2 focus:ring-slate-400">Lowest rating</button>
-            </div>
-          </div>
-
           <div className="grid md:grid-cols-3 gap-6">
             {trustpilotReviews.map((review) => (
-              <div key={review.id} className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+              <div key={review.id} className="bg-slate-50 rounded-2xl p-8 border-2 border-slate-300 shadow-sm flex flex-col h-full">
                 <div className="flex flex-col gap-3 mb-5">
                   <TrustpilotStars />
                   <span className="text-slate-500 text-[15px] font-medium">{review.date}</span>
                 </div>
                 <h4 className="text-[20px] font-bold text-slate-900 mb-3">{review.title}</h4>
-                <div className="mb-6">
+                <div className="mb-6 flex-grow">
                   <ExpandableReview text={review.text} maxLength={100} />
                 </div>
-                <div className="flex items-center gap-3 pt-5 border-t border-slate-200">
+                <div className="flex items-center gap-3 pt-5 border-t border-slate-200 mt-auto">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-700 font-bold border border-slate-200 shadow-sm">
                     {review.name.charAt(0)}
                   </div>
@@ -313,12 +336,6 @@ export default function ReviewsContent() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <button className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 text-slate-700 font-bold text-[18px] min-h-[56px] px-8 rounded-xl transition-colors shadow-sm w-full sm:w-auto">
-              Load 10 more reviews
-              <ChevronDown size={20} strokeWidth={2.5} />
-            </button>
-          </div>
         </div>
       </section>
 
@@ -332,7 +349,7 @@ export default function ReviewsContent() {
             <h3 className="font-serif text-2xl md:text-3xl font-extrabold text-slate-900 mb-6 text-center md:text-left">
               Our Commitment to Honesty
             </h3>
-            <ul className="text-[18px] text-slate-600 space-y-4">
+            <ul className="text-[20px] text-slate-700 space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle className="text-teal-600 mt-1 flex-shrink-0" size={24} />
                 <span className="leading-relaxed">
@@ -373,11 +390,11 @@ export default function ReviewsContent() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:08001234567"
+                href={`tel:+${PHONE_TEL}`}
                 className="flex items-center justify-center gap-3 bg-white text-slate-900 text-[20px] font-extrabold min-h-[60px] px-8 rounded-xl hover:bg-slate-100 transition-colors w-full sm:w-auto"
               >
                 <Phone size={24} className="text-teal-700" strokeWidth={2.5} />
-                0800 123 4567
+                {PHONE}
               </a>
               <Link
                 href="/free-quote"
