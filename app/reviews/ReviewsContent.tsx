@@ -258,18 +258,18 @@ export default function ReviewsContent() {
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <p className="text-[18px] font-bold text-slate-900 leading-none">{story.name}</p>
-                      <span className="flex items-center gap-1 text-[13px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
+                      <span className="flex items-center gap-1 text-[14px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full">
                         <CheckCircle size={14} /> Verified
                       </span>
                     </div>
-                    <p className="text-[15px] text-slate-500 flex items-center gap-1 font-medium">
+                    <p className="text-[16px] text-slate-500 flex items-center gap-1 font-medium">
                       <MapPin size={16} /> {story.location}
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-slate-50 rounded-lg p-3 text-[16px] text-slate-600 flex justify-between items-center border border-slate-100">
-                  <span className="font-medium text-slate-500 text-sm">Product mentioned:</span>
+                <div className="bg-white rounded-lg p-3 text-[16px] text-slate-600 flex justify-between items-center border border-slate-100">
+                  <span className="font-medium text-slate-500 text-[15px]">Product mentioned:</span>
                   <Link href={story.productHref} className="font-bold text-teal-700 hover:text-teal-800 transition-colors">
                     {story.product}
                   </Link>
@@ -313,7 +313,7 @@ export default function ReviewsContent() {
               <div key={review.id} className="bg-slate-50 rounded-2xl p-8 border-2 border-slate-300 shadow-sm flex flex-col h-full">
                 <div className="flex flex-col gap-3 mb-5">
                   <TrustpilotStars />
-                  <span className="text-slate-500 text-[15px] font-medium">{review.date}</span>
+                  <span className="text-slate-500 text-[16px] font-medium">{review.date}</span>
                 </div>
                 <h4 className="text-[20px] font-bold text-slate-900 mb-3">{review.title}</h4>
                 <div className="mb-6 flex-grow">
@@ -326,7 +326,7 @@ export default function ReviewsContent() {
                   <div>
                     <p className="text-[16px] font-bold text-slate-900 leading-none mb-1">{review.name}</p>
                     {review.verified && (
-                      <p className="text-[14px] font-bold text-emerald-700 flex items-center gap-1">
+                      <p className="text-[15px] font-bold text-emerald-700 flex items-center gap-1">
                         <CheckCircle size={16} style={{ color: "#00B67A" }} strokeWidth={2.5} /> Verified
                       </p>
                     )}

@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Star, Check } from "lucide-react";
 
 export function Testimonials() {
     return (
-        <section className="bg-slate-50 py-10 border-b border-slate-200">
+        <section className="bg-cream-50 py-10 border-b border-slate-200">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -29,8 +30,8 @@ export function Testimonials() {
                                 <Star key={i} size={20} fill="currentColor" strokeWidth={0} />
                             ))}
                         </div>
-                        <span className="text-sm font-bold text-slate-900">
-                            Rated 4.9/5 on <span className="font-black">Trustpilot</span>
+                        <span className="text-[16px] font-bold text-slate-900">
+                            Rated 4.2/5 on <span className="font-black">Trustpilot</span>
                         </span>
                     </a>
                 </div>
@@ -63,6 +64,16 @@ export function Testimonials() {
                     />
 
                 </div>
+
+                {/* CTA to reviews page */}
+                <div className="mt-12 text-center">
+                    <Link
+                        href="/reviews"
+                        className="inline-flex items-center gap-2 bg-teal-800 hover:bg-teal-900 text-white text-lg font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                    >
+                        Read all customer reviews
+                    </Link>
+                </div>
             </div>
         </section>
     );
@@ -91,11 +102,11 @@ function ReviewCard({
                         <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
                     ))}
                 </div>
-                <span className="text-xs font-medium text-slate-600">{date}</span>
+                <span className="text-[15px] font-medium text-slate-600">{date}</span>
             </div>
 
             {/* Content */}
-            <h3 className="font-bold text-lg text-slate-900 mb-3 leading-tight group-hover:text-teal-800 transition-colors">
+            <h3 className="font-serif font-bold text-lg text-slate-900 mb-3 leading-tight group-hover:text-teal-800 transition-colors">
                 {title}
             </h3>
             <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
@@ -108,8 +119,8 @@ function ReviewCard({
                     {initial}
                 </div>
                 <div>
-                    <div className="font-bold text-slate-900 text-sm">{name}</div>
-                    <div className="flex items-center gap-1 text-slate-600 text-xs mt-0.5">
+                    <div className="font-bold text-slate-900 text-[16px]">{name}</div>
+                    <div className="flex items-center gap-1 text-slate-600 text-[14px] mt-0.5">
                         <Check size={12} className="text-teal-800" strokeWidth={3} />
                         Verified Customer
                     </div>

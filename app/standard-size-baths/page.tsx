@@ -43,7 +43,7 @@ function StandardSizeBathsContent() {
 
 export default function StandardSizeBathsPage() {
   return (
-    <main className="min-h-screen bg-slate-50 font-sans selection:bg-teal-200">
+    <main className="min-h-screen bg-cream-50 font-sans selection:bg-teal-200">
       <Header />
       <div className="mx-auto max-w-7xl px-6 py-5">
         <Breadcrumbs items={getBreadcrumbs("/standard-size-baths")} />

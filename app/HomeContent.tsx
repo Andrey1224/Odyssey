@@ -33,7 +33,7 @@ const TrustTicker = () => {
   return (
     <div className="bg-teal-50 border-b border-teal-100 py-2 flex justify-center items-center h-10 overflow-hidden">
       <div
-        className={`flex items-center gap-2 text-sm md:text-base text-slate-800 font-medium transition-all duration-500 transform ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95"
+        className={`flex items-center gap-2 text-base text-slate-800 font-medium transition-all duration-500 transform ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-95"
           }`}
       >
         <CheckCircle2 className="text-teal-800 shrink-0" size={16} />
@@ -93,8 +93,8 @@ const Hero = () => (
             <CheckCircle2 className="text-teal-800 w-4 h-4 md:w-5 md:h-5" strokeWidth={3} />
           </div>
           <div>
-            <div className="text-[9px] md:text-[10px] text-slate-600 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
-            <div className="text-slate-900 font-bold leading-none text-xs md:text-sm">VAT Relief Available</div>
+            <div className="text-[11px] md:text-[12px] text-slate-600 font-bold uppercase tracking-wider leading-tight">Eligible?</div>
+            <div className="text-slate-900 font-bold leading-none text-sm">VAT Relief Available</div>
           </div>
         </div>
       </div>
@@ -123,7 +123,7 @@ const CategoryChoice = () => {
           { title: "Standard Size Baths", img: "/images/StandardEasy-Access.png", desc: "Accessible full-length bathing", cta: "View Standard", href: "/standard-size-baths" },
           { title: "Deep Soakers", img: "/images/DeepSoaker.png", desc: "Ideal for small spaces.", cta: "View Soakers", href: "/deep-soaker-baths" },
         ].map((cat, i) => (
-          <div key={i} className="group relative bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-teal-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+          <div key={i} className="group relative bg-cream-50 rounded-2xl overflow-hidden border border-slate-200 hover:border-teal-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
             <div className="aspect-[4/3] relative bg-cream-50 shrink-0">
               <Image
                 src={cat.img}
@@ -134,7 +134,7 @@ const CategoryChoice = () => {
             </div>
             <div className="p-6 md:p-8 flex flex-col flex-1">
               <h3 className="font-serif text-2xl font-bold text-slate-900 mb-3 leading-tight">{cat.title}</h3>
-              <p className="text-slate-600 mb-6 text-sm md:text-base flex-1">{cat.desc}</p>
+              <p className="text-slate-600 mb-6 text-base flex-1">{cat.desc}</p>
               <button className="w-full py-3 rounded-xl border-2 border-slate-900 text-slate-900 font-bold group-hover:bg-slate-900 group-hover:text-white transition-colors mt-auto">
                 {cat.cta}
               </button>
@@ -193,6 +193,13 @@ export function HomeContent() {
           <cite className="not-italic text-sm font-bold text-slate-900 uppercase tracking-[0.2em] block ml-auto mr-4">
             — Paul, Founder
           </cite>
+
+          <Link
+            href="/about"
+            className="mt-10 inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white text-lg font-bold px-8 py-4 rounded-xl transition-colors duration-200"
+          >
+            Learn more about us
+          </Link>
         </div>
       </section>
 
