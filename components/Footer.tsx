@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Phone, MapPin } from "lucide-react";
+import { PHONE, PHONE_TEL, ADDRESS } from "@/lib/site";
 
 export const Footer = () => (
     <footer className="bg-slate-900 text-slate-300 py-12 md:py-20 pb-28 md:pb-20">
@@ -9,15 +10,12 @@ export const Footer = () => (
                 <h4 className="text-white font-serif text-2xl font-bold tracking-tight">Odyssey Baths</h4>
                 <div className="flex gap-4">
                     <MapPin className="shrink-0 mt-1 text-teal-400" />
-                    <p className="text-slate-300">
-                        123 Accessibility Lane,<br />
-                        Bath City, BA1 1AA
-                    </p>
+                    <p className="text-slate-300">{ADDRESS}</p>
                 </div>
                 <div className="flex gap-4">
                     <Phone className="shrink-0 mt-1 text-teal-400" />
                     <div>
-                        <p className="font-bold text-white text-xl">0800 123 4567</p>
+                        <a href={`tel:+${PHONE_TEL}`} className="font-bold text-white text-xl hover:text-teal-400 transition-colors">{PHONE}</a>
                         <p className="mt-1 text-sm text-slate-300">Mon-Fri 9am - 5pm</p>
                     </div>
                 </div>

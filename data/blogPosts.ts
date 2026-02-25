@@ -14,6 +14,7 @@ export type BlogPost = {
   readTime: string;
   date: string;
   imagePlaceholder: string;
+  tableOfContents: { id: string; title: string }[];
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -26,6 +27,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     date: "12 March 2026",
     imagePlaceholder: "VAT Relief Guide",
+    tableOfContents: [
+      { id: "what-is-vat-relief", title: "What is VAT Relief?" },
+      { id: "who-qualifies", title: "Who qualifies for 0% VAT?" },
+      { id: "eligible-conditions", title: "Examples of eligible conditions" },
+      { id: "how-to-claim", title: "How to claim your exemption" },
+    ],
   },
   {
     id: 2,
@@ -36,6 +43,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read",
     date: "05 March 2026",
     imagePlaceholder: "Bath vs Shower",
+    tableOfContents: [
+      { id: "key-differences", title: "Key differences explained" },
+      { id: "walk-in-bath-benefits", title: "Benefits of a walk-in bath" },
+      { id: "shower-bath-benefits", title: "Benefits of a shower bath" },
+      { id: "which-is-right", title: "Which is right for your situation?" },
+    ],
   },
   {
     id: 3,
@@ -46,6 +59,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     date: "28 February 2026",
     imagePlaceholder: "Hydrotherapy",
+    tableOfContents: [
+      { id: "science-of-hydrotherapy", title: "The science of hydrotherapy" },
+      { id: "pain-relief-benefits", title: "Pain relief & circulation benefits" },
+      { id: "key-features", title: "Key features to look for" },
+      { id: "getting-started", title: "Getting started safely" },
+    ],
   },
   {
     id: 4,
@@ -56,6 +75,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "4 min read",
     date: "15 February 2026",
     imagePlaceholder: "Installation Process",
+    tableOfContents: [
+      { id: "before-installation", title: "Before the day of installation" },
+      { id: "on-the-day", title: "What happens on the day" },
+      { id: "after-installation", title: "After the installation is complete" },
+      { id: "aftercare", title: "Ongoing aftercare & warranty" },
+    ],
   },
   {
     id: 5,
@@ -66,6 +91,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "7 min read",
     date: "02 February 2026",
     imagePlaceholder: "Safety Features",
+    tableOfContents: [
+      { id: "low-threshold-doors", title: "Low-threshold inward-opening doors" },
+      { id: "anti-slip-surfaces", title: "Anti-slip surfaces & grab rails" },
+      { id: "thermostatic-controls", title: "Thermostatic & fast-fill taps" },
+      { id: "additional-safety", title: "Additional safety considerations" },
+    ],
   },
   {
     id: 6,
@@ -76,5 +107,11 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     date: "20 January 2026",
     imagePlaceholder: "Home Independence",
+    tableOfContents: [
+      { id: "bathroom-adaptations", title: "Essential bathroom adaptations" },
+      { id: "daily-routines", title: "Safe daily routines & habits" },
+      { id: "assistive-technology", title: "Assistive technology & aids" },
+      { id: "when-to-plan", title: "When to start planning ahead" },
+    ],
   },
 ];

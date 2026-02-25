@@ -4,6 +4,7 @@ import { WALK_IN_BATHS } from "@/data/walkInBaths";
 import { DEEP_SOAKER_BATHS } from "@/data/deepSoakerBaths";
 import { WALK_IN_SHOWER_BATHS } from "@/data/walkInShowerBaths";
 import { STANDARD_SIZE_BATHS } from "@/data/standardSizeBaths";
+import { BLOG_POSTS } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -53,11 +54,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const blogArticles: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${SITE_DOMAIN}/blog/${post.id}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     ...staticRoutes,
     ...walkInBathPdps,
     ...showerBathPdps,
     ...standardSizePdps,
     ...deepSoakerPdps,
+    ...blogArticles,
   ];
 }

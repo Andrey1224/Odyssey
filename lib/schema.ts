@@ -1,4 +1,5 @@
 import type { CatalogProductVariant } from "@/data/catalogTypes";
+import type { BlogPost } from "@/data/blogPosts";
 import { SITE_DOMAIN, SITE_NAME, PHONE, EMAIL, CURRENCY } from "./site";
 import { priceIncVat } from "./catalog";
 
@@ -21,6 +22,19 @@ export function localBusinessJsonLd() {
     areaServed: { "@type": "Country", name: "United Kingdom" },
     currenciesAccepted: CURRENCY,
     priceRange: "££",
+  };
+}
+
+export function blogPostingJsonLd(post: BlogPost, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: SITE_NAME },
+    publisher: { "@type": "Organization", name: SITE_NAME },
+    url,
   };
 }
 

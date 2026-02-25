@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Sparkles, Phone } from "lucide-react";
 import { useWizardStore } from "@/lib/wizardStore";
+import { PHONE_TEL } from "@/lib/site";
 
 import HandingCard from "@/components/HandingCard";
 import { Testimonials } from "@/components/Testimonials";
@@ -239,7 +240,7 @@ const StickyBottomBar = () => {
         }`}
     >
       <div className="px-4 py-3 flex gap-4 items-center">
-        <a href="tel:08001234567" className="flex-1 h-14 bg-cream-50 border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
+        <a href={`tel:+${PHONE_TEL}`} className="flex-1 h-14 bg-cream-50 border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
           <Phone size={20} className="text-teal-800" />
           <span className="whitespace-nowrap">Call Now</span>
         </a>

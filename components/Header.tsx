@@ -10,6 +10,7 @@ import { WalkInShowerWizardModal } from "@/components/WalkInShowerWizardModal";
 import { StandardSizeWizardModal } from "@/components/StandardSizeWizardModal";
 import { DeepSoakerWizardModal } from "@/components/DeepSoakerWizardModal";
 import { useWizardStore } from "@/lib/wizardStore";
+import { PHONE, PHONE_TEL } from "@/lib/site";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,9 +43,9 @@ export const Header = () => {
 
                         {/* Desktop: Phone Info Block (Text Stack) */}
                         <div className="hidden lg:flex flex-col items-end leading-tight">
-                            <a href="tel:08001234567" className="group flex items-center gap-3 text-[28px] font-bold text-slate-900 hover:text-teal-800 transition-colors">
+                            <a href={`tel:+${PHONE_TEL}`} className="group flex items-center gap-3 text-[28px] font-bold text-slate-900 hover:text-teal-800 transition-colors">
                                 <Phone size={26} className="text-teal-800 group-hover:scale-110 transition-transform" fill="currentColor" />
-                                0800 123 4567
+                                {PHONE}
                             </a>
                             <div className="text-sm font-medium text-slate-600 mt-1 flex gap-3">
                                 <span className="text-teal-800 font-bold uppercase tracking-wider">Call Free</span>
@@ -53,7 +54,7 @@ export const Header = () => {
                         </div>
 
                         {/* Mobile: Compact Call Button */}
-                        <a href="tel:08001234567" className="lg:hidden flex items-center gap-1.5 bg-teal-800 hover:bg-teal-900 px-3 py-2.5 rounded-full shadow-md transition-all group text-white shrink-0">
+                        <a href={`tel:+${PHONE_TEL}`} className="lg:hidden flex items-center gap-1.5 bg-teal-800 hover:bg-teal-900 px-3 py-2.5 rounded-full shadow-md transition-all group text-white shrink-0">
                             <Phone size={18} fill="currentColor" />
                             <span className="font-bold text-sm">Call Us</span>
                         </a>
@@ -177,7 +178,7 @@ const MenuOverlay = ({ isOpen, onClose, onOpenWizard }: { isOpen: boolean; onClo
                 <div className="p-6 md:p-8 bg-cream-50 border-t border-slate-100 mt-auto">
                     <p className="text-center text-slate-600 text-sm md:text-lg mb-4 md:mb-6">Need to speak to a human?</p>
                     <div className="flex flex-col gap-3 md:gap-4">
-                        <a href="tel:08001234567" className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 md:py-5 rounded-xl md:rounded-2xl shadow-md flex items-center justify-center gap-2 md:gap-3 text-lg md:text-2xl active:scale-95 transition-transform">
+                        <a href={`tel:+${PHONE_TEL}`} className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 md:py-5 rounded-xl md:rounded-2xl shadow-md flex items-center justify-center gap-2 md:gap-3 text-lg md:text-2xl active:scale-95 transition-transform">
                             <Phone size={20} className="md:w-7 md:h-7" fill="currentColor" />
                             Call Now
                         </a>
