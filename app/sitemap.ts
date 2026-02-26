@@ -4,9 +4,9 @@ import { WALK_IN_BATHS } from "@/data/walkInBaths";
 import { DEEP_SOAKER_BATHS } from "@/data/deepSoakerBaths";
 import { WALK_IN_SHOWER_BATHS } from "@/data/walkInShowerBaths";
 import { STANDARD_SIZE_BATHS } from "@/data/standardSizeBaths";
-import { BLOG_POSTS } from "@/data/blogPosts";
+import { getAllBlogSlugs } from "@/sanity/lib/queries";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -54,10 +54,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const blogArticles: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
-    url: `${SITE_DOMAIN}/blog/${post.id}`,
+  const blogSlugs = await getAllBlogSlugs();
+  const blogArticles: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
+    url: `${SITE_DOMAIN}/blog/${slug}`,
     lastModified: now,
-    changeFrequency: "monthly" as const,
+    changeFrequency: "monthly",
     priority: 0.6,
   }));
 

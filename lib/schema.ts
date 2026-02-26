@@ -1,7 +1,14 @@
 import type { CatalogProductVariant } from "@/data/catalogTypes";
-import type { BlogPost } from "@/data/blogPosts";
 import { SITE_DOMAIN, SITE_NAME, PHONE, EMAIL, CURRENCY } from "./site";
 import { priceIncVat } from "./catalog";
+
+type BlogPostingInput = {
+  title: string;
+  excerpt: string;
+  publishedAt?: string;
+  date?: string;
+  coverImage?: string[];
+};
 
 export function localBusinessJsonLd() {
   return {
@@ -25,15 +32,16 @@ export function localBusinessJsonLd() {
   };
 }
 
-export function blogPostingJsonLd(post: BlogPost, url: string) {
+export function blogPostingJsonLd(post: BlogPostingInput, url: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
-    datePublished: post.date,
+    datePublished: post.publishedAt ?? post.date,
     author: { "@type": "Organization", name: SITE_NAME },
     publisher: { "@type": "Organization", name: SITE_NAME },
+    image: post.coverImage,
     url,
   };
 }
@@ -45,10 +53,7 @@ export function productJsonLd(product: CatalogProductVariant, url: string) {
     "@type": "Product",
     name: product.title,
     description: product.subtitle ?? undefined,
-    image: [
-      product.primaryImage.src,
-      ...(product.gallery?.map((g) => g.src) ?? []),
-    ],
+    image: [product.primaryImage.src, ...(product.gallery?.map((g) => g.src) ?? [])],
     url,
     offers: {
       "@type": "Offer",
