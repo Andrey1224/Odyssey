@@ -20,6 +20,10 @@ export type PostCardDTO = {
   categorySlug: string;
   publishedAt: string;
   readTime?: string;
+  tags?: string[];
+  seo?: {
+    noindex?: boolean;
+  };
   coverImage?: {
     url: string;
     alt: string;
@@ -130,26 +134,43 @@ export function postCardFromSanity(input: {
   slug: string;
   title: string;
   excerpt: string;
+  category?: {
+    title?: string;
+    slug?: string;
+  };
   categoryTitle?: string;
   categorySlug?: string;
   publishedAt: string;
   readTime?: string;
+  tags?: string[];
+  seo?: {
+    noindex?: boolean;
+  };
+  coverImage?: {
+    url?: string;
+    alt?: string;
+  };
   coverImageUrl?: string;
   coverImageAlt?: string;
 }): PostCardDTO {
+  const imageUrl = input.coverImage?.url ?? input.coverImageUrl;
+  const imageAlt = input.coverImage?.alt ?? input.coverImageAlt ?? input.title;
+
   return {
     id: input._id,
     slug: input.slug,
     title: input.title,
     excerpt: input.excerpt,
-    categoryTitle: input.categoryTitle ?? "Uncategorized",
-    categorySlug: input.categorySlug ?? "uncategorized",
+    categoryTitle: input.category?.title ?? input.categoryTitle ?? "Uncategorized",
+    categorySlug: input.category?.slug ?? input.categorySlug ?? "uncategorized",
     publishedAt: input.publishedAt,
     readTime: input.readTime,
-    coverImage: input.coverImageUrl
+    tags: input.tags ?? [],
+    seo: input.seo,
+    coverImage: imageUrl
       ? {
-          url: input.coverImageUrl,
-          alt: input.coverImageAlt ?? input.title,
+          url: imageUrl,
+          alt: imageAlt,
         }
       : undefined,
   };
@@ -162,7 +183,12 @@ export function postPageFromSanity(input: {
   previousSlugs?: string[];
   title: string;
   excerpt: string;
-  categoryId: string;
+  category?: {
+    id?: string;
+    title?: string;
+    slug?: string;
+  };
+  categoryId?: string;
   categoryTitle?: string;
   categorySlug?: string;
   publishedAt: string;
@@ -170,6 +196,10 @@ export function postPageFromSanity(input: {
   body?: PortableTextBlock[];
   tags?: string[];
   faq?: PostFaqItem[];
+  coverImage?: {
+    url?: string;
+    alt?: string;
+  };
   coverImageUrl?: string;
   coverImageAlt?: string;
   seo?: {
@@ -179,6 +209,12 @@ export function postPageFromSanity(input: {
     noindex?: boolean;
   };
 }): PostPageDTO {
+  const categoryId = input.categoryId ?? input.category?.id ?? "uncategorized";
+  const categoryTitle = input.category?.title ?? input.categoryTitle ?? "Uncategorized";
+  const categorySlug = input.category?.slug ?? input.categorySlug ?? "uncategorized";
+  const coverImageUrl = input.coverImage?.url ?? input.coverImageUrl ?? "";
+  const coverImageAlt = input.coverImage?.alt ?? input.coverImageAlt ?? input.title;
+
   return {
     id: input._id,
     slug: input.slug,
@@ -186,14 +222,14 @@ export function postPageFromSanity(input: {
     previousSlugs: input.previousSlugs,
     title: input.title,
     excerpt: input.excerpt,
-    categoryId: input.categoryId,
-    categoryTitle: input.categoryTitle ?? "Uncategorized",
-    categorySlug: input.categorySlug ?? "uncategorized",
+    categoryId,
+    categoryTitle,
+    categorySlug,
     publishedAt: input.publishedAt,
     readTime: input.readTime,
     coverImage: {
-      url: input.coverImageUrl ?? "",
-      alt: input.coverImageAlt ?? input.title,
+      url: coverImageUrl,
+      alt: coverImageAlt,
     },
     body: input.body ?? [],
     tags: input.tags ?? [],

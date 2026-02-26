@@ -20,7 +20,7 @@ export const getCategoriesQuery = groq`
   }
 `;
 
-export const getPostsQuery = groq`
+export const POSTS_INDEX_QUERY = groq`
   {
     "total": count(*[
       _type == "post" &&
@@ -38,15 +38,23 @@ export const getPostsQuery = groq`
       excerpt,
       publishedAt,
       readTime,
-      "categoryTitle": category->title,
-      "categorySlug": category->slug.current,
-      "coverImageUrl": coverImage.asset->url,
-      "coverImageAlt": coverImageAlt
+      "category": category->{
+        title,
+        "slug": slug.current
+      },
+      tags,
+      seo{
+        noindex
+      },
+      "coverImage": {
+        "url": coverImage.asset->url,
+        "alt": coverImageAlt
+      }
     }
   }
 `;
 
-export const getPostBySlugQuery = groq`
+export const POST_BY_SLUG_QUERY = groq`
   *[_type == "post" && slug.current == $slug][0]{
     _id,
     title,
@@ -56,9 +64,11 @@ export const getPostBySlugQuery = groq`
     excerpt,
     publishedAt,
     readTime,
-    "categoryId": category->_ref,
-    "categoryTitle": category->title,
-    "categorySlug": category->slug.current,
+    "category": category->{
+      "id": _id,
+      title,
+      "slug": slug.current
+    },
     body[]{
       ...,
       _type == "image" => {
@@ -66,8 +76,10 @@ export const getPostBySlugQuery = groq`
         "asset": asset->{_id, url, metadata}
       }
     },
-    "coverImageUrl": coverImage.asset->url,
-    "coverImageAlt": coverImageAlt,
+    "coverImage": {
+      "url": coverImage.asset->url,
+      "alt": coverImageAlt
+    },
     tags,
     faq[]{q, a},
     seo{
@@ -78,6 +90,9 @@ export const getPostBySlugQuery = groq`
     }
   }
 `;
+
+export const getPostsQuery = POSTS_INDEX_QUERY;
+export const getPostBySlugQuery = POST_BY_SLUG_QUERY;
 
 export const getPostByPreviousSlugQuery = groq`
   *[_type == "post" && $slug in previousSlugs][0]{
@@ -196,14 +211,22 @@ export async function getPosts({
       slug: string;
       title: string;
       excerpt: string;
-      categoryTitle?: string;
-      categorySlug?: string;
+      category?: {
+        title?: string;
+        slug?: string;
+      };
       publishedAt: string;
       readTime?: string;
-      coverImageUrl?: string;
-      coverImageAlt?: string;
+      tags?: string[];
+      seo?: {
+        noindex?: boolean;
+      };
+      coverImage?: {
+        url?: string;
+        alt?: string;
+      };
     }>;
-  }>(getPostsQuery, {
+  }>(POSTS_INDEX_QUERY, {
     start,
     end,
     categorySlug: categorySlug?.trim() ? categorySlug.trim() : null,
@@ -226,18 +249,22 @@ export async function getPostBySlug(slug: string): Promise<PostPageDTO | null> {
     previousSlugs?: string[];
     title: string;
     excerpt: string;
-    categoryId: string;
-    categoryTitle?: string;
-    categorySlug?: string;
+    category?: {
+      id?: string;
+      title?: string;
+      slug?: string;
+    };
     publishedAt: string;
     readTime?: string;
-    coverImageUrl?: string;
-    coverImageAlt?: string;
+    coverImage?: {
+      url?: string;
+      alt?: string;
+    };
     body?: PostPageDTO["body"];
     tags?: string[];
     faq?: PostPageDTO["faq"];
     seo?: PostPageDTO["seo"];
-  } | null>(getPostBySlugQuery, { slug });
+  } | null>(POST_BY_SLUG_QUERY, { slug });
 
   return row ? postPageFromSanity(row) : null;
 }
