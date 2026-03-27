@@ -7,7 +7,7 @@ export default defineConfig({
   title: "Odyssey Blog CMS",
 
   // ✅ НЕ через env
-  projectId: "ja23se9g",
+  projectId: "gmurived",
   dataset: "production",
 
   plugins: [deskTool()],

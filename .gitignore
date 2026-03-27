@@ -40,6 +40,9 @@ yarn-error.log*
 # sanity (local runtime/cache)
 .sanity/
 
+# backups
+*.tar.gz
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
