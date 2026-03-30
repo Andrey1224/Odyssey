@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { SITE_DOMAIN } from "@/lib/site";
+import { FREEPHONE, FREEPHONE_TEL, SITE_DOMAIN } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Odyssey Baths",
@@ -352,8 +352,8 @@ export default function AboutPage() {
 
           <div className="mt-8">
             <p className="font-medium text-slate-600">Or speak to our friendly UK team:</p>
-            <a href="tel:08001234567" className="text-2xl font-bold text-slate-900 transition-colors hover:text-teal-800">
-              0800 123 4567
+            <a href={`tel:${FREEPHONE_TEL}`} className="text-2xl font-bold text-slate-900 transition-colors hover:text-teal-800">
+              {FREEPHONE}
             </a>
             <p className="mt-2 text-sm text-slate-600">No pressure. Just helpful guidance.</p>
           </div>

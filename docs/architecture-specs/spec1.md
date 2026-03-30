@@ -92,7 +92,7 @@ interface GlobalState {
 1. **Left:** Logo (SVG, Alt text: "Odyssey Baths - Accessible Bathing").
 2. **Center (Desktop):** Links: *Walk-in Baths, Showers, About Us*. Font size 18px, weight Medium.
 3. **Right:**
-* **Phone Block:** Icon (Phone) + Text "**0800 123 4567**" (Size 20px, Bold).
+* **Phone Block:** Icon (Phone) + Text "**01284645035**" (Size 20px, Bold).
 * **Subtext:** "Mon-Fri • No Robots" (Size 14px).
 * **Mobile:** Only Logo and "Call" button visible. Hamburger menu for links.
 

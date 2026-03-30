@@ -15,7 +15,7 @@ export const Footer = () => (
                 <div className="flex gap-4">
                     <Phone className="shrink-0 mt-1 text-teal-400" />
                     <div>
-                        <a href={`tel:+${PHONE_TEL}`} className="font-bold text-white text-xl hover:text-teal-400 transition-colors">{PHONE}</a>
+                        <a href={`tel:${PHONE_TEL}`} className="font-bold text-white text-xl hover:text-teal-400 transition-colors">{PHONE}</a>
                         <p className="mt-1 text-sm text-slate-300">Mon-Fri 9am - 5pm</p>
                     </div>
                 </div>
@@ -45,7 +45,6 @@ export const Footer = () => (
                 <h4 className="text-white font-bold text-xl mb-6">Legal</h4>
                 <ul className="space-y-4">
                     <li><Link href="/privacy-policy" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Privacy Policy</Link></li>
-                    <li><a href="#" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Terms of Service</a></li>
                     <li><Link href="/return-policy" className="hover:text-teal-400 transition underline decoration-transparent hover:decoration-teal-400">Returns Policy</Link></li>
                 </ul>
             </div>

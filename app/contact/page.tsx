@@ -18,13 +18,15 @@ const VALID_INTENTS: IntentId[] = ["quote", "survey", "question", "handing"];
 export default async function ContactPage({
   searchParams,
 }: {
-  searchParams: Promise<{ intent?: string }>;
+  searchParams: Promise<{ intent?: string; handing?: string }>;
 }) {
-  const { intent } = await searchParams;
+  const { intent, handing } = await searchParams;
   const defaultIntent: IntentId =
     intent && (VALID_INTENTS as string[]).includes(intent)
       ? (intent as IntentId)
       : "quote";
+  const initialHanding =
+    handing === "left" || handing === "right" ? handing : undefined;
 
   return (
     <main className="min-h-screen bg-cream-50">
@@ -36,7 +38,10 @@ export default async function ContactPage({
       <div className="mx-auto max-w-7xl px-6 py-5">
         <Breadcrumbs items={getBreadcrumbs("/contact")} />
       </div>
-      <ContactContent defaultIntent={defaultIntent} />
+      <ContactContent
+        defaultIntent={defaultIntent}
+        initialHanding={initialHanding}
+      />
       <Footer />
     </main>
   );

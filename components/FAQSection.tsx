@@ -44,7 +44,7 @@ export const FAQSection = () => {
         },
         {
             question: "What is the difference between Left and Right hand?",
-            answer: "When you sit in the bath facing the taps, if the door is on your left, you need a Left Hand bath. If it's on your right, you need a Right Hand bath. Our team can confirm this during your free home survey."
+            answer: "When you sit in the bath facing the taps, if the door is on your left, you need a Left Hand bath. If it&apos;s on your right, you need a Right Hand bath. Our team can confirm this during your free home survey."
         },
         {
             question: "Installation and Warranty",
@@ -56,7 +56,7 @@ export const FAQSection = () => {
         <section className="bg-cream-50 py-12 md:py-16 border-t border-slate-100">
             <div className="max-w-3xl mx-auto px-5">
                 <h2 className="text-3xl font-bold text-center text-slate-900 mb-10 font-serif">
-                    Buyer's Guide & FAQ
+                    Buyer&apos;s Guide & FAQ
                 </h2>
                 <div className="space-y-2">
                     {faqs.map((faq, index) => (

@@ -8,11 +8,7 @@ export const TrustStrip = () => (
             </span>
             <span className="w-px h-3 bg-slate-300 my-auto"></span>
             <span className="flex items-center">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                    className="w-4 h-3 mr-1.5 shadow-sm border border-slate-200"
-                    alt="UK Flag"
-                />
+                <span className="mr-1.5" aria-hidden="true">🇬🇧</span>
                 Made in UK
             </span>
             <span className="w-px h-3 bg-slate-300 my-auto"></span>

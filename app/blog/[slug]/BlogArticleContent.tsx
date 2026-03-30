@@ -97,7 +97,7 @@ export function BlogArticleContent({ post, relatedPosts, cta }: Props) {
     cta?.text?.trim() ||
     "If you found this guide helpful and want to discuss your specific needs, our team is here to help. No hard sell, just friendly advice.";
   const primaryLabel = cta?.primaryButtonLabel?.trim() || PHONE;
-  const primaryHref = cta?.primaryButtonHref?.trim() || `tel:+${PHONE_TEL}`;
+  const primaryHref = cta?.primaryButtonHref?.trim() || `tel:${PHONE_TEL}`;
   const secondaryLabel = cta?.secondaryButtonLabel?.trim() || "Request Free Brochure";
   const secondaryHref = cta?.secondaryButtonHref?.trim() || "/free-brochure";
 

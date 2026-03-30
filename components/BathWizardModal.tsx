@@ -8,6 +8,7 @@ import {
   ArrowLeft, Phone, CheckCircle, HelpCircle,
   Star, X,
 } from "lucide-react";
+import { FREEPHONE } from "@/lib/site";
 
 interface BathWizardModalProps {
   isOpen: boolean;
@@ -179,11 +180,11 @@ export function BathWizardModal({ isOpen, onClose }: BathWizardModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-4 bg-slate-900/80 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-4 bg-slate-900/80 animate-fade-in"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl bg-cream-50 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[94dvh] md:max-h-[90vh] animate-zoom-in"
+        className="relative w-full max-w-4xl bg-cream-50 rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[94dvh] md:max-h-[90vh]"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -236,7 +237,7 @@ export function BathWizardModal({ isOpen, onClose }: BathWizardModalProps) {
                 {currentStep.buttonText}
               </button>
               <div className="mt-6 text-slate-600 text-sm flex justify-center gap-2">
-                <Phone size={14} /> Need help? Call 0800 123 4567
+                <Phone size={14} /> Need help? Call {FREEPHONE}
               </div>
             </div>
           ) : (

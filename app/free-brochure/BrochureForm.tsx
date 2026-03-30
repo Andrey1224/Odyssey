@@ -13,6 +13,7 @@ type FormState = {
   success: boolean;
   firstName?: string;
   errors?: Record<string, string>;
+  formError?: string;
 };
 
 const initialState: FormState = { success: false };
@@ -376,6 +377,15 @@ export function BrochureForm({
                       "Get Free Brochure"
                     )}
                   </button>
+
+                  {state.formError ? (
+                    <p
+                      role="alert"
+                      className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-800"
+                    >
+                      {state.formError}
+                    </p>
+                  ) : null}
 
                   <p className="text-center text-sm text-slate-600 mt-4 flex items-center justify-center gap-1.5">
                     <Lock size={13} />

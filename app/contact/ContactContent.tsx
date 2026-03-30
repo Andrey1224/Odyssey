@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Phone, MapPin, CheckCircle, ShieldCheck, Mail, Clock,
   Calculator, MessageSquare, ArrowRight, ChevronDown, ChevronUp,
   Bath, Home,
 } from "lucide-react";
+import { BUSINESS_HOURS, EMAIL, FREEPHONE, FREEPHONE_TEL } from "@/lib/site";
 
 export type IntentId = "quote" | "survey" | "question" | "handing";
 
@@ -56,30 +57,55 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
+export function ContactContent({
+  defaultIntent,
+  initialHanding,
+}: {
+  defaultIntent: IntentId;
+  initialHanding?: "left" | "right";
+}) {
   const [activeIntent, setActiveIntent] = useState<IntentId>(defaultIntent);
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
     postcode: "",
     email: "",
     message: "",
-    handing: "",
+    handing: initialHanding ?? "",
   });
   const formSectionRef = useRef<HTMLElement>(null);
   const honeypotRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    const [firstField] = Object.keys(fieldErrors);
+    if (!firstField) return;
+
+    const target = formRef.current?.querySelector<HTMLElement>(
+      `[name="${firstField}"]`,
+    );
+    target?.focus();
+  }, [fieldErrors]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    setFieldErrors((prev) => {
+      if (!prev[name]) return prev;
+      const next = { ...prev };
+      delete next[name];
+      return next;
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
     setError(null);
+    setFieldErrors({});
     const res = await fetch("/api/leads", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -90,15 +116,18 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
         postcode: formData.postcode,
         email: formData.email || undefined,
         message: formData.message || undefined,
+        handing: activeIntent === "handing" ? formData.handing || undefined : undefined,
         website: honeypotRef.current?.value ?? "",
       }),
     });
     const data = await res.json().catch(() => ({ ok: false, error: "Network error." }));
     if (data.ok) {
       setStatus("success");
+      setFieldErrors({});
       formSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     } else {
       setError(data.error ?? "Something went wrong. Please try again.");
+      setFieldErrors(data.fieldErrors ?? {});
       setStatus("idle");
     }
   };
@@ -144,17 +173,17 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                 Speak to a specialist now
               </h2>
               <a
-                href="tel:08001234567"
+                href={`tel:${FREEPHONE_TEL}`}
                 className="inline-flex items-center justify-center gap-3 text-4xl md:text-5xl font-black text-teal-800 hover:text-teal-600 transition-colors mb-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 rounded-xl p-2"
               >
                 <Phone size={36} strokeWidth={2.5} />
-                0800 123 4567
+                {FREEPHONE}
               </a>
               <p className="text-[18px] text-slate-600 font-medium flex items-center justify-center gap-2 mb-8">
-                <Clock size={20} /> Mon-Fri: 9am - 5pm
+                <Clock size={20} /> {BUSINESS_HOURS}
               </p>
               <a
-                href="tel:08001234567"
+                href={`tel:${FREEPHONE_TEL}`}
                 className="flex items-center justify-center w-full bg-teal-800 hover:bg-teal-900 text-white text-[20px] font-bold min-h-[64px] rounded-xl shadow-md transition-colors mb-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50"
               >
                 Call Now
@@ -181,7 +210,11 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
             return (
               <button
                 key={intent.id}
-                onClick={() => setActiveIntent(intent.id)}
+                onClick={() => {
+                  setActiveIntent(intent.id);
+                  setError(null);
+                  setFieldErrors({});
+                }}
                 className={`
                   flex items-start gap-4 p-6 rounded-2xl text-left transition-all min-h-[100px]
                   focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 border-2
@@ -279,7 +312,7 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
 
               {/* Right panel: Adaptive form */}
               <div className="p-8 md:p-12">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
 
                   {/* Honeypot — hidden from real users */}
                   <input
@@ -296,13 +329,18 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                     <label htmlFor="fullName" className="block text-[18px] font-bold text-slate-800 mb-2">
                       Full Name <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text" id="fullName" name="fullName" required
-                      value={formData.fullName} onChange={handleInputChange}
-                      placeholder="e.g. John Smith"
-                      className="w-full h-14 px-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all"
-                    />
-                  </div>
+                      <input
+                        type="text" id="fullName" name="fullName" required
+                        value={formData.fullName} onChange={handleInputChange}
+                        placeholder="e.g. John Smith"
+                        autoComplete="name"
+                        aria-invalid={fieldErrors.fullName ? true : undefined}
+                        className="w-full h-14 px-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all"
+                      />
+                      {fieldErrors.fullName ? (
+                        <p className="mt-1.5 text-sm font-medium text-red-700">{fieldErrors.fullName}</p>
+                      ) : null}
+                    </div>
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
@@ -313,8 +351,13 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                         type="tel" id="phone" name="phone" required
                         value={formData.phone} onChange={handleInputChange}
                         placeholder="07700 900000"
+                        autoComplete="tel"
+                        aria-invalid={fieldErrors.phone ? true : undefined}
                         className="w-full h-14 px-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all"
                       />
+                      {fieldErrors.phone ? (
+                        <p className="mt-1.5 text-sm font-medium text-red-700">{fieldErrors.phone}</p>
+                      ) : null}
                     </div>
                     <div>
                       <label htmlFor="postcode" className="block text-[18px] font-bold text-slate-800 mb-2">
@@ -324,8 +367,13 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                         type="text" id="postcode" name="postcode" required
                         value={formData.postcode} onChange={handleInputChange}
                         placeholder="e.g. IP33 1AA"
+                        autoComplete="postal-code"
+                        aria-invalid={fieldErrors.postcode ? true : undefined}
                         className="w-full h-14 px-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all uppercase"
                       />
+                      {fieldErrors.postcode ? (
+                        <p className="mt-1.5 text-sm font-medium text-red-700">{fieldErrors.postcode}</p>
+                      ) : null}
                     </div>
                   </div>
 
@@ -338,8 +386,13 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                       <input
                         type="email" id="email" name="email"
                         value={formData.email} onChange={handleInputChange}
+                        autoComplete="email"
+                        aria-invalid={fieldErrors.email ? true : undefined}
                         className="w-full h-14 px-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all"
                       />
+                      {fieldErrors.email ? (
+                        <p className="mt-1.5 text-sm font-medium text-red-700">{fieldErrors.email}</p>
+                      ) : null}
                     </div>
                   )}
 
@@ -352,6 +405,7 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                       <div className="grid grid-cols-2 gap-4">
                         <button
                           type="button"
+                          name="handing"
                           onClick={() => setFormData({ ...formData, handing: "left" })}
                           className={`h-14 rounded-xl border-2 font-bold text-[18px] transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 ${
                             formData.handing === "left"
@@ -363,6 +417,7 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                         </button>
                         <button
                           type="button"
+                          name="handing"
                           onClick={() => setFormData({ ...formData, handing: "right" })}
                           className={`h-14 rounded-xl border-2 font-bold text-[18px] transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50 ${
                             formData.handing === "right"
@@ -373,6 +428,9 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                           Right Side
                         </button>
                       </div>
+                      {fieldErrors.handing ? (
+                        <p className="mt-2 text-sm font-medium text-red-700">{fieldErrors.handing}</p>
+                      ) : null}
                     </div>
                   )}
 
@@ -389,8 +447,12 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
                       required={activeIntent === "question"}
                       value={formData.message} onChange={handleInputChange}
                       placeholder={activeIntent === "survey" ? "E.g. Is access difficult? Which floor is the bathroom on?" : "How can we help?"}
+                      aria-invalid={fieldErrors.message ? true : undefined}
                       className="w-full p-4 rounded-xl border-2 border-slate-300 bg-cream-50 text-[18px] text-slate-900 focus:border-teal-700 focus:ring-4 focus:ring-teal-700/20 outline-none transition-all resize-none"
                     />
+                    {fieldErrors.message ? (
+                      <p className="mt-1.5 text-sm font-medium text-red-700">{fieldErrors.message}</p>
+                    ) : null}
                   </div>
 
                   {error && (
@@ -432,15 +494,15 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
               <Phone size={32} />
             </div>
             <h3 className="font-bold text-[20px] text-slate-900 mb-2">Call Us Free</h3>
-            <p className="text-[18px] text-slate-600 mb-1">0800 123 4567</p>
-            <p className="text-[16px] text-slate-500">Mon-Fri: 9am - 5pm</p>
+            <p className="text-[18px] text-slate-600 mb-1">{FREEPHONE}</p>
+            <p className="text-[16px] text-slate-500">{BUSINESS_HOURS}</p>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
             <div className="w-16 h-16 bg-teal-50 text-teal-700 rounded-full flex items-center justify-center mx-auto mb-4">
               <Mail size={32} />
             </div>
             <h3 className="font-bold text-[20px] text-slate-900 mb-2">Email Us</h3>
-            <p className="text-[18px] text-slate-600 mb-1">info@odysseybaths.co.uk</p>
+            <p className="text-[18px] text-slate-600 mb-1">{EMAIL}</p>
             <p className="text-[16px] text-slate-500">We reply within 24 hours</p>
           </div>
           <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm text-center">
@@ -486,11 +548,11 @@ export function ContactContent({ defaultIntent }: { defaultIntent: IntentId }) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:08001234567"
+                href={`tel:${FREEPHONE_TEL}`}
                 className="flex items-center justify-center gap-3 bg-white text-slate-900 text-[20px] font-extrabold min-h-[64px] px-8 rounded-xl hover:bg-slate-100 transition-colors w-full sm:w-auto focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-700/50"
               >
                 <Phone size={24} className="text-teal-700" />
-                0800 123 4567
+                {FREEPHONE}
               </a>
               <Link
                 href="/free-brochure"

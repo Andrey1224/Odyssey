@@ -3,6 +3,7 @@
 import * as React from "react";
 import { HandingTool } from "./HandingTool";
 import { Phone } from "lucide-react";
+import { FREEPHONE, FREEPHONE_TEL } from "@/lib/site";
 
 export default function HandingCard() {
     const [handing, setHanding] = React.useState<"left" | "right">("left");
@@ -34,11 +35,11 @@ export default function HandingCard() {
                         </p>
 
                         <p className="text-sm text-slate-600 italic border-l-2 border-teal-500/30 pl-4 py-1">
-                            Don't worry — we verify everything during your free home survey.
+                            Don&apos;t worry — we verify everything during your free home survey.
                         </p>
 
                         <a
-                            href={`/contact?handing=${handing}`}
+                            href={`/contact?intent=handing&handing=${handing}`}
                             className="hidden lg:flex w-full bg-cream-50 text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
                         >
                             Check My Bathroom Layout
@@ -50,11 +51,11 @@ export default function HandingCard() {
                                 Still unsure? Call us and we’ll help you choose.
                             </div>
                             <a
-                                href="tel:08001234567"
+                                href={`tel:${FREEPHONE_TEL}`}
                                 className="inline-flex items-center justify-center rounded-xl bg-teal-600/90 hover:bg-teal-500 px-5 py-3 text-base font-bold text-white transition-colors w-full gap-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30"
                             >
                                 <Phone size={18} fill="currentColor" />
-                                Call free: 0800 123 4567
+                                Call free: {FREEPHONE}
                             </a>
                             <div className="mt-3 text-center text-xs text-white/70 font-medium tracking-wide">
                                 MON–FRI 9AM–5PM • FREE ADVICE
@@ -73,7 +74,7 @@ export default function HandingCard() {
                         {/* Mobile Buttons (below tool) */}
                         <div className="w-full lg:hidden mt-8 space-y-4">
                             <a
-                                href={`/contact?handing=${handing}`}
+                                href={`/contact?intent=handing&handing=${handing}`}
                                 className="flex w-full bg-cream-50 text-slate-900 hover:bg-teal-50 font-bold text-lg py-4 px-8 rounded-xl shadow-lg transition-all items-center justify-center gap-2 active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-teal-500/50"
                             >
                                 Check My Bathroom Layout
@@ -84,11 +85,11 @@ export default function HandingCard() {
                                     Still unsure? Call us.
                                 </div>
                                 <a
-                                    href="tel:08001234567"
+                                    href={`tel:${FREEPHONE_TEL}`}
                                     className="flex items-center justify-center rounded-xl bg-teal-600/90 hover:bg-teal-500 px-5 py-3 text-base font-bold text-white transition-colors w-full gap-2 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30"
                                 >
                                     <Phone size={18} fill="currentColor" />
-                                    Call free: 0800 123 4567
+                                    Call free: {FREEPHONE}
                                 </a>
                                 <div className="mt-3 text-center text-xs text-white/70 font-medium tracking-wide">
                                     MON–FRI 9AM–5PM

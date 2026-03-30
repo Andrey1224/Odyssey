@@ -390,14 +390,14 @@ export default function ReviewsContent() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`tel:+${PHONE_TEL}`}
+                href={`tel:${PHONE_TEL}`}
                 className="flex items-center justify-center gap-3 bg-white text-slate-900 text-[20px] font-extrabold min-h-[60px] px-8 rounded-xl hover:bg-slate-100 transition-colors w-full sm:w-auto"
               >
                 <Phone size={24} className="text-teal-700" strokeWidth={2.5} />
                 {PHONE}
               </a>
               <Link
-                href="/free-quote"
+                href="/contact?intent=quote"
                 className="bg-teal-800 hover:bg-teal-700 text-white text-[20px] font-bold min-h-[60px] px-8 rounded-xl transition-colors border border-teal-700 w-full sm:w-auto flex items-center justify-center"
               >
                 Get a Free Quote

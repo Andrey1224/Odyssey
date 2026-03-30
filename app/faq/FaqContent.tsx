@@ -16,6 +16,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getBreadcrumbs } from "@/lib/breadcrumbs";
+import { FREEPHONE, FREEPHONE_TEL } from "@/lib/site";
 
 type FAQItem = {
   question: string;
@@ -276,11 +277,11 @@ export function FaqContent() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
-                href="tel:08001234567"
+                href={`tel:${FREEPHONE_TEL}`}
                 className="inline-flex items-center gap-2 rounded-full bg-teal-800 px-7 py-3 text-lg font-semibold text-white transition hover:bg-teal-900"
               >
                 <Phone className="h-5 w-5" />
-                Call Free 0800 123 4567
+                Call Free {FREEPHONE}
               </a>
               <a
                 href="/contact"

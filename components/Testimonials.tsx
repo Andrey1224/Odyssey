@@ -15,7 +15,7 @@ export function Testimonials() {
                         Trusted by families across the UK
                     </h2>
                     <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                        We don't just sell baths; we restore confidence. Here is what our customers have to say about their experience.
+                        We don&apos;t just sell baths; we restore confidence. Here is what our customers have to say about their experience.
                     </p>
 
                     {/* Trustpilot Badge */}
@@ -110,7 +110,7 @@ function ReviewCard({
                 {title}
             </h3>
             <p className="text-slate-600 leading-relaxed mb-6 flex-grow">
-                "{body}"
+                &ldquo;{body}&rdquo;
             </p>
 
             {/* Reviewer Info */}

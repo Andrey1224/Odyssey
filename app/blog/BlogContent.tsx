@@ -232,7 +232,7 @@ export function BlogContent({
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`tel:+${PHONE_TEL}`}
+              href={`tel:${PHONE_TEL}`}
               className="flex items-center justify-center gap-3 bg-white text-slate-900 text-[20px] font-extrabold min-h-[64px] px-8 rounded-xl hover:bg-slate-100 transition-colors w-full sm:w-auto focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50"
             >
               <Phone size={24} className="text-teal-700" />

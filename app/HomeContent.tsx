@@ -29,7 +29,7 @@ const TrustTicker = () => {
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [items.length]);
 
   return (
     <div className="bg-teal-50 border-b border-teal-100 py-2 flex justify-center items-center h-10 overflow-hidden">
@@ -67,7 +67,7 @@ const Hero = () => (
           <p className="text-center text-sm text-slate-600 font-medium mt-1">
             No obligation • Takes 30 seconds
           </p>
-          <Link id="hero-quote-btn" href="/free-quote" className="h-14 md:h-16 px-6 md:px-10 bg-cream-50 border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1 flex items-center justify-center">
+          <Link id="hero-quote-btn" href="/contact?intent=quote" className="h-14 md:h-16 px-6 md:px-10 bg-cream-50 border-2 border-slate-300 text-slate-800 text-lg md:text-xl font-bold rounded-xl hover:border-teal-700 hover:text-teal-800 transition focus-ring w-full mt-1 flex items-center justify-center">
             Get Free Quote
           </Link>
         </div>
@@ -240,11 +240,11 @@ const StickyBottomBar = () => {
         }`}
     >
       <div className="px-4 py-3 flex gap-4 items-center">
-        <a href={`tel:+${PHONE_TEL}`} className="flex-1 h-14 bg-cream-50 border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
+        <a href={`tel:${PHONE_TEL}`} className="flex-1 h-14 bg-cream-50 border-2 border-slate-200 hover:border-slate-300 text-slate-800 font-bold rounded-xl flex items-center justify-center gap-2 text-lg active:scale-95 transition-transform">
           <Phone size={20} className="text-teal-800" />
           <span className="whitespace-nowrap">Call Now</span>
         </a>
-        <Link href="/free-quote" className="flex-1 h-14 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
+        <Link href="/contact?intent=quote" className="flex-1 h-14 bg-teal-800 hover:bg-teal-900 text-white font-bold rounded-xl shadow-lg shadow-teal-700/20 flex items-center justify-center text-lg active:scale-95 transition-transform">
           <span className="whitespace-nowrap">Get Free Quote</span>
         </Link>
       </div>

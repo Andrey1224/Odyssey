@@ -43,7 +43,7 @@ export const Header = () => {
 
                         {/* Desktop: Phone Info Block (Text Stack) */}
                         <div className="hidden lg:flex flex-col items-end leading-tight">
-                            <a href={`tel:+${PHONE_TEL}`} className="group flex items-center gap-3 text-[28px] font-bold text-slate-900 hover:text-teal-800 transition-colors">
+                            <a href={`tel:${PHONE_TEL}`} className="group flex items-center gap-3 text-[28px] font-bold text-slate-900 hover:text-teal-800 transition-colors">
                                 <Phone size={26} className="text-teal-800 group-hover:scale-110 transition-transform" fill="currentColor" />
                                 {PHONE}
                             </a>
@@ -54,7 +54,7 @@ export const Header = () => {
                         </div>
 
                         {/* Mobile: Compact Call Button */}
-                        <a href={`tel:+${PHONE_TEL}`} className="lg:hidden flex items-center gap-1.5 bg-teal-800 hover:bg-teal-900 px-3 py-2.5 rounded-full shadow-md transition-all group text-white shrink-0">
+                        <a href={`tel:${PHONE_TEL}`} className="lg:hidden flex items-center gap-1.5 bg-teal-800 hover:bg-teal-900 px-3 py-2.5 rounded-full shadow-md transition-all group text-white shrink-0">
                             <Phone size={18} fill="currentColor" />
                             <span className="font-bold text-sm">Call Us</span>
                         </a>
@@ -79,27 +79,22 @@ export const Header = () => {
             />
 
             <BathWizardModal
-                key={activeWizard === "global" ? "global-open" : "global-closed"}
                 isOpen={activeWizard === "global"}
                 onClose={closeWizard}
             />
             <WalkInBathsWizardModal
-                key={activeWizard === "walk-in-baths" ? "walkin-open" : "walkin-closed"}
                 isOpen={activeWizard === "walk-in-baths"}
                 onClose={closeWizard}
             />
             <WalkInShowerWizardModal
-                key={activeWizard === "walk-in-shower-baths" ? "shower-open" : "shower-closed"}
                 isOpen={activeWizard === "walk-in-shower-baths"}
                 onClose={closeWizard}
             />
             <StandardSizeWizardModal
-                key={activeWizard === "standard-size-baths" ? "standard-open" : "standard-closed"}
                 isOpen={activeWizard === "standard-size-baths"}
                 onClose={closeWizard}
             />
             <DeepSoakerWizardModal
-                key={activeWizard === "deep-soaker-baths" ? "deepsoaker-open" : "deepsoaker-closed"}
                 isOpen={activeWizard === "deep-soaker-baths"}
                 onClose={closeWizard}
             />
@@ -163,8 +158,7 @@ const MenuOverlay = ({ isOpen, onClose, onOpenWizard }: { isOpen: boolean; onClo
                                 <Sparkles size={20} className="text-teal-800 md:w-6 md:h-6" />
                                 Help Me Choose
                             </button>
-                            <a href="#" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">VAT Relief Guide</a>
-                            <a href="#" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Right vs Left Hand?</a>
+                            <Link href="/contact?intent=handing" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Right vs Left Hand?</Link>
                             <Link href="/blog" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Advice & Guides</Link>
                             <Link href="/faq" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">FAQ</Link>
                             <Link href="/reviews" className="py-3 md:py-4 border-b border-slate-100 hover:text-teal-800">Customer Reviews</Link>
@@ -178,12 +172,12 @@ const MenuOverlay = ({ isOpen, onClose, onOpenWizard }: { isOpen: boolean; onClo
                 <div className="p-6 md:p-8 bg-cream-50 border-t border-slate-100 mt-auto">
                     <p className="text-center text-slate-600 text-sm md:text-lg mb-4 md:mb-6">Need to speak to a human?</p>
                     <div className="flex flex-col gap-3 md:gap-4">
-                        <a href={`tel:+${PHONE_TEL}`} className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 md:py-5 rounded-xl md:rounded-2xl shadow-md flex items-center justify-center gap-2 md:gap-3 text-lg md:text-2xl active:scale-95 transition-transform">
+                        <a href={`tel:${PHONE_TEL}`} className="bg-teal-800 hover:bg-teal-900 text-white font-bold py-3 md:py-5 rounded-xl md:rounded-2xl shadow-md flex items-center justify-center gap-2 md:gap-3 text-lg md:text-2xl active:scale-95 transition-transform">
                             <Phone size={20} className="md:w-7 md:h-7" fill="currentColor" />
                             Call Now
                         </a>
                         <Link
-                            href="/free-quote"
+                            href="/contact?intent=quote"
                             onClick={onClose}
                             className="bg-cream-50 border-2 border-slate-300 text-slate-800 font-bold py-3 md:py-5 rounded-xl md:rounded-2xl hover:bg-slate-50 flex items-center justify-center text-lg md:text-2xl active:scale-95 transition-transform"
                         >
