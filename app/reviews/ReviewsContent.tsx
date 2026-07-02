@@ -5,7 +5,7 @@ import Link from "next/link";
 import {
   Star, CheckCircle, Phone,
   ChevronDown, ChevronUp, MapPin,
-  ShieldCheck, ExternalLink, Info, Quote,
+  ShieldCheck, Info, Quote,
 } from "lucide-react";
 import { PHONE, PHONE_TEL } from "@/lib/site";
 
@@ -54,78 +54,9 @@ const odysseyStories = [
   },
 ];
 
-const trustpilotReviews = [
-  {
-    id: 1,
-    name: "A. Wilkinson",
-    date: "9 February 2026",
-    title: "Pleased with the bath and support",
-    text: "Pleased with the bath and support, thanks for the helpful advice.",
-    verified: true,
-  },
-  {
-    id: 2,
-    name: "Nicole Ohnstad",
-    date: "9 February 2026",
-    title: "I sent them a photo of my bathroom",
-    text: "I sent them a photo of my bathroom so they could see how the usable space was situated, Odyssey suggested which baths would be most suitable and the correct handings, recommend getting in touch and talking through your build.",
-    verified: true,
-  },
-  {
-    id: 3,
-    name: "Jacob Stewart",
-    date: "10 April 2025",
-    title: "Excellent — Thank you very much",
-    text: "Provided helpful advice via email when requested. Delivered promptly. Excellent product.",
-    verified: true,
-  },
-  {
-    id: 4,
-    name: "Courtney Stokes",
-    date: "28 February 2025",
-    title: "Great communications and fast delivery",
-    text: "Superb choice of products at a competitive price. So helpful about updating our order as we worked out exactly what we needed. Great communications and product delivered as fast as possible. Thanks to all at Odyssey — you were wonderful to deal with.",
-    verified: true,
-  },
-  {
-    id: 5,
-    name: "Roger Coleman",
-    date: "19 February 2025",
-    title: "Professional and reliable",
-    text: "Professional and reliable. Would use again. Thanks.",
-    verified: true,
-  },
-  {
-    id: 6,
-    name: "Lorraine Clarke",
-    date: "28 February 2025",
-    title: "Walk In bath problem",
-    text: "Excellent service from this company. Paul was very helpful and went over and above to help me sort out a bath problem I had. He answered emails quickly too and he also rang me back when he missed my call. Great service thank you.",
-    verified: true,
-  },
-  {
-    id: 7,
-    name: "OldChina Hand",
-    date: "12 April 2023",
-    title: "Needed to upgrade a relative's home",
-    text: "Needed to upgrade a relative's home so looked for a Bath supplier. Odyssey were very easy to use, the team were very knowledgeable and helpful and their speed of delivery was a big factor in deciding to use them.",
-    verified: true,
-  },
-];
-
 // ==========================================
 // 2. HELPER COMPONENTS
 // ==========================================
-
-const TrustpilotStars = () => (
-  <div className="flex gap-1" style={{ color: "#00B67A" }}>
-    <Star size={24} fill="currentColor" />
-    <Star size={24} fill="currentColor" />
-    <Star size={24} fill="currentColor" />
-    <Star size={24} fill="currentColor" />
-    <Star size={24} fill="currentColor" />
-  </div>
-);
 
 const ExpandableReview = ({ text, maxLength = 130 }: { text: string; maxLength?: number }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -180,14 +111,13 @@ export default function ReviewsContent() {
             See why hundreds of families across the UK trust Odyssey to bring safety, comfort, and independence back into their bathrooms.
           </p>
 
-          {/* Trust badge */}
-          <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-slate-50 border border-slate-200 rounded-2xl p-6 md:px-8 shadow-sm">
-            <TrustpilotStars />
-            <div className="h-10 w-px bg-slate-300 hidden sm:block" />
-            <div className="text-[20px] md:text-[22px] text-slate-700 text-left">
-              <span className="font-bold text-slate-900">4.9/5</span> rating on Trustpilot{" "}
-              <span className="font-medium text-slate-500">(1,284 reviews)</span>
-            </div>
+          <div className="inline-grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 border border-slate-200 rounded-2xl p-4 md:p-5 shadow-sm text-left">
+            {["Clear product guidance", "No-obligation advice", "UK-based support"].map((item) => (
+              <div key={item} className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-base font-bold text-slate-800 border border-slate-100">
+                <CheckCircle size={18} className="shrink-0 text-teal-700" />
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -280,66 +210,7 @@ export default function ReviewsContent() {
         </div>
       </section>
 
-      {/* --- 3. TRUSTPILOT INDEPENDENT REVIEWS --- */}
-      <section className="bg-white border-y border-slate-200 py-16 md:py-24 px-6 md:px-8 mt-4">
-        <div className="max-w-7xl mx-auto">
-
-          {/* Transparency bridge */}
-          <div className="bg-slate-50 rounded-2xl p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-200">
-            <p className="text-[20px] text-slate-700 leading-relaxed max-w-3xl">
-              <strong className="text-slate-900 font-bold">Transparency matters.</strong> While we carefully select the detailed stories above to highlight specific features, below you can read every single review exactly as published on Trustpilot.
-            </p>
-            <ShieldCheck size={48} className="text-slate-300 hidden md:block flex-shrink-0" />
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
-            <div className="max-w-2xl">
-              <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-slate-900 mb-3 tracking-tight">
-                Independent Reviews
-              </h2>
-            </div>
-            <a
-              href="https://www.trustpilot.com/review/odysseybaths.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-800 text-[20px] font-bold min-h-[56px] px-8 rounded-xl transition-colors w-full md:w-auto shadow-sm"
-            >
-              View all on Trustpilot <ExternalLink size={20} strokeWidth={2.5} />
-            </a>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {trustpilotReviews.map((review) => (
-              <div key={review.id} className="bg-slate-50 rounded-2xl p-8 border-2 border-slate-300 shadow-sm flex flex-col h-full">
-                <div className="flex flex-col gap-3 mb-5">
-                  <TrustpilotStars />
-                  <span className="text-slate-500 text-[16px] font-medium">{review.date}</span>
-                </div>
-                <h4 className="text-[20px] font-bold text-slate-900 mb-3">{review.title}</h4>
-                <div className="mb-6 flex-grow">
-                  <ExpandableReview text={review.text} maxLength={100} />
-                </div>
-                <div className="flex items-center gap-3 pt-5 border-t border-slate-200 mt-auto">
-                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-700 font-bold border border-slate-200 shadow-sm">
-                    {review.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-[16px] font-bold text-slate-900 leading-none mb-1">{review.name}</p>
-                    {review.verified && (
-                      <p className="text-[15px] font-bold text-emerald-700 flex items-center gap-1">
-                        <CheckCircle size={16} style={{ color: "#00B67A" }} strokeWidth={2.5} /> Verified
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* --- 4. TRANSPARENCY BLOCK --- */}
+      {/* --- 3. TRANSPARENCY BLOCK --- */}
       <section className="py-16 md:py-24 px-6 max-w-5xl mx-auto">
         <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center md:items-start shadow-sm">
           <div className="flex-shrink-0 bg-teal-50 p-5 rounded-2xl">
@@ -373,7 +244,7 @@ export default function ReviewsContent() {
         </div>
       </section>
 
-      {/* --- 5. FINAL CTA --- */}
+      {/* --- 4. FINAL CTA --- */}
       <section className="max-w-5xl mx-auto px-6 mb-12">
         <div className="bg-slate-900 rounded-[2rem] p-10 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
           <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">

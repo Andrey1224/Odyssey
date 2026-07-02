@@ -16,7 +16,6 @@ import {
   Shield,
   ShowerHead,
   Sparkles,
-  Star,
   Thermometer,
   Waves,
   Wrench,
@@ -197,7 +196,7 @@ export function CatalogProductDetail({
 
             <div className="mb-6 flex flex-wrap gap-3">
               {[
-                { Icon: Star, label: "4.9/5 Trustpilot" },
+                { Icon: Lightbulb, label: "Helpful Advice" },
                 { Icon: Shield, label: "10 Year Warranty" },
                 { Icon: Flag, label: "Made in UK" },
               ].map(({ Icon, label }) => (

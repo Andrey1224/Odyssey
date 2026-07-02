@@ -6,7 +6,6 @@ import Image from "next/image";
 import {
     Check,
     Shield,
-    Star,
     Flag,
     DoorOpen,
     Dumbbell,
@@ -180,7 +179,7 @@ export function ProductDetail({ product }: { product: ProductVariant }) {
                         {/* Trust Badges */}
                         <div className="flex gap-3 mb-6 flex-wrap">
                             {[
-                                { Icon: Star, label: "4.9/5 Trustpilot" },
+                                { Icon: Lightbulb, label: "Helpful Advice" },
                                 { Icon: Shield, label: "10 Year Warranty" },
                                 { Icon: Flag, label: "Made in UK" },
                             ].map(({ Icon, label }) => (

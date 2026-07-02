@@ -35,7 +35,7 @@ export const WALK_IN_SHOWER_BATHS_CATEGORY: CatalogCategory = {
   heroSubhead:
     "2-in-1 bath and shower models combining accessible entry, family flexibility, and modern design.",
   trustStrip: [
-    { iconKey: "trustpilot", label: "4.9/5 Trustpilot" },
+    { iconKey: "support", label: "Helpful Advice" },
     { iconKey: "warranty", label: "10 Year Warranty" },
     { iconKey: "uk", label: "Made in UK" },
     { iconKey: "vat", label: "VAT Relief Handled" },

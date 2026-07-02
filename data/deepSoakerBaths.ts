@@ -35,7 +35,7 @@ export const DEEP_SOAKER_CATEGORY: CatalogCategory = {
   heroSubhead:
     "Compact sit-in bathing with deep immersion and safer access for smaller bathrooms.",
   trustStrip: [
-    { iconKey: "trustpilot", label: "4.9/5 Trustpilot" },
+    { iconKey: "support", label: "Helpful Advice" },
     { iconKey: "warranty", label: "10 Year Warranty" },
     { iconKey: "uk", label: "Made in UK" },
     { iconKey: "vat", label: "VAT Relief Handled" },

@@ -10,7 +10,6 @@ import {
   Percent,
   PlayCircle,
   SlidersHorizontal,
-  Star,
 } from "lucide-react";
 
 import { BrochureBridge } from "@/components/BrochureBridge";
@@ -238,7 +237,7 @@ export function CatalogListContent({
         <div className="mx-auto max-w-[1280px] px-5">
           <div className="flex flex-wrap justify-center gap-3 md:gap-10">
             <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
-              <span className="text-teal-800"><Star size={14} /></span> 4.9/5 Trustpilot
+              <span className="text-teal-800"><CheckCircle2 size={14} /></span> Helpful Advice
             </div>
             <div className="flex items-center gap-2 text-[0.9rem] font-medium text-slate-800">
               <span className="text-teal-800"><CheckCircle2 size={14} /></span> 10 Year Warranty

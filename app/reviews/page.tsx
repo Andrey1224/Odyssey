@@ -9,7 +9,7 @@ import ReviewsContent from "./ReviewsContent";
 
 export const metadata: Metadata = {
     title: "Customer Reviews | Odyssey Baths",
-    description: "Read what our customers say about their Odyssey Baths experience. See genuine Trustpilot reviews and customer stories from across the UK.",
+    description: "Read customer stories from Odyssey Baths and learn how safer bathing solutions support comfort, access, and independence across the UK.",
 };
 
 export default function ReviewsPage() {

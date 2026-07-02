@@ -35,7 +35,7 @@ export const STANDARD_SIZE_CATEGORY: CatalogCategory = {
   heroSubhead:
     "Full-length accessible baths in familiar sizes, built to replace your existing tub with safer access.",
   trustStrip: [
-    { iconKey: "trustpilot", label: "4.9/5 Trustpilot" },
+    { iconKey: "support", label: "Helpful Advice" },
     { iconKey: "warranty", label: "10 Year Warranty" },
     { iconKey: "uk", label: "Made in UK" },
     { iconKey: "vat", label: "VAT Relief Handled" },
