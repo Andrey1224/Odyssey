@@ -1,0 +1,54 @@
+old_path,proposed_destination,action,status,confidence,reason
+/home/,/,permanent_redirect,ready,high,Legacy home alias
+/product-category/walk-in-baths/,/walk-in-baths,permanent_redirect,ready,high,Exact category equivalent
+/product-category/deep-soaker-bath/,/deep-soaker-baths,permanent_redirect,ready,high,Exact category equivalent
+/product-category/walk-in-shower-baths/,/walk-in-shower-baths,permanent_redirect,ready,high,Exact category equivalent
+/product-category/standard-size-baths/,/standard-size-baths,permanent_redirect,ready,high,Exact category equivalent
+/product/carnelian-curvy-and-stunning-p-shaped-bath/,/walk-in-shower-baths/carnelian,permanent_redirect,ready,high,Exact product equivalent
+/product/highgrove-a-beautiful-l-shaped-bath/,/walk-in-shower-baths/highgrove,permanent_redirect,ready,high,Exact product equivalent
+/product/larimar-the-perfect-l-shaped-bath/,/walk-in-shower-baths/larimar,permanent_redirect,ready,high,Exact product equivalent
+/product/olivia-available-in-a-larger-size/,/walk-in-shower-baths/olivia,permanent_redirect,ready,high,Exact product equivalent
+/product/abalone-1500-and-1700-with-glass-door/,/standard-size-baths/abalone-1500-1700-glass,permanent_redirect,ready,high,Exact product equivalent
+/product/abalone-rv-1500-and-1700-with-glass-door/,/standard-size-baths/abalone-rv-1500-1700-glass,permanent_redirect,ready,high,Exact product equivalent
+/product/avrail-solid-performer-1500-and-1700-with-plastic-door/,/standard-size-baths/avrail-1500-1700-plastic,permanent_redirect,ready,high,Exact product equivalent
+/product/cordova-double-ended-1700-with-plastic-door/,/standard-size-baths/cordova-1700-plastic,permanent_redirect,ready,high,Exact product equivalent
+/product/cortega-double-ended-1700-with-glass-door/,/standard-size-baths/cortega-1700-glass,permanent_redirect,ready,high,Exact product equivalent
+/product/aventis-the-family-favourite-1700/,/standard-size-baths/aventis-1700-plastic,permanent_redirect,ready,high,Exact product equivalent
+/product/affinity-attractive-bifold-door-design/,/deep-soaker-baths/affinity,permanent_redirect,ready,high,Exact product equivalent
+/product/athena-and-athena-mini-functional-and-stylish/,/deep-soaker-baths/athena,permanent_redirect,review,medium,Old page may represent both Athena and Athena Mini
+/product/priya-a-modern-and-luxurious-bath/,/deep-soaker-baths/priya,permanent_redirect,ready,high,Exact product equivalent
+/product/caversham-an-absolute-sublime-all-rounder/,/deep-soaker-baths/caversham,permanent_redirect,ready,high,Exact product equivalent
+/product/maestro-unique-bi-folding-door-and-easy-to-clean/,/deep-soaker-baths/maestro,permanent_redirect,ready,high,Exact product equivalent
+/product/serenity-66-classic-one-of-our-bestsellers/,/walk-in-baths/serenity-66-classic,permanent_redirect,ready,high,Exact product equivalent
+/product/serenity-66-plus-ease-your-muscles-with-water-jets/,/walk-in-baths/serenity-66-plus,permanent_redirect,ready,high,Exact product equivalent
+/product/serenity-66-special-luxury-featuress-and-fully-loaded/,/walk-in-baths/serenity-66-special,permanent_redirect,ready,high,Exact product equivalent including legacy typo
+/product/serenity-66-special/,/walk-in-baths/serenity-66-special,permanent_redirect,ready,high,Exact product equivalent
+/product/serenity-75-classic-styling-and-built-to-last/,/walk-in-baths/serenity-75-classic,permanent_redirect,ready,high,Exact product equivalent
+/product/serenity-75-plus-large-walk-in-bath-with-water-jets/,/walk-in-baths/serenity-75-plus,permanent_redirect,ready,high,Exact product equivalent
+/product/stamford-75-classic-a-robust-inswing/,/walk-in-baths/stamford-75-classic,permanent_redirect,ready,high,Exact product equivalent
+/returns-policy/,/return-policy,permanent_redirect,review,high,Old plural route to current singular route
+/blog/page/2/,/blog,redirect_or_restore_pagination,review,medium,Confirm whether historical pagination has valuable unique discovery
+/blog/page/5/,/blog,redirect_or_restore_pagination,review,medium,Confirm whether historical pagination has valuable unique discovery
+/shop/,/shop,restore,restore,high,Restore useful all-products catalogue or choose an equivalent hub before redirecting
+/shop/page/2/,/shop,restore_or_redirect,restore,medium,Depends on restored shop catalogue and pagination
+/shop/page/3/,/shop,restore_or_redirect,restore,medium,Depends on restored shop catalogue and pagination
+/installing-a-walk-in-bath/,/installing-a-walk-in-bath/,restore_same_url,restore,high,Former high-impression article
+/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,restore_same_url,restore,high,Former high-impression article
+/best-shower-walk-in-tubs-for-small-bathrooms-space-saving-solutions/,/best-shower-walk-in-tubs-for-small-bathrooms-space-saving-solutions/,restore_same_url,restore,high,Former high-impression article
+/how-microbubbles-can-transform-your-skin-and-bathing-experience/,/how-microbubbles-can-transform-your-skin-and-bathing-experience/,restore_same_url,restore,high,Former impression and click source
+/air-spas-what-are-the-benefits/,/air-spas-what-are-the-benefits/,restore_same_url,restore,medium,Legacy informational content
+/aluminium-jamb-what-is-it-and-does-it-make-a-walk-in-bath-last-longer/,/aluminium-jamb-what-is-it-and-does-it-make-a-walk-in-bath-last-longer/,restore_same_url,restore,medium,Legacy informational content
+/one-piece-vs-two-piece-walk-in-baths-the-longest-walk/,/one-piece-vs-two-piece-walk-in-baths-the-longest-walk/,restore_same_url,restore,medium,Legacy informational content
+/create-your-ultimate-bathroom-retreat-with-odyssey-walk-in-tubs/,/create-your-ultimate-bathroom-retreat-with-odyssey-walk-in-tubs/,restore_same_url,restore,medium,Legacy informational content
+/from-recovery-to-relaxation-walk-in-baths-for-post-surgery-healing/,/from-recovery-to-relaxation-walk-in-baths-for-post-surgery-healing/,restore_same_url,restore,medium,Legacy informational content
+/ai-and-smart-tech-in-walk-in-baths-the-future-of-accessible-luxury/,/ai-and-smart-tech-in-walk-in-baths-the-future-of-accessible-luxury/,restore_same_url,restore,medium,Legacy informational content
+/bathing-safety-solutions-for-carers-why-walk-in-units-make-sense/,/bathing-safety-solutions-for-carers-why-walk-in-units-make-sense/,restore_same_url,restore,medium,Legacy informational content
+/a-closer-look-at-the-benefits-of-a-walk-in-bath/,/a-closer-look-at-the-benefits-of-a-walk-in-bath/,restore_same_url,restore,medium,Legacy informational content
+/safety-and-independence-why-walk-in-baths-are-transforming-uk-bathrooms/,/safety-and-independence-why-walk-in-baths-are-transforming-uk-bathrooms/,restore_same_url,restore,medium,Legacy informational content
+/how-a-walk-in-shower-bath-changed-my-daily-routine/,/how-a-walk-in-shower-bath-changed-my-daily-routine/,restore_same_url,restore,medium,Legacy informational content
+/how-walk-in-baths-can-help-with-muscle-pain/,/how-walk-in-baths-can-help-with-muscle-pain/,restore_same_url,restore,medium,Legacy informational content
+/why-will-all-baths-be-fitted-with-ozone-in-the-the-future/,/why-will-all-baths-be-fitted-with-ozone-in-the-the-future/,restore_same_url,restore,medium,Legacy informational content including legacy typo
+/serenity-range-self-cleaning-walk-in-baths/,/serenity-range-self-cleaning-walk-in-baths/,restore_same_url,restore,medium,Legacy informational content
+/how-a-walk-in-bath-helps-keep-your-bones-safe-in-the-bathroom/,/how-a-walk-in-bath-helps-keep-your-bones-safe-in-the-bathroom/,restore_same_url,restore,medium,Legacy informational content
+/innovative-technologies-in-walk-in-baths-you-should-know-about/,/innovative-technologies-in-walk-in-baths-you-should-know-about/,restore_same_url,restore,medium,Legacy informational content
+/easy-access-bath-installation-what-you-need-to-know-before-buying/,/easy-access-bath-installation-what-you-need-to-know-before-buying/,restore_same_url,restore,medium,Legacy informational content
