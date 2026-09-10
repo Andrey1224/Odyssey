@@ -12,6 +12,8 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `RESPONSIBILITY_ASSESSMENT.md` — separates developer implementation responsibility from formal scope, client dependencies, content ownership, and launch-process failures.
 - `LEGACY_CONTENT_RECOVERY.md` — confirmed archive availability and the source-by-source plan for recovering the old WordPress pages without admin access.
 - `WAYBACK_URL_INVENTORY_2024-2025.csv` — 60 confirmed archived HTML URLs with capture timestamps.
+- `AGENT_EXECUTION_RUNBOOK.md` — roles, safety rules, review gates, and the task sequence for supervised implementation.
+- `TASK_00_BASELINE_AND_RECONCILIATION.md` — the first bounded assignment for the coding agent.
 
 ## Current conclusion
 
