@@ -1,8 +1,8 @@
 # SEO Recovery Release Candidate — Pre-deployment Gate
 
 ## Commit Information
-* **Current Commit:** 549cc2cfb0c63b81832497054d7bfbed8fd05761
-* **Diff Checked Against:** `origin/main`
+* **Recovery branch verified through:** `baac73209733191d94d7a94efeea561cbe2d3930`
+* **Diff checked against:** `origin/main` at `31e526d4ae0e3c6331d36969dd0f14f97305f6dc`
 
 ## Verification Checklist
 
@@ -49,7 +49,9 @@
 * Diff contains no temporary files, archives, build output, or `.env`.
 
 ## Readiness
-**Status:** READY FOR PREVIEW
+**Status:** READY FOR PREVIEW — RELEASE HOLD PENDING VERCEL ACCESS
+
+The local implementation is complete. No branch should be pushed until both connected Vercel projects have been inspected and the production project and production branch are unambiguous.
 
 ## Vercel Pre-Flight Checklist
 Before pushing to production, verify the following inside the Vercel Dashboard:
