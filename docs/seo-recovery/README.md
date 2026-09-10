@@ -14,6 +14,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `WAYBACK_URL_INVENTORY_2024-2025.csv` — 60 confirmed archived HTML URLs with capture timestamps.
 - `AGENT_EXECUTION_RUNBOOK.md` — roles, safety rules, review gates, and the task sequence for supervised implementation.
 - `TASK_00_BASELINE_AND_RECONCILIATION.md` — the first bounded assignment for the coding agent.
+- `TASK_01_P0_CANONICAL_ORIGIN.md` — the first implementation task: replace the temporary Vercel canonical origin and verify generated output.
 
 ## Current conclusion
 

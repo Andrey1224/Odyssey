@@ -13,6 +13,8 @@ Audit documentation commit: `3e7007e`
 
 Self-reported success is not sufficient. A task is complete only after technical-lead review of the working tree, diff, test output, and relevant live/preview behavior.
 
+Reviews are risk-based. Only correctness, security/data safety, SEO outcome, scope violations, or release-safety problems block progress. Cosmetic wording, formatting, and other non-material issues are noted without delaying the next task.
+
 ## Safety rules
 
 1. Work only in `oddyseyweb-git-recovered`.
@@ -131,4 +133,3 @@ Every agent response must include:
 5. Assumptions and unresolved blockers.
 6. Confirmation that no push/deploy/external-setting changes occurred.
 7. Current branch and `git status --short`.
-
