@@ -15,6 +15,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `AGENT_EXECUTION_RUNBOOK.md` — roles, safety rules, review gates, and the task sequence for supervised implementation.
 - `TASK_00_BASELINE_AND_RECONCILIATION.md` — the first bounded assignment for the coding agent.
 - `TASK_01_P0_CANONICAL_ORIGIN.md` — the first implementation task: replace the temporary Vercel canonical origin and verify generated output.
+- `TASK_02_P0_LEGACY_REDIRECTS.md` — implement and verify the unambiguous WordPress URL mappings and canonical host redirects.
 
 ## Current conclusion
 
