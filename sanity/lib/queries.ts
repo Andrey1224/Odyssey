@@ -151,7 +151,7 @@ export const getSiteSettingsQuery = groq`
 `;
 
 export const getAllBlogSlugsQuery = groq`
-  *[_type == "post" && defined(slug.current)] | order(publishedAt desc){
+  *[_type == "post" && defined(slug.current) && (seo.noindex != true)] | order(publishedAt desc){
     "slug": slug.current
   }
 `;

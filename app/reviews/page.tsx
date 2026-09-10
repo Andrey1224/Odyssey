@@ -7,9 +7,12 @@ import { getBreadcrumbs } from "@/lib/breadcrumbs";
 
 import ReviewsContent from "./ReviewsContent";
 
+import { SITE_DOMAIN } from "@/lib/site";
+
 export const metadata: Metadata = {
     title: "Customer Reviews | Odyssey Baths",
     description: "Read customer stories from Odyssey Baths and learn how safer bathing solutions support comfort, access, and independence across the UK.",
+    alternates: { canonical: `${SITE_DOMAIN}/reviews` },
 };
 
 export default function ReviewsPage() {
