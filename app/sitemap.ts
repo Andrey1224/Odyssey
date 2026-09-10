@@ -21,6 +21,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_DOMAIN}/free-brochure`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_DOMAIN}/return-policy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_DOMAIN}/privacy-policy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${SITE_DOMAIN}/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk`, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE_DOMAIN}/installing-a-walk-in-bath`, changeFrequency: "yearly", priority: 0.6 },
   ];
 
   const walkInBathPdps: MetadataRoute.Sitemap = WALK_IN_BATHS.map((p) => ({

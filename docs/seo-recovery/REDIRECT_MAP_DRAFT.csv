@@ -32,8 +32,8 @@ old_path,proposed_destination,action,status,confidence,reason
 /shop/,/shop,restore,restore,high,Restore useful all-products catalogue or choose an equivalent hub before redirecting
 /shop/page/2/,/shop,restore_or_redirect,restore,medium,Depends on restored shop catalogue and pagination
 /shop/page/3/,/shop,restore_or_redirect,restore,medium,Depends on restored shop catalogue and pagination
-/installing-a-walk-in-bath/,/installing-a-walk-in-bath/,restore_same_url,restore,high,Former high-impression article
-/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,restore_same_url,restore,high,Former high-impression article
+/installing-a-walk-in-bath/,/installing-a-walk-in-bath/,restore_same_url,restored_locally,high,Former high-impression article
+/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/,restore_same_url,restored_locally,high,Former high-impression article
 /best-shower-walk-in-tubs-for-small-bathrooms-space-saving-solutions/,/best-shower-walk-in-tubs-for-small-bathrooms-space-saving-solutions/,restore_same_url,restore,high,Former high-impression article
 /how-microbubbles-can-transform-your-skin-and-bathing-experience/,/how-microbubbles-can-transform-your-skin-and-bathing-experience/,restore_same_url,restore,high,Former impression and click source
 /air-spas-what-are-the-benefits/,/air-spas-what-are-the-benefits/,restore_same_url,restore,medium,Legacy informational content

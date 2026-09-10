@@ -69,3 +69,11 @@ Ask the following without requesting that anything be reactivated publicly:
 6. Validate restored pages against their historical search intent, metadata, headings, and internal links.
 7. Add the restored canonical URLs to the corrected sitemap and monitor reindexing.
 
+
+## Restoration Status (2026-09-10)
+
+The two highest-priority informational articles have been restored locally from Wayback Machine snapshots:
+- `/installing-a-walk-in-bath/` (Snapshot: 20240415115910)
+- `/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/` (Snapshot: 20250308065003)
+
+These have been restored directly at their root paths, added to the static Next.js sitemap, and populated with authentic JSON-LD and content from the snapshots without requiring Sanity configuration. Images from the old domain were intentionally omitted to guarantee safety unless they exist in the new local structure. They are awaiting production deployment.
