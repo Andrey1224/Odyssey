@@ -1,4 +1,4 @@
-export const SITE_DOMAIN = "https://odyssey-navy-theta.vercel.app";
+export const SITE_DOMAIN = "https://odysseybaths.co.uk";
 export const SITE_NAME   = "Odyssey Baths";
 export const PHONE       = "01284645035";
 export const PHONE_TEL   = "01284645035";
