@@ -27,9 +27,10 @@ This folder records the read-only Google Search Console and source-code audit pe
 
 - Working branch: `fix/seo-migration-recovery`.
 - Recovery implementation and verification are complete locally through commit `baac732`.
-- The local release gate passes: 40 sitemap URLs, 53 path redirects, 53 trailing-slash variants, 53 query-string variants, 2 host redirects, and both restored priority articles.
+- The local release gate passes: 40 sitemap URLs, 53 path redirects, 53 trailing-slash variants, 53 query-string variants, 3 host redirects, and both restored priority articles.
 - No recovery commit has been pushed, merged, or deployed.
-- Do not push until both Vercel projects have been inspected and the production project, Git repository, production branch, domains, environment variables, deployment protection, and `www` TLS state are confirmed.
+- **Confirmed production scheme (from Vercel dashboard, read-only):** production repository `Odycode8/Odyssey`, production branch `main`, current production commit `31e526d`, canonical domain `odysseybaths.co.uk`, client stable Vercel domain `odyssey-alpha-eosin.vercel.app` (now covered by a permanent host redirect to the canonical apex). `www.odysseybaths.co.uk` is attached but shows **No Deployment**. Preview deployments are protected by Vercel Authentication. Environment variables visible in the dashboard: `SANITY_PROJECT_ID`, `SANITY_DATASET`, `SANITY_API_VERSION`. `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables are **not visible** in the dashboard — recorded as an open release risk, not assumed present or absent, and no values were invented.
+- Next stage: deploy this branch as a **Preview** (not a push to `main`), verify contact/brochure lead-form submissions end-to-end on that Preview, and run `scripts/seo/verify-recovery.mjs` against it before any production release.
 
 ## Current conclusion
 
