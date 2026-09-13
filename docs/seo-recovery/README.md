@@ -1,6 +1,6 @@
 # Odyssey Baths SEO recovery workspace
 
-Status: remediation implemented and verified locally; release is on hold pending client Vercel access.
+Status: remediation is implemented, verified, and pushed to the upstream `main`; client production is awaiting the fork sync.
 
 This folder records the read-only Google Search Console and source-code audit performed on 8 September 2026 after the WordPress-to-Next.js migration.
 
@@ -22,15 +22,20 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `PRIORITY_CONTENT_RESTORATION.md` — evidence and implementation details for the two restored high-priority articles.
 - `SECONDARY_CONTENT_SOURCE_RECOVERY.md` — records the unsuccessful source search for two additional missing articles so the work is not repeated.
 - `PREDEPLOY_RELEASE_GATE.md` — final local release gate and Vercel pre-flight checklist.
+- `CURRENT_HANDOFF_2026-09-13.md` — exact current repository, Vercel, client-fork, release, and next-action state.
 
 ## Current release status
 
-- Working branch: `fix/seo-migration-recovery`.
-- Recovery implementation and verification are complete locally through commit `baac732`.
+- Upstream repository: `Andrey1224/Odyssey`.
+- Upstream `main` and local `main`: `55ccd4d` (`docs(seo): record confirmed production scheme and correct lead-form dependency`).
+- The local `fix/seo-migration-recovery` branch points to the same accepted recovery commit.
 - The local release gate passes: 40 sitemap URLs, 53 path redirects, 53 trailing-slash variants, 53 query-string variants, 3 host redirects, and both restored priority articles.
-- No recovery commit has been pushed, merged, or deployed.
-- **Confirmed production scheme (from Vercel dashboard, read-only):** production repository `Odycode8/Odyssey`, production branch `main`, current production commit `31e526d`, canonical domain `odysseybaths.co.uk`, client stable Vercel domain `odyssey-alpha-eosin.vercel.app` (now covered by a permanent host redirect to the canonical apex). `www.odysseybaths.co.uk` is attached but shows **No Deployment**. Preview deployments are protected by Vercel Authentication. Environment variables visible in the dashboard: `SANITY_PROJECT_ID`, `SANITY_DATASET`, `SANITY_API_VERSION`. `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables are **not visible** in the dashboard — recorded as an open release risk, not assumed present or absent, and no values were invented.
-- Next stage: deploy this branch as a **Preview** (not a push to `main`), verify contact/brochure lead-form submissions end-to-end on that Preview, and run `scripts/seo/verify-recovery.mjs` against it before any production release.
+- The accepted recovery package has been pushed to `Andrey1224/Odyssey/main` at `55ccd4d`.
+- Vercel reported the upstream deployment for `55ccd4d` as successful. Its immutable deployment URL is protected by Vercel Authentication and returns `x-robots-tag: noindex`, so unauthenticated remote verification is intentionally blocked. The upstream stable Vercel hostname returns the expected `308` to the canonical apex and preserves path/query strings.
+- **Confirmed client production scheme:** repository `Odycode8/Odyssey`, production branch `main`, currently observed production commit `31e526d`, canonical domain `odysseybaths.co.uk`, client stable Vercel domain `odyssey-alpha-eosin.vercel.app`. `www.odysseybaths.co.uk` was attached but showed **No Deployment** before the recovery release. Environment variables visible in the dashboard were `SANITY_PROJECT_ID`, `SANITY_DATASET`, and `SANITY_API_VERSION`.
+- **Current release boundary:** the client fork and client production have not yet been confirmed updated. Paul must use GitHub **Sync fork → Update branch**. If GitHub reports conflicts or offers a destructive/force option, stop and inspect instead of forcing the sync.
+- **Open pre-existing risk:** `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables were not visible in the client Vercel project. Both lead forms require Supabase to save submissions. This dependency already existed in production baseline `31e526d`; it was not introduced by the SEO recovery.
+- Next stage: after Paul confirms the fork sync and the client Vercel deployment is **Ready**, run the production verification in `CURRENT_HANDOFF_2026-09-13.md`, then perform the defined Google Search Console follow-up.
 
 ## Current conclusion
 
@@ -47,4 +52,4 @@ This is a recoverable technical migration problem. Search Console reports no man
 
 ## Change-control rule
 
-Do not make isolated SEO changes directly in production. After Vercel access is available, inspect both projects read-only, push only the recovery branch, validate it on a Preview with `scripts/seo/verify-recovery.mjs`, then release the verified package once and monitor the defined recovery metrics in Google Search Console.
+Do not make additional isolated SEO changes while this release is in flight. The accepted recovery package is already in upstream `main`; the next production state change is the controlled client-fork sync. After the client deployment is **Ready**, validate the live package once, record the result, and monitor the defined recovery metrics in Google Search Console.
