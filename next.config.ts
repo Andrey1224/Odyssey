@@ -26,6 +26,12 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'odyssey-alpha-eosin.vercel.app' }],
+        destination: 'https://odysseybaths.co.uk/:path*',
+        permanent: true,
+      },
+      {
         source: '/home',
         destination: '/',
         permanent: true,

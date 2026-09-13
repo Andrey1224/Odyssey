@@ -225,7 +225,7 @@ async function testHostRedirects() {
      return;
   }
   
-  const hosts = ['www.odysseybaths.co.uk', 'odyssey-navy-theta.vercel.app'];
+  const hosts = ['www.odysseybaths.co.uk', 'odyssey-navy-theta.vercel.app', 'odyssey-alpha-eosin.vercel.app'];
   for (const host of hosts) {
     hostChecksCount++;
     const res = await fetchWithHttpHost(`${baseUrl}/about?test=1`, host);
