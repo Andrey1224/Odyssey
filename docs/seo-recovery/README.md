@@ -28,16 +28,17 @@ This folder records the read-only Google Search Console and source-code audit pe
 ## Current release status
 
 - Upstream repository: `Andrey1224/Odyssey`.
-- Upstream `main` and local `main`: `55ccd4d` (`docs(seo): record confirmed production scheme and correct lead-form dependency`).
+- Upstream `main` and local `main` before this documentation update: `20553a6` (`docs(seo): record postdeploy GSC verification`).
 - The local `fix/seo-migration-recovery` branch points to the same accepted recovery commit.
 - The local release gate passes: 40 sitemap URLs, 53 path redirects, 53 trailing-slash variants, 53 query-string variants, 3 host redirects, and both restored priority articles.
 - The accepted recovery package has been pushed to `Andrey1224/Odyssey/main` at `55ccd4d`.
 - Vercel reported the upstream deployment for `55ccd4d` as successful. Its immutable deployment URL is protected by Vercel Authentication and returns `x-robots-tag: noindex`, so unauthenticated remote verification is intentionally blocked. The upstream stable Vercel hostname returns the expected `308` to the canonical apex and preserves path/query strings.
-- **Confirmed client production scheme:** repository `Odycode8/Odyssey`, production branch `main`, currently observed production commit `31e526d`, canonical domain `odysseybaths.co.uk`, client stable Vercel domain `odyssey-alpha-eosin.vercel.app`. `www.odysseybaths.co.uk` was attached but showed **No Deployment** before the recovery release. Environment variables visible in the dashboard were `SANITY_PROJECT_ID`, `SANITY_DATASET`, and `SANITY_API_VERSION`.
-- **Current release boundary:** the client fork and client production have not yet been confirmed updated. Paul must use GitHub **Sync fork → Update branch**. If GitHub reports conflicts or offers a destructive/force option, stop and inspect instead of forcing the sync.
+- **Confirmed client production scheme:** repository `Odycode8/Odyssey`, production branch `main`, current production commit `957440f`, canonical domain `odysseybaths.co.uk`, and client stable Vercel domain `odyssey-alpha-eosin.vercel.app`. The previous production baseline was `31e526d`. Environment variables visible in the dashboard were `SANITY_PROJECT_ID`, `SANITY_DATASET`, and `SANITY_API_VERSION`.
+- **Current release boundary:** Paul synced the client fork and Vercel successfully deployed production commit `957440f` from `Odycode8/Odyssey/main`.
 - **Open pre-existing risk:** `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables were not visible in the client Vercel project. Both lead forms require Supabase to save submissions. This dependency already existed in production baseline `31e526d`; it was not introduced by the SEO recovery.
-- Next stage: after Paul confirms the fork sync and the client Vercel deployment is **Ready**, run the production verification in `CURRENT_HANDOFF_2026-09-13.md`, then perform the defined Google Search Console follow-up.
-- **Post-deploy update (14 September 2026):** Paul synced the fork and client Vercel deployed `957440f` successfully. Live host redirects, legacy redirects, restored pages, robots, sitemap hostnames, and Googlebot live availability were verified. Search Console still contains pre-release data and its submitted sitemap record has not been read since 1 March 2025; see `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md`. No sitemap submission, indexing request, or validation action has yet been made in GSC.
+- **Post-deploy update (14 September 2026):** Paul synced the fork and client Vercel deployed `957440f` successfully. Live host redirects, legacy redirects, restored pages, robots, sitemap hostnames, and Googlebot live availability were verified.
+- **GSC recovery actions completed (14 September 2026):** the sitemap was resubmitted and accepted as a Sitemap with 46 discovered pages; the homepage and two restored priority articles were added to Google’s priority crawl queue; validation was started for the 52 URLs in **Alternate page with proper canonical tag**. See `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md`.
+- Next stage: monitor crawl and validation movement after 3–7 days, then assess impressions, clicks, position, and indexed-page recovery over 2–4 weeks.
 
 ## Current conclusion
 
@@ -54,4 +55,4 @@ This is a recoverable technical migration problem. Search Console reports no man
 
 ## Change-control rule
 
-Do not make additional isolated SEO changes while this release is in flight. The accepted recovery package is already in upstream `main`; the next production state change is the controlled client-fork sync. After the client deployment is **Ready**, validate the live package once, record the result, and monitor the defined recovery metrics in Google Search Console.
+Do not make additional isolated SEO changes while Google is recrawling the accepted recovery package. Production is verified, the current sitemap is accepted, priority crawling is requested, and canonical validation is running. Monitor the defined recovery metrics before deciding on further SEO changes.

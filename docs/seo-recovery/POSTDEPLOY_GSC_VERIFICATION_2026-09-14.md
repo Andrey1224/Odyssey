@@ -1,7 +1,7 @@
 # Odyssey Baths — Post-deploy GSC Verification
 
 **Verified:** 14 September 2026  
-**Mode:** read-only, except Google Search Console live URL tests (no sitemap submission, indexing request, or issue-validation action was started)
+**Mode:** read-only audit followed by explicitly approved Google Search Console recovery actions
 
 ## Deployment confirmed
 
@@ -146,15 +146,25 @@ The live sitemap is valid and contains 46 canonical URLs, but GSC has not proces
 - Merchant listings: 0 invalid; optional return policy, shipping, `validFrom`, and product-identifier improvements only
 - Breadcrumbs: 0 invalid; no issues detected
 
-## Recommended GSC actions (not yet executed)
+## GSC recovery actions executed on 14 September 2026
 
-1. Resubmit `https://odysseybaths.co.uk/sitemap.xml` so Google processes the current 46-URL sitemap.
-2. Request indexing for the small priority set, starting with the homepage and the two restored articles.
-3. After sitemap submission, start validation for **Alternate page with proper canonical tag** because the common canonical-origin defect is fixed.
-4. Do not start validation for the entire 404 group yet: some examples are now redirected/restored, but intentionally unavailable legacy articles and assets remain.
-5. Do not validate the 403 or historic `noindex` groups until their individual intended outcomes are confirmed.
-6. Recheck live GSC performance after 3–7 days for crawl/discovery movement and after 2–4 weeks for ranking/traffic movement.
+The following actions were performed after explicit approval and confirmed by Search Console:
+
+1. Requested indexing for `https://odysseybaths.co.uk/`. Google confirmed that the URL was added to the priority crawl queue.
+2. Requested indexing for `https://odysseybaths.co.uk/installing-a-walk-in-bath`. Google confirmed that the URL was added to the priority crawl queue.
+3. Requested indexing for `https://odysseybaths.co.uk/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk`. Google confirmed that the URL was added to the priority crawl queue.
+4. Resubmitted `https://odysseybaths.co.uk/sitemap.xml`. Search Console immediately recorded it as a **Sitemap**, with submission and last-read date **14 September 2026**, status **Success**, and **46 discovered pages**.
+5. Started validation for **Alternate page with proper canonical tag**. Search Console shows **Validation started**, started **14 September 2026**, covering the currently reported 52 affected pages.
+
+No validation was started for the 404, 403, historic `noindex`, redirect, or crawled-not-indexed groups because those groups contain mixed outcomes that require individual treatment.
+
+## Monitoring plan
+
+1. Recheck sitemap processing, URL Inspection, and canonical-validation progress after 3–7 days.
+2. Compare performance after the release with an equal pre-release period once sufficient post-release data is available.
+3. Review clicks, impressions, position, and indexed-page movement after 2–4 weeks; ranking recovery cannot be judged immediately.
+4. Do not repeatedly submit the same URLs: Google states that duplicate submissions do not increase crawl priority.
 
 ## Current conclusion
 
-The deployment successfully corrected the central canonical and redirect defects. Google’s stored index evidence still reflects the broken pre-release site, while Googlebot live tests now see indexable canonical pages. The next high-value action is to submit the current sitemap and request indexing for a small priority set; ranking recovery cannot be judged on the day after deployment.
+The deployment successfully corrected the central canonical and redirect defects. Google’s stored index evidence still reflects the broken pre-release site, while Googlebot live tests now see indexable canonical pages. The current sitemap has now been processed successfully with 46 discovered pages, three priority URLs are in Google’s crawl queue, and canonical validation is running. The next phase is monitoring; ranking recovery cannot be judged on the day after deployment.
