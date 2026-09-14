@@ -23,6 +23,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `SECONDARY_CONTENT_SOURCE_RECOVERY.md` — records the unsuccessful source search for two additional missing articles so the work is not repeated.
 - `PREDEPLOY_RELEASE_GATE.md` — final local release gate and Vercel pre-flight checklist.
 - `CURRENT_HANDOFF_2026-09-13.md` — exact current repository, Vercel, client-fork, release, and next-action state.
+- `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md` — client production and Google Search Console evidence collected after the recovery deployment, including the stale sitemap finding and next GSC actions.
 
 ## Current release status
 
@@ -36,6 +37,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 - **Current release boundary:** the client fork and client production have not yet been confirmed updated. Paul must use GitHub **Sync fork → Update branch**. If GitHub reports conflicts or offers a destructive/force option, stop and inspect instead of forcing the sync.
 - **Open pre-existing risk:** `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables were not visible in the client Vercel project. Both lead forms require Supabase to save submissions. This dependency already existed in production baseline `31e526d`; it was not introduced by the SEO recovery.
 - Next stage: after Paul confirms the fork sync and the client Vercel deployment is **Ready**, run the production verification in `CURRENT_HANDOFF_2026-09-13.md`, then perform the defined Google Search Console follow-up.
+- **Post-deploy update (14 September 2026):** Paul synced the fork and client Vercel deployed `957440f` successfully. Live host redirects, legacy redirects, restored pages, robots, sitemap hostnames, and Googlebot live availability were verified. Search Console still contains pre-release data and its submitted sitemap record has not been read since 1 March 2025; see `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md`. No sitemap submission, indexing request, or validation action has yet been made in GSC.
 
 ## Current conclusion
 
