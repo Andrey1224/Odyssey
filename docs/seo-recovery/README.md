@@ -1,6 +1,6 @@
 # Odyssey Baths SEO recovery workspace
 
-Status: remediation is implemented, verified, and pushed to the upstream `main`; client production is awaiting the fork sync.
+Status: remediation is deployed to client production and Google is recrawling it. Ongoing content/image work is now governed by a branch/Preview/review workflow.
 
 This folder records the read-only Google Search Console and source-code audit performed on 8 September 2026 after the WordPress-to-Next.js migration.
 
@@ -24,6 +24,16 @@ This folder records the read-only Google Search Console and source-code audit pe
 - `PREDEPLOY_RELEASE_GATE.md` — final local release gate and Vercel pre-flight checklist.
 - `CURRENT_HANDOFF_2026-09-13.md` — exact current repository, Vercel, client-fork, release, and next-action state.
 - `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md` — client production and Google Search Console evidence collected after the recovery deployment, including the stale sitemap finding and next GSC actions.
+- `CONTENT_RECOVERY_QUEUE.csv` — ordered, source-aware queue for one-at-a-time legacy article recovery.
+- `CONTENT_RECOVERY_RUNBOOK.md` — required source, implementation, sitemap, SEO, and verification process for Claude Code.
+- `SOURCE_RECORD_TEMPLATE.md` — evidence record that must be completed before an archived article is published.
+
+Paul's two approved self-service workflows are documented separately:
+
+- `../paul/PAUL_AND_CLAUDE_WORKFLOW.md` — safe Git/fork/Preview/review lifecycle.
+- `../paul/IMAGE_WORKFLOW.md` — local product/site image placement and shared-image safety rules.
+- `../paul/CLAUDE_TASK_TEMPLATES.md` — copyable Claude Code tasks for images and one-at-a-time article recovery.
+- `../paul/START_HERE_FOR_PAUL.md` — the only short guide Paul needs for normal day-to-day requests.
 
 ## Current release status
 
@@ -39,6 +49,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 - **Post-deploy update (14 September 2026):** Paul synced the fork and client Vercel deployed `957440f` successfully. Live host redirects, legacy redirects, restored pages, robots, sitemap hostnames, and Googlebot live availability were verified.
 - **GSC recovery actions completed (14 September 2026):** the sitemap was resubmitted and accepted as a Sitemap with 46 discovered pages; the homepage and two restored priority articles were added to Google’s priority crawl queue; validation was started for the 52 URLs in **Alternate page with proper canonical tag**. See `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md`.
 - **GSC follow-up (27 September 2026):** all three priority URLs are now indexed. Indexed pages increased from 27 to 38; not-indexed pages decreased from 236 to 201; crawled-not-indexed decreased from 100 to 48; and alternate-canonical examples decreased from 52 to 46. Canonical validation has 46 pending and 0 failed. Week-over-week impressions increased from 600 to 823, while clicks decreased from 6 to 4, so technical recovery is progressing but ranking/traffic recovery is not yet complete.
+- **Paul/Claude Code safety package (27 September 2026):** the repository now distinguishes static content from the still-active Sanity blog, provides an evidence-backed content queue, protects image placement, standardizes feature-branch and upstream-PR handling, and exposes `npm run verify:paul` plus a GitHub pull-request check. This package is prepared on `chore/paul-content-safety` and is not a production change until reviewed and merged.
 - Next stage: retain the production SEO freeze and repeat the equal-period GSC comparison after 7–14 days.
 
 ## Current conclusion

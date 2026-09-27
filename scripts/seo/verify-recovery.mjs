@@ -16,10 +16,6 @@ function fail(msg) {
   hasErrors = true;
 }
 
-function pass(msg) {
-  // Uncomment for verbose output: console.log(`[PASS] ${msg}`);
-}
-
 async function fetchUrl(url, options = {}) {
   try {
     const res = await fetch(url, options);

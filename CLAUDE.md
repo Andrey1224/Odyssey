@@ -1,148 +1,157 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This is the operating guide for Claude Code in the Odyssey Baths repository. Read it before changing anything.
+
+## Paul interaction contract
+
+Paul is not expected to know the repository structure, Git commands, SEO implementation details, or deployment terminology. When Paul describes a task in ordinary language, Claude Code must route and manage the workflow for him.
+
+### Automatic routing
+
+- If Paul mentions changing, adding or replacing a photo/image, read `docs/paul/IMAGE_WORKFLOW.md` before acting.
+- If Paul mentions an old article, Wayback, restoring content or “the next article”, read `docs/seo-recovery/CONTENT_RECOVERY_RUNBOOK.md` and `docs/seo-recovery/CONTENT_RECOVERY_QUEUE.csv` before acting.
+- If Paul mentions forms, enquiries, leads or Supabase, read the lead-form section below and `docs/api-integrations/SUPABASE_LEAD_SUBMISSIONS.sql` before acting.
+
+### Minimize Paul's work
+
+1. Inspect the repository and documentation before asking Paul a technical question.
+2. Ask only for information that cannot be discovered locally. Use plain language and ask the smallest number of questions needed.
+3. For an image task, normally ask only for the image file, exact target page/product, intended position, and confirmation of permission to publish.
+4. For “restore the next article”, select the first actionable queue item yourself, explain it briefly, and investigate its sources. Ask Paul only when source rights, factual approval, or missing original material requires his decision.
+5. Run Git status/remote checks, create the feature branch, edit files, optimize placement, run validation, commit, push and prepare the pull request yourself when credentials and authorization are available.
+6. Never ask Paul to type Git commands that Claude Code can safely run.
+7. Present Paul with a short outcome: what changed, the Preview/PR link, and exactly what he should visually approve.
+8. If GitHub or Vercel authentication is missing, explain the single smallest action Paul needs to take, then continue automatically.
+
+Natural-language requests are sufficient. Paul does not need to copy a long prompt; `docs/paul/CLAUDE_TASK_TEMPLATES.md` is an advanced fallback for ambiguous work.
+
+## Non-negotiable safety rules
+
+1. Never work directly on `main`. Create one short-lived branch per article or image task.
+2. Never push to `main`, deploy manually, change Vercel/DNS/GSC/Sanity settings, or alter redirects unless the task explicitly authorizes it.
+3. Preserve public URLs, slugs, canonicals, redirect destinations, publication dates, and authors unless the task provides verified replacement data.
+4. Do not invent historical article copy, testimonials, product claims, prices, dates, authors, specifications, or image provenance.
+5. Never commit `.env*`, API keys, tokens, customer submissions, or downloaded private backups.
+6. One article or one clearly scoped image group per pull request. Do not mix cleanup or refactors into content work.
+7. Before handing off, run `npm run verify:paul` and report its exact result plus `git status --short`.
+
+Detailed workflows:
+
+- `docs/paul/PAUL_AND_CLAUDE_WORKFLOW.md`
+- `docs/paul/IMAGE_WORKFLOW.md`
+- `docs/seo-recovery/CONTENT_RECOVERY_RUNBOOK.md`
+- `docs/paul/CLAUDE_TASK_TEMPLATES.md`
 
 ## Commands
 
 ```bash
-npm run dev      # Start dev server at http://localhost:3000
-npm run build    # Production build
-npm run start    # Serve production build
-npm run lint     # Run ESLint
+npm ci                  # install exactly the locked dependencies
+npm run dev             # local development server
+npm run lint            # ESLint
+npm run build           # production build
+npm run verify:content  # local content/image/SEO guardrails
+npm run verify:paul     # required complete check before a pull request
+npm run start           # serve the production build locally
 ```
 
-No test framework is configured.
+No unit-test framework is currently configured. Pull requests are checked by the repository content-safety workflow, but a human must still review the Vercel Preview visually.
 
-## Architecture
+## Actual architecture
 
-**Next.js 16.1.6 App Router** site for Odyssey Baths — a UK senior-focused (65+) ethical bathing products company. Currently static/mock data with no backend or CMS integration. React 19 compiler is enabled (`next.config.ts`), so manual `memo()` calls are unnecessary.
+This is a Next.js 16 App Router site. Content is currently **hybrid**; do not assume the project is CMS-free.
 
-### Pages (`app/`)
+### Static application content
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home: hero, trust ticker, product categories, testimonials, handing selector |
-| `/walk-in-baths` | Catalog with filter sidebar |
-| `/walk-in-shower-baths` | Catalog with filter sidebar |
-| `/deep-soaker-baths` | Catalog with filter sidebar |
-| `/standard-size-baths` | Catalog with filter sidebar |
-| `/walk-in-baths/[id]` | Product detail |
-| `/walk-in-shower-baths/[id]` | Product detail |
-| `/deep-soaker-baths/[id]` | Product detail |
-| `/standard-size-baths/[id]` | Product detail |
-| `/about` | About page |
-| `/faq` | FAQ page |
-| `/reviews` | Customer reviews |
-| `/contact` | Contact form (posts to `/api/leads`) |
-| `/free-quote` | Quote request form |
-| `/free-brochure` | Brochure request form (server action, writes to `data/leads.json`) |
-| `/blog` | Blog listing with category filter |
-| `/privacy-policy` | Static privacy policy page |
-| `/return-policy` | Static returns & refunds policy page |
+- Product/catalog data lives in `data/*.ts`.
+- Site-owned local images live under `public/images/`.
+- Most static pages live under `app/<route>/page.tsx`.
+- Two recovered legacy articles currently live as static root routes:
+  - `app/installing-a-walk-in-bath/page.tsx`
+  - `app/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk/page.tsx`
+- `components/LegacyArticleLayout.tsx` is the shared layout for recovered root-level articles.
 
-### Data Layer (`data/`)
+### Sanity-backed blog (still active)
 
-All product data is static/mock — no backend or CMS.
+- `/blog` and `/blog/[slug]` query published posts from Sanity.
+- Sanity queries and mapping live in `sanity/lib/queries.ts` and `sanity/lib/types.ts`.
+- Post schema lives in `sanity/schemaTypes/post.ts`.
+- Sanity post cover/body/OG images are served from `cdn.sanity.io`.
+- `app/sitemap.ts` obtains current `/blog/<slug>` entries from Sanity.
 
-- `data/catalogTypes.ts` — canonical shared TypeScript types (`CatalogProductVariant`, `CatalogBaseModel`, `CatalogCategory`, etc.). Always import types from here.
-- `data/walkInBaths.ts`, `data/deepSoakerBaths.ts`, `data/walkInShowerBaths.ts`, `data/standardSizeBaths.ts` — product arrays, base models, category config, and per-product filter tag records
-- `data/tags.ts` — filter tag metadata; `ProductTags` interface maps each product to its filterable attributes (`Feature` union, `DoorHanding`, width buckets, etc.)
-- `data/blogPosts.ts` — mock blog data (`BLOG_CATEGORIES`, `BlogPost` type, `BLOG_POSTS` array)
-- `data/leads.json` — brochure leads written by the server action; not committed with real data
+Paul does not want to use Sanity for future editing. That is a planned migration, not a completed one. Do not remove Sanity or its environment variables until every live Sanity URL has been inventoried, migrated or redirected, tested, and accepted. Until then, recovered legacy articles should follow the static recovery runbook.
 
-### Catalog Page Pattern
+### Lead forms
 
-Every category catalog page follows this structure:
+Both public forms persist through the shared server-only implementation in `lib/lead-submissions.ts`:
 
-```
-page.tsx (server — exports metadata)
-  └─ <Suspense fallback={null}>          ← required: CatalogListContent uses useSearchParams()
-       └─ <CatalogListContent            ← "use client" generic component
-            category={...}
-            products={...}
-            filterPreset="deepSoaker"    ← selects which FilterSidebar variant to render
-            queryParamKeys={{...}}       ← maps FilterState keys to URL param names
-          />
-```
+- Contact: `app/api/leads/route.ts` -> `submitContactLead()` -> `persistLead()`
+- Brochure: `app/free-brochure/actions.ts` -> `submitBrochureLeadRecord()` -> `persistLead()`
+- Durable storage requires server-side `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`.
+- Resend variables are optional and only control email notification after a successful Supabase save.
+- The required table schema is `docs/api-integrations/SUPABASE_LEAD_SUBMISSIONS.sql`.
 
-`CatalogListContent` handles: filter state synced to URL search params (enabling shareable filtered URLs), mobile drawer, product grid, VAT toggle, empty state. Each category has its own `FilterSidebar` variant (`FilterSidebar`, `DeepSoakerFilterSidebar`, `StandardSizeFilterSidebar`, `WalkInShowerFilterSidebar`). Filter option metadata (labels, values) lives in `config/filters.ts`.
+Never expose the service-role key to browser code or prefix it with `NEXT_PUBLIC_`.
 
-### Product Detail Page Pattern
+## SEO recovery constraints
 
-```
-[id]/page.tsx (server — generateStaticParams + notFound())
-  └─ <CatalogProductDetail              ← "use client" component, includes Header/Footer
-       product={product}
-       products={allProducts}
-       baseModels={BASE_MODELS}
-       categoryHref="/walk-in-baths"
-     />
-```
+The site is recovering from a WordPress-to-Next.js migration. Historical URLs and signals are intentional.
 
-### Server / Client Split
+- Canonical origin: `https://odysseybaths.co.uk`, defined in `lib/site.ts`.
+- Redirects live in `next.config.ts`; do not edit them during ordinary article/image work.
+- Canonical sitemap is generated by `app/sitemap.ts`.
+- Recovery evidence and decisions live in `docs/seo-recovery/`.
+- The authoritative work queue is `docs/seo-recovery/CONTENT_RECOVERY_QUEUE.csv`.
+- Wayback inventory is `docs/seo-recovery/WAYBACK_URL_INVENTORY_2024-2025.csv`.
+- Redirect decisions are in `docs/seo-recovery/REDIRECT_MAP_DRAFT.csv`.
 
-Pages that export `metadata` must be server components. When client features are needed (state, search params), split into:
-- `page.tsx` — server component, metadata export, renders `<Header>` + `<Breadcrumbs>` + `<Footer>`
-- `*Content.tsx` — `"use client"`, contains all stateful logic
+For a legacy article, retain the original root URL when the queue says `restore_same_url`. A restored page must return 200, be indexable, have an apex self-canonical, authentic metadata/dates, BlogPosting JSON-LD, useful internal links, and a sitemap entry. Never redirect an unrelated article to the homepage.
 
-`CatalogProductDetail` is an exception — it manages its own `<Header>`/`<Footer>` internally.
+## Image rules
 
-### Forms & API
+- New article images: `public/images/articles/<article-slug>/`.
+- Product-specific images: `public/images/products/<product-slug>/`.
+- Shared/global artwork remains in `public/images/`; replacing a shared filename can change several pages at once.
+- Add new filenames and update only the intended references. Do not silently overwrite a shared image.
+- Use descriptive lowercase kebab-case filenames, correct alt text, and web-friendly formats (`.webp`, `.avif`, `.jpg`, `.png`; SVG only from a trusted source).
+- Do not commit an image if its ownership or permission to publish is unknown.
+- Keep originals outside the repo; commit optimized web assets only.
+- `next/image` should be used for rendered images where practical.
 
-- **`app/api/leads/route.ts`** — POST endpoint for contact/quote forms. In-memory rate limiting (5 req / 15 min per IP), honeypot check (`body.website`). Required fields: `intent`, `name`, `phone`, `postcode`. Currently logs to console; marked for future backend integration.
-- **`app/free-brochure/actions.ts`** — Server action `submitBrochureLead()`. Zod validation (name, UK postcode regex, email, phone, address, `bestTimeToCall`, `productSlug`), honeypot check (`_hp`). Writes to `data/leads.json`.
+## Git workflow
 
-### State Management
+Paul works from his fork, while `Andrey1224/Odyssey` is the upstream source. Safe flow:
 
-- **`lib/wizardStore.ts`** — Zustand store (`useWizardStore`) tracks which quiz/wizard modal is open (`WizardType`: `"global" | "walk-in-baths" | "walk-in-shower-baths" | "standard-size-baths" | "deep-soaker-baths"`). Wizard modal components: `BathWizardModal`, `WalkInBathsWizardModal`, `WalkInShowerWizardModal`, `StandardSizeWizardModal`, `DeepSoakerWizardModal`.
-- **VAT** — toggled in `FilterState.vatExempt` local to `CatalogListContent`; displayed with `orange-700` callouts.
+1. Sync fork `main` from upstream.
+2. Create `images/<scope>` or `content/<slug>` from the synced `main`.
+3. Make one scoped change.
+4. Run `npm run verify:paul`.
+5. Push the branch to Paul's fork, not `main`.
+6. Open a PR to `Andrey1224/Odyssey:main`.
+7. Review CI and the Vercel Preview.
+8. Andrii approves/merges.
+9. Paul syncs his fork; client Vercel then receives the approved production commit.
 
-### Library Utilities (`lib/`)
+Claude Code should perform steps 1-7 and prepare step 9 whenever authenticated. Paul should normally only provide/approve the content and review the Preview. Do not manually deploy a feature branch: pushing the branch should let the connected Vercel project create the Preview automatically.
 
-| File | Purpose |
-|------|---------|
-| `lib/site.ts` | Canonical site constants: `SITE_DOMAIN`, `SITE_NAME`, `PHONE`, `PHONE_TEL`, `ADDRESS`, `EMAIL`. Use these everywhere — never hardcode contact details. |
-| `lib/schema.ts` | JSON-LD helpers: `localBusinessJsonLd()`, `productJsonLd(product, url)` |
-| `lib/catalog.ts` | Generic catalog math: `priceIncVat`, `formatGBP`, `getBySlug`, `getSiblings` |
-| `lib/walkInBaths.ts` | Legacy walk-in-bath utilities (`vatReliefSave`, `displayPrice`, `filterVariants`). Partially duplicates `catalog.ts`; prefer `catalog.ts` for new code. |
-| `lib/breadcrumbs.ts` | `getBreadcrumbs(pathname, options?)` — builds breadcrumb arrays. Add new routes to `SEGMENT_LABELS` to get correct labels. |
-| `lib/wizardStore.ts` | Zustand wizard modal state |
-| `lib/catalogValidation.ts` | Dev-only data integrity checks (warns on duplicate IDs/slugs, broken refs) |
+If branch/fork state is unclear, stop and report `git remote -v`, `git branch --show-current`, `git status --short`, and `git log -3 --oneline`. Do not guess or force-push.
 
-### Path Aliases
+## Application conventions
 
-`@/*` maps to the repository root. Always use `@/components/...`, `@/data/...`, `@/lib/...` for imports.
+- Pages exporting metadata are server components; stateful UI belongs in a separate client component.
+- Use `SITE_DOMAIN` and other constants from `lib/site.ts`; do not hardcode contact details or Vercel hosts.
+- Use path aliases (`@/...`).
+- Maintain WCAG 2.2 AA, readable sizing for the senior audience, semantic headings, meaningful alt text, and keyboard accessibility.
+- Preserve the existing Tailwind v4 brand tokens in `app/globals.css`.
 
-## Styling Conventions
+## Required final report
 
-Tailwind CSS v4 via PostCSS. Custom design tokens in `app/globals.css` (`@theme` block):
+Every Claude Code task must report:
 
-- **Brand color:** `teal-800` (`#115E59`) for primary buttons/actions; `teal-700` (`#0F766E`) for links/icons
-- **Background:** `cream-50` (`#FAFAF9`) — page backgrounds, not `slate-50`
-- **Primary text:** `slate-900` | **Secondary:** `slate-600`
-- **VAT/attention:** `orange-700`
-- **Fonts:** `font-serif` → Merriweather (all headings h1/h2/h3); `font-sans` → Inter (body)
-- **Base font:** 20px, line-height 1.6 (set globally in CSS)
-
-`clsx` and `tailwind-merge` are installed but no `cn()` utility exists — import them directly if needed. The `prose` Tailwind Typography plugin is **not** installed; set text styles explicitly.
-
-## Accessibility Requirements
-
-Target: WCAG 2.2 AA. Audience is UK seniors (65+):
-- Minimum 20px font size for body text
-- Minimum 4.5:1 contrast ratio for all text
-- Touch targets 48px minimum
-- Semantic HTML and keyboard navigation
-- No dark patterns or high-pressure sales tactics
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `app/globals.css` | Tailwind v4 `@theme` tokens + base accessibility styles |
-| `app/layout.tsx` | Root layout — Google Fonts (Inter + Merriweather), metadata |
-| `next.config.ts` | `reactCompiler: true` (React 19 compiler enabled) |
-| `data/catalogTypes.ts` | Canonical shared TypeScript types for all catalog components |
-| `config/filters.ts` | Filter option metadata arrays for all sidebar variants |
-| `spec1.md` | Detailed frontend specification (Russian) |
-| `implementation_plan.md` | Design V2 implementation plan |
+1. Scope completed.
+2. Files changed.
+3. Source/provenance of every new article or image.
+4. URLs affected and whether any shared image was touched.
+5. Results of `npm run verify:paul`.
+6. `git diff --check` result.
+7. Current branch and `git status --short`.
+8. Confirmation that no direct push to `main`, production deployment, secret handling, DNS, GSC, or unrelated redirect changes occurred.
