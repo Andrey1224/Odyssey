@@ -28,7 +28,7 @@ This folder records the read-only Google Search Console and source-code audit pe
 ## Current release status
 
 - Upstream repository: `Andrey1224/Odyssey`.
-- Upstream `main` and local `main` before this documentation update: `20553a6` (`docs(seo): record postdeploy GSC verification`).
+- Upstream `main` and local `main` before this documentation update: `8e0e366` (`docs(seo): record GSC recovery submissions`).
 - The local `fix/seo-migration-recovery` branch points to the same accepted recovery commit.
 - The local release gate passes: 40 sitemap URLs, 53 path redirects, 53 trailing-slash variants, 53 query-string variants, 3 host redirects, and both restored priority articles.
 - The accepted recovery package has been pushed to `Andrey1224/Odyssey/main` at `55ccd4d`.
@@ -38,7 +38,8 @@ This folder records the read-only Google Search Console and source-code audit pe
 - **Open pre-existing risk:** `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and Resend variables were not visible in the client Vercel project. Both lead forms require Supabase to save submissions. This dependency already existed in production baseline `31e526d`; it was not introduced by the SEO recovery.
 - **Post-deploy update (14 September 2026):** Paul synced the fork and client Vercel deployed `957440f` successfully. Live host redirects, legacy redirects, restored pages, robots, sitemap hostnames, and Googlebot live availability were verified.
 - **GSC recovery actions completed (14 September 2026):** the sitemap was resubmitted and accepted as a Sitemap with 46 discovered pages; the homepage and two restored priority articles were added to Google’s priority crawl queue; validation was started for the 52 URLs in **Alternate page with proper canonical tag**. See `POSTDEPLOY_GSC_VERIFICATION_2026-09-14.md`.
-- Next stage: monitor crawl and validation movement after 3–7 days, then assess impressions, clicks, position, and indexed-page recovery over 2–4 weeks.
+- **GSC follow-up (27 September 2026):** all three priority URLs are now indexed. Indexed pages increased from 27 to 38; not-indexed pages decreased from 236 to 201; crawled-not-indexed decreased from 100 to 48; and alternate-canonical examples decreased from 52 to 46. Canonical validation has 46 pending and 0 failed. Week-over-week impressions increased from 600 to 823, while clicks decreased from 6 to 4, so technical recovery is progressing but ranking/traffic recovery is not yet complete.
+- Next stage: retain the production SEO freeze and repeat the equal-period GSC comparison after 7–14 days.
 
 ## Current conclusion
 

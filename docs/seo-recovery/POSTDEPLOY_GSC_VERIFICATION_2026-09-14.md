@@ -168,3 +168,43 @@ No validation was started for the 404, 403, historic `noindex`, redirect, or cra
 ## Current conclusion
 
 The deployment successfully corrected the central canonical and redirect defects. Google’s stored index evidence still reflects the broken pre-release site, while Googlebot live tests now see indexable canonical pages. The current sitemap has now been processed successfully with 46 discovered pages, three priority URLs are in Google’s crawl queue, and canonical validation is running. The next phase is monitoring; ranking recovery cannot be judged on the day after deployment.
+
+## Follow-up verification — 27 September 2026
+
+### Performance: 18–24 September vs. 11–17 September
+
+- Clicks: **4 vs. 6** (`-33%`)
+- Impressions: **823 vs. 600** (`+37%`)
+- CTR: **0.5% vs. 1.0%**
+- Average position: **30.9 vs. 28.2**
+
+The impression increase is an early positive discovery/visibility signal, but clicks, CTR, and average position do not yet show a stable ranking recovery.
+
+Largest page-level impression movements:
+
+- Homepage: **566 vs. 439** (`+127`)
+- `/blog/epsom-salts-walk-in-bath-health-benefits`: **165 vs. 38** (`+127`)
+- `/installing-a-walk-in-bath`: **38 vs. 18** (`+20`)
+- `/about`: **10 vs. 2** (`+8`)
+- `/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk`: **17 vs. 40** (`-23`)
+
+### Sitemap and indexing
+
+- Sitemap status remains **Success** with **46 discovered pages**.
+- Search Console last read the sitemap on **27 September 2026**, proving that Google continues to process it.
+- Indexed pages increased from **27 to 38** (`+11`).
+- Not-indexed pages decreased from **236 to 201** (`-35`).
+- Crawled, currently not indexed decreased from **100 to 48** (`-52`).
+- Alternate page with proper canonical decreased from **52 to 46** (`-6`).
+- Canonical validation remains **Started**: **46 pending, 0 failed**.
+- The Page indexing report itself was last updated on **20 September 2026**, so it does not yet include the latest week of crawling.
+
+URL Inspection now reports **URL is on Google / Page is indexed** for all three priority URLs:
+
+1. `https://odysseybaths.co.uk/`
+2. `https://odysseybaths.co.uk/installing-a-walk-in-bath`
+3. `https://odysseybaths.co.uk/walk-in-baths-with-showers-the-best-dual-function-options-in-the-uk`
+
+### Follow-up conclusion
+
+The technical recovery is progressing correctly: the former homepage canonical failure has cleared, the restored priority articles are indexed, the sitemap is being reread, and overall index coverage has improved materially. Organic visibility is beginning to expand, but traffic and ranking recovery remain incomplete. Continue the production SEO freeze and reassess with another equal-period comparison after 7–14 days.
