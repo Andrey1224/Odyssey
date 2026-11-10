@@ -46,3 +46,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# windows NTFS alternate-data-stream markers (invalid filename on Windows)
+*:Zone.Identifier
